@@ -9,28 +9,28 @@
     "RSI": 1.0,
     "SupportResistance": 1.0
   },
-  "buy_threshold": 2,
-  "sell_threshold": -2,
+  "buy_threshold": 2.0,
+  "sell_threshold": -2.0,
   "train_metrics": {
-    "cumulative_return": 0.1171811138343859,
-    "cagr": 0.03128052979781337,
-    "max_drawdown": -0.2684816354004077,
-    "sharpe_ratio": 0.25350816458477365,
+    "cumulative_return": 0.11718149616071827,
+    "cagr": 0.03128062790080466,
+    "max_drawdown": -0.26848125477846474,
+    "sharpe_ratio": 0.2535086551167325,
     "win_rate": 0.46153846153846156,
-    "avg_win_loss_ratio": 1.5829930264887673,
+    "avg_win_loss_ratio": 1.5829937350586407,
     "total_trades": 13,
     "benchmark_return": 0.4292611483832496,
-    "excess_return": -0.3120800345488637
+    "excess_return": -0.3120796522225313
   },
   "test_metrics": {
-    "cumulative_return": 0.5930963037118477,
-    "cagr": 0.593604516444425,
-    "max_drawdown": -0.11239466456183544,
-    "sharpe_ratio": 2.4821533275506398,
+    "cumulative_return": 0.5930961989885415,
+    "cagr": 0.5936044116159598,
+    "max_drawdown": -0.11239466456183556,
+    "sharpe_ratio": 2.482152416364027,
     "win_rate": 1.0,
     "avg_win_loss_ratio": Infinity,
     "total_trades": 4,
     "benchmark_return": 0.1884962678672557,
-    "excess_return": 0.40460003584459203
+    "excess_return": 0.4045999311212858
   }
 }
