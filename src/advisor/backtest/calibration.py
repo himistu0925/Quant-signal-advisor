@@ -47,6 +47,13 @@ class CalibrationResult:
     test_metrics: PerformanceMetrics
 
 
+class InsufficientDataError(Exception):
+    """Not enough price history to run a meaningful train/test calibration
+    (plan.md section 9 assumes a multi-year split) -- e.g. a ticker that
+    IPO'd a few weeks ago. Callers should skip calibrating this ticker
+    rather than persist a threshold that was never really searched."""
+
+
 def grid_search(
     df: pd.DataFrame,
     indicators: dict[str, Indicator],
@@ -68,12 +75,25 @@ def grid_search(
     names = list(indicators.keys())
 
     vote_matrix = compute_vote_matrix(df, indicators, min_lookback)
+    if vote_matrix.empty:
+        raise InsufficientDataError(
+            f"only {len(df)} price bars available -- need more than min_lookback={min_lookback} "
+            "to compute even one indicator vote"
+        )
+
     volume_votes = None
     if volume_indicator is not None:
         volume_votes = compute_vote_matrix(df, {"Volume": volume_indicator}, min_lookback)["Volume"]
 
     split_date = df.index[-1] - pd.Timedelta(days=int(test_years * 365.25))
     train_mask = vote_matrix.index < split_date
+
+    if train_mask.sum() == 0 or (~train_mask).sum() == 0:
+        raise InsufficientDataError(
+            f"computable history only spans {vote_matrix.index[0].date()}..{vote_matrix.index[-1].date()} "
+            f"({len(vote_matrix)} days) -- not enough to form both a train period and a "
+            f"{test_years}-year test period"
+        )
 
     if benchmark_df is not None:
         benchmark_close = benchmark_df["Close"]

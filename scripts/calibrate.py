@@ -1,5 +1,5 @@
-from advisor.backtest.calibration import calibrate_ticker
-from advisor.backtest.calibration_store import save_calibration
+from advisor.backtest.calibration import InsufficientDataError, calibrate_ticker
+from advisor.backtest.calibration_store import save_calibration, save_insufficient_data
 from advisor.data.yfinance_client import fetch_benchmark, fetch_daily
 from advisor.watchlist import load_watchlist
 
@@ -10,7 +10,14 @@ def main() -> None:
 
     for ticker in watchlist.tickers:
         df = fetch_daily(ticker, period="5y")
-        result = calibrate_ticker(df, benchmark)
+
+        try:
+            result = calibrate_ticker(df, benchmark)
+        except InsufficientDataError as e:
+            path = save_insufficient_data(ticker, str(e))
+            print(f"{ticker}: skipped calibration ({e}) -> {path}")
+            continue
+
         path = save_calibration(ticker, result)
         print(f"{ticker}: buy={result.buy_threshold} sell={result.sell_threshold} -> {path}")
 

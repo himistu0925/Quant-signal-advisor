@@ -142,7 +142,7 @@ def test_run_sends_alert_and_records_history_on_buy_signal(tmp_path, monkeypatch
     monkeypatch.setattr(run_check, "is_market_open", lambda now: True)
     monkeypatch.setattr(run_check, "fetch_daily", lambda ticker, period="1y": pd.DataFrame({"Close": [100.0]}))
     monkeypatch.setattr(run_check, "fetch_vix", lambda period="1y": pd.DataFrame({"Close": [15.0] * 30}))
-    monkeypatch.setattr(run_check, "load_calibration", _raise_not_found)
+    monkeypatch.setattr(run_check, "load_calibration_entry", _raise_not_found)
     monkeypatch.setattr(run_check, "score_ticker", lambda *a, **k: ("BUY", 5.0, 3.0, ["reason1"]))
     monkeypatch.setenv("DISCORD_WEBHOOK_URL", "https://discord.example/webhook")
 
@@ -173,7 +173,7 @@ def test_run_skips_discord_send_without_webhook_url_but_still_logs(tmp_path, mon
     monkeypatch.setattr(run_check, "is_market_open", lambda now: True)
     monkeypatch.setattr(run_check, "fetch_daily", lambda ticker, period="1y": pd.DataFrame({"Close": [100.0]}))
     monkeypatch.setattr(run_check, "fetch_vix", lambda period="1y": pd.DataFrame({"Close": [15.0] * 30}))
-    monkeypatch.setattr(run_check, "load_calibration", _raise_not_found)
+    monkeypatch.setattr(run_check, "load_calibration_entry", _raise_not_found)
     monkeypatch.setattr(run_check, "score_ticker", lambda *a, **k: ("BUY", 5.0, 3.0, ["reason1"]))
     monkeypatch.delenv("DISCORD_WEBHOOK_URL", raising=False)
 
@@ -197,7 +197,7 @@ def test_run_suppresses_repeat_alert_within_cooldown(tmp_path, monkeypatch):
     monkeypatch.setattr(run_check, "is_market_open", lambda now: True)
     monkeypatch.setattr(run_check, "fetch_daily", lambda ticker, period="1y": pd.DataFrame({"Close": [100.0]}))
     monkeypatch.setattr(run_check, "fetch_vix", lambda period="1y": pd.DataFrame({"Close": [15.0] * 30}))
-    monkeypatch.setattr(run_check, "load_calibration", _raise_not_found)
+    monkeypatch.setattr(run_check, "load_calibration_entry", _raise_not_found)
     monkeypatch.setattr(run_check, "score_ticker", lambda *a, **k: ("BUY", 5.0, 3.0, ["reason1"]))
     monkeypatch.setenv("DISCORD_WEBHOOK_URL", "https://discord.example/webhook")
 
@@ -212,3 +212,33 @@ def test_run_suppresses_repeat_alert_within_cooldown(tmp_path, monkeypatch):
 
     assert len(sent) == 1
     assert len(load_signal_history(history_path)) == 1
+
+
+def test_run_treats_insufficient_data_marker_as_no_calibration(tmp_path, monkeypatch):
+    from advisor.backtest.calibration_store import InsufficientDataMarker
+
+    watchlist_path = _write_watchlist(tmp_path, ["SPCX"])
+    monkeypatch.setattr(run_check, "is_market_open", lambda now: True)
+    monkeypatch.setattr(run_check, "fetch_daily", lambda ticker, period="1y": pd.DataFrame({"Close": [100.0]}))
+    monkeypatch.setattr(run_check, "fetch_vix", lambda period="1y": pd.DataFrame({"Close": [15.0] * 30}))
+    monkeypatch.setattr(
+        run_check, "load_calibration_entry",
+        lambda ticker: InsufficientDataMarker(ticker=ticker, reason="only 27 bars available"),
+    )
+
+    captured_calibration = {}
+
+    def fake_score_ticker(df, calibration=None, vix_state=None, news_result=None):
+        captured_calibration["value"] = calibration
+        return (None, 0.0, None, [])
+
+    monkeypatch.setattr(run_check, "score_ticker", fake_score_ticker)
+
+    run_check.run(
+        watchlist_path=watchlist_path,
+        now=datetime(2026, 7, 23, 10, 0),
+        cooldown_path=tmp_path / "cooldown.json",
+        history_path=tmp_path / "history.json",
+    )
+
+    assert captured_calibration["value"] is None

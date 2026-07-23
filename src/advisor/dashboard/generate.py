@@ -4,7 +4,11 @@ from datetime import datetime
 from pathlib import Path
 
 from advisor.alerts.history import DEFAULT_HISTORY_PATH, load_signal_history
-from advisor.backtest.calibration_store import DEFAULT_CALIBRATION_DIR, load_calibration
+from advisor.backtest.calibration_store import (
+    DEFAULT_CALIBRATION_DIR,
+    InsufficientDataMarker,
+    load_calibration_entry,
+)
 from advisor.watchlist import load_watchlist
 
 DEFAULT_OUTPUT_DIR = Path("docs")
@@ -21,15 +25,22 @@ def build_dashboard_data(
     tickers = []
     for ticker in watchlist.tickers:
         try:
-            calibration = load_calibration(ticker, directory=calibration_dir)
-            calibration_summary = {
-                "weights": calibration.weights,
-                "buy_threshold": calibration.buy_threshold,
-                "sell_threshold": calibration.sell_threshold,
-                "test_metrics": asdict(calibration.test_metrics),
-            }
+            entry = load_calibration_entry(ticker, directory=calibration_dir)
         except FileNotFoundError:
+            entry = None
+
+        if entry is None:
             calibration_summary = None
+        elif isinstance(entry, InsufficientDataMarker):
+            calibration_summary = {"status": "insufficient_data", "reason": entry.reason}
+        else:
+            calibration_summary = {
+                "status": "calibrated",
+                "weights": entry.weights,
+                "buy_threshold": entry.buy_threshold,
+                "sell_threshold": entry.sell_threshold,
+                "test_metrics": asdict(entry.test_metrics),
+            }
         tickers.append({"ticker": ticker, "calibration": calibration_summary})
 
     history = load_signal_history(history_path)
@@ -53,6 +64,9 @@ def _watchlist_rows(tickers: list) -> str:
         calibration = entry["calibration"]
         if calibration is None:
             rows.append(f"<tr><td>{ticker}</td><td colspan='5'>캘리브레이션 없음 (기본값 사용)</td></tr>")
+            continue
+        if calibration["status"] == "insufficient_data":
+            rows.append(f"<tr><td>{ticker}</td><td colspan='5'>데이터 부족 (상장 초기 등 — 기본값 사용)</td></tr>")
             continue
 
         m = calibration["test_metrics"]

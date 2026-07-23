@@ -1,0 +1,36 @@
+{
+  "ticker": "UPRO",
+  "weights": {
+    "BollingerBands": 1.0,
+    "Fibonacci": 1.0,
+    "Ichimoku": 1.0,
+    "MACD": 1.0,
+    "MA": 1.0,
+    "RSI": 1.0,
+    "SupportResistance": 1.0
+  },
+  "buy_threshold": 2.0,
+  "sell_threshold": -2.0,
+  "train_metrics": {
+    "cumulative_return": 0.4552456590364602,
+    "cagr": 0.10991849138216137,
+    "max_drawdown": -0.5610782231210623,
+    "sharpe_ratio": 0.4620746183036486,
+    "win_rate": 0.45454545454545453,
+    "avg_win_loss_ratio": 2.1877726842213825,
+    "total_trades": 11,
+    "benchmark_return": 0.4292611483832496,
+    "excess_return": 0.025984510653210613
+  },
+  "test_metrics": {
+    "cumulative_return": 0.018630765060945187,
+    "cagr": 0.01864364408064101,
+    "max_drawdown": -0.19637038833779552,
+    "sharpe_ratio": 0.21694848438633862,
+    "win_rate": 0.6666666666666666,
+    "avg_win_loss_ratio": 0.6445872730137306,
+    "total_trades": 3,
+    "benchmark_return": 0.1884962678672557,
+    "excess_return": -0.16986550280631052
+  }
+}

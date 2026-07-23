@@ -8,7 +8,7 @@ from advisor.alerts.cooldown import DEFAULT_STATE_PATH, CooldownTracker
 from advisor.alerts.discord import format_signal_message, send_discord_alert
 from advisor.alerts.history import DEFAULT_HISTORY_PATH, append_signal_event
 from advisor.alerts.market_hours import NY_TZ, is_market_open
-from advisor.backtest.calibration_store import load_calibration
+from advisor.backtest.calibration_store import InsufficientDataMarker, load_calibration_entry
 from advisor.data.finnhub_client import FinnhubConfigError
 from advisor.data.yfinance_client import fetch_daily, fetch_vix
 from advisor.indicators import split_registered
@@ -88,7 +88,8 @@ def run(
         df = fetch_daily(ticker, period="1y")
 
         try:
-            calibration = load_calibration(ticker)
+            entry = load_calibration_entry(ticker)
+            calibration = None if isinstance(entry, InsufficientDataMarker) else entry
         except FileNotFoundError:
             calibration = None
 

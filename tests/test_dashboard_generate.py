@@ -1,5 +1,5 @@
 from advisor.backtest.calibration import CalibrationResult
-from advisor.backtest.calibration_store import save_calibration
+from advisor.backtest.calibration_store import save_calibration, save_insufficient_data
 from advisor.backtest.metrics import PerformanceMetrics
 from advisor.dashboard.generate import build_dashboard_data, generate, render_html
 
@@ -44,6 +44,30 @@ def test_build_dashboard_data_includes_calibrated_and_uncalibrated_tickers(tmp_p
     assert data["recent_signals"][0]["ticker"] == "AAPL"
 
 
+def test_build_dashboard_data_marks_insufficient_data_ticker(tmp_path):
+    watchlist_path = _write_watchlist(tmp_path, ["SPCX"])
+    calibration_dir = tmp_path / "calibration"
+    save_insufficient_data("SPCX", "only 27 bars available", directory=calibration_dir)
+
+    data = build_dashboard_data(watchlist_path, calibration_dir, tmp_path / "history.json")
+
+    entry = data["tickers"][0]
+    assert entry["calibration"]["status"] == "insufficient_data"
+    assert "27 bars" in entry["calibration"]["reason"]
+
+
+def test_render_html_shows_insufficient_data_message():
+    data = {
+        "generated_at": "2026-07-23T10:00:00",
+        "tickers": [{"ticker": "SPCX", "calibration": {"status": "insufficient_data", "reason": "only 27 bars"}}],
+        "recent_signals": [],
+    }
+    html = render_html(data)
+
+    assert "SPCX" in html
+    assert "데이터 부족" in html
+
+
 def test_render_html_shows_no_signals_message_when_empty():
     data = {"generated_at": "2026-07-23T10:00:00", "tickers": [{"ticker": "AAPL", "calibration": None}], "recent_signals": []}
     html = render_html(data)
@@ -58,6 +82,7 @@ def test_render_html_includes_calibration_metrics():
         "tickers": [{
             "ticker": "AAPL",
             "calibration": {
+                "status": "calibrated",
                 "weights": {"RSI": 1.0}, "buy_threshold": 2.0, "sell_threshold": -2.0,
                 "test_metrics": {
                     "cumulative_return": 0.15, "cagr": 0.1, "max_drawdown": -0.05, "sharpe_ratio": 1.2,
