@@ -1,0 +1,36 @@
+{
+  "ticker": "TQQQ",
+  "weights": {
+    "BollingerBands": 1.0,
+    "Fibonacci": 1.0,
+    "Ichimoku": 1.0,
+    "MACD": 1.0,
+    "MA": 1.0,
+    "RSI": 1.0,
+    "SupportResistance": 1.0
+  },
+  "buy_threshold": 4.0,
+  "sell_threshold": -4.0,
+  "train_metrics": {
+    "cumulative_return": 0.0,
+    "cagr": 0.0,
+    "max_drawdown": 0.0,
+    "sharpe_ratio": 0.0,
+    "win_rate": 0.0,
+    "avg_win_loss_ratio": 0.0,
+    "total_trades": 0,
+    "benchmark_return": 0.4292611483832496,
+    "excess_return": -0.4292611483832496
+  },
+  "test_metrics": {
+    "cumulative_return": 0.0,
+    "cagr": 0.0,
+    "max_drawdown": 0.0,
+    "sharpe_ratio": 0.0,
+    "win_rate": 0.0,
+    "avg_win_loss_ratio": 0.0,
+    "total_trades": 0,
+    "benchmark_return": 0.1884962678672557,
+    "excess_return": -0.1884962678672557
+  }
+}

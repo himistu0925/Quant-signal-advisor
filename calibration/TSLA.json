@@ -1,0 +1,36 @@
+{
+  "ticker": "TSLA",
+  "weights": {
+    "BollingerBands": 1.0,
+    "Fibonacci": 1.0,
+    "Ichimoku": 1.0,
+    "MACD": 1.0,
+    "MA": 1.0,
+    "RSI": 1.0,
+    "SupportResistance": 1.0
+  },
+  "buy_threshold": 2.0,
+  "sell_threshold": -2.0,
+  "train_metrics": {
+    "cumulative_return": 4.2388462653977035,
+    "cagr": 0.5846177728458342,
+    "max_drawdown": -0.4680167607465211,
+    "sharpe_ratio": 1.206151144381052,
+    "win_rate": 0.5,
+    "avg_win_loss_ratio": 5.8160488947795645,
+    "total_trades": 12,
+    "benchmark_return": 0.4292611483832496,
+    "excess_return": 3.809585117014454
+  },
+  "test_metrics": {
+    "cumulative_return": 0.06523800770104171,
+    "cagr": 0.06528411909895793,
+    "max_drawdown": -0.2838554434196233,
+    "sharpe_ratio": 0.3549042880158059,
+    "win_rate": 0.25,
+    "avg_win_loss_ratio": 4.686002141433322,
+    "total_trades": 4,
+    "benchmark_return": 0.1884962678672557,
+    "excess_return": -0.123258260166214
+  }
+}

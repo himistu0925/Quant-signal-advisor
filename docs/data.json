@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-23T15:12:09.985561",
+  "generated_at": "2026-07-23T15:31:12.522217",
   "tickers": [
     {
-      "ticker": "AAPL",
+      "ticker": "TQQQ",
       "calibration": {
         "weights": {
           "BollingerBands": 1.0,
@@ -13,23 +13,23 @@
           "RSI": 1.0,
           "SupportResistance": 1.0
         },
-        "buy_threshold": 2.0,
-        "sell_threshold": -2.0,
+        "buy_threshold": 4.0,
+        "sell_threshold": -4.0,
         "test_metrics": {
-          "cumulative_return": 0.5930963037118488,
-          "cagr": 0.5936045164444261,
-          "max_drawdown": -0.11239466456183567,
-          "sharpe_ratio": 2.482152754306426,
-          "win_rate": 1.0,
-          "avg_win_loss_ratio": null,
-          "total_trades": 4,
+          "cumulative_return": 0.0,
+          "cagr": 0.0,
+          "max_drawdown": 0.0,
+          "sharpe_ratio": 0.0,
+          "win_rate": 0.0,
+          "avg_win_loss_ratio": 0.0,
+          "total_trades": 0,
           "benchmark_return": 0.1884962678672557,
-          "excess_return": 0.40460003584459314
+          "excess_return": -0.1884962678672557
         }
       }
     },
     {
-      "ticker": "MSFT",
+      "ticker": "NVDA",
       "calibration": {
         "weights": {
           "BollingerBands": 1.0,
@@ -43,15 +43,42 @@
         "buy_threshold": 3.0,
         "sell_threshold": -3.0,
         "test_metrics": {
-          "cumulative_return": -0.1614478837602098,
-          "cagr": -0.16154900850941556,
-          "max_drawdown": -0.19879105516339213,
-          "sharpe_ratio": -1.0715840239381855,
+          "cumulative_return": 0.0,
+          "cagr": 0.0,
+          "max_drawdown": 0.0,
+          "sharpe_ratio": 0.0,
           "win_rate": 0.0,
           "avg_win_loss_ratio": 0.0,
-          "total_trades": 1,
+          "total_trades": 0,
           "benchmark_return": 0.1884962678672557,
-          "excess_return": -0.3499441516274655
+          "excess_return": -0.1884962678672557
+        }
+      }
+    },
+    {
+      "ticker": "TSLA",
+      "calibration": {
+        "weights": {
+          "BollingerBands": 1.0,
+          "Fibonacci": 1.0,
+          "Ichimoku": 1.0,
+          "MACD": 1.0,
+          "MA": 1.0,
+          "RSI": 1.0,
+          "SupportResistance": 1.0
+        },
+        "buy_threshold": 2.0,
+        "sell_threshold": -2.0,
+        "test_metrics": {
+          "cumulative_return": 0.06523800770104171,
+          "cagr": 0.06528411909895793,
+          "max_drawdown": -0.2838554434196233,
+          "sharpe_ratio": 0.3549042880158059,
+          "win_rate": 0.25,
+          "avg_win_loss_ratio": 4.686002141433322,
+          "total_trades": 4,
+          "benchmark_return": 0.1884962678672557,
+          "excess_return": -0.123258260166214
         }
       }
     }
