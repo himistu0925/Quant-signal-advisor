@@ -1,3 +1,5 @@
+import dataclasses
+import json
 import math
 
 import pandas as pd
@@ -39,3 +41,22 @@ def test_compute_metrics_empty_result_is_all_zero():
     assert metrics.total_trades == 0
     assert metrics.cumulative_return == 0.0
     assert metrics.win_rate == 0.0
+
+
+def test_all_winning_trades_give_none_not_infinity():
+    # No losing trade means "wins divided by losses" has nothing to divide
+    # by -- must come out as None (JSON null), never float("inf") (which
+    # serializes to the non-standard, unparseable "Infinity" token).
+    dates = pd.date_range("2020-01-01", periods=3)
+    equity = pd.Series([1.0, 1.1, 1.2], index=dates)
+    trades = [
+        Trade(entry_date=dates[0], entry_price=100, exit_date=dates[1], exit_price=110),
+        Trade(entry_date=dates[1], entry_price=110, exit_date=dates[2], exit_price=120),
+    ]
+    result = BacktestResult(trades=trades, equity_curve=equity)
+
+    metrics = compute_metrics(result, pd.Series(dtype=float))
+
+    assert metrics.avg_win_loss_ratio is None
+    serialized = json.dumps(dataclasses.asdict(metrics))
+    assert "Infinity" not in serialized

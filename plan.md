@@ -174,7 +174,7 @@ VIX 필터: 중립 (52th pct)
 | Phase 2 | 시장 심리 데이터 연동 | VIX 연동, Finnhub 뉴스 감성 연동(장애 시 자동 제외) | **완료** (2026-07-23) |
 | Phase 3 | 백테스트 엔진 | 5년 기본 검증, 학습/검증 구간 분리 리포트 | **완료** (2026-07-23) |
 | Phase 4 | 임계값 캘리브레이션 파이프라인 | 그리드서치(임계값 1차, 가중치는 확장 가능), 종목별 결과 저장(`calibration/{ticker}.json`) | **완료(1차)** (2026-07-23) — 워크포워드(다중 구간 롤링 검증)는 후속 확장 |
-| Phase 5 | 디스코드 알림 + 웹 대시보드 + GitHub Actions 스케줄러 | 웹훅 연동, 쿨다운 로직, `schedule.yml`, 대시보드 정적 사이트 생성/배포(12절) | **코드 완료** (2026-07-23) — GitHub 저장소/Secrets 미설정으로 실배포는 미검증 |
+| Phase 5 | 디스코드 알림 + 웹 대시보드 + GitHub Actions 스케줄러 | 웹훅 연동, 쿨다운 로직, `schedule.yml`, 대시보드 정적 사이트 생성/배포(12절) | **완료 및 배포 검증** (2026-07-23) — `github.com/himistu0925/Quant-signal-advisor`, Pages 라이브(`himistu0925.github.io/Quant-signal-advisor`), Secrets 등록 및 Actions 수동 실행 성공 확인 |
 | Phase 6 | 페이퍼 트레이딩 검증 및 지표 확장 | 실전 모니터링, 스토캐스틱/ADX/OBV 등 추가 지표 검토 | 예정 |
 
 ## 15. 리스크 및 면책

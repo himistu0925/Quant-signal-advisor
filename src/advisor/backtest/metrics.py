@@ -13,7 +13,7 @@ class PerformanceMetrics:
     max_drawdown: float
     sharpe_ratio: float
     win_rate: float
-    avg_win_loss_ratio: float
+    avg_win_loss_ratio: float | None  # None when there are no losing trades to compare against
     total_trades: int
     benchmark_return: float
     excess_return: float
@@ -55,8 +55,13 @@ def compute_metrics(result: BacktestResult, benchmark_close: pd.Series) -> Perfo
     avg_loss = sum(losses) / len(losses) if losses else 0.0
     if avg_loss != 0:
         avg_win_loss_ratio = abs(avg_win / avg_loss)
+    elif avg_win > 0:
+        # No losing trades at all -- float("inf") would serialize to the
+        # non-standard JSON token "Infinity" and break strict JSON parsers
+        # (calibration/*.json and docs/data.json are both real JSON files).
+        avg_win_loss_ratio = None
     else:
-        avg_win_loss_ratio = float("inf") if avg_win > 0 else 0.0
+        avg_win_loss_ratio = 0.0
 
     if len(benchmark_close) > 1:
         benchmark_return = benchmark_close.iloc[-1] / benchmark_close.iloc[0] - 1
