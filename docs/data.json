@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-07-23T14:33:56.856099",
+  "tickers": [
+    {
+      "ticker": "AAPL",
+      "calibration": {
+        "weights": {
+          "BollingerBands": 1.0,
+          "Fibonacci": 1.0,
+          "Ichimoku": 1.0,
+          "MACD": 1.0,
+          "MA": 1.0,
+          "RSI": 1.0,
+          "SupportResistance": 1.0
+        },
+        "buy_threshold": 2,
+        "sell_threshold": -2,
+        "test_metrics": {
+          "cumulative_return": 0.5930963037118477,
+          "cagr": 0.593604516444425,
+          "max_drawdown": -0.11239466456183544,
+          "sharpe_ratio": 2.4821533275506398,
+          "win_rate": 1.0,
+          "avg_win_loss_ratio": Infinity,
+          "total_trades": 4,
+          "benchmark_return": 0.1884962678672557,
+          "excess_return": 0.40460003584459203
+        }
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "calibration": null
+    }
+  ],
+  "recent_signals": []
+}

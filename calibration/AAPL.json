@@ -1,0 +1,36 @@
+{
+  "ticker": "AAPL",
+  "weights": {
+    "BollingerBands": 1.0,
+    "Fibonacci": 1.0,
+    "Ichimoku": 1.0,
+    "MACD": 1.0,
+    "MA": 1.0,
+    "RSI": 1.0,
+    "SupportResistance": 1.0
+  },
+  "buy_threshold": 2,
+  "sell_threshold": -2,
+  "train_metrics": {
+    "cumulative_return": 0.1171811138343859,
+    "cagr": 0.03128052979781337,
+    "max_drawdown": -0.2684816354004077,
+    "sharpe_ratio": 0.25350816458477365,
+    "win_rate": 0.46153846153846156,
+    "avg_win_loss_ratio": 1.5829930264887673,
+    "total_trades": 13,
+    "benchmark_return": 0.4292611483832496,
+    "excess_return": -0.3120800345488637
+  },
+  "test_metrics": {
+    "cumulative_return": 0.5930963037118477,
+    "cagr": 0.593604516444425,
+    "max_drawdown": -0.11239466456183544,
+    "sharpe_ratio": 2.4821533275506398,
+    "win_rate": 1.0,
+    "avg_win_loss_ratio": Infinity,
+    "total_trades": 4,
+    "benchmark_return": 0.1884962678672557,
+    "excess_return": 0.40460003584459203
+  }
+}

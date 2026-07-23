@@ -51,3 +51,16 @@ def test_fetch_vix_uses_caret_vix_symbol(monkeypatch):
     yfc.fetch_vix()
 
     assert captured["symbol"] == "^VIX"
+
+
+def test_fetch_benchmark_uses_sp500_symbol(monkeypatch):
+    captured = {}
+
+    def fake_ticker(symbol):
+        captured["symbol"] = symbol
+        return FakeTicker(symbol)
+
+    monkeypatch.setattr(yfc.yf, "Ticker", fake_ticker)
+    yfc.fetch_benchmark()
+
+    assert captured["symbol"] == "^GSPC"

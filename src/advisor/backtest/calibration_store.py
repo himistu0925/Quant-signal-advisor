@@ -1,0 +1,38 @@
+import json
+from dataclasses import asdict
+from pathlib import Path
+
+from .calibration import CalibrationResult
+from .metrics import PerformanceMetrics
+
+DEFAULT_CALIBRATION_DIR = Path("calibration")
+
+
+def save_calibration(ticker: str, result: CalibrationResult, directory: Path = DEFAULT_CALIBRATION_DIR) -> Path:
+    directory = Path(directory)
+    directory.mkdir(parents=True, exist_ok=True)
+    path = directory / f"{ticker}.json"
+
+    payload = {
+        "ticker": ticker,
+        "weights": result.weights,
+        "buy_threshold": result.buy_threshold,
+        "sell_threshold": result.sell_threshold,
+        "train_metrics": asdict(result.train_metrics),
+        "test_metrics": asdict(result.test_metrics),
+    }
+    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    return path
+
+
+def load_calibration(ticker: str, directory: Path = DEFAULT_CALIBRATION_DIR) -> CalibrationResult:
+    directory = Path(directory)
+    payload = json.loads((directory / f"{ticker}.json").read_text(encoding="utf-8"))
+
+    return CalibrationResult(
+        weights=payload["weights"],
+        buy_threshold=payload["buy_threshold"],
+        sell_threshold=payload["sell_threshold"],
+        train_metrics=PerformanceMetrics(**payload["train_metrics"]),
+        test_metrics=PerformanceMetrics(**payload["test_metrics"]),
+    )

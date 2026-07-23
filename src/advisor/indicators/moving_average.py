@@ -1,6 +1,6 @@
 import pandas as pd
 
-from .base import IndicatorResult
+from .base import IndicatorResult, crossover_vote
 from .registry import register
 
 
@@ -24,13 +24,7 @@ class MovingAverageIndicator:
         if pd.isna(prev_diff) or pd.isna(curr_diff):
             return IndicatorResult(vote=0, detail="MA: insufficient data")
 
-        if prev_diff <= 0 and curr_diff > 0:
-            vote = 1  # golden cross
-        elif prev_diff >= 0 and curr_diff < 0:
-            vote = -1  # dead cross
-        else:
-            vote = 0
-
+        vote = crossover_vote(prev_diff, curr_diff)
         detail = f"MA{self.short}={short_ma.iloc[-1]:.2f}, MA{self.long}={long_ma.iloc[-1]:.2f}"
         return IndicatorResult(vote=vote, detail=detail)
 

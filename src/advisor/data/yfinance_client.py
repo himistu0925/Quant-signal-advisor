@@ -2,6 +2,7 @@ import pandas as pd
 import yfinance as yf
 
 VIX_SYMBOL = "^VIX"
+SPX_SYMBOL = "^GSPC"  # backtest benchmark: S&P 500 buy-and-hold
 
 
 def fetch_daily(ticker: str, period: str = "5y") -> pd.DataFrame:
@@ -17,3 +18,7 @@ def fetch_intraday(ticker: str, period: str = "60d", interval: str = "15m") -> p
 
 def fetch_vix(period: str = "1y", interval: str = "1d") -> pd.DataFrame:
     return yf.Ticker(VIX_SYMBOL).history(period=period, interval=interval)
+
+
+def fetch_benchmark(period: str = "5y", interval: str = "1d") -> pd.DataFrame:
+    return yf.Ticker(SPX_SYMBOL).history(period=period, interval=interval)

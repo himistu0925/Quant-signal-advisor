@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>퀀트 신호 어드바이저 대시보드</title>
+<style>
+  body { font-family: -apple-system, sans-serif; margin: 2rem auto; max-width: 900px; padding: 0 1rem; color: #1a1a1a; }
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.1rem; margin-top: 2rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; }
+  th { background: #f5f5f5; }
+  .meta { color: #666; font-size: 0.85rem; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #111; color: #eee; }
+    th { background: #222; }
+    th, td { border-color: #333; }
+  }
+</style>
+</head>
+<body>
+<h1>퀀트 신호 어드바이저 대시보드</h1>
+<p class="meta">생성 시각: 2026-07-23T14:33:56.856099</p>
+
+<h2>워치리스트 현황</h2>
+<table>
+<tr><th>종목</th><th>매수/매도 임계값</th><th>검증구간 누적수익</th><th>샤프비율</th><th>거래수</th><th>벤치마크 초과수익</th></tr>
+<tr><td>AAPL</td><td>+2.0 / -2.0</td><td>59.3%</td><td>2.48</td><td>4</td><td>40.5%</td></tr>
+<tr><td>MSFT</td><td colspan='5'>캘리브레이션 없음 (기본값 사용)</td></tr>
+</table>
+
+<h2>최근 신호 히스토리</h2>
+<table>
+<tr><th>시각</th><th>종목</th><th>방향</th><th>가격</th><th>근거</th></tr>
+<tr><td colspan='5'>아직 발생한 신호가 없습니다.</td></tr>
+</table>
+</body>
+</html>
