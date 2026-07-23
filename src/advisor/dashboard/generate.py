@@ -57,16 +57,22 @@ def _format_pct(value) -> str:
     return f"{value:.1%}" if isinstance(value, (int, float)) else "-"
 
 
+def _top_indicators(weights: dict, n: int = 3) -> str:
+    ranked = sorted(weights.items(), key=lambda kv: -kv[1])
+    shown = [f"{name}({w:.1f})" for name, w in ranked[:n] if w > 0]
+    return ", ".join(shown) if shown else "-"
+
+
 def _watchlist_rows(tickers: list) -> str:
     rows = []
     for entry in tickers:
         ticker = entry["ticker"]
         calibration = entry["calibration"]
         if calibration is None:
-            rows.append(f"<tr><td>{ticker}</td><td colspan='5'>캘리브레이션 없음 (기본값 사용)</td></tr>")
+            rows.append(f"<tr><td>{ticker}</td><td colspan='6'>캘리브레이션 없음 (기본값 사용)</td></tr>")
             continue
         if calibration["status"] == "insufficient_data":
-            rows.append(f"<tr><td>{ticker}</td><td colspan='5'>데이터 부족 (상장 초기 등 — 기본값 사용)</td></tr>")
+            rows.append(f"<tr><td>{ticker}</td><td colspan='6'>데이터 부족 (상장 초기 등 — 기본값 사용)</td></tr>")
             continue
 
         m = calibration["test_metrics"]
@@ -74,6 +80,7 @@ def _watchlist_rows(tickers: list) -> str:
             "<tr>"
             f"<td>{ticker}</td>"
             f"<td>{calibration['buy_threshold']:+.1f} / {calibration['sell_threshold']:+.1f}</td>"
+            f"<td>{_top_indicators(calibration['weights'])}</td>"
             f"<td>{_format_pct(m['cumulative_return'])}</td>"
             f"<td>{m['sharpe_ratio']:.2f}</td>"
             f"<td>{m['total_trades']}</td>"
@@ -132,7 +139,7 @@ def render_html(data: dict) -> str:
 
 <h2>워치리스트 현황</h2>
 <table>
-<tr><th>종목</th><th>매수/매도 임계값</th><th>검증구간 누적수익</th><th>샤프비율</th><th>거래수</th><th>벤치마크 초과수익</th></tr>
+<tr><th>종목</th><th>매수/매도 임계값</th><th>주요 지표</th><th>검증구간 누적수익</th><th>샤프비율</th><th>거래수</th><th>벤치마크 초과수익</th></tr>
 {watchlist_rows}
 </table>
 

@@ -21,6 +21,10 @@ def main() -> None:
         path = save_calibration(ticker, result)
         print(f"{ticker}: buy={result.buy_threshold} sell={result.sell_threshold} -> {path}")
 
+        ranked = sorted(result.weights.items(), key=lambda kv: -kv[1])
+        weight_summary = ", ".join(f"{name}={w:.2f}" for name, w in ranked)
+        print(f"  weights: {weight_summary}")
+
 
 if __name__ == "__main__":
     main()

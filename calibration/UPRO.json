@@ -1,36 +1,36 @@
 {
   "ticker": "UPRO",
   "weights": {
-    "BollingerBands": 1.0,
-    "Fibonacci": 1.0,
-    "Ichimoku": 1.0,
-    "MACD": 1.0,
-    "MA": 1.0,
-    "RSI": 1.0,
-    "SupportResistance": 1.0
+    "BollingerBands": 1.0162028773968355,
+    "Fibonacci": 0.0,
+    "Ichimoku": 1.5104693715828097,
+    "MACD": 0.0,
+    "MA": 0.0,
+    "RSI": 4.4733277510203555,
+    "SupportResistance": 0.0
   },
   "buy_threshold": 2.0,
   "sell_threshold": -2.0,
   "train_metrics": {
-    "cumulative_return": 0.4552456590364602,
-    "cagr": 0.10991849138216137,
-    "max_drawdown": -0.5610782231210623,
-    "sharpe_ratio": 0.4620746183036486,
-    "win_rate": 0.45454545454545453,
-    "avg_win_loss_ratio": 2.1877726842213825,
-    "total_trades": 11,
+    "cumulative_return": 1.6340968515483572,
+    "cagr": 0.30894735136331186,
+    "max_drawdown": -0.5292041259998896,
+    "sharpe_ratio": 0.7904172437149994,
+    "win_rate": 0.8,
+    "avg_win_loss_ratio": 2.046885512723294,
+    "total_trades": 5,
     "benchmark_return": 0.4292611483832496,
-    "excess_return": 0.025984510653210613
+    "excess_return": 1.2048357031651076
   },
   "test_metrics": {
-    "cumulative_return": 0.018630765060945187,
-    "cagr": 0.01864364408064101,
-    "max_drawdown": -0.19637038833779552,
-    "sharpe_ratio": 0.21694848438633862,
-    "win_rate": 0.6666666666666666,
-    "avg_win_loss_ratio": 0.6445872730137306,
-    "total_trades": 3,
+    "cumulative_return": 0.29272816407665503,
+    "cagr": 0.29295552257061264,
+    "max_drawdown": -0.11171901540347062,
+    "sharpe_ratio": 1.7049835970624627,
+    "win_rate": 1.0,
+    "avg_win_loss_ratio": null,
+    "total_trades": 1,
     "benchmark_return": 0.1884962678672557,
-    "excess_return": -0.16986550280631052
+    "excess_return": 0.10423189620939932
   }
 }

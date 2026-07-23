@@ -68,6 +68,31 @@ def test_render_html_shows_insufficient_data_message():
     assert "데이터 부족" in html
 
 
+def test_render_html_shows_top_weighted_indicators():
+    data = {
+        "generated_at": "2026-07-23T10:00:00",
+        "tickers": [{
+            "ticker": "TQQQ",
+            "calibration": {
+                "status": "calibrated",
+                "weights": {"RSI": 3.0, "MACD": 2.0, "ADX": 0.0, "OBV": 0.0},
+                "buy_threshold": 2.0, "sell_threshold": -2.0,
+                "test_metrics": {
+                    "cumulative_return": 0.1, "cagr": 0.1, "max_drawdown": -0.05, "sharpe_ratio": 1.0,
+                    "win_rate": 0.5, "avg_win_loss_ratio": 1.0, "total_trades": 3,
+                    "benchmark_return": 0.05, "excess_return": 0.05,
+                },
+            },
+        }],
+        "recent_signals": [],
+    }
+    html = render_html(data)
+
+    assert "RSI(3.0)" in html
+    assert "MACD(2.0)" in html
+    assert "ADX" not in html  # zero-weight indicators are omitted
+
+
 def test_render_html_shows_no_signals_message_when_empty():
     data = {"generated_at": "2026-07-23T10:00:00", "tickers": [{"ticker": "AAPL", "calibration": None}], "recent_signals": []}
     html = render_html(data)

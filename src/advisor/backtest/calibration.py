@@ -57,8 +57,9 @@ class InsufficientDataError(Exception):
 def grid_search(
     df: pd.DataFrame,
     indicators: dict[str, Indicator],
-    weight_grid: list,
     threshold_grid: list,
+    weight_grid: list | None = None,
+    fixed_weights: dict | None = None,
     volume_indicator: Indicator | None = None,
     volume_multiplier: float = 1.5,
     min_lookback: int = 100,
@@ -70,9 +71,16 @@ def grid_search(
     the untouched holdout test period to surface overfitting rather than
     hide it. Symmetric thresholds (sell = -buy) keep the grid a single
     dimension instead of two, which matters a lot once weight combinations
-    are already multiplying the search space."""
+    are already multiplying the search space.
+
+    Pass exactly one of weight_grid (search every combination) or
+    fixed_weights (use these weights as-is, e.g. from derive_ic_weights,
+    and only search threshold_grid)."""
     close = df["Close"]
     names = list(indicators.keys())
+
+    if fixed_weights is None and weight_grid is None:
+        raise ValueError("grid_search requires either weight_grid or fixed_weights")
 
     vote_matrix = compute_vote_matrix(df, indicators, min_lookback)
     if vote_matrix.empty:
@@ -103,11 +111,18 @@ def grid_search(
         train_benchmark = pd.Series(dtype=float)
         test_benchmark = pd.Series(dtype=float)
 
+    if fixed_weights is not None:
+        weight_combos = [tuple(fixed_weights[name] for name in names)]
+    elif weight_grid is not None:
+        weight_combos = product(weight_grid, repeat=len(names))
+    else:
+        raise ValueError("grid_search requires either weight_grid or fixed_weights")
+
     best_objective = None
     best_weights = None
     best_buy_threshold = None
 
-    for weight_combo in product(weight_grid, repeat=len(names)):
+    for weight_combo in weight_combos:
         weights = dict(zip(names, weight_combo))
         score_series = _score_series_from_votes(vote_matrix, weights, volume_votes, volume_multiplier)
         train_score = score_series[train_mask]
@@ -140,26 +155,30 @@ def grid_search(
 def calibrate_ticker(
     df: pd.DataFrame,
     benchmark_df: pd.DataFrame,
-    weight_grid=(1.0,),
     threshold_grid=(2.0, 3.0, 4.0, 5.0),
     min_lookback: int = 100,
     test_years: float = 1.0,
+    forward_days: int = 5,
 ) -> CalibrationResult:
-    """Default weight_grid=(1.0,) intentionally searches thresholds only:
-    with 7 directional indicators, even a 3-value weight grid is 3**7=2187
-    combinations, and calibrating 14 free parameters (7 weights + threshold)
-    against ~4 years of daily bars risks curve-fitting badly (plan.md
-    section 14). Pass a wider weight_grid explicitly if you want that
-    broader (and slower, and shakier) search."""
+    """Plan.md section 9 (updated 2026-07-23): per-ticker weights come from
+    derive_ic_weights -- each indicator's own measured information
+    coefficient on THIS ticker's 5-year history -- rather than a blind
+    equal-weight grid search. A leveraged index ETF and an individual stock
+    can genuinely have different indicators driving the signal, so this
+    also sidesteps the earlier curve-fitting concern (plan.md section 14)
+    about searching 7 free weight parameters: each weight is *measured*
+    from held-out correlation, not chosen to maximize in-sample Sharpe."""
+    from advisor.backtest.indicator_evaluation import derive_ic_weights
     from advisor.indicators import split_registered
 
     directional, volume_indicator = split_registered()
+    weights = derive_ic_weights(df, directional, min_lookback=min_lookback, forward_days=forward_days)
 
     return grid_search(
         df=df,
         indicators=directional,
-        weight_grid=list(weight_grid),
         threshold_grid=list(threshold_grid),
+        fixed_weights=weights,
         volume_indicator=volume_indicator,
         min_lookback=min_lookback,
         test_years=test_years,

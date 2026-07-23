@@ -57,3 +57,39 @@ def evaluate_indicator_contribution(
         information_coefficient=information_coefficient,
         solo_metrics=solo_metrics,
     )
+
+
+def derive_ic_weights(
+    df: pd.DataFrame,
+    indicators: dict[str, Indicator],
+    min_lookback: int = 100,
+    forward_days: int = 5,
+    min_ic_samples: int = 30,
+) -> dict[str, float]:
+    """Plan.md section 9 (2026-07-23 update): weight each indicator by its
+    own measured information coefficient on THIS ticker's history, instead
+    of every indicator getting the same weight everywhere -- a leveraged
+    index ETF and an individual stock can genuinely have different
+    indicators driving the real signal. Non-positive IC gets weight 0
+    (excluded, not sign-flipped -- inverting a backward-looking correlation
+    is a much bigger overfitting risk than just dropping it). Weights are
+    rescaled to sum to len(indicators) so they stay on the same numeric
+    scale as the old equal-weight-of-1.0 baseline (existing threshold grids
+    like 2-5 remain meaningful)."""
+    raw_weights = {}
+    for name, indicator in indicators.items():
+        report = evaluate_indicator_contribution(
+            df, indicator, min_lookback=min_lookback, forward_days=forward_days, min_ic_samples=min_ic_samples,
+        )
+        ic = report.information_coefficient or 0.0
+        raw_weights[name] = max(0.0, ic)
+
+    total = sum(raw_weights.values())
+    n = len(indicators)
+
+    if total <= 0:
+        # Nothing showed positive predictive value -- fall back to the
+        # safe equal-weight baseline rather than an all-zero score.
+        return {name: 1.0 for name in indicators}
+
+    return {name: (w / total) * n for name, w in raw_weights.items()}
