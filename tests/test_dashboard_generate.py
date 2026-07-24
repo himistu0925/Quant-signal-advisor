@@ -35,7 +35,7 @@ def test_build_dashboard_data_includes_calibrated_and_uncalibrated_tickers(tmp_p
         encoding="utf-8",
     )
 
-    data = build_dashboard_data(watchlist_path, calibration_dir, history_path)
+    data = build_dashboard_data(watchlist_path, calibration_dir, history_path, tmp_path / "last_check.json")
 
     tickers_by_name = {t["ticker"]: t for t in data["tickers"]}
     assert tickers_by_name["AAPL"]["calibration"]["buy_threshold"] == 2.0
@@ -49,7 +49,7 @@ def test_build_dashboard_data_marks_insufficient_data_ticker(tmp_path):
     calibration_dir = tmp_path / "calibration"
     save_insufficient_data("SPCX", "only 27 bars available", directory=calibration_dir)
 
-    data = build_dashboard_data(watchlist_path, calibration_dir, tmp_path / "history.json")
+    data = build_dashboard_data(watchlist_path, calibration_dir, tmp_path / "history.json", tmp_path / "last_check.json")
 
     entry = data["tickers"][0]
     assert entry["calibration"]["status"] == "insufficient_data"
@@ -93,6 +93,40 @@ def test_render_html_shows_top_weighted_indicators():
     assert "ADX" not in html  # zero-weight indicators are omitted
 
 
+def test_render_html_shows_no_last_check_message_when_none():
+    data = {"generated_at": "2026-07-23T10:00:00", "tickers": [], "recent_signals": [], "last_check": None}
+    html = render_html(data)
+
+    assert "아직 체크 기록이 없습니다" in html
+
+
+def test_render_html_shows_market_closed_last_check():
+    data = {
+        "generated_at": "2026-07-23T10:00:00", "tickers": [], "recent_signals": [],
+        "last_check": {"timestamp": "2026-07-23T17:41:00-04:00", "market_open": False, "tickers": {}},
+    }
+    html = render_html(data)
+
+    assert "장 마감 시간이라 스킵됨" in html
+    assert "2026-07-23T17:41:00-04:00" in html
+
+
+def test_render_html_shows_ticker_scores_from_last_check():
+    data = {
+        "generated_at": "2026-07-23T10:00:00", "tickers": [], "recent_signals": [],
+        "last_check": {
+            "timestamp": "2026-07-23T13:58:00-04:00",
+            "market_open": True,
+            "tickers": {"TQQQ": {"score": 1.23, "direction": None, "threshold": None}},
+        },
+    }
+    html = render_html(data)
+
+    assert "TQQQ" in html
+    assert "1.23" in html
+    assert "중립" in html
+
+
 def test_render_html_shows_no_signals_message_when_empty():
     data = {"generated_at": "2026-07-23T10:00:00", "tickers": [{"ticker": "AAPL", "calibration": None}], "recent_signals": []}
     html = render_html(data)
@@ -132,6 +166,7 @@ def test_generate_writes_index_html_and_data_json(tmp_path):
         watchlist_path=watchlist_path,
         calibration_dir=tmp_path / "calibration",
         history_path=tmp_path / "history.json",
+        last_check_path=tmp_path / "last_check.json",
         output_dir=output_dir,
     )
 

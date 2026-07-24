@@ -5,8 +5,11 @@ on:
     # Generous UTC window covering US market hours across both EST (UTC-5)
     # and EDT (UTC-4) -- is_market_open() does the real America/New_York
     # check inside the script and exits quietly outside 9:30-16:00 ET
-    # (plan.md section 3).
-    - cron: '*/15 13-22 * * 1-5'
+    # (plan.md section 3). 30-minute interval, not 15: GitHub silently
+    # drops most fires of a */15 cron on low-traffic repos (observed
+    # 2026-07-23 -- only 2 of ~40 expected fires actually ran), and
+    # community reports say GitHub is measurably more reliable at 30min+.
+    - cron: '*/30 13-22 * * 1-5'
   workflow_dispatch: {}
 
 permissions:

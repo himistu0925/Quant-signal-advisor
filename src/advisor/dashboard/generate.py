@@ -4,6 +4,7 @@ from datetime import datetime
 from pathlib import Path
 
 from advisor.alerts.history import DEFAULT_HISTORY_PATH, load_signal_history
+from advisor.alerts.last_check import DEFAULT_LAST_CHECK_PATH, load_last_check
 from advisor.backtest.calibration_store import (
     DEFAULT_CALIBRATION_DIR,
     InsufficientDataMarker,
@@ -18,6 +19,7 @@ def build_dashboard_data(
     watchlist_path: str = "config/watchlist.yaml",
     calibration_dir=DEFAULT_CALIBRATION_DIR,
     history_path=DEFAULT_HISTORY_PATH,
+    last_check_path=DEFAULT_LAST_CHECK_PATH,
     generated_at: datetime | None = None,
 ) -> dict:
     watchlist = load_watchlist(watchlist_path)
@@ -50,6 +52,7 @@ def build_dashboard_data(
         "generated_at": (generated_at or datetime.now()).isoformat(),
         "tickers": tickers,
         "recent_signals": recent_signals,
+        "last_check": load_last_check(last_check_path),
     }
 
 
@@ -90,6 +93,34 @@ def _watchlist_rows(tickers: list) -> str:
     return "\n".join(rows)
 
 
+def _last_check_section(last_check: dict | None) -> str:
+    if last_check is None:
+        return "<p>아직 체크 기록이 없습니다.</p>"
+
+    timestamp = last_check.get("timestamp", "-")
+    if not last_check.get("market_open"):
+        return f"<p>마지막 워크플로 실행: {timestamp} (장 마감 시간이라 스킵됨)</p>"
+
+    tickers = last_check.get("tickers", {})
+    if not tickers:
+        return f"<p>마지막 체크: {timestamp} (워치리스트 비어 있음)</p>"
+
+    rows = []
+    for ticker, info in tickers.items():
+        direction = info.get("direction") or "중립"
+        score = info.get("score")
+        score_str = f"{score:.2f}" if isinstance(score, (int, float)) else "-"
+        rows.append(f"<tr><td>{ticker}</td><td>{score_str}</td><td>{direction}</td></tr>")
+
+    return (
+        f"<p>마지막 체크: {timestamp}</p>"
+        "<table>"
+        "<tr><th>종목</th><th>현재 스코어</th><th>방향</th></tr>"
+        f"{''.join(rows)}"
+        "</table>"
+    )
+
+
 def _signal_rows(signals: list) -> str:
     if not signals:
         return "<tr><td colspan='5'>아직 발생한 신호가 없습니다.</td></tr>"
@@ -112,6 +143,7 @@ def _signal_rows(signals: list) -> str:
 def render_html(data: dict) -> str:
     watchlist_rows = _watchlist_rows(data["tickers"])
     signal_rows = _signal_rows(data["recent_signals"])
+    last_check_section = _last_check_section(data.get("last_check"))
 
     return f"""<!doctype html>
 <html lang="ko">
@@ -137,6 +169,9 @@ def render_html(data: dict) -> str:
 <h1>퀀트 신호 어드바이저 대시보드</h1>
 <p class="meta">생성 시각: {data['generated_at']}</p>
 
+<h2>마지막 체크</h2>
+{last_check_section}
+
 <h2>워치리스트 현황</h2>
 <table>
 <tr><th>종목</th><th>매수/매도 임계값</th><th>주요 지표</th><th>검증구간 누적수익</th><th>샤프비율</th><th>거래수</th><th>벤치마크 초과수익</th></tr>
@@ -157,10 +192,11 @@ def generate(
     watchlist_path: str = "config/watchlist.yaml",
     calibration_dir=DEFAULT_CALIBRATION_DIR,
     history_path=DEFAULT_HISTORY_PATH,
+    last_check_path=DEFAULT_LAST_CHECK_PATH,
     output_dir=DEFAULT_OUTPUT_DIR,
     generated_at: datetime | None = None,
 ) -> Path:
-    data = build_dashboard_data(watchlist_path, calibration_dir, history_path, generated_at)
+    data = build_dashboard_data(watchlist_path, calibration_dir, history_path, last_check_path, generated_at)
 
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)

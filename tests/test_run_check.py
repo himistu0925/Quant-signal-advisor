@@ -131,10 +131,16 @@ def test_run_does_nothing_outside_market_hours(tmp_path, monkeypatch):
         now=datetime(2026, 7, 23, 20, 0),
         cooldown_path=tmp_path / "cooldown.json",
         history_path=tmp_path / "history.json",
+        last_check_path=tmp_path / "last_check.json",
     )
 
     assert called["score_ticker"] is False
     assert not (tmp_path / "history.json").exists()
+
+    from advisor.alerts.last_check import load_last_check
+
+    last_check = load_last_check(tmp_path / "last_check.json")
+    assert last_check["market_open"] is False
 
 
 def test_run_sends_alert_and_records_history_on_buy_signal(tmp_path, monkeypatch):
@@ -152,8 +158,12 @@ def test_run_sends_alert_and_records_history_on_buy_signal(tmp_path, monkeypatch
     now = datetime(2026, 7, 23, 10, 0)
     cooldown_path = tmp_path / "cooldown.json"
     history_path = tmp_path / "history.json"
+    last_check_path = tmp_path / "last_check.json"
 
-    run_check.run(watchlist_path=watchlist_path, now=now, cooldown_path=cooldown_path, history_path=history_path)
+    run_check.run(
+        watchlist_path=watchlist_path, now=now, cooldown_path=cooldown_path,
+        history_path=history_path, last_check_path=last_check_path,
+    )
 
     assert len(sent) == 1
     assert sent[0][0] == "https://discord.example/webhook"
@@ -166,6 +176,12 @@ def test_run_sends_alert_and_records_history_on_buy_signal(tmp_path, monkeypatch
 
     tracker = CooldownTracker(path=cooldown_path)
     assert tracker.should_alert("AAPL", "BUY", now) is False
+
+    from advisor.alerts.last_check import load_last_check
+
+    last_check = load_last_check(last_check_path)
+    assert last_check["market_open"] is True
+    assert last_check["tickers"]["AAPL"]["direction"] == "BUY"
 
 
 def test_run_skips_discord_send_without_webhook_url_but_still_logs(tmp_path, monkeypatch):
@@ -186,6 +202,7 @@ def test_run_skips_discord_send_without_webhook_url_but_still_logs(tmp_path, mon
         now=datetime(2026, 7, 23, 10, 0),
         cooldown_path=tmp_path / "cooldown.json",
         history_path=history_path,
+        last_check_path=tmp_path / "last_check.json",
     )
 
     assert sent == []
@@ -206,9 +223,10 @@ def test_run_suppresses_repeat_alert_within_cooldown(tmp_path, monkeypatch):
 
     cooldown_path = tmp_path / "cooldown.json"
     history_path = tmp_path / "history.json"
+    last_check_path = tmp_path / "last_check.json"
 
-    run_check.run(watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 0), cooldown_path=cooldown_path, history_path=history_path)
-    run_check.run(watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 15), cooldown_path=cooldown_path, history_path=history_path)
+    run_check.run(watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 0), cooldown_path=cooldown_path, history_path=history_path, last_check_path=last_check_path)
+    run_check.run(watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 15), cooldown_path=cooldown_path, history_path=history_path, last_check_path=last_check_path)
 
     assert len(sent) == 1
     assert len(load_signal_history(history_path)) == 1
@@ -239,6 +257,7 @@ def test_run_treats_insufficient_data_marker_as_no_calibration(tmp_path, monkeyp
         now=datetime(2026, 7, 23, 10, 0),
         cooldown_path=tmp_path / "cooldown.json",
         history_path=tmp_path / "history.json",
+        last_check_path=tmp_path / "last_check.json",
     )
 
     assert captured_calibration["value"] is None

@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-07-24T10:00:00-04:00",
+  "market_open": true,
+  "tickers": {
+    "TQQQ": {
+      "score": 0.0,
+      "direction": null,
+      "threshold": null
+    },
+    "SOXL": {
+      "score": 0.0,
+      "direction": null,
+      "threshold": null
+    },
+    "UPRO": {
+      "score": 0.0,
+      "direction": null,
+      "threshold": null
+    }
+  }
+}

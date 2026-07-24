@@ -7,6 +7,7 @@ import requests
 from advisor.alerts.cooldown import DEFAULT_STATE_PATH, CooldownTracker
 from advisor.alerts.discord import format_signal_message, send_discord_alert
 from advisor.alerts.history import DEFAULT_HISTORY_PATH, append_signal_event
+from advisor.alerts.last_check import DEFAULT_LAST_CHECK_PATH, save_last_check
 from advisor.alerts.market_hours import NY_TZ, is_market_open
 from advisor.backtest.calibration_store import InsufficientDataMarker, load_calibration_entry
 from advisor.data.finnhub_client import FinnhubConfigError
@@ -71,18 +72,25 @@ def run(
     now: datetime | None = None,
     cooldown_path=DEFAULT_STATE_PATH,
     history_path=DEFAULT_HISTORY_PATH,
+    last_check_path=DEFAULT_LAST_CHECK_PATH,
 ) -> None:
     # datetime.now() with no tz would be naive local time -- wrong on a UTC
     # GitHub Actions runner, since is_market_open() treats naive input as
     # already being NY wall-clock time. Anchor explicitly to NY time instead.
     now = now or datetime.now(tz=NY_TZ)
     if not is_market_open(now):
-        return  # plan.md section 3: quietly exit outside regular trading hours
+        # Still record that the workflow fired, just outside market hours --
+        # this is how the dashboard tells "checked, market closed" apart
+        # from "the schedule never fired" (see plan.md section 3 notes on
+        # GitHub's cron being unreliable at high frequency).
+        save_last_check(now.isoformat(), market_open=False, path=last_check_path)
+        return
 
     webhook_url = os.environ.get("DISCORD_WEBHOOK_URL")
     watchlist = load_watchlist(watchlist_path)
     vix_state = VixFilter().evaluate(fetch_vix(period="1y"))
     cooldown = CooldownTracker(path=cooldown_path)
+    last_check_scores = {}
 
     for ticker in watchlist.tickers:
         df = fetch_daily(ticker, period="1y")
@@ -100,6 +108,8 @@ def run(
             news_result = None
 
         direction, score, threshold, reasons = score_ticker(df, calibration, vix_state, news_result)
+        last_check_scores[ticker] = {"score": score, "direction": direction, "threshold": threshold}
+
         if direction is None:
             continue
         if not cooldown.should_alert(ticker, direction, now):
@@ -136,6 +146,7 @@ def run(
         cooldown.record(ticker, direction, now)
 
     cooldown.save()
+    save_last_check(now.isoformat(), market_open=True, tickers=last_check_scores, path=last_check_path)
 
 
 if __name__ == "__main__":

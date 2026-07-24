@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T16:11:16.660704",
+  "generated_at": "2026-07-24T13:14:55.017618",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -86,5 +86,26 @@
       }
     }
   ],
-  "recent_signals": []
+  "recent_signals": [],
+  "last_check": {
+    "timestamp": "2026-07-24T10:00:00-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      }
+    }
+  }
 }
