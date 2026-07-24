@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T05:53:37.066277",
+  "generated_at": "2026-07-24T06:20:04.557076",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -88,9 +88,170 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-07-24T01:53:36.467756-04:00",
+    "timestamp": "2026-07-24T02:20:03.937416-04:00",
     "market_open": false,
     "tickers": {}
   },
-  "universe_candidates": []
+  "universe_candidates": [
+    {
+      "ticker": "AESI",
+      "name": "Atlas Energy Solutions Inc. Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "DOV",
+      "name": "Dover Corporation Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "EZA",
+      "name": "iShares MSCI South Africa Index Fund",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "FBRT",
+      "name": "Franklin BSP Realty Trust, Inc. Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "FXY",
+      "name": "Invesco CurrencyShares Japanese Yen Trust",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "GGG",
+      "name": "Graco Inc. Common Stock",
+      "exchange": "NYSE",
+      "score": 4.5,
+      "direction": "BUY",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "SCHP",
+      "name": "Schwab U.S. TIPS ETF",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "SPIP",
+      "name": "State Street SPDR Portfolio TIPS ETF",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "VCR",
+      "name": "Vanguard Consumer Discretion ETF",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "CGBD",
+      "name": "Carlyle Secured Lending, Inc. - Closed End Fund",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "CMCSA",
+      "name": "Comcast Corporation - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "CRUS",
+      "name": "Cirrus Logic, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "CXDO",
+      "name": "Crexendo, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "EVSD",
+      "name": "Eaton Vance Short Duration Income ETF",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "FCFS",
+      "name": "FirstCash Holdings, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "FCNCA",
+      "name": "First Citizens BancShares, Inc. - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "GGLL",
+      "name": "Direxion Daily GOOGL Bull 2X ETF",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "GOOG",
+      "name": "Alphabet Inc. - Class C Capital Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc. - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    },
+    {
+      "ticker": "MBLY",
+      "name": "Mobileye Global Inc. - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "as_of": "2026-07-24T06:17:09.961012+00:00"
+    }
+  ]
 }
