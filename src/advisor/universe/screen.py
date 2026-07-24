@@ -2,13 +2,14 @@ from dataclasses import dataclass
 
 from advisor.data.yfinance_client import fetch_batch_daily
 from advisor.live.run_check import score_ticker
+from advisor.risk.position_sizing import compute_risk_levels, position_size_pct
 from advisor.universe.listing import Listing
 
 MIN_PRICE = 5.0
 MIN_AVG_DOLLAR_VOLUME = 5_000_000.0
 LIQUIDITY_LOOKBACK_PERIOD = "3mo"
 SCORING_LOOKBACK_PERIOD = "1y"
-TOP_N_CANDIDATES = 20
+TOP_N_CANDIDATES = 10
 
 
 @dataclass
@@ -18,6 +19,12 @@ class Candidate:
     exchange: str
     score: float
     direction: str
+    price: float | None = None
+    # BUY-only, %-based (see risk/position_sizing.py) -- None for SELL
+    # candidates or when there isn't enough history yet for a real ATR.
+    stop_price: float | None = None
+    target_price: float | None = None
+    position_pct: float | None = None
 
 
 def filter_by_liquidity(
@@ -66,8 +73,22 @@ def rank_candidates(
         direction, score, _threshold, _reasons = score_ticker(df)
         if direction is None:
             continue
+
+        price = float(df["Close"].iloc[-1])
+        stop_price = target_price = position_pct = None
+        if direction == "BUY":
+            risk_levels = compute_risk_levels(df, price)
+            if risk_levels is not None:
+                stop_price = risk_levels.stop_price
+                target_price = risk_levels.target_price
+                position_pct = position_size_pct(risk_levels.stop_distance_pct)
+
         candidates.append(
-            Candidate(ticker=listing.symbol, name=listing.name, exchange=listing.exchange, score=score, direction=direction)
+            Candidate(
+                ticker=listing.symbol, name=listing.name, exchange=listing.exchange,
+                score=score, direction=direction, price=price,
+                stop_price=stop_price, target_price=target_price, position_pct=position_pct,
+            )
         )
 
     candidates.sort(key=lambda c: abs(c.score), reverse=True)

@@ -1,3 +1,4 @@
+import json
 from datetime import datetime
 
 import pandas as pd
@@ -132,6 +133,7 @@ def test_run_does_nothing_outside_market_hours(tmp_path, monkeypatch):
         cooldown_path=tmp_path / "cooldown.json",
         history_path=tmp_path / "history.json",
         last_check_path=tmp_path / "last_check.json",
+        candidates_path=tmp_path / "candidates.json",
     )
 
     assert called["score_ticker"] is False
@@ -163,6 +165,7 @@ def test_run_sends_alert_and_records_history_on_buy_signal(tmp_path, monkeypatch
     run_check.run(
         watchlist_path=watchlist_path, now=now, cooldown_path=cooldown_path,
         history_path=history_path, last_check_path=last_check_path,
+        candidates_path=tmp_path / "candidates.json",
     )
 
     assert len(sent) == 1
@@ -203,6 +206,7 @@ def test_run_skips_discord_send_without_webhook_url_but_still_logs(tmp_path, mon
         cooldown_path=tmp_path / "cooldown.json",
         history_path=history_path,
         last_check_path=tmp_path / "last_check.json",
+        candidates_path=tmp_path / "candidates.json",
     )
 
     assert sent == []
@@ -225,8 +229,9 @@ def test_run_suppresses_repeat_alert_within_cooldown(tmp_path, monkeypatch):
     history_path = tmp_path / "history.json"
     last_check_path = tmp_path / "last_check.json"
 
-    run_check.run(watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 0), cooldown_path=cooldown_path, history_path=history_path, last_check_path=last_check_path)
-    run_check.run(watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 15), cooldown_path=cooldown_path, history_path=history_path, last_check_path=last_check_path)
+    candidates_path = tmp_path / "candidates.json"
+    run_check.run(watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 0), cooldown_path=cooldown_path, history_path=history_path, last_check_path=last_check_path, candidates_path=candidates_path)
+    run_check.run(watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 15), cooldown_path=cooldown_path, history_path=history_path, last_check_path=last_check_path, candidates_path=candidates_path)
 
     assert len(sent) == 1
     assert len(load_signal_history(history_path)) == 1
@@ -254,6 +259,7 @@ def test_run_adds_atr_risk_levels_to_buy_signal_without_leaking_shares(tmp_path,
         watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 0),
         cooldown_path=tmp_path / "cooldown.json", history_path=history_path,
         last_check_path=tmp_path / "last_check.json",
+        candidates_path=tmp_path / "candidates.json",
     )
 
     message = sent[0][1]
@@ -285,12 +291,127 @@ def test_run_omits_risk_fields_when_atr_not_yet_computable(tmp_path, monkeypatch
         watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 0),
         cooldown_path=tmp_path / "cooldown.json", history_path=history_path,
         last_check_path=tmp_path / "last_check.json",
+        candidates_path=tmp_path / "candidates.json",
     )
 
     assert "손절" not in sent[0][1]
     event = load_signal_history(history_path)[0]
     assert event["stop_price"] is None
     assert event["position_pct"] is None
+
+
+def _write_candidates(tmp_path, candidates):
+    path = tmp_path / "candidates.json"
+    path.write_text(json.dumps(candidates), encoding="utf-8")
+    return path
+
+
+def _fake_fetch_daily_with_mover(mover_ticker, jump_close=20.0):
+    def fake_fetch_daily(ticker, period="1y"):
+        if ticker == mover_ticker:
+            closes = [10.0] * 19 + [jump_close]  # a jump comfortably past any ATR-based bar
+            return pd.DataFrame({"High": [c + 1 for c in closes], "Low": [c - 1 for c in closes], "Close": closes})
+        return pd.DataFrame({"Close": [100.0]})
+
+    return fake_fetch_daily
+
+
+def test_run_alerts_on_sharp_move_for_universe_candidate(tmp_path, monkeypatch):
+    watchlist_path = _write_watchlist(tmp_path, ["AAPL"])
+    candidates_path = _write_candidates(tmp_path, [
+        {"ticker": "MOVER", "name": "Mover Co", "exchange": "NASDAQ", "score": 4.0, "direction": "BUY",
+         "price": 10.0, "stop_price": None, "target_price": None, "position_pct": None,
+         "as_of": "2026-07-23T00:00:00+00:00"},
+    ])
+
+    monkeypatch.setattr(run_check, "is_market_open", lambda now: True)
+    monkeypatch.setattr(run_check, "fetch_vix", lambda period="1y": pd.DataFrame({"Close": [15.0] * 30}))
+    monkeypatch.setattr(run_check, "load_calibration_entry", _raise_not_found)
+    monkeypatch.setattr(run_check, "score_ticker", lambda *a, **k: (None, 0.0, None, []))  # watchlist stays quiet
+    monkeypatch.setattr(run_check, "fetch_daily", _fake_fetch_daily_with_mover("MOVER"))
+    monkeypatch.setenv("DISCORD_WEBHOOK_URL", "https://discord.example/webhook")
+
+    sent = []
+    monkeypatch.setattr(run_check, "send_discord_alert", lambda url, message: sent.append((url, message)))
+
+    mover_history_path = tmp_path / "mover_history.json"
+    run_check.run(
+        watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 0),
+        cooldown_path=tmp_path / "cooldown.json", history_path=tmp_path / "history.json",
+        last_check_path=tmp_path / "last_check.json", candidates_path=candidates_path,
+        mover_history_path=mover_history_path,
+    )
+
+    assert len(sent) == 1
+    assert "급등 알림 — MOVER" in sent[0][1]
+    assert "참고: 최근 발굴 스캔 스코어 BUY" in sent[0][1]
+
+    events = load_signal_history(mover_history_path)
+    assert len(events) == 1
+    assert events[0]["ticker"] == "MOVER"
+    assert events[0]["direction"] == "SURGE"
+
+
+def test_run_ignores_universe_candidate_without_a_sharp_move(tmp_path, monkeypatch):
+    watchlist_path = _write_watchlist(tmp_path, ["AAPL"])
+    candidates_path = _write_candidates(tmp_path, [
+        {"ticker": "QUIET", "name": "Quiet Co", "exchange": "NASDAQ", "score": 4.0, "direction": "BUY"},
+    ])
+
+    monkeypatch.setattr(run_check, "is_market_open", lambda now: True)
+    monkeypatch.setattr(run_check, "fetch_vix", lambda period="1y": pd.DataFrame({"Close": [15.0] * 30}))
+    monkeypatch.setattr(run_check, "load_calibration_entry", _raise_not_found)
+    monkeypatch.setattr(run_check, "score_ticker", lambda *a, **k: (None, 0.0, None, []))
+    # Flat price history for QUIET -- no sharp move to detect.
+    monkeypatch.setattr(run_check, "fetch_daily", lambda ticker, period="1y": pd.DataFrame({"Close": [10.0] * 20}))
+    monkeypatch.setenv("DISCORD_WEBHOOK_URL", "https://discord.example/webhook")
+
+    sent = []
+    monkeypatch.setattr(run_check, "send_discord_alert", lambda url, message: sent.append((url, message)))
+
+    run_check.run(
+        watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 0),
+        cooldown_path=tmp_path / "cooldown.json", history_path=tmp_path / "history.json",
+        last_check_path=tmp_path / "last_check.json", candidates_path=candidates_path,
+        mover_history_path=tmp_path / "mover_history.json",
+    )
+
+    assert sent == []
+
+
+def test_run_suppresses_repeat_mover_alert_within_cooldown(tmp_path, monkeypatch):
+    watchlist_path = _write_watchlist(tmp_path, ["AAPL"])
+    candidates_path = _write_candidates(tmp_path, [
+        {"ticker": "MOVER", "name": "Mover Co", "exchange": "NASDAQ", "score": 4.0, "direction": "BUY"},
+    ])
+
+    monkeypatch.setattr(run_check, "is_market_open", lambda now: True)
+    monkeypatch.setattr(run_check, "fetch_vix", lambda period="1y": pd.DataFrame({"Close": [15.0] * 30}))
+    monkeypatch.setattr(run_check, "load_calibration_entry", _raise_not_found)
+    monkeypatch.setattr(run_check, "score_ticker", lambda *a, **k: (None, 0.0, None, []))
+    monkeypatch.setattr(run_check, "fetch_daily", _fake_fetch_daily_with_mover("MOVER"))
+    monkeypatch.setenv("DISCORD_WEBHOOK_URL", "https://discord.example/webhook")
+
+    sent = []
+    monkeypatch.setattr(run_check, "send_discord_alert", lambda url, message: sent.append((url, message)))
+
+    cooldown_path = tmp_path / "cooldown.json"
+    mover_history_path = tmp_path / "mover_history.json"
+    run_check.run(
+        watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 0),
+        cooldown_path=cooldown_path, history_path=tmp_path / "history.json",
+        last_check_path=tmp_path / "last_check.json", candidates_path=candidates_path,
+        mover_history_path=mover_history_path,
+    )
+    run_check.run(
+        watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 15),
+        cooldown_path=cooldown_path, history_path=tmp_path / "history.json",
+        last_check_path=tmp_path / "last_check.json", candidates_path=candidates_path,
+        mover_history_path=mover_history_path,
+    )
+
+    assert len(sent) == 1
+    assert len(load_signal_history(mover_history_path)) == 1
 
 
 def test_run_treats_insufficient_data_marker_as_no_calibration(tmp_path, monkeypatch):
@@ -319,6 +440,7 @@ def test_run_treats_insufficient_data_marker_as_no_calibration(tmp_path, monkeyp
         cooldown_path=tmp_path / "cooldown.json",
         history_path=tmp_path / "history.json",
         last_check_path=tmp_path / "last_check.json",
+        candidates_path=tmp_path / "candidates.json",
     )
 
     assert captured_calibration["value"] is None

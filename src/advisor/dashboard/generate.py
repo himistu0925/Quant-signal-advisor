@@ -155,7 +155,7 @@ def _signal_rows(signals: list) -> str:
 
 def _candidates_rows(candidates: list) -> str:
     if not candidates:
-        return "<tr><td colspan='5'>아직 발굴된 후보가 없습니다.</td></tr>"
+        return "<tr><td colspan='6'>아직 발굴된 후보가 없습니다.</td></tr>"
 
     rows = []
     for c in candidates:
@@ -166,6 +166,7 @@ def _candidates_rows(candidates: list) -> str:
             f"<td>{c.get('exchange', '-')}</td>"
             f"<td>{c.get('direction', '-')}</td>"
             f"<td>{c.get('score', 0):+.2f}</td>"
+            f"<td>{_risk_cell(c)}</td>"
             "</tr>"
         )
     return "\n".join(rows)
@@ -221,7 +222,7 @@ def render_html(data: dict) -> str:
 <h2>자동 발굴 후보 (전체 미국 상장 종목/ETF 스캔)</h2>
 <p class="meta">기준 시각: {candidates_as_of} · 워치리스트 미포함 종목 중 유동성 필터 통과 + 현재 매수/매도 신호가 있는 상위 종목 (참고용, 알림 발송 대상 아님)</p>
 <table>
-<tr><th>종목</th><th>이름</th><th>거래소</th><th>방향</th><th>스코어</th></tr>
+<tr><th>종목</th><th>이름</th><th>거래소</th><th>방향</th><th>스코어</th><th>리스크 (ATR 기준)</th></tr>
 {candidates_rows}
 </table>
 </body>

@@ -1,11 +1,12 @@
 import os
 from datetime import datetime
+from pathlib import Path
 
 import pandas as pd
 import requests
 
 from advisor.alerts.cooldown import DEFAULT_STATE_PATH, CooldownTracker
-from advisor.alerts.discord import format_signal_message, send_discord_alert
+from advisor.alerts.discord import format_move_alert_message, format_signal_message, send_discord_alert
 from advisor.alerts.history import DEFAULT_HISTORY_PATH, append_signal_event
 from advisor.alerts.last_check import DEFAULT_LAST_CHECK_PATH, save_last_check
 from advisor.alerts.market_hours import NY_TZ, is_market_open
@@ -13,9 +14,16 @@ from advisor.backtest.calibration_store import InsufficientDataMarker, load_cali
 from advisor.data.finnhub_client import FinnhubConfigError
 from advisor.data.yfinance_client import fetch_daily, fetch_vix
 from advisor.indicators import split_registered
+from advisor.live.movers import detect_sharp_move
 from advisor.market_signals.news_sentiment import sentiment_for_ticker
 from advisor.market_signals.vix_filter import VixFilter
-from advisor.risk.position_sizing import compute_risk_levels, position_size_pct, position_size_shares
+from advisor.risk.position_sizing import (
+    compute_risk_levels,
+    parse_account_equity,
+    position_size_pct,
+    position_size_shares,
+)
+from advisor.universe.store import DEFAULT_CANDIDATES_PATH, load_candidates
 from advisor.watchlist import load_watchlist
 
 DEFAULT_BUY_THRESHOLD = 3.0
@@ -23,6 +31,8 @@ DEFAULT_SELL_THRESHOLD = -3.0
 VOLUME_MULTIPLIER = 1.5
 NEWS_SENTIMENT_WEIGHT = 0.5  # plan.md section 8/9: secondary confirmation, not a full vote
 VIX_FEAR_THRESHOLD_PENALTY = 1.0  # section 8: raise the buy bar when VIX is in extreme_fear
+DEFAULT_MOVER_HISTORY_PATH = Path("data/mover_history.json")
+MOVER_LOOKBACK_PERIOD = "3mo"
 
 
 def score_ticker(df: pd.DataFrame, calibration=None, vix_state=None, news_result=None):
@@ -68,25 +78,14 @@ def score_ticker(df: pd.DataFrame, calibration=None, vix_state=None, news_result
     return direction, score, threshold, reasons
 
 
-def _parse_account_equity(raw: str | None) -> float | None:
-    """ACCOUNT_EQUITY is an optional secret (same os.environ.get pattern as
-    FINNHUB_API_KEY) -- absent by default, in which case position sizing
-    stays in %-of-equity terms with no real dollar figure anywhere."""
-    if not raw:
-        return None
-    try:
-        value = float(raw)
-    except ValueError:
-        return None
-    return value if value > 0 else None
-
-
 def run(
     watchlist_path: str = "config/watchlist.yaml",
     now: datetime | None = None,
     cooldown_path=DEFAULT_STATE_PATH,
     history_path=DEFAULT_HISTORY_PATH,
     last_check_path=DEFAULT_LAST_CHECK_PATH,
+    candidates_path=DEFAULT_CANDIDATES_PATH,
+    mover_history_path=DEFAULT_MOVER_HISTORY_PATH,
 ) -> None:
     # datetime.now() with no tz would be naive local time -- wrong on a UTC
     # GitHub Actions runner, since is_market_open() treats naive input as
@@ -101,7 +100,7 @@ def run(
         return
 
     webhook_url = os.environ.get("DISCORD_WEBHOOK_URL")
-    account_equity = _parse_account_equity(os.environ.get("ACCOUNT_EQUITY"))
+    account_equity = parse_account_equity(os.environ.get("ACCOUNT_EQUITY"))
     watchlist = load_watchlist(watchlist_path)
     vix_state = VixFilter().evaluate(fetch_vix(period="1y"))
     cooldown = CooldownTracker(path=cooldown_path)
@@ -182,6 +181,53 @@ def run(
             path=history_path,
         )
         cooldown.record(ticker, direction, now)
+
+    # Auto-discovered universe candidates (scripts/scan_universe.py, nightly)
+    # aren't Discord-alerted on their own -- but if one of them moves sharply
+    # *during* the trading day, that's worth flagging right then rather than
+    # waiting for the next nightly scan to notice it.
+    for candidate in load_candidates(candidates_path):
+        ticker = candidate["ticker"]
+        df = fetch_daily(ticker, period=MOVER_LOOKBACK_PERIOD)
+        move = detect_sharp_move(df)
+        if move is None:
+            continue
+        if not cooldown.should_alert(ticker, move.direction, now):
+            continue
+
+        shares = None
+        if account_equity is not None and candidate.get("position_pct") is not None:
+            shares = position_size_shares(account_equity, candidate["position_pct"], move.price)
+
+        message = format_move_alert_message(
+            ticker=ticker,
+            name=candidate.get("name", ticker),
+            direction=move.direction,
+            price=move.price,
+            pct_change=move.pct_change,
+            timestamp_et=now.isoformat(),
+            scan_direction=candidate.get("direction"),
+            scan_score=candidate.get("score"),
+            stop_price=candidate.get("stop_price"),
+            target_price=candidate.get("target_price"),
+            position_pct=candidate.get("position_pct"),
+            shares=shares,
+        )
+
+        if webhook_url:
+            send_discord_alert(webhook_url, message)
+
+        append_signal_event(
+            {
+                "ticker": ticker,
+                "direction": move.direction,
+                "pct_change": move.pct_change,
+                "price": move.price,
+                "timestamp": now.isoformat(),
+            },
+            path=mover_history_path,
+        )
+        cooldown.record(ticker, move.direction, now)
 
     cooldown.save()
     save_last_check(now.isoformat(), market_open=True, tickers=last_check_scores, path=last_check_path)

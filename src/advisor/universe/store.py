@@ -2,8 +2,6 @@ import json
 from dataclasses import asdict
 from pathlib import Path
 
-from advisor.universe.screen import Candidate
-
 DEFAULT_CANDIDATES_PATH = Path("data/universe_candidates.json")
 
 
@@ -14,9 +12,14 @@ def load_candidates(path: Path = DEFAULT_CANDIDATES_PATH) -> list:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def save_candidates(candidates: list[Candidate], as_of: str, path: Path = DEFAULT_CANDIDATES_PATH) -> None:
-    """Only ever called after a fully successful scan -- a partial/failed
-    run should leave the previous scan's candidates in place rather than
+def save_candidates(candidates: list, as_of: str, path: Path = DEFAULT_CANDIDATES_PATH) -> None:
+    """candidates is a list[universe.screen.Candidate], typed loosely as
+    `list` here (not importing Candidate) to avoid a circular import --
+    screen.py imports live.run_check.score_ticker, and run_check.py in turn
+    reads this candidates file to check for sharp intraday moves (movers.py).
+
+    Only ever called after a fully successful scan -- a partial/failed run
+    should leave the previous scan's candidates in place rather than
     overwrite them with an incomplete result (mirrors calibration_store's
     insufficient-data handling elsewhere in this project)."""
     path = Path(path)

@@ -64,3 +64,18 @@ def position_size_shares(equity: float, position_pct: float, entry_price: float)
     if entry_price <= 0:
         return 0
     return int((equity * position_pct) // entry_price)
+
+
+def parse_account_equity(raw: str | None) -> float | None:
+    """ACCOUNT_EQUITY is an optional secret (same os.environ.get pattern as
+    FINNHUB_API_KEY) -- absent by default, in which case position sizing
+    stays in %-of-equity terms with no real dollar figure anywhere. Shared
+    by every entry point that can compute a position size (live/run_check.py,
+    scripts/scan_universe.py)."""
+    if not raw:
+        return None
+    try:
+        value = float(raw)
+    except ValueError:
+        return None
+    return value if value > 0 else None

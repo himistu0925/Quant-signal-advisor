@@ -1,4 +1,5 @@
 import pandas as pd
+import pytest
 
 from advisor.universe import screen as screen_module
 from advisor.universe.listing import Listing
@@ -60,6 +61,34 @@ def test_rank_candidates_sorts_by_absolute_score_descending(monkeypatch):
     candidates = rank_candidates(listings, top_n=10)
 
     assert [c.ticker for c in candidates] == ["STRONG", "WEAK"]  # |−8.0| > |3.5| regardless of direction
+
+
+def test_rank_candidates_populates_risk_levels_for_buy_only(monkeypatch):
+    listings = [_listing("BUYME"), _listing("SELLME")]
+    # Constant High=11/Low=9/Close=10 -> ATR(14) converges to 2.0 (see test_risk_atr.py)
+    buy_df = pd.DataFrame({"High": [11.0] * 30, "Low": [9.0] * 30, "Close": [10.0] * 30})
+    sell_df = pd.DataFrame({"High": [11.0] * 30, "Low": [9.0] * 30, "Close": [10.0] * 30})
+    bars = {"BUYME": buy_df, "SELLME": sell_df}
+    monkeypatch.setattr(screen_module, "fetch_batch_daily", lambda tickers, period=None: bars)
+
+    def fake_score_ticker(df):
+        return ("BUY", 5.0, 3.0, []) if df is buy_df else ("SELL", -5.0, -3.0, [])
+
+    monkeypatch.setattr(screen_module, "score_ticker", fake_score_ticker)
+
+    candidates = rank_candidates(listings)
+    by_ticker = {c.ticker: c for c in candidates}
+
+    buy = by_ticker["BUYME"]
+    assert buy.price == pytest.approx(10.0)
+    assert buy.stop_price == pytest.approx(6.0)  # ATR(2.0) * default 2.0x multiplier
+    assert buy.target_price == pytest.approx(18.0)
+    assert buy.position_pct is not None
+
+    sell = by_ticker["SELLME"]
+    assert sell.stop_price is None
+    assert sell.target_price is None
+    assert sell.position_pct is None
 
 
 def test_rank_candidates_respects_top_n(monkeypatch):
