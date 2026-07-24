@@ -20,6 +20,14 @@ on:
 permissions:
   contents: write
 
+# Shared across every workflow that commits to config/, calibration/, data/,
+# state/, or docs/ -- queues instead of racing on git push (a real
+# possibility once add_ticker.yml/remove_ticker.yml can fire on demand
+# during market hours, overlapping with this schedule).
+concurrency:
+  group: repo-state-write
+  cancel-in-progress: false
+
 jobs:
   check-signals:
     runs-on: ubuntu-latest

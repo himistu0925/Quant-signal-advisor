@@ -3,6 +3,7 @@ from dataclasses import asdict
 from pathlib import Path
 
 DEFAULT_CANDIDATES_PATH = Path("data/universe_candidates.json")
+DEFAULT_SEARCH_INDEX_PATH = Path("docs/tickers.json")
 
 
 def load_candidates(path: Path = DEFAULT_CANDIDATES_PATH) -> list:
@@ -26,3 +27,16 @@ def save_candidates(candidates: list, as_of: str, path: Path = DEFAULT_CANDIDATE
     path.parent.mkdir(parents=True, exist_ok=True)
     payload = [{**asdict(candidate), "as_of": as_of} for candidate in candidates]
     path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+
+def build_search_index(listings: list) -> list:
+    """Array-of-arrays, not array-of-objects -- for ~12,480 rows this avoids
+    repeating four JSON keys per row, meaningfully shrinking the file the
+    dashboard's ticker search has to fetch."""
+    return [[l.symbol, l.name, l.exchange, int(l.is_etf)] for l in listings]
+
+
+def save_search_index(listings: list, path: Path = DEFAULT_SEARCH_INDEX_PATH) -> None:
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(build_search_index(listings), separators=(",", ":")), encoding="utf-8")

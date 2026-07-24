@@ -69,16 +69,31 @@ def _top_indicators(weights: dict, n: int = 3) -> str:
     return ", ".join(shown) if shown else "-"
 
 
+def _direction_badge(direction: str) -> str:
+    cls = {"BUY": "badge-buy", "SELL": "badge-sell"}.get(direction, "badge-neutral")
+    return f'<span class="badge {cls}">{direction}</span>'
+
+
+def _remove_button(ticker: str) -> str:
+    return f'<button class="btn-remove" data-ticker="{ticker}">삭제</button>'
+
+
 def _watchlist_rows(tickers: list) -> str:
     rows = []
     for entry in tickers:
         ticker = entry["ticker"]
         calibration = entry["calibration"]
         if calibration is None:
-            rows.append(f"<tr><td>{ticker}</td><td colspan='6'>캘리브레이션 없음 (기본값 사용)</td></tr>")
+            rows.append(
+                f"<tr><td>{ticker}</td><td colspan='6'>캘리브레이션 없음 (기본값 사용)</td>"
+                f"<td>{_remove_button(ticker)}</td></tr>"
+            )
             continue
         if calibration["status"] == "insufficient_data":
-            rows.append(f"<tr><td>{ticker}</td><td colspan='6'>데이터 부족 (상장 초기 등 — 기본값 사용)</td></tr>")
+            rows.append(
+                f"<tr><td>{ticker}</td><td colspan='6'>데이터 부족 (상장 초기 등 — 기본값 사용)</td>"
+                f"<td>{_remove_button(ticker)}</td></tr>"
+            )
             continue
 
         m = calibration["test_metrics"]
@@ -91,6 +106,7 @@ def _watchlist_rows(tickers: list) -> str:
             f"<td>{m['sharpe_ratio']:.2f}</td>"
             f"<td>{m['total_trades']}</td>"
             f"<td>{_format_pct(m['excess_return'])}</td>"
+            f"<td>{_remove_button(ticker)}</td>"
             "</tr>"
         )
     return "\n".join(rows)
@@ -113,7 +129,7 @@ def _last_check_section(last_check: dict | None) -> str:
         direction = info.get("direction") or "중립"
         score = info.get("score")
         score_str = f"{score:.2f}" if isinstance(score, (int, float)) else "-"
-        rows.append(f"<tr><td>{ticker}</td><td>{score_str}</td><td>{direction}</td></tr>")
+        rows.append(f"<tr><td>{ticker}</td><td>{score_str}</td><td>{_direction_badge(direction)}</td></tr>")
 
     return (
         f"<p>마지막 체크: {timestamp}</p>"
@@ -172,6 +188,177 @@ def _candidates_rows(candidates: list) -> str:
     return "\n".join(rows)
 
 
+# Built as a plain (non-f) string, not an f-string: the JS below is full of
+# literal `{`/`}` (object literals, template-literal `${...}` interpolation)
+# that would otherwise all need doubling to survive Python's f-string
+# parsing. __CURRENT_WATCHLIST__ is substituted via a plain .replace() call
+# instead, so none of that escaping is needed.
+_INTERACTIVE_PANEL_TEMPLATE = """
+<h2>워치리스트 관리</h2>
+<details>
+  <summary>⚙ 설정 (GitHub 토큰)</summary>
+  <p class="meta">
+    종목 추가/삭제를 실제로 저장소에 반영하려면 이 저장소 전용 GitHub Fine-grained
+    Personal Access Token이 필요합니다 (Contents: Read/Write, Actions: Read/Write).
+    토큰은 이 브라우저에만 저장되고 서버로 전송되지 않습니다.
+  </p>
+  <input type="password" id="pat-input" placeholder="github_pat_...">
+  <button id="pat-save">저장</button>
+  <button id="pat-clear">삭제</button>
+  <p class="meta" id="pat-status"></p>
+</details>
+
+<div class="search-panel">
+  <input type="text" id="ticker-search" placeholder="티커 또는 종목명 검색 (예: AAPL, Apple)">
+  <div id="search-results"></div>
+</div>
+
+<div id="op-status"></div>
+
+<script>
+const OWNER = "himistu0925";
+const REPO = "Quant-signal-advisor";
+const MAX_TICKERS = 5;
+const CURRENT_WATCHLIST = __CURRENT_WATCHLIST__;
+const API = `https://api.github.com/repos/${OWNER}/${REPO}`;
+
+function getPat() { return localStorage.getItem("qsa_gh_pat") || ""; }
+
+document.getElementById("pat-save").addEventListener("click", () => {
+  const v = document.getElementById("pat-input").value.trim();
+  if (!v) return;
+  localStorage.setItem("qsa_gh_pat", v);
+  document.getElementById("pat-input").value = "";
+  document.getElementById("pat-status").textContent = "토큰이 저장되었습니다.";
+});
+document.getElementById("pat-clear").addEventListener("click", () => {
+  localStorage.removeItem("qsa_gh_pat");
+  document.getElementById("pat-status").textContent = "토큰이 삭제되었습니다.";
+});
+
+async function ghFetch(path, options) {
+  options = options || {};
+  const pat = getPat();
+  if (!pat) throw new Error("먼저 위 설정에서 GitHub 토큰을 등록해주세요.");
+  const headers = Object.assign(
+    {
+      "Authorization": `Bearer ${pat}`,
+      "Accept": "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+    },
+    options.body ? { "Content-Type": "application/json" } : {},
+    options.headers || {}
+  );
+  return fetch(`${API}${path}`, Object.assign({}, options, { headers }));
+}
+
+function showStatus(html) {
+  const el = document.getElementById("op-status");
+  el.classList.add("visible");
+  el.innerHTML = html;
+}
+
+async function dispatchAndPoll(workflow, ticker, button) {
+  button.disabled = true;
+  showStatus(`⏳ ${ticker} 처리 중... (보통 1~3분 정도 걸려요)`);
+  try {
+    const dispatchRes = await ghFetch(`/actions/workflows/${workflow}/dispatches`, {
+      method: "POST",
+      body: JSON.stringify({ ref: "master", inputs: { ticker: ticker }, return_run_details: true }),
+    });
+    if (!dispatchRes.ok && dispatchRes.status !== 204) {
+      const err = await dispatchRes.text();
+      throw new Error(`실행 요청 실패 (${dispatchRes.status}): ${err}`);
+    }
+
+    let runId = null;
+    if (dispatchRes.status === 200) {
+      const body = await dispatchRes.json();
+      runId = body.workflow_run_id;
+    }
+
+    if (!runId) {
+      // Defensive fallback for older API behavior (bare 204, no run id):
+      // find the newest run created at/after dispatch time.
+      const dispatchedAt = Date.now();
+      for (let i = 0; i < 10 && !runId; i++) {
+        await new Promise(r => setTimeout(r, 3000));
+        const runsRes = await ghFetch(`/actions/workflows/${workflow}/runs?event=workflow_dispatch&per_page=5`);
+        const runsBody = await runsRes.json();
+        const fresh = (runsBody.workflow_runs || []).find(r => new Date(r.created_at).getTime() >= dispatchedAt - 5000);
+        if (fresh) runId = fresh.id;
+      }
+      if (!runId) throw new Error("실행을 찾지 못했습니다. GitHub Actions 탭에서 직접 확인해주세요.");
+    }
+
+    const deadline = Date.now() + 5 * 60 * 1000;
+    let run = null;
+    while (Date.now() < deadline) {
+      const runRes = await ghFetch(`/actions/runs/${runId}`);
+      run = await runRes.json();
+      if (run.status === "completed") break;
+      await new Promise(r => setTimeout(r, 4000));
+    }
+
+    if (!run || run.status !== "completed") {
+      showStatus(`⏱ 시간이 오래 걸리고 있어요. <a href="https://github.com/${OWNER}/${REPO}/actions" target="_blank">Actions 탭</a>에서 직접 확인해주세요.`);
+      return;
+    }
+
+    if (run.conclusion === "success") {
+      showStatus(`✅ ${ticker} 처리 완료! <button onclick="location.reload()">새로고침</button>`);
+    } else {
+      showStatus(`❌ 실패했습니다. <a href="${run.html_url}" target="_blank">실행 로그 보기</a>`);
+    }
+  } catch (e) {
+    showStatus(`❌ 오류: ${e.message}`);
+  } finally {
+    button.disabled = false;
+  }
+}
+
+document.querySelectorAll(".btn-remove").forEach(btn => {
+  btn.addEventListener("click", () => dispatchAndPoll("remove_ticker.yml", btn.dataset.ticker, btn));
+});
+
+let tickerIndex = null;
+async function loadTickerIndex() {
+  if (tickerIndex) return tickerIndex;
+  const res = await fetch("tickers.json");
+  tickerIndex = await res.json();
+  return tickerIndex;
+}
+
+const searchInput = document.getElementById("ticker-search");
+const resultsEl = document.getElementById("search-results");
+searchInput.addEventListener("input", async () => {
+  const q = searchInput.value.trim().toUpperCase();
+  resultsEl.innerHTML = "";
+  if (!q) return;
+  const index = await loadTickerIndex();
+  const matches = index.filter(row => row[0].startsWith(q) || row[1].toUpperCase().includes(q)).slice(0, 20);
+  for (const [sym, name, exchange] of matches) {
+    const row = document.createElement("div");
+    row.className = "result-row";
+    const already = CURRENT_WATCHLIST.includes(sym);
+    const full = CURRENT_WATCHLIST.length >= MAX_TICKERS;
+    const label = already ? "이미 있음" : (full ? "5개 꽉 참" : "추가");
+    const disabledAttr = (already || full) ? "disabled" : "";
+    row.innerHTML = `<span>${sym} — ${name} (${exchange})</span><button class="btn-add" data-ticker="${sym}" ${disabledAttr}>${label}</button>`;
+    resultsEl.appendChild(row);
+  }
+  resultsEl.querySelectorAll(".btn-add").forEach(btn => {
+    btn.addEventListener("click", () => dispatchAndPoll("add_ticker.yml", btn.dataset.ticker, btn));
+  });
+});
+</script>
+"""
+
+
+def _interactive_panel(current_tickers: list) -> str:
+    return _INTERACTIVE_PANEL_TEMPLATE.replace("__CURRENT_WATCHLIST__", json.dumps(current_tickers))
+
+
 def render_html(data: dict) -> str:
     watchlist_rows = _watchlist_rows(data["tickers"])
     signal_rows = _signal_rows(data["recent_signals"])
@@ -179,6 +366,7 @@ def render_html(data: dict) -> str:
     candidates = data.get("universe_candidates") or []
     candidates_rows = _candidates_rows(candidates)
     candidates_as_of = candidates[0].get("as_of", "-") if candidates else "-"
+    interactive_panel = _interactive_panel([t["ticker"] for t in data["tickers"]])
 
     return f"""<!doctype html>
 <html lang="ko">
@@ -193,10 +381,30 @@ def render_html(data: dict) -> str:
   th, td {{ border: 1px solid #ddd; padding: 0.5rem; text-align: left; }}
   th {{ background: #f5f5f5; }}
   .meta {{ color: #666; font-size: 0.85rem; }}
+  .badge {{ display: inline-block; padding: 0.15rem 0.6rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }}
+  .badge-buy {{ background: #d1fae5; color: #065f46; }}
+  .badge-sell {{ background: #fee2e2; color: #991b1b; }}
+  .badge-neutral {{ background: #e5e7eb; color: #374151; }}
+  button {{ cursor: pointer; border: 1px solid #ccc; background: #fff; border-radius: 6px; padding: 0.3rem 0.8rem; font-size: 0.85rem; }}
+  button:disabled {{ cursor: not-allowed; opacity: 0.5; }}
+  input[type=text], input[type=password] {{ width: 100%; max-width: 380px; padding: 0.4rem; border: 1px solid #ccc; border-radius: 6px; font-size: 0.9rem; }}
+  details {{ border: 1px solid #ddd; border-radius: 8px; padding: 0.6rem 1rem; margin: 0.5rem 0; }}
+  .search-panel {{ margin: 1rem 0; }}
+  .result-row {{ display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid #ddd; gap: 1rem; }}
+  #op-status {{ display: none; margin: 1rem 0; padding: 0.75rem 1rem; border-radius: 8px; background: #f5f5f5; }}
+  #op-status.visible {{ display: block; }}
   @media (prefers-color-scheme: dark) {{
     body {{ background: #111; color: #eee; }}
     th {{ background: #222; }}
     th, td {{ border-color: #333; }}
+    button {{ background: #222; border-color: #444; color: #eee; }}
+    input[type=text], input[type=password] {{ background: #1a1a1a; border-color: #444; color: #eee; }}
+    details {{ border-color: #333; }}
+    .result-row {{ border-color: #333; }}
+    #op-status {{ background: #222; }}
+    .badge-buy {{ background: #064e3b; color: #6ee7b7; }}
+    .badge-sell {{ background: #7f1d1d; color: #fca5a5; }}
+    .badge-neutral {{ background: #374151; color: #d1d5db; }}
   }}
 </style>
 </head>
@@ -209,9 +417,10 @@ def render_html(data: dict) -> str:
 
 <h2>워치리스트 현황</h2>
 <table>
-<tr><th>종목</th><th>매수/매도 임계값</th><th>주요 지표</th><th>검증구간 누적수익</th><th>샤프비율</th><th>거래수</th><th>벤치마크 초과수익</th></tr>
+<tr><th>종목</th><th>매수/매도 임계값</th><th>주요 지표</th><th>검증구간 누적수익</th><th>샤프비율</th><th>거래수</th><th>벤치마크 초과수익</th><th>관리</th></tr>
 {watchlist_rows}
 </table>
+{interactive_panel}
 
 <h2>최근 신호 히스토리</h2>
 <table>

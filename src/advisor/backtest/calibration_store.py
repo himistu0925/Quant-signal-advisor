@@ -62,6 +62,10 @@ def load_calibration(ticker: str, directory: Path = DEFAULT_CALIBRATION_DIR) -> 
     )
 
 
+def delete_calibration(ticker: str, directory: Path = DEFAULT_CALIBRATION_DIR) -> None:
+    (Path(directory) / f"{ticker}.json").unlink(missing_ok=True)
+
+
 def load_calibration_entry(ticker: str, directory: Path = DEFAULT_CALIBRATION_DIR):
     """Returns whichever was actually saved for this ticker: a full
     CalibrationResult or an InsufficientDataMarker. Raises FileNotFoundError

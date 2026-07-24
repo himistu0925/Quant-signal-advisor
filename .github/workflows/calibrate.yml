@@ -13,6 +13,12 @@ on:
 permissions:
   contents: write
 
+# See schedule.yml for why this group is shared across every workflow that
+# commits repo state.
+concurrency:
+  group: repo-state-write
+  cancel-in-progress: false
+
 jobs:
   calibrate:
     runs-on: ubuntu-latest

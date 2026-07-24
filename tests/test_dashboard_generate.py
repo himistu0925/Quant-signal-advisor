@@ -198,6 +198,23 @@ def test_render_html_shows_no_candidates_message_when_empty():
     assert "아직 발굴된 후보가 없습니다" in html
 
 
+def test_render_html_includes_remove_button_for_watchlist_ticker():
+    data = {"generated_at": "2026-07-23T10:00:00", "tickers": [{"ticker": "AAPL", "calibration": None}], "recent_signals": []}
+    html = render_html(data)
+
+    assert 'data-ticker="AAPL"' in html
+    assert "btn-remove" in html
+
+
+def test_render_html_includes_search_and_settings_panel():
+    data = {"generated_at": "2026-07-23T10:00:00", "tickers": [{"ticker": "AAPL", "calibration": None}], "recent_signals": []}
+    html = render_html(data)
+
+    assert 'id="ticker-search"' in html
+    assert 'id="pat-input"' in html
+    assert '["AAPL"]' in html  # CURRENT_WATCHLIST injected as JSON
+
+
 def test_generate_writes_index_html_and_data_json(tmp_path):
     watchlist_path = _write_watchlist(tmp_path, ["AAPL"])
     output_dir = tmp_path / "docs"

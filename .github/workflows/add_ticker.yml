@@ -1,0 +1,55 @@
+name: Add Ticker to Watchlist
+
+on:
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: 'Ticker symbol to add (e.g. AAPL)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+# See schedule.yml for why this group is shared across every workflow that
+# commits repo state.
+concurrency:
+  group: repo-state-write
+  cancel-in-progress: false
+
+jobs:
+  add-ticker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -e .
+
+      - name: Add ticker and calibrate
+        env:
+          # Never splice ${{ inputs.ticker }} directly into a run: string --
+          # that's GitHub's documented script-injection footgun for
+          # untrusted workflow_dispatch inputs. Routing through env: makes
+          # the shell treat it as inert data instead of command text.
+          TICKER_INPUT: ${{ inputs.ticker }}
+        run: python scripts/add_ticker.py "$TICKER_INPUT"
+
+      - name: Regenerate dashboard
+        run: python scripts/generate_dashboard.py
+
+      - name: Commit changes
+        env:
+          # Same script-injection reasoning as the step above -- keep the
+          # raw input out of the run: string.
+          TICKER_INPUT: ${{ inputs.ticker }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add config/watchlist.yaml calibration/ docs/
+          git diff --staged --quiet || git commit -m "Add $TICKER_INPUT to watchlist [skip ci]"
+          git push

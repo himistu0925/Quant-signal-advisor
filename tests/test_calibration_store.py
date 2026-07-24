@@ -1,5 +1,5 @@
 from advisor.backtest.calibration import CalibrationResult
-from advisor.backtest.calibration_store import load_calibration, save_calibration
+from advisor.backtest.calibration_store import delete_calibration, load_calibration, save_calibration
 from advisor.backtest.metrics import PerformanceMetrics
 
 
@@ -35,3 +35,23 @@ def test_save_and_load_calibration_roundtrip(tmp_path):
     assert loaded.buy_threshold == 3.0
     assert loaded.train_metrics.sharpe_ratio == 0.2
     assert loaded.test_metrics.total_trades == 2
+
+
+def test_delete_calibration_removes_file(tmp_path):
+    result = CalibrationResult(
+        weights={"RSI": 1.0},
+        buy_threshold=3.0,
+        sell_threshold=-3.0,
+        train_metrics=make_metrics(0.2),
+        test_metrics=make_metrics(0.1),
+    )
+    path = save_calibration("AAPL", result, directory=tmp_path)
+    assert path.exists()
+
+    delete_calibration("AAPL", directory=tmp_path)
+
+    assert not path.exists()
+
+
+def test_delete_calibration_missing_file_is_noop(tmp_path):
+    delete_calibration("NOPE", directory=tmp_path)  # should not raise
