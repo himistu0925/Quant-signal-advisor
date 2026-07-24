@@ -158,6 +158,46 @@ def test_render_html_includes_calibration_metrics():
     assert "15.0%" in html
 
 
+def test_build_dashboard_data_includes_universe_candidates(tmp_path):
+    watchlist_path = _write_watchlist(tmp_path, ["AAPL"])
+    candidates_path = tmp_path / "candidates.json"
+    candidates_path.write_text(
+        '[{"ticker": "NVDA", "name": "NVIDIA", "exchange": "NASDAQ", "direction": "BUY", '
+        '"score": 4.5, "as_of": "2026-07-24T06:00:00+00:00"}]',
+        encoding="utf-8",
+    )
+
+    data = build_dashboard_data(
+        watchlist_path, tmp_path / "calibration", tmp_path / "history.json",
+        tmp_path / "last_check.json", candidates_path,
+    )
+
+    assert data["universe_candidates"][0]["ticker"] == "NVDA"
+
+
+def test_render_html_shows_universe_candidates_section():
+    data = {
+        "generated_at": "2026-07-23T10:00:00",
+        "tickers": [], "recent_signals": [],
+        "universe_candidates": [
+            {"ticker": "NVDA", "name": "NVIDIA Corp", "exchange": "NASDAQ",
+             "direction": "BUY", "score": 4.5, "as_of": "2026-07-24T06:00:00+00:00"},
+        ],
+    }
+    html = render_html(data)
+
+    assert "NVDA" in html
+    assert "NVIDIA Corp" in html
+    assert "2026-07-24T06:00:00+00:00" in html
+
+
+def test_render_html_shows_no_candidates_message_when_empty():
+    data = {"generated_at": "2026-07-23T10:00:00", "tickers": [], "recent_signals": [], "universe_candidates": []}
+    html = render_html(data)
+
+    assert "아직 발굴된 후보가 없습니다" in html
+
+
 def test_generate_writes_index_html_and_data_json(tmp_path):
     watchlist_path = _write_watchlist(tmp_path, ["AAPL"])
     output_dir = tmp_path / "docs"

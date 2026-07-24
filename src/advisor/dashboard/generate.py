@@ -10,6 +10,7 @@ from advisor.backtest.calibration_store import (
     InsufficientDataMarker,
     load_calibration_entry,
 )
+from advisor.universe.store import DEFAULT_CANDIDATES_PATH, load_candidates
 from advisor.watchlist import load_watchlist
 
 DEFAULT_OUTPUT_DIR = Path("docs")
@@ -20,6 +21,7 @@ def build_dashboard_data(
     calibration_dir=DEFAULT_CALIBRATION_DIR,
     history_path=DEFAULT_HISTORY_PATH,
     last_check_path=DEFAULT_LAST_CHECK_PATH,
+    candidates_path=DEFAULT_CANDIDATES_PATH,
     generated_at: datetime | None = None,
 ) -> dict:
     watchlist = load_watchlist(watchlist_path)
@@ -53,6 +55,7 @@ def build_dashboard_data(
         "tickers": tickers,
         "recent_signals": recent_signals,
         "last_check": load_last_check(last_check_path),
+        "universe_candidates": load_candidates(candidates_path),
     }
 
 
@@ -121,9 +124,18 @@ def _last_check_section(last_check: dict | None) -> str:
     )
 
 
+def _risk_cell(s: dict) -> str:
+    # %-based only, by design -- signal_history.json is committed to the
+    # public repo, so no dollar amount or share count ever lands here.
+    stop, target, position_pct = s.get("stop_price"), s.get("target_price"), s.get("position_pct")
+    if stop is None or target is None or position_pct is None:
+        return "-"
+    return f"손절 ${stop:.2f} / 익절 ${target:.2f} ({position_pct:.1%})"
+
+
 def _signal_rows(signals: list) -> str:
     if not signals:
-        return "<tr><td colspan='5'>아직 발생한 신호가 없습니다.</td></tr>"
+        return "<tr><td colspan='6'>아직 발생한 신호가 없습니다.</td></tr>"
 
     rows = []
     for s in signals:
@@ -135,6 +147,25 @@ def _signal_rows(signals: list) -> str:
             f"<td>{s.get('direction', '-')}</td>"
             f"<td>${s.get('price', 0):.2f}</td>"
             f"<td>{reasons}</td>"
+            f"<td>{_risk_cell(s)}</td>"
+            "</tr>"
+        )
+    return "\n".join(rows)
+
+
+def _candidates_rows(candidates: list) -> str:
+    if not candidates:
+        return "<tr><td colspan='5'>아직 발굴된 후보가 없습니다.</td></tr>"
+
+    rows = []
+    for c in candidates:
+        rows.append(
+            "<tr>"
+            f"<td>{c.get('ticker', '-')}</td>"
+            f"<td>{c.get('name', '-')}</td>"
+            f"<td>{c.get('exchange', '-')}</td>"
+            f"<td>{c.get('direction', '-')}</td>"
+            f"<td>{c.get('score', 0):+.2f}</td>"
             "</tr>"
         )
     return "\n".join(rows)
@@ -144,6 +175,9 @@ def render_html(data: dict) -> str:
     watchlist_rows = _watchlist_rows(data["tickers"])
     signal_rows = _signal_rows(data["recent_signals"])
     last_check_section = _last_check_section(data.get("last_check"))
+    candidates = data.get("universe_candidates") or []
+    candidates_rows = _candidates_rows(candidates)
+    candidates_as_of = candidates[0].get("as_of", "-") if candidates else "-"
 
     return f"""<!doctype html>
 <html lang="ko">
@@ -180,8 +214,15 @@ def render_html(data: dict) -> str:
 
 <h2>최근 신호 히스토리</h2>
 <table>
-<tr><th>시각</th><th>종목</th><th>방향</th><th>가격</th><th>근거</th></tr>
+<tr><th>시각</th><th>종목</th><th>방향</th><th>가격</th><th>근거</th><th>리스크 (ATR 기준)</th></tr>
 {signal_rows}
+</table>
+
+<h2>자동 발굴 후보 (전체 미국 상장 종목/ETF 스캔)</h2>
+<p class="meta">기준 시각: {candidates_as_of} · 워치리스트 미포함 종목 중 유동성 필터 통과 + 현재 매수/매도 신호가 있는 상위 종목 (참고용, 알림 발송 대상 아님)</p>
+<table>
+<tr><th>종목</th><th>이름</th><th>거래소</th><th>방향</th><th>스코어</th></tr>
+{candidates_rows}
 </table>
 </body>
 </html>
@@ -193,10 +234,13 @@ def generate(
     calibration_dir=DEFAULT_CALIBRATION_DIR,
     history_path=DEFAULT_HISTORY_PATH,
     last_check_path=DEFAULT_LAST_CHECK_PATH,
+    candidates_path=DEFAULT_CANDIDATES_PATH,
     output_dir=DEFAULT_OUTPUT_DIR,
     generated_at: datetime | None = None,
 ) -> Path:
-    data = build_dashboard_data(watchlist_path, calibration_dir, history_path, last_check_path, generated_at)
+    data = build_dashboard_data(
+        watchlist_path, calibration_dir, history_path, last_check_path, candidates_path, generated_at
+    )
 
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)

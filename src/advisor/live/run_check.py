@@ -15,6 +15,7 @@ from advisor.data.yfinance_client import fetch_daily, fetch_vix
 from advisor.indicators import split_registered
 from advisor.market_signals.news_sentiment import sentiment_for_ticker
 from advisor.market_signals.vix_filter import VixFilter
+from advisor.risk.position_sizing import compute_risk_levels, position_size_pct, position_size_shares
 from advisor.watchlist import load_watchlist
 
 DEFAULT_BUY_THRESHOLD = 3.0
@@ -67,6 +68,19 @@ def score_ticker(df: pd.DataFrame, calibration=None, vix_state=None, news_result
     return direction, score, threshold, reasons
 
 
+def _parse_account_equity(raw: str | None) -> float | None:
+    """ACCOUNT_EQUITY is an optional secret (same os.environ.get pattern as
+    FINNHUB_API_KEY) -- absent by default, in which case position sizing
+    stays in %-of-equity terms with no real dollar figure anywhere."""
+    if not raw:
+        return None
+    try:
+        value = float(raw)
+    except ValueError:
+        return None
+    return value if value > 0 else None
+
+
 def run(
     watchlist_path: str = "config/watchlist.yaml",
     now: datetime | None = None,
@@ -87,6 +101,7 @@ def run(
         return
 
     webhook_url = os.environ.get("DISCORD_WEBHOOK_URL")
+    account_equity = _parse_account_equity(os.environ.get("ACCOUNT_EQUITY"))
     watchlist = load_watchlist(watchlist_path)
     vix_state = VixFilter().evaluate(fetch_vix(period="1y"))
     cooldown = CooldownTracker(path=cooldown_path)
@@ -116,6 +131,20 @@ def run(
             continue
 
         price = df["Close"].iloc[-1]
+
+        # Risk levels only apply to new entries (BUY) -- a SELL signal exits
+        # an existing holding, not a position to size. compute_risk_levels
+        # returns None when there isn't enough history yet for a real ATR.
+        stop_price = target_price = position_pct = shares = None
+        if direction == "BUY":
+            risk_levels = compute_risk_levels(df, price)
+            if risk_levels is not None:
+                stop_price = risk_levels.stop_price
+                target_price = risk_levels.target_price
+                position_pct = position_size_pct(risk_levels.stop_distance_pct)
+                if position_pct is not None and account_equity is not None:
+                    shares = position_size_shares(account_equity, position_pct, price)
+
         message = format_signal_message(
             ticker=ticker,
             direction=direction,
@@ -126,6 +155,10 @@ def run(
             vix_percentile=vix_state.percentile,
             score=score,
             threshold=threshold,
+            stop_price=stop_price,
+            target_price=target_price,
+            position_pct=position_pct,
+            shares=shares,
         )
 
         if webhook_url:
@@ -140,6 +173,11 @@ def run(
                 "score": score,
                 "threshold": threshold,
                 "reasons": reasons,
+                # %-based only -- never shares/dollar amounts (data/ is
+                # committed to the public repo; see plan's privacy boundary).
+                "stop_price": stop_price,
+                "target_price": target_price,
+                "position_pct": position_pct,
             },
             path=history_path,
         )

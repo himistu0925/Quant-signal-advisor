@@ -1,5 +1,7 @@
 import pandas as pd
 
+from advisor.risk.atr import true_range
+
 from .base import IndicatorResult
 from .registry import register
 
@@ -33,15 +35,12 @@ class ADXIndicator:
         plus_dm = ((up_move > down_move) & (up_move > 0)) * up_move
         minus_dm = ((down_move > up_move) & (down_move > 0)) * down_move
 
-        prev_close = close.shift(1)
-        true_range = pd.concat(
-            [high - low, (high - prev_close).abs(), (low - prev_close).abs()], axis=1
-        ).max(axis=1)
+        tr = true_range(df)
 
         alpha_di = 1 / self.di_period
         smoothed_plus_dm = plus_dm.ewm(alpha=alpha_di, adjust=False, min_periods=self.di_period).mean()
         smoothed_minus_dm = minus_dm.ewm(alpha=alpha_di, adjust=False, min_periods=self.di_period).mean()
-        smoothed_tr = true_range.ewm(alpha=alpha_di, adjust=False, min_periods=self.di_period).mean()
+        smoothed_tr = tr.ewm(alpha=alpha_di, adjust=False, min_periods=self.di_period).mean()
 
         plus_di = 100 * smoothed_plus_dm / smoothed_tr
         minus_di = 100 * smoothed_minus_dm / smoothed_tr

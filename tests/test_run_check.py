@@ -232,6 +232,67 @@ def test_run_suppresses_repeat_alert_within_cooldown(tmp_path, monkeypatch):
     assert len(load_signal_history(history_path)) == 1
 
 
+def test_run_adds_atr_risk_levels_to_buy_signal_without_leaking_shares(tmp_path, monkeypatch):
+    watchlist_path = _write_watchlist(tmp_path, ["AAPL"])
+    monkeypatch.setattr(run_check, "is_market_open", lambda now: True)
+
+    # Constant High=11/Low=9/Close=10 -> ATR(14) converges to 2.0 (see test_risk_atr.py),
+    # so with the module's default 2.0x multiplier the stop distance is 4.0.
+    df = pd.DataFrame({"High": [11.0] * 20, "Low": [9.0] * 20, "Close": [10.0] * 20})
+    monkeypatch.setattr(run_check, "fetch_daily", lambda ticker, period="1y": df)
+    monkeypatch.setattr(run_check, "fetch_vix", lambda period="1y": pd.DataFrame({"Close": [15.0] * 30}))
+    monkeypatch.setattr(run_check, "load_calibration_entry", _raise_not_found)
+    monkeypatch.setattr(run_check, "score_ticker", lambda *a, **k: ("BUY", 5.0, 3.0, ["reason1"]))
+    monkeypatch.setenv("DISCORD_WEBHOOK_URL", "https://discord.example/webhook")
+    monkeypatch.setenv("ACCOUNT_EQUITY", "10000")
+
+    sent = []
+    monkeypatch.setattr(run_check, "send_discord_alert", lambda url, message: sent.append((url, message)))
+
+    history_path = tmp_path / "history.json"
+    run_check.run(
+        watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 0),
+        cooldown_path=tmp_path / "cooldown.json", history_path=history_path,
+        last_check_path=tmp_path / "last_check.json",
+    )
+
+    message = sent[0][1]
+    assert "손절: $6.00" in message and "익절: $18.00" in message
+    assert "주)" in message  # ACCOUNT_EQUITY was set, so a share count is included here
+
+    event = load_signal_history(history_path)[0]
+    assert event["stop_price"] == pytest.approx(6.0)
+    assert event["target_price"] == pytest.approx(18.0)
+    assert event["position_pct"] is not None
+    assert "shares" not in event  # data/signal_history.json is committed publicly -- never leak this
+
+
+def test_run_omits_risk_fields_when_atr_not_yet_computable(tmp_path, monkeypatch):
+    watchlist_path = _write_watchlist(tmp_path, ["AAPL"])
+    monkeypatch.setattr(run_check, "is_market_open", lambda now: True)
+    monkeypatch.setattr(run_check, "fetch_daily", lambda ticker, period="1y": pd.DataFrame({"Close": [100.0]}))
+    monkeypatch.setattr(run_check, "fetch_vix", lambda period="1y": pd.DataFrame({"Close": [15.0] * 30}))
+    monkeypatch.setattr(run_check, "load_calibration_entry", _raise_not_found)
+    monkeypatch.setattr(run_check, "score_ticker", lambda *a, **k: ("BUY", 5.0, 3.0, ["reason1"]))
+    monkeypatch.setenv("DISCORD_WEBHOOK_URL", "https://discord.example/webhook")
+    monkeypatch.delenv("ACCOUNT_EQUITY", raising=False)
+
+    sent = []
+    monkeypatch.setattr(run_check, "send_discord_alert", lambda url, message: sent.append((url, message)))
+
+    history_path = tmp_path / "history.json"
+    run_check.run(
+        watchlist_path=watchlist_path, now=datetime(2026, 7, 23, 10, 0),
+        cooldown_path=tmp_path / "cooldown.json", history_path=history_path,
+        last_check_path=tmp_path / "last_check.json",
+    )
+
+    assert "손절" not in sent[0][1]
+    event = load_signal_history(history_path)[0]
+    assert event["stop_price"] is None
+    assert event["position_pct"] is None
+
+
 def test_run_treats_insufficient_data_marker_as_no_calibration(tmp_path, monkeypatch):
     from advisor.backtest.calibration_store import InsufficientDataMarker
 

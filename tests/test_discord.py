@@ -34,6 +34,35 @@ def test_format_signal_message_handles_no_reasons():
     assert "근거: N/A" in message
 
 
+def test_format_signal_message_omits_risk_block_when_not_provided():
+    message = format_signal_message(
+        ticker="AAPL", direction="BUY", price=100.0, timestamp_et="10:00 ET",
+        reasons=["RSI 28"], vix_regime="neutral", vix_percentile=50, score=5, threshold=3,
+    )
+    assert "손절" not in message
+
+
+def test_format_signal_message_includes_risk_block_without_shares_by_default():
+    message = format_signal_message(
+        ticker="AAPL", direction="BUY", price=100.0, timestamp_et="10:00 ET",
+        reasons=["RSI 28"], vix_regime="neutral", vix_percentile=50, score=5, threshold=3,
+        stop_price=92.0, target_price=116.0, position_pct=0.05,
+    )
+    assert "손절: $92.00" in message
+    assert "익절: $116.00" in message
+    assert "제안 비중: 계좌의 5.0%" in message
+    assert "주)" not in message  # no account size configured -> no share count
+
+
+def test_format_signal_message_includes_shares_when_account_equity_known():
+    message = format_signal_message(
+        ticker="AAPL", direction="BUY", price=100.0, timestamp_et="10:00 ET",
+        reasons=["RSI 28"], vix_regime="neutral", vix_percentile=50, score=5, threshold=3,
+        stop_price=92.0, target_price=116.0, position_pct=0.05, shares=5,
+    )
+    assert "(~5주)" in message
+
+
 def test_send_discord_alert_posts_content(monkeypatch):
     captured = {}
 
