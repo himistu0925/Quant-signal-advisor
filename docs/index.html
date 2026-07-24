@@ -11,27 +11,207 @@
   th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; }
   th { background: #f5f5f5; }
   .meta { color: #666; font-size: 0.85rem; }
+  .badge { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
+  .badge-buy { background: #d1fae5; color: #065f46; }
+  .badge-sell { background: #fee2e2; color: #991b1b; }
+  .badge-neutral { background: #e5e7eb; color: #374151; }
+  button { cursor: pointer; border: 1px solid #ccc; background: #fff; border-radius: 6px; padding: 0.3rem 0.8rem; font-size: 0.85rem; }
+  button:disabled { cursor: not-allowed; opacity: 0.5; }
+  input[type=text], input[type=password] { width: 100%; max-width: 380px; padding: 0.4rem; border: 1px solid #ccc; border-radius: 6px; font-size: 0.9rem; }
+  details { border: 1px solid #ddd; border-radius: 8px; padding: 0.6rem 1rem; margin: 0.5rem 0; }
+  .search-panel { margin: 1rem 0; }
+  .result-row { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid #ddd; gap: 1rem; }
+  #op-status { display: none; margin: 1rem 0; padding: 0.75rem 1rem; border-radius: 8px; background: #f5f5f5; }
+  #op-status.visible { display: block; }
   @media (prefers-color-scheme: dark) {
     body { background: #111; color: #eee; }
     th { background: #222; }
     th, td { border-color: #333; }
+    button { background: #222; border-color: #444; color: #eee; }
+    input[type=text], input[type=password] { background: #1a1a1a; border-color: #444; color: #eee; }
+    details { border-color: #333; }
+    .result-row { border-color: #333; }
+    #op-status { background: #222; }
+    .badge-buy { background: #064e3b; color: #6ee7b7; }
+    .badge-sell { background: #7f1d1d; color: #fca5a5; }
+    .badge-neutral { background: #374151; color: #d1d5db; }
   }
 </style>
 </head>
 <body>
 <h1>퀀트 신호 어드바이저 대시보드</h1>
-<p class="meta">생성 시각: 2026-07-24T06:20:04.557076</p>
+<p class="meta">생성 시각: 2026-07-24T20:52:13.263255</p>
 
 <h2>마지막 체크</h2>
-<p>마지막 워크플로 실행: 2026-07-24T02:20:03.937416-04:00 (장 마감 시간이라 스킵됨)</p>
+<p>마지막 워크플로 실행: 2026-07-24T16:52:12.875795-04:00 (장 마감 시간이라 스킵됨)</p>
 
 <h2>워치리스트 현황</h2>
 <table>
-<tr><th>종목</th><th>매수/매도 임계값</th><th>주요 지표</th><th>검증구간 누적수익</th><th>샤프비율</th><th>거래수</th><th>벤치마크 초과수익</th></tr>
-<tr><td>TQQQ</td><td>+2.0 / -2.0</td><td>RSI(7.0)</td><td>43.5%</td><td>2.35</td><td>1</td><td>24.7%</td></tr>
-<tr><td>SOXL</td><td>+3.0 / -3.0</td><td>BollingerBands(2.3), Ichimoku(2.0), MA(1.6)</td><td>170.9%</td><td>1.81</td><td>1</td><td>152.1%</td></tr>
-<tr><td>UPRO</td><td>+2.0 / -2.0</td><td>RSI(4.5), Ichimoku(1.5), BollingerBands(1.0)</td><td>29.3%</td><td>1.70</td><td>1</td><td>10.4%</td></tr>
+<tr><th>종목</th><th>매수/매도 임계값</th><th>주요 지표</th><th>검증구간 누적수익</th><th>샤프비율</th><th>거래수</th><th>벤치마크 초과수익</th><th>관리</th></tr>
+<tr><td>TQQQ</td><td>+2.0 / -2.0</td><td>RSI(7.0)</td><td>43.5%</td><td>2.35</td><td>1</td><td>24.7%</td><td><button class="btn-remove" data-ticker="TQQQ">삭제</button></td></tr>
+<tr><td>SOXL</td><td>+3.0 / -3.0</td><td>BollingerBands(2.3), Ichimoku(2.0), MA(1.6)</td><td>170.9%</td><td>1.81</td><td>1</td><td>152.1%</td><td><button class="btn-remove" data-ticker="SOXL">삭제</button></td></tr>
+<tr><td>UPRO</td><td>+2.0 / -2.0</td><td>RSI(4.5), Ichimoku(1.5), BollingerBands(1.0)</td><td>29.3%</td><td>1.70</td><td>1</td><td>10.4%</td><td><button class="btn-remove" data-ticker="UPRO">삭제</button></td></tr>
 </table>
+
+<h2>워치리스트 관리</h2>
+<details>
+  <summary>⚙ 설정 (GitHub 토큰)</summary>
+  <p class="meta">
+    종목 추가/삭제를 실제로 저장소에 반영하려면 이 저장소 전용 GitHub Fine-grained
+    Personal Access Token이 필요합니다 (Contents: Read/Write, Actions: Read/Write).
+    토큰은 이 브라우저에만 저장되고 서버로 전송되지 않습니다.
+  </p>
+  <input type="password" id="pat-input" placeholder="github_pat_...">
+  <button id="pat-save">저장</button>
+  <button id="pat-clear">삭제</button>
+  <p class="meta" id="pat-status"></p>
+</details>
+
+<div class="search-panel">
+  <input type="text" id="ticker-search" placeholder="티커 또는 종목명 검색 (예: AAPL, Apple)">
+  <div id="search-results"></div>
+</div>
+
+<div id="op-status"></div>
+
+<script>
+const OWNER = "himistu0925";
+const REPO = "Quant-signal-advisor";
+const MAX_TICKERS = 5;
+const CURRENT_WATCHLIST = ["TQQQ", "SOXL", "UPRO"];
+const API = `https://api.github.com/repos/${OWNER}/${REPO}`;
+
+function getPat() { return localStorage.getItem("qsa_gh_pat") || ""; }
+
+document.getElementById("pat-save").addEventListener("click", () => {
+  const v = document.getElementById("pat-input").value.trim();
+  if (!v) return;
+  localStorage.setItem("qsa_gh_pat", v);
+  document.getElementById("pat-input").value = "";
+  document.getElementById("pat-status").textContent = "토큰이 저장되었습니다.";
+});
+document.getElementById("pat-clear").addEventListener("click", () => {
+  localStorage.removeItem("qsa_gh_pat");
+  document.getElementById("pat-status").textContent = "토큰이 삭제되었습니다.";
+});
+
+async function ghFetch(path, options) {
+  options = options || {};
+  const pat = getPat();
+  if (!pat) throw new Error("먼저 위 설정에서 GitHub 토큰을 등록해주세요.");
+  const headers = Object.assign(
+    {
+      "Authorization": `Bearer ${pat}`,
+      "Accept": "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+    },
+    options.body ? { "Content-Type": "application/json" } : {},
+    options.headers || {}
+  );
+  return fetch(`${API}${path}`, Object.assign({}, options, { headers }));
+}
+
+function showStatus(html) {
+  const el = document.getElementById("op-status");
+  el.classList.add("visible");
+  el.innerHTML = html;
+}
+
+async function dispatchAndPoll(workflow, ticker, button) {
+  button.disabled = true;
+  showStatus(`⏳ ${ticker} 처리 중... (보통 1~3분 정도 걸려요)`);
+  try {
+    const dispatchRes = await ghFetch(`/actions/workflows/${workflow}/dispatches`, {
+      method: "POST",
+      body: JSON.stringify({ ref: "master", inputs: { ticker: ticker }, return_run_details: true }),
+    });
+    if (!dispatchRes.ok && dispatchRes.status !== 204) {
+      const err = await dispatchRes.text();
+      throw new Error(`실행 요청 실패 (${dispatchRes.status}): ${err}`);
+    }
+
+    let runId = null;
+    if (dispatchRes.status === 200) {
+      const body = await dispatchRes.json();
+      runId = body.workflow_run_id;
+    }
+
+    if (!runId) {
+      // Defensive fallback for older API behavior (bare 204, no run id):
+      // find the newest run created at/after dispatch time.
+      const dispatchedAt = Date.now();
+      for (let i = 0; i < 10 && !runId; i++) {
+        await new Promise(r => setTimeout(r, 3000));
+        const runsRes = await ghFetch(`/actions/workflows/${workflow}/runs?event=workflow_dispatch&per_page=5`);
+        const runsBody = await runsRes.json();
+        const fresh = (runsBody.workflow_runs || []).find(r => new Date(r.created_at).getTime() >= dispatchedAt - 5000);
+        if (fresh) runId = fresh.id;
+      }
+      if (!runId) throw new Error("실행을 찾지 못했습니다. GitHub Actions 탭에서 직접 확인해주세요.");
+    }
+
+    const deadline = Date.now() + 5 * 60 * 1000;
+    let run = null;
+    while (Date.now() < deadline) {
+      const runRes = await ghFetch(`/actions/runs/${runId}`);
+      run = await runRes.json();
+      if (run.status === "completed") break;
+      await new Promise(r => setTimeout(r, 4000));
+    }
+
+    if (!run || run.status !== "completed") {
+      showStatus(`⏱ 시간이 오래 걸리고 있어요. <a href="https://github.com/${OWNER}/${REPO}/actions" target="_blank">Actions 탭</a>에서 직접 확인해주세요.`);
+      return;
+    }
+
+    if (run.conclusion === "success") {
+      showStatus(`✅ ${ticker} 처리 완료! <button onclick="location.reload()">새로고침</button>`);
+    } else {
+      showStatus(`❌ 실패했습니다. <a href="${run.html_url}" target="_blank">실행 로그 보기</a>`);
+    }
+  } catch (e) {
+    showStatus(`❌ 오류: ${e.message}`);
+  } finally {
+    button.disabled = false;
+  }
+}
+
+document.querySelectorAll(".btn-remove").forEach(btn => {
+  btn.addEventListener("click", () => dispatchAndPoll("remove_ticker.yml", btn.dataset.ticker, btn));
+});
+
+let tickerIndex = null;
+async function loadTickerIndex() {
+  if (tickerIndex) return tickerIndex;
+  const res = await fetch("tickers.json");
+  tickerIndex = await res.json();
+  return tickerIndex;
+}
+
+const searchInput = document.getElementById("ticker-search");
+const resultsEl = document.getElementById("search-results");
+searchInput.addEventListener("input", async () => {
+  const q = searchInput.value.trim().toUpperCase();
+  resultsEl.innerHTML = "";
+  if (!q) return;
+  const index = await loadTickerIndex();
+  const matches = index.filter(row => row[0].startsWith(q) || row[1].toUpperCase().includes(q)).slice(0, 20);
+  for (const [sym, name, exchange] of matches) {
+    const row = document.createElement("div");
+    row.className = "result-row";
+    const already = CURRENT_WATCHLIST.includes(sym);
+    const full = CURRENT_WATCHLIST.length >= MAX_TICKERS;
+    const label = already ? "이미 있음" : (full ? "5개 꽉 참" : "추가");
+    const disabledAttr = (already || full) ? "disabled" : "";
+    row.innerHTML = `<span>${sym} — ${name} (${exchange})</span><button class="btn-add" data-ticker="${sym}" ${disabledAttr}>${label}</button>`;
+    resultsEl.appendChild(row);
+  }
+  resultsEl.querySelectorAll(".btn-add").forEach(btn => {
+    btn.addEventListener("click", () => dispatchAndPoll("add_ticker.yml", btn.dataset.ticker, btn));
+  });
+});
+</script>
+
 
 <h2>최근 신호 히스토리</h2>
 <table>
@@ -42,27 +222,27 @@
 <h2>자동 발굴 후보 (전체 미국 상장 종목/ETF 스캔)</h2>
 <p class="meta">기준 시각: 2026-07-24T06:17:09.961012+00:00 · 워치리스트 미포함 종목 중 유동성 필터 통과 + 현재 매수/매도 신호가 있는 상위 종목 (참고용, 알림 발송 대상 아님)</p>
 <table>
-<tr><th>종목</th><th>이름</th><th>거래소</th><th>방향</th><th>스코어</th></tr>
-<tr><td>AESI</td><td>Atlas Energy Solutions Inc. Common Stock</td><td>NYSE</td><td>SELL</td><td>-4.50</td></tr>
-<tr><td>DOV</td><td>Dover Corporation Common Stock</td><td>NYSE</td><td>SELL</td><td>-4.50</td></tr>
-<tr><td>EZA</td><td>iShares MSCI South Africa Index Fund</td><td>NYSE Arca</td><td>SELL</td><td>-4.50</td></tr>
-<tr><td>FBRT</td><td>Franklin BSP Realty Trust, Inc. Common Stock</td><td>NYSE</td><td>SELL</td><td>-4.50</td></tr>
-<tr><td>FXY</td><td>Invesco CurrencyShares Japanese Yen Trust</td><td>NYSE Arca</td><td>SELL</td><td>-4.50</td></tr>
-<tr><td>GGG</td><td>Graco Inc. Common Stock</td><td>NYSE</td><td>BUY</td><td>+4.50</td></tr>
-<tr><td>SCHP</td><td>Schwab U.S. TIPS ETF</td><td>NYSE Arca</td><td>SELL</td><td>-4.50</td></tr>
-<tr><td>SPIP</td><td>State Street SPDR Portfolio TIPS ETF</td><td>NYSE Arca</td><td>SELL</td><td>-4.50</td></tr>
-<tr><td>VCR</td><td>Vanguard Consumer Discretion ETF</td><td>NYSE Arca</td><td>SELL</td><td>-4.50</td></tr>
-<tr><td>CGBD</td><td>Carlyle Secured Lending, Inc. - Closed End Fund</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td></tr>
-<tr><td>CMCSA</td><td>Comcast Corporation - Class A Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td></tr>
-<tr><td>CRUS</td><td>Cirrus Logic, Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td></tr>
-<tr><td>CXDO</td><td>Crexendo, Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td></tr>
-<tr><td>EVSD</td><td>Eaton Vance Short Duration Income ETF</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td></tr>
-<tr><td>FCFS</td><td>FirstCash Holdings, Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td></tr>
-<tr><td>FCNCA</td><td>First Citizens BancShares, Inc. - Class A Common Stock</td><td>NASDAQ</td><td>BUY</td><td>+3.00</td></tr>
-<tr><td>GGLL</td><td>Direxion Daily GOOGL Bull 2X ETF</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td></tr>
-<tr><td>GOOG</td><td>Alphabet Inc. - Class C Capital Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td></tr>
-<tr><td>GOOGL</td><td>Alphabet Inc. - Class A Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td></tr>
-<tr><td>MBLY</td><td>Mobileye Global Inc. - Class A Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td></tr>
+<tr><th>종목</th><th>이름</th><th>거래소</th><th>방향</th><th>스코어</th><th>리스크 (ATR 기준)</th></tr>
+<tr><td>AESI</td><td>Atlas Energy Solutions Inc. Common Stock</td><td>NYSE</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
+<tr><td>DOV</td><td>Dover Corporation Common Stock</td><td>NYSE</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
+<tr><td>EZA</td><td>iShares MSCI South Africa Index Fund</td><td>NYSE Arca</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
+<tr><td>FBRT</td><td>Franklin BSP Realty Trust, Inc. Common Stock</td><td>NYSE</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
+<tr><td>FXY</td><td>Invesco CurrencyShares Japanese Yen Trust</td><td>NYSE Arca</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
+<tr><td>GGG</td><td>Graco Inc. Common Stock</td><td>NYSE</td><td>BUY</td><td>+4.50</td><td>-</td></tr>
+<tr><td>SCHP</td><td>Schwab U.S. TIPS ETF</td><td>NYSE Arca</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
+<tr><td>SPIP</td><td>State Street SPDR Portfolio TIPS ETF</td><td>NYSE Arca</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
+<tr><td>VCR</td><td>Vanguard Consumer Discretion ETF</td><td>NYSE Arca</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
+<tr><td>CGBD</td><td>Carlyle Secured Lending, Inc. - Closed End Fund</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
+<tr><td>CMCSA</td><td>Comcast Corporation - Class A Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
+<tr><td>CRUS</td><td>Cirrus Logic, Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
+<tr><td>CXDO</td><td>Crexendo, Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
+<tr><td>EVSD</td><td>Eaton Vance Short Duration Income ETF</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
+<tr><td>FCFS</td><td>FirstCash Holdings, Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
+<tr><td>FCNCA</td><td>First Citizens BancShares, Inc. - Class A Common Stock</td><td>NASDAQ</td><td>BUY</td><td>+3.00</td><td>-</td></tr>
+<tr><td>GGLL</td><td>Direxion Daily GOOGL Bull 2X ETF</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
+<tr><td>GOOG</td><td>Alphabet Inc. - Class C Capital Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
+<tr><td>GOOGL</td><td>Alphabet Inc. - Class A Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
+<tr><td>MBLY</td><td>Mobileye Global Inc. - Class A Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
 </table>
 </body>
 </html>
