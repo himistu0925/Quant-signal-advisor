@@ -2,10 +2,14 @@ name: Scan Universe
 
 on:
   schedule:
-    # Nightly, well after US market close (16:00 ET) -- 06:00 UTC Tue-Sat
-    # covers the Mon-Fri close. Not time-sensitive like schedule.yml's live
-    # check, so no intraday re-validation is needed here.
-    - cron: '0 6 * * 2-6'
+    # Shortly after the regular session closes (16:00 ET = 20:00 UTC EDT /
+    # 21:00 UTC EST -- unlike schedule.yml's 13-22 UTC window, close always
+    # falls on the *same* UTC calendar day as the ET trading date, so this
+    # stays Mon-Fri, not Tue-Sat). 23:00 UTC gives a ~2-3h buffer past close
+    # either way DST falls, and -- deliberately -- runs after schedule.yml's
+    # last 22:30 UTC fire, so the two workflows' git-commit-and-push steps
+    # never race each other over data/universe_candidates.json.
+    - cron: '0 23 * * 1-5'
   workflow_dispatch: {}
 
 permissions:
