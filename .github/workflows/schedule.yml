@@ -9,7 +9,12 @@ on:
     # drops most fires of a */15 cron on low-traffic repos (observed
     # 2026-07-23 -- only 2 of ~40 expected fires actually ran), and
     # community reports say GitHub is measurably more reliable at 30min+.
-    - cron: '*/30 13-22 * * 1-5'
+    # Minutes offset to :07/:37, not :00/:30: GitHub's own docs warn that
+    # "high load times include the start of every hour" and scheduled runs
+    # are more likely to be delayed/dropped then -- confirmed again
+    # 2026-07-24, where every fire that day landed exactly on :00/:30 and
+    # zero of ~8 expected windows actually ran.
+    - cron: '7,37 13-22 * * 1-5'
   workflow_dispatch: {}
 
 permissions:

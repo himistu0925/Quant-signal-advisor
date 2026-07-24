@@ -5,7 +5,9 @@ on:
     # plan.md section 16: recalibration cadence (quarterly vs monthly) is
     # still an open question -- monthly is a placeholder default. Adjust
     # this cron once that's decided, or just trigger manually until then.
-    - cron: '0 6 1 * *'
+    # :22 past the hour, not :00: avoids GitHub's documented top-of-hour
+    # scheduling congestion (see schedule.yml for the same fix).
+    - cron: '22 6 1 * *'
   workflow_dispatch: {}
 
 permissions:
