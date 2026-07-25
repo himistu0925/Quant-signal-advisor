@@ -9,7 +9,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-25T07:44:12.652094+00:00"
+    "as_of": "2026-07-25T09:19:46.043199+00:00"
   },
   {
     "ticker": "PUMP",
@@ -21,7 +21,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-25T07:44:12.652094+00:00"
+    "as_of": "2026-07-25T09:19:46.043199+00:00"
   },
   {
     "ticker": "RNG",
@@ -33,7 +33,7 @@
     "stop_price": 42.64337854082615,
     "target_price": 59.64324703822075,
     "position_pct": 0.08525360307468556,
-    "as_of": "2026-07-25T07:44:12.652094+00:00"
+    "as_of": "2026-07-25T09:19:46.043199+00:00"
   },
   {
     "ticker": "ACDC",
@@ -45,7 +45,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-25T07:44:12.652094+00:00"
+    "as_of": "2026-07-25T09:19:46.043199+00:00"
   },
   {
     "ticker": "AMSC",
@@ -57,7 +57,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-25T07:44:12.652094+00:00"
+    "as_of": "2026-07-25T09:19:46.043199+00:00"
   },
   {
     "ticker": "BIYA",
@@ -69,7 +69,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-25T07:44:12.652094+00:00"
+    "as_of": "2026-07-25T09:19:46.043199+00:00"
   },
   {
     "ticker": "CAIQ",
@@ -81,7 +81,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-25T07:44:12.652094+00:00"
+    "as_of": "2026-07-25T09:19:46.043199+00:00"
   },
   {
     "ticker": "CSIQ",
@@ -93,7 +93,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-25T07:44:12.652094+00:00"
+    "as_of": "2026-07-25T09:19:46.043199+00:00"
   },
   {
     "ticker": "FSV",
@@ -105,7 +105,7 @@
     "stop_price": 126.53126499049321,
     "target_price": 159.31749016061514,
     "position_pct": 0.12577843835386182,
-    "as_of": "2026-07-25T07:44:12.652094+00:00"
+    "as_of": "2026-07-25T09:19:46.043199+00:00"
   },
   {
     "ticker": "JBLU",
@@ -117,6 +117,6 @@
     "stop_price": 4.619473965836906,
     "target_price": 6.5710520111057305,
     "position_pct": 0.08101136401440585,
-    "as_of": "2026-07-25T07:44:12.652094+00:00"
+    "as_of": "2026-07-25T09:19:46.043199+00:00"
   }
 ]
