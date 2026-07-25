@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T06:06:30.677904",
+  "generated_at": "2026-07-25T08:52:37.503782",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -88,170 +88,130 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-07-25T02:06:30.288283-04:00",
+    "timestamp": "2026-07-25T04:52:37.021181-04:00",
     "market_open": false,
     "tickers": {}
   },
   "universe_candidates": [
     {
-      "ticker": "AESI",
-      "name": "Atlas Energy Solutions Inc. Common Stock",
+      "ticker": "GOOS",
+      "name": "Canada Goose Holdings Inc. Subordinate Voting Shares",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
+      "price": 8.890000343322754,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-25T07:44:12.652094+00:00"
     },
     {
-      "ticker": "DOV",
-      "name": "Dover Corporation Common Stock",
+      "ticker": "PUMP",
+      "name": "ProPetro Holding Corp. Common Stock",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
+      "price": 11.800000190734863,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-25T07:44:12.652094+00:00"
     },
     {
-      "ticker": "EZA",
-      "name": "iShares MSCI South Africa Index Fund",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
-    },
-    {
-      "ticker": "FBRT",
-      "name": "Franklin BSP Realty Trust, Inc. Common Stock",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
-    },
-    {
-      "ticker": "FXY",
-      "name": "Invesco CurrencyShares Japanese Yen Trust",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
-    },
-    {
-      "ticker": "GGG",
-      "name": "Graco Inc. Common Stock",
+      "ticker": "RNG",
+      "name": "RingCentral, Inc. Class A Common Stock",
       "exchange": "NYSE",
       "score": 4.5,
       "direction": "BUY",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
+      "price": 48.310001373291016,
+      "stop_price": 42.64337854082615,
+      "target_price": 59.64324703822075,
+      "position_pct": 0.08525360307468556,
+      "as_of": "2026-07-25T07:44:12.652094+00:00"
     },
     {
-      "ticker": "SCHP",
-      "name": "Schwab U.S. TIPS ETF",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
-    },
-    {
-      "ticker": "SPIP",
-      "name": "State Street SPDR Portfolio TIPS ETF",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
-    },
-    {
-      "ticker": "VCR",
-      "name": "Vanguard Consumer Discretion ETF",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
-    },
-    {
-      "ticker": "CGBD",
-      "name": "Carlyle Secured Lending, Inc. - Closed End Fund",
+      "ticker": "ACDC",
+      "name": "ProFrac Holding Corp. - Class A Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
+      "price": 4.260000228881836,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-25T07:44:12.652094+00:00"
     },
     {
-      "ticker": "CMCSA",
-      "name": "Comcast Corporation - Class A Common Stock",
+      "ticker": "AMSC",
+      "name": "American Superconductor Corporation - Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
+      "price": 30.520000457763672,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-25T07:44:12.652094+00:00"
     },
     {
-      "ticker": "CRUS",
-      "name": "Cirrus Logic, Inc. - Common Stock",
+      "ticker": "BIYA",
+      "name": "Baiya International Group Inc.  - Ordinary Shares",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
+      "price": 1.9299999475479126,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-25T07:44:12.652094+00:00"
     },
     {
-      "ticker": "CXDO",
-      "name": "Crexendo, Inc. - Common Stock",
+      "ticker": "CAIQ",
+      "name": "Calamos Nasdaq Autocallable Income ETF",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
+      "price": 25.41200065612793,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-25T07:44:12.652094+00:00"
     },
     {
-      "ticker": "EVSD",
-      "name": "Eaton Vance Short Duration Income ETF",
+      "ticker": "CSIQ",
+      "name": "Canadian Solar Inc. - Common Shares",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
+      "price": 13.350000381469727,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-25T07:44:12.652094+00:00"
     },
     {
-      "ticker": "FCFS",
-      "name": "FirstCash Holdings, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
-    },
-    {
-      "ticker": "FCNCA",
-      "name": "First Citizens BancShares, Inc. - Class A Common Stock",
+      "ticker": "FSV",
+      "name": "FirstService Corporation - Common Shares",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
+      "price": 137.4600067138672,
+      "stop_price": 126.53126499049321,
+      "target_price": 159.31749016061514,
+      "position_pct": 0.12577843835386182,
+      "as_of": "2026-07-25T07:44:12.652094+00:00"
     },
     {
-      "ticker": "GGLL",
-      "name": "Direxion Daily GOOGL Bull 2X ETF",
+      "ticker": "JBLU",
+      "name": "JetBlue Airways Corporation - Common Stock",
       "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
-    },
-    {
-      "ticker": "GOOG",
-      "name": "Alphabet Inc. - Class C Capital Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet Inc. - Class A Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
-    },
-    {
-      "ticker": "MBLY",
-      "name": "Mobileye Global Inc. - Class A Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "as_of": "2026-07-24T06:17:09.961012+00:00"
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 5.269999980926514,
+      "stop_price": 4.619473965836906,
+      "target_price": 6.5710520111057305,
+      "position_pct": 0.08101136401440585,
+      "as_of": "2026-07-25T07:44:12.652094+00:00"
     }
   ]
 }
