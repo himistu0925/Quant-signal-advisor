@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T22:26:23.900961",
+  "generated_at": "2026-07-25T22:32:16.907136",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,9 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-07-25T18:26:23.564520-04:00",
+    "timestamp": "2026-07-25T18:32:16.525684-04:00",
     "market_open": false,
     "tickers": {}
   },
-  "universe_candidates": [
-    {
-      "ticker": "GOOS",
-      "name": "Canada Goose Holdings Inc. Subordinate Voting Shares",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 8.890000343322754,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-25T09:19:46.043199+00:00"
-    },
-    {
-      "ticker": "PUMP",
-      "name": "ProPetro Holding Corp. Common Stock",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 11.800000190734863,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-25T09:19:46.043199+00:00"
-    },
-    {
-      "ticker": "RNG",
-      "name": "RingCentral, Inc. Class A Common Stock",
-      "exchange": "NYSE",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 48.310001373291016,
-      "stop_price": 42.64337854082615,
-      "target_price": 59.64324703822075,
-      "position_pct": 0.08525360307468556,
-      "as_of": "2026-07-25T09:19:46.043199+00:00"
-    },
-    {
-      "ticker": "ACDC",
-      "name": "ProFrac Holding Corp. - Class A Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 4.260000228881836,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-25T09:19:46.043199+00:00"
-    },
-    {
-      "ticker": "AMSC",
-      "name": "American Superconductor Corporation - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 30.520000457763672,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-25T09:19:46.043199+00:00"
-    },
-    {
-      "ticker": "BIYA",
-      "name": "Baiya International Group Inc.  - Ordinary Shares",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 1.9299999475479126,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-25T09:19:46.043199+00:00"
-    },
-    {
-      "ticker": "CAIQ",
-      "name": "Calamos Nasdaq Autocallable Income ETF",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 25.41200065612793,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-25T09:19:46.043199+00:00"
-    },
-    {
-      "ticker": "CSIQ",
-      "name": "Canadian Solar Inc. - Common Shares",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 13.350000381469727,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-25T09:19:46.043199+00:00"
-    },
-    {
-      "ticker": "FSV",
-      "name": "FirstService Corporation - Common Shares",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 137.4600067138672,
-      "stop_price": 126.53126499049321,
-      "target_price": 159.31749016061514,
-      "position_pct": 0.12577843835386182,
-      "as_of": "2026-07-25T09:19:46.043199+00:00"
-    },
-    {
-      "ticker": "JBLU",
-      "name": "JetBlue Airways Corporation - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 5.269999980926514,
-      "stop_price": 4.619473965836906,
-      "target_price": 6.5710520111057305,
-      "position_pct": 0.08101136401440585,
-      "as_of": "2026-07-25T09:19:46.043199+00:00"
-    }
-  ]
+  "universe_candidates": []
 }
