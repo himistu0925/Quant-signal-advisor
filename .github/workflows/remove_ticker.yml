@@ -45,9 +45,5 @@ jobs:
       - name: Commit changes
         env:
           TICKER_INPUT: ${{ inputs.ticker }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add config/watchlist.yaml calibration/ docs/
-          git diff --staged --quiet || git commit -m "Remove $TICKER_INPUT from watchlist [skip ci]"
-          git push
+          REGENERATE_DASHBOARD: "1"
+        run: bash scripts/commit_and_push.sh "Remove $TICKER_INPUT from watchlist [skip ci]" config/watchlist.yaml calibration/ docs/

@@ -38,9 +38,4 @@ jobs:
         run: python scripts/calibrate.py
 
       - name: Commit updated calibration
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add calibration/
-          git diff --staged --quiet || git commit -m "Recalibrate thresholds [skip ci]"
-          git push
+        run: bash scripts/commit_and_push.sh "Recalibrate thresholds [skip ci]" calibration/
