@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T11:03:00.087579",
+  "generated_at": "2026-07-25T11:14:32.329583",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -110,6 +110,34 @@
           "total_trades": 5,
           "benchmark_return": 0.1647921089865434,
           "excess_return": 0.2147049415976987
+        }
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "calibration": {
+        "status": "calibrated",
+        "weights": {
+          "BollingerBands": 2.0939226475217714,
+          "Fibonacci": 0.0,
+          "Ichimoku": 0.0,
+          "MACD": 1.998531896680873,
+          "MA": 0.0,
+          "RSI": 2.9075454557973552,
+          "SupportResistance": 0.0
+        },
+        "buy_threshold": 3.0,
+        "sell_threshold": -3.0,
+        "test_metrics": {
+          "cumulative_return": 0.0,
+          "cagr": 0.0,
+          "max_drawdown": 0.0,
+          "sharpe_ratio": 0.0,
+          "win_rate": 0.0,
+          "avg_win_loss_ratio": 0.0,
+          "total_trades": 0,
+          "benchmark_return": 0.1647921089865434,
+          "excess_return": -0.1647921089865434
         }
       }
     }
