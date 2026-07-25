@@ -40,7 +40,7 @@
 </head>
 <body>
 <h1>퀀트 신호 어드바이저 대시보드</h1>
-<p class="meta">생성 시각: 2026-07-25T10:30:52.229393</p>
+<p class="meta">생성 시각: 2026-07-25T11:03:00.087579</p>
 
 <h2>마지막 체크</h2>
 <p>마지막 워크플로 실행: 2026-07-25T06:30:51.851772-04:00 (장 마감 시간이라 스킵됨)</p>
@@ -51,6 +51,7 @@
 <tr><td>TQQQ</td><td>+2.0 / -2.0</td><td>RSI(7.0)</td><td>43.5%</td><td>2.35</td><td>1</td><td>24.7%</td><td><button class="btn-remove" data-ticker="TQQQ">삭제</button></td></tr>
 <tr><td>SOXL</td><td>+3.0 / -3.0</td><td>BollingerBands(2.3), Ichimoku(2.0), MA(1.6)</td><td>170.9%</td><td>1.81</td><td>1</td><td>152.1%</td><td><button class="btn-remove" data-ticker="SOXL">삭제</button></td></tr>
 <tr><td>UPRO</td><td>+2.0 / -2.0</td><td>RSI(4.5), Ichimoku(1.5), BollingerBands(1.0)</td><td>29.3%</td><td>1.70</td><td>1</td><td>10.4%</td><td><button class="btn-remove" data-ticker="UPRO">삭제</button></td></tr>
+<tr><td>AAPL</td><td>+2.0 / -2.0</td><td>RSI(2.4), BollingerBands(2.1), Ichimoku(1.5)</td><td>37.9%</td><td>2.12</td><td>5</td><td>21.5%</td><td><button class="btn-remove" data-ticker="AAPL">삭제</button></td></tr>
 </table>
 
 <h2>워치리스트 관리</h2>
@@ -78,7 +79,7 @@
 const OWNER = "himistu0925";
 const REPO = "Quant-signal-advisor";
 const MAX_TICKERS = 5;
-const CURRENT_WATCHLIST = ["TQQQ", "SOXL", "UPRO"];
+const CURRENT_WATCHLIST = ["TQQQ", "SOXL", "UPRO", "AAPL"];
 const API = `https://api.github.com/repos/${OWNER}/${REPO}`;
 
 function getPat() { return localStorage.getItem("qsa_gh_pat") || ""; }

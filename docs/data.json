@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T10:30:52.229393",
+  "generated_at": "2026-07-25T11:03:00.087579",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -82,6 +82,34 @@
           "total_trades": 1,
           "benchmark_return": 0.1884962678672557,
           "excess_return": 0.10423189620939932
+        }
+      }
+    },
+    {
+      "ticker": "AAPL",
+      "calibration": {
+        "status": "calibrated",
+        "weights": {
+          "BollingerBands": 2.0837248016858703,
+          "Fibonacci": 0.0,
+          "Ichimoku": 1.4731728046576866,
+          "MACD": 1.024139653340725,
+          "MA": 0.0,
+          "RSI": 2.4189627403157186,
+          "SupportResistance": 0.0
+        },
+        "buy_threshold": 2.0,
+        "sell_threshold": -2.0,
+        "test_metrics": {
+          "cumulative_return": 0.3794970505842421,
+          "cagr": 0.3798010637904101,
+          "max_drawdown": -0.0805039337122776,
+          "sharpe_ratio": 2.1231906615045872,
+          "win_rate": 0.8,
+          "avg_win_loss_ratio": 40.782479401398426,
+          "total_trades": 5,
+          "benchmark_return": 0.1647921089865434,
+          "excess_return": 0.2147049415976987
         }
       }
     }
