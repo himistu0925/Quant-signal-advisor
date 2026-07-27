@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T22:19:50.126519",
+  "generated_at": "2026-07-27T22:30:46.666616",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,46 +144,22 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-07-27T18:19:49.736882-04:00",
+    "timestamp": "2026-07-27T18:30:46.237810-04:00",
     "market_open": false,
     "tickers": {}
   },
   "universe_candidates": [
     {
-      "ticker": "GOOS",
-      "name": "Canada Goose Holdings Inc. Subordinate Voting Shares",
+      "ticker": "MTDR",
+      "name": "Matador Resources Company Common Stock",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 8.890000343322754,
+      "price": 47.16999816894531,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-26T22:15:55.676136+00:00"
-    },
-    {
-      "ticker": "PUMP",
-      "name": "ProPetro Holding Corp. Common Stock",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 11.800000190734863,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-26T22:15:55.676136+00:00"
-    },
-    {
-      "ticker": "RNG",
-      "name": "RingCentral, Inc. Class A Common Stock",
-      "exchange": "NYSE",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 48.310001373291016,
-      "stop_price": 42.64337854082615,
-      "target_price": 59.64324703822075,
-      "position_pct": 0.08525360307468556,
-      "as_of": "2026-07-26T22:15:55.676136+00:00"
+      "as_of": "2026-07-27T22:19:16.128415+00:00"
     },
     {
       "ticker": "ACDC",
@@ -191,83 +167,107 @@
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 4.260000228881836,
+      "price": 4.010000228881836,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-26T22:15:55.676136+00:00"
+      "as_of": "2026-07-27T22:19:16.128415+00:00"
     },
     {
-      "ticker": "AMSC",
-      "name": "American Superconductor Corporation - Common Stock",
+      "ticker": "CAPR",
+      "name": "Capricor Therapeutics, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 30.520000457763672,
+      "price": 6.994999885559082,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-26T22:15:55.676136+00:00"
+      "as_of": "2026-07-27T22:19:16.128415+00:00"
     },
     {
-      "ticker": "BIYA",
-      "name": "Baiya International Group Inc.  - Ordinary Shares",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 1.9299999475479126,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-26T22:15:55.676136+00:00"
-    },
-    {
-      "ticker": "CAIQ",
-      "name": "Calamos Nasdaq Autocallable Income ETF",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 25.41200065612793,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-26T22:15:55.676136+00:00"
-    },
-    {
-      "ticker": "CSIQ",
-      "name": "Canadian Solar Inc. - Common Shares",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 13.350000381469727,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-26T22:15:55.676136+00:00"
-    },
-    {
-      "ticker": "FSV",
-      "name": "FirstService Corporation - Common Shares",
+      "ticker": "LBTYK",
+      "name": "Liberty Global Ltd. - Class C Common Shares",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 137.4600067138672,
-      "stop_price": 126.53126499049321,
-      "target_price": 159.31749016061514,
-      "position_pct": 0.12577843835386182,
-      "as_of": "2026-07-26T22:15:55.676136+00:00"
+      "price": 9.59000015258789,
+      "stop_price": 8.867529508328017,
+      "target_price": 11.034941441107637,
+      "position_pct": 0.13273895941353103,
+      "as_of": "2026-07-27T22:19:16.128415+00:00"
     },
     {
-      "ticker": "JBLU",
-      "name": "JetBlue Airways Corporation - Common Stock",
+      "ticker": "MPLT",
+      "name": "MapLight Therapeutics, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 9.904999732971191,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-27T22:19:16.128415+00:00"
+    },
+    {
+      "ticker": "MXL",
+      "name": "MaxLinear, Inc - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 64.86000061035156,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-27T22:19:16.128415+00:00"
+    },
+    {
+      "ticker": "NEXT",
+      "name": "NextDecade Corporation - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 6.434999942779541,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-27T22:19:16.128415+00:00"
+    },
+    {
+      "ticker": "OMER",
+      "name": "Omeros Corporation - Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 5.269999980926514,
-      "stop_price": 4.619473965836906,
-      "target_price": 6.5710520111057305,
-      "position_pct": 0.08101136401440585,
-      "as_of": "2026-07-26T22:15:55.676136+00:00"
+      "price": 11.34000015258789,
+      "stop_price": 9.790302025757567,
+      "target_price": 14.439396406248537,
+      "position_pct": 0.07317554274768451,
+      "as_of": "2026-07-27T22:19:16.128415+00:00"
+    },
+    {
+      "ticker": "POWL",
+      "name": "Powell Industries, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 219.22999572753906,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-27T22:19:16.128415+00:00"
+    },
+    {
+      "ticker": "SLBT",
+      "name": "SL Science Holding Limited - Ordinary Shares",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 2.759999990463257,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-27T22:19:16.128415+00:00"
     }
   ]
 }
