@@ -9,7 +9,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-27T22:19:16.128415+00:00"
+    "as_of": "2026-07-28T08:20:10.151860+00:00"
   },
   {
     "ticker": "ACDC",
@@ -21,7 +21,19 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-27T22:19:16.128415+00:00"
+    "as_of": "2026-07-28T08:20:10.151860+00:00"
+  },
+  {
+    "ticker": "BKR",
+    "name": "Baker Hughes Company - Common Stock",
+    "exchange": "NASDAQ",
+    "score": 3.0,
+    "direction": "BUY",
+    "price": 60.59000015258789,
+    "stop_price": 56.56549658605165,
+    "target_price": 68.63900728566037,
+    "position_pct": 0.15055273066818475,
+    "as_of": "2026-07-28T08:20:10.151860+00:00"
   },
   {
     "ticker": "CAPR",
@@ -29,11 +41,11 @@
     "exchange": "NASDAQ",
     "score": -3.0,
     "direction": "SELL",
-    "price": 6.994999885559082,
+    "price": 7.0,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-27T22:19:16.128415+00:00"
+    "as_of": "2026-07-28T08:20:10.151860+00:00"
   },
   {
     "ticker": "LBTYK",
@@ -45,7 +57,7 @@
     "stop_price": 8.867529508328017,
     "target_price": 11.034941441107637,
     "position_pct": 0.13273895941353103,
-    "as_of": "2026-07-27T22:19:16.128415+00:00"
+    "as_of": "2026-07-28T08:20:10.151860+00:00"
   },
   {
     "ticker": "MPLT",
@@ -57,7 +69,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-27T22:19:16.128415+00:00"
+    "as_of": "2026-07-28T08:20:10.151860+00:00"
   },
   {
     "ticker": "MXL",
@@ -69,7 +81,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-27T22:19:16.128415+00:00"
+    "as_of": "2026-07-28T08:20:10.151860+00:00"
   },
   {
     "ticker": "NEXT",
@@ -81,7 +93,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-27T22:19:16.128415+00:00"
+    "as_of": "2026-07-28T08:20:10.151860+00:00"
   },
   {
     "ticker": "OMER",
@@ -93,7 +105,7 @@
     "stop_price": 9.790302025757567,
     "target_price": 14.439396406248537,
     "position_pct": 0.07317554274768451,
-    "as_of": "2026-07-27T22:19:16.128415+00:00"
+    "as_of": "2026-07-28T08:20:10.151860+00:00"
   },
   {
     "ticker": "POWL",
@@ -105,18 +117,6 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-27T22:19:16.128415+00:00"
-  },
-  {
-    "ticker": "SLBT",
-    "name": "SL Science Holding Limited - Ordinary Shares",
-    "exchange": "NASDAQ",
-    "score": -3.0,
-    "direction": "SELL",
-    "price": 2.759999990463257,
-    "stop_price": null,
-    "target_price": null,
-    "position_pct": null,
-    "as_of": "2026-07-27T22:19:16.128415+00:00"
+    "as_of": "2026-07-28T08:20:10.151860+00:00"
   }
 ]
