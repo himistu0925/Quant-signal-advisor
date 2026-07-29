@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T08:05:14.482027",
+  "generated_at": "2026-07-29T08:30:53.146291",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,7 +144,7 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-07-29T04:05:14.004395-04:00",
+    "timestamp": "2026-07-29T04:30:52.877952-04:00",
     "market_open": false,
     "tickers": {}
   },
@@ -159,7 +159,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-28T22:16:58.909308+00:00"
+      "as_of": "2026-07-29T08:25:04.177926+00:00"
     },
     {
       "ticker": "PWRD",
@@ -171,7 +171,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-28T22:16:58.909308+00:00"
+      "as_of": "2026-07-29T08:25:04.177926+00:00"
     },
     {
       "ticker": "SANM",
@@ -183,7 +183,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-28T22:16:58.909308+00:00"
+      "as_of": "2026-07-29T08:25:04.177926+00:00"
     },
     {
       "ticker": "CRWU",
@@ -195,7 +195,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-28T22:16:58.909308+00:00"
+      "as_of": "2026-07-29T08:25:04.177926+00:00"
     },
     {
       "ticker": "LITX",
@@ -207,7 +207,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-28T22:16:58.909308+00:00"
+      "as_of": "2026-07-29T08:25:04.177926+00:00"
     },
     {
       "ticker": "MAIR",
@@ -219,7 +219,19 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-28T22:16:58.909308+00:00"
+      "as_of": "2026-07-29T08:25:04.177926+00:00"
+    },
+    {
+      "ticker": "NPKI",
+      "name": "NPK International Inc. Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 12.9399995803833,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-29T08:25:04.177926+00:00"
     },
     {
       "ticker": "RITM",
@@ -231,7 +243,7 @@
       "stop_price": 9.313142864871509,
       "target_price": 10.713713469170557,
       "position_pct": 0.2094860416808299,
-      "as_of": "2026-07-28T22:16:58.909308+00:00"
+      "as_of": "2026-07-29T08:25:04.177926+00:00"
     },
     {
       "ticker": "CRK",
@@ -243,7 +255,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-28T22:16:58.909308+00:00"
+      "as_of": "2026-07-29T08:25:04.177926+00:00"
     },
     {
       "ticker": "AAOI",
@@ -255,19 +267,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-28T22:16:58.909308+00:00"
-    },
-    {
-      "ticker": "ADP",
-      "name": "Automatic Data Processing, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 264.1700134277344,
-      "stop_price": 249.29541444754682,
-      "target_price": 293.9192113881095,
-      "position_pct": 0.17759807426042182,
-      "as_of": "2026-07-28T22:16:58.909308+00:00"
+      "as_of": "2026-07-29T08:25:04.177926+00:00"
     }
   ]
 }
