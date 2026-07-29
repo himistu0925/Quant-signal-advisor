@@ -2,5 +2,17 @@
   "RNG": {
     "direction": "SURGE",
     "timestamp": "2026-07-27T15:00:57.076662-04:00"
+  },
+  "SANM": {
+    "direction": "PLUNGE",
+    "timestamp": "2026-07-29T11:00:57.016654-04:00"
+  },
+  "NPKI": {
+    "direction": "PLUNGE",
+    "timestamp": "2026-07-29T11:00:57.016654-04:00"
+  },
+  "RITM": {
+    "direction": "SURGE",
+    "timestamp": "2026-07-29T11:00:57.016654-04:00"
   }
 }
