@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T22:18:45.829202",
+  "generated_at": "2026-07-29T22:30:48.138903",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,130 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-07-29T18:18:45.498927-04:00",
+    "timestamp": "2026-07-29T18:30:47.741413-04:00",
     "market_open": false,
     "tickers": {}
   },
   "universe_candidates": [
     {
-      "ticker": "PSIX",
-      "name": "Power Solutions International, Inc. - Common Stock",
+      "ticker": "VFC",
+      "name": "V.F. Corporation Common Stock",
+      "exchange": "NYSE",
+      "score": -6.0,
+      "direction": "SELL",
+      "price": 15.079999923706055,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-29T22:18:12.787906+00:00"
+    },
+    {
+      "ticker": "FDT",
+      "name": "First Trust Developed Markets Ex-US AlphaDEX Fund",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 27.899999618530273,
+      "price": 87.69999694824219,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-29T08:25:04.177926+00:00"
+      "as_of": "2026-07-29T22:18:12.787906+00:00"
     },
     {
-      "ticker": "PWRD",
-      "name": "TCW Transform Systems ETF",
+      "ticker": "GDYN",
+      "name": "Grid Dynamics Holdings, Inc. - Class A Common Stock",
       "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 106.0,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-29T08:25:04.177926+00:00"
-    },
-    {
-      "ticker": "SANM",
-      "name": "Sanmina Corporation - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 172.42999267578125,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-29T08:25:04.177926+00:00"
-    },
-    {
-      "ticker": "CRWU",
-      "name": "T-REX 2X Long CRWV Daily Target ETF",
-      "exchange": "Cboe BZX",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 2.5450000762939453,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-29T08:25:04.177926+00:00"
-    },
-    {
-      "ticker": "LITX",
-      "name": "Tradr 2X Long LITE Daily ETF",
-      "exchange": "Cboe BZX",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 18.229999542236328,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-29T08:25:04.177926+00:00"
-    },
-    {
-      "ticker": "MAIR",
-      "name": "Madison Air Solutions Corporation Class A Common Stock",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 32.220001220703125,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-29T08:25:04.177926+00:00"
-    },
-    {
-      "ticker": "NPKI",
-      "name": "NPK International Inc. Common Stock",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 12.9399995803833,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-29T08:25:04.177926+00:00"
-    },
-    {
-      "ticker": "RITM",
-      "name": "Rithm Capital Corp. Common Stock",
-      "exchange": "NYSE",
       "score": 4.5,
       "direction": "BUY",
-      "price": 9.779999732971191,
-      "stop_price": 9.313142864871509,
-      "target_price": 10.713713469170557,
-      "position_pct": 0.2094860416808299,
-      "as_of": "2026-07-29T08:25:04.177926+00:00"
+      "price": 6.800000190734863,
+      "stop_price": 6.054748586335192,
+      "target_price": 8.290503399534206,
+      "position_pct": 0.09124435493449924,
+      "as_of": "2026-07-29T22:18:12.787906+00:00"
     },
     {
-      "ticker": "CRK",
-      "name": "Comstock Resources, Inc. Common Stock",
+      "ticker": "IREN",
+      "name": "IREN Limited - Ordinary Shares",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 29.309999465942383,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-29T22:18:12.787906+00:00"
+    },
+    {
+      "ticker": "PDD",
+      "name": "PDD Holdings Inc. - American Depositary Shares",
+      "exchange": "NASDAQ",
+      "score": 4.5,
+      "direction": "BUY",
+      "price": 88.31999969482422,
+      "stop_price": 83.2631814344787,
+      "target_price": 98.43363621551525,
+      "position_pct": 0.17465527758316068,
+      "as_of": "2026-07-29T22:18:12.787906+00:00"
+    },
+    {
+      "ticker": "SIMO",
+      "name": "Silicon Motion Technology Corporation - American Depositary Shares, each representing four ordinary shares",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 209.67999267578125,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-29T22:18:12.787906+00:00"
+    },
+    {
+      "ticker": "AXS",
+      "name": "Axis Capital Holdings Limited Common Stock",
       "exchange": "NYSE",
-      "score": -4.0,
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 105.95999908447266,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-29T22:18:12.787906+00:00"
+    },
+    {
+      "ticker": "BLOX",
+      "name": "Nicholas Crypto Income ETF",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
       "direction": "SELL",
       "price": 12.380000114440918,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-29T08:25:04.177926+00:00"
+      "as_of": "2026-07-29T22:18:12.787906+00:00"
     },
     {
-      "ticker": "AAOI",
-      "name": "Applied Optoelectronics, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
+      "ticker": "BTU",
+      "name": "Peabody Energy Corporation Common Stock ",
+      "exchange": "NYSE",
+      "score": -4.5,
       "direction": "SELL",
-      "price": 88.13999938964844,
+      "price": 20.81999969482422,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-29T08:25:04.177926+00:00"
+      "as_of": "2026-07-29T22:18:12.787906+00:00"
+    },
+    {
+      "ticker": "CW",
+      "name": "Curtiss-Wright Corporation Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 679.4099731445312,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-29T22:18:12.787906+00:00"
     }
   ]
 }
