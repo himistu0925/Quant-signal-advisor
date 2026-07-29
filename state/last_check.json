@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-29T15:00:52.761176-04:00",
+  "timestamp": "2026-07-29T15:30:58.529329-04:00",
   "market_open": true,
   "tickers": {
     "TQQQ": {
@@ -18,7 +18,7 @@
       "threshold": null
     },
     "AAPL": {
-      "score": -1.9189627403157186,
+      "score": 0.5,
       "direction": null,
       "threshold": null
     },
