@@ -14,5 +14,9 @@
   "RITM": {
     "direction": "SURGE",
     "timestamp": "2026-07-29T14:01:02.360606-04:00"
+  },
+  "SIMO": {
+    "direction": "SURGE",
+    "timestamp": "2026-07-30T09:30:50.412608-04:00"
   }
 }
