@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T22:08:25.504665",
+  "generated_at": "2026-07-30T22:30:49.860142",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,130 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-07-30T18:08:25.127739-04:00",
+    "timestamp": "2026-07-30T18:30:49.469226-04:00",
     "market_open": false,
     "tickers": {}
   },
   "universe_candidates": [
     {
-      "ticker": "VFC",
-      "name": "V.F. Corporation Common Stock",
+      "ticker": "PFSI",
+      "name": "PennyMac Financial Services, Inc. Common Stock",
       "exchange": "NYSE",
+      "score": -7.5,
+      "direction": "SELL",
+      "price": 75.87000274658203,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-30T22:30:13.161389+00:00"
+    },
+    {
+      "ticker": "IREZ",
+      "name": "Tradr 2X Short IREN Daily ETF",
+      "exchange": "Cboe BZX",
       "score": -6.0,
       "direction": "SELL",
-      "price": 15.079999923706055,
+      "price": 15.199999809265137,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-30T08:10:58.742670+00:00"
+      "as_of": "2026-07-30T22:30:13.161389+00:00"
     },
     {
-      "ticker": "FDT",
-      "name": "First Trust Developed Markets Ex-US AlphaDEX Fund",
+      "ticker": "HWKN",
+      "name": "Hawkins, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 87.69999694824219,
+      "price": 129.22000122070312,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-30T08:10:58.742670+00:00"
+      "as_of": "2026-07-30T22:30:13.161389+00:00"
     },
     {
-      "ticker": "GDYN",
-      "name": "Grid Dynamics Holdings, Inc. - Class A Common Stock",
+      "ticker": "LKQ",
+      "name": "LKQ Corporation - Common Stock",
       "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 22.600000381469727,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-30T22:30:13.161389+00:00"
+    },
+    {
+      "ticker": "PHAT",
+      "name": "Phathom Pharmaceuticals, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 9.029999732971191,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-30T22:30:13.161389+00:00"
+    },
+    {
+      "ticker": "AGCO",
+      "name": "AGCO Corporation Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 107.12999725341797,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-30T22:30:13.161389+00:00"
+    },
+    {
+      "ticker": "ARX",
+      "name": "Accelerant Holdings Class A Common Shares",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 11.199999809265137,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-07-30T22:30:13.161389+00:00"
+    },
+    {
+      "ticker": "EME",
+      "name": "EMCOR Group, Inc. Common Stock",
+      "exchange": "NYSE",
       "score": 4.5,
       "direction": "BUY",
-      "price": 6.800000190734863,
-      "stop_price": 6.054034352391797,
-      "target_price": 8.291931867420995,
-      "position_pct": 0.09115699193194929,
-      "as_of": "2026-07-30T08:10:58.742670+00:00"
+      "price": 802.3699951171875,
+      "stop_price": 725.7202355016598,
+      "target_price": 955.669514348243,
+      "position_pct": 0.10468004063441876,
+      "as_of": "2026-07-30T22:30:13.161389+00:00"
     },
     {
-      "ticker": "IREN",
-      "name": "IREN Limited - Ordinary Shares",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 29.309999465942383,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-30T08:10:58.742670+00:00"
-    },
-    {
-      "ticker": "PDD",
-      "name": "PDD Holdings Inc. - American Depositary Shares",
-      "exchange": "NASDAQ",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 88.31999969482422,
-      "stop_price": 83.2631814344787,
-      "target_price": 98.43363621551525,
-      "position_pct": 0.17465527758316068,
-      "as_of": "2026-07-30T08:10:58.742670+00:00"
-    },
-    {
-      "ticker": "SIMO",
-      "name": "Silicon Motion Technology Corporation - American Depositary Shares, each representing four ordinary shares",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 209.67999267578125,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-30T08:10:58.742670+00:00"
-    },
-    {
-      "ticker": "AXS",
-      "name": "Axis Capital Holdings Limited Common Stock",
+      "ticker": "ESRT",
+      "name": "Empire State Realty Trust, Inc. Class A Common Stock",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 105.95999908447266,
+      "price": 5.0,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-30T08:10:58.742670+00:00"
+      "as_of": "2026-07-30T22:30:13.161389+00:00"
     },
     {
-      "ticker": "BLOX",
-      "name": "Nicholas Crypto Income ETF",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 12.380000114440918,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-30T08:10:58.742670+00:00"
-    },
-    {
-      "ticker": "BTU",
-      "name": "Peabody Energy Corporation Common Stock ",
+      "ticker": "FICO",
+      "name": "Fair Isaac Corporation Common Stock",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 20.81999969482422,
+      "price": 1139.5400390625,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-30T08:10:58.742670+00:00"
-    },
-    {
-      "ticker": "CW",
-      "name": "Curtiss-Wright Corporation Common Stock",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 679.4099731445312,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-07-30T08:10:58.742670+00:00"
+      "as_of": "2026-07-30T22:30:13.161389+00:00"
     }
   ]
 }
