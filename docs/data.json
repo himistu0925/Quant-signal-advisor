@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T08:11:22.330778",
+  "generated_at": "2026-07-30T08:30:46.947821",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,7 +144,7 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-07-30T04:11:21.924203-04:00",
+    "timestamp": "2026-07-30T04:30:46.559203-04:00",
     "market_open": false,
     "tickers": {}
   },
@@ -159,7 +159,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-29T22:18:12.787906+00:00"
+      "as_of": "2026-07-30T08:10:58.742670+00:00"
     },
     {
       "ticker": "FDT",
@@ -171,7 +171,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-29T22:18:12.787906+00:00"
+      "as_of": "2026-07-30T08:10:58.742670+00:00"
     },
     {
       "ticker": "GDYN",
@@ -180,10 +180,10 @@
       "score": 4.5,
       "direction": "BUY",
       "price": 6.800000190734863,
-      "stop_price": 6.054748586335192,
-      "target_price": 8.290503399534206,
-      "position_pct": 0.09124435493449924,
-      "as_of": "2026-07-29T22:18:12.787906+00:00"
+      "stop_price": 6.054034352391797,
+      "target_price": 8.291931867420995,
+      "position_pct": 0.09115699193194929,
+      "as_of": "2026-07-30T08:10:58.742670+00:00"
     },
     {
       "ticker": "IREN",
@@ -195,7 +195,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-29T22:18:12.787906+00:00"
+      "as_of": "2026-07-30T08:10:58.742670+00:00"
     },
     {
       "ticker": "PDD",
@@ -207,7 +207,7 @@
       "stop_price": 83.2631814344787,
       "target_price": 98.43363621551525,
       "position_pct": 0.17465527758316068,
-      "as_of": "2026-07-29T22:18:12.787906+00:00"
+      "as_of": "2026-07-30T08:10:58.742670+00:00"
     },
     {
       "ticker": "SIMO",
@@ -219,7 +219,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-29T22:18:12.787906+00:00"
+      "as_of": "2026-07-30T08:10:58.742670+00:00"
     },
     {
       "ticker": "AXS",
@@ -231,7 +231,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-29T22:18:12.787906+00:00"
+      "as_of": "2026-07-30T08:10:58.742670+00:00"
     },
     {
       "ticker": "BLOX",
@@ -243,7 +243,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-29T22:18:12.787906+00:00"
+      "as_of": "2026-07-30T08:10:58.742670+00:00"
     },
     {
       "ticker": "BTU",
@@ -255,7 +255,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-29T22:18:12.787906+00:00"
+      "as_of": "2026-07-30T08:10:58.742670+00:00"
     },
     {
       "ticker": "CW",
@@ -267,7 +267,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-29T22:18:12.787906+00:00"
+      "as_of": "2026-07-30T08:10:58.742670+00:00"
     }
   ]
 }
