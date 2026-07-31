@@ -9,7 +9,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-30T22:30:13.161389+00:00"
+    "as_of": "2026-07-31T10:02:15.171381+00:00"
   },
   {
     "ticker": "IREZ",
@@ -21,7 +21,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-30T22:30:13.161389+00:00"
+    "as_of": "2026-07-31T10:02:15.171381+00:00"
   },
   {
     "ticker": "HWKN",
@@ -33,7 +33,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-30T22:30:13.161389+00:00"
+    "as_of": "2026-07-31T10:02:15.171381+00:00"
   },
   {
     "ticker": "LKQ",
@@ -45,7 +45,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-30T22:30:13.161389+00:00"
+    "as_of": "2026-07-31T10:02:15.171381+00:00"
   },
   {
     "ticker": "PHAT",
@@ -57,7 +57,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-30T22:30:13.161389+00:00"
+    "as_of": "2026-07-31T10:02:15.171381+00:00"
   },
   {
     "ticker": "AGCO",
@@ -69,7 +69,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-30T22:30:13.161389+00:00"
+    "as_of": "2026-07-31T10:02:15.171381+00:00"
   },
   {
     "ticker": "ARX",
@@ -81,7 +81,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-30T22:30:13.161389+00:00"
+    "as_of": "2026-07-31T10:02:15.171381+00:00"
   },
   {
     "ticker": "EME",
@@ -90,10 +90,10 @@
     "score": 4.5,
     "direction": "BUY",
     "price": 802.3699951171875,
-    "stop_price": 725.7202355016598,
-    "target_price": 955.669514348243,
-    "position_pct": 0.10468004063441876,
-    "as_of": "2026-07-30T22:30:13.161389+00:00"
+    "stop_price": 725.720296536816,
+    "target_price": 955.6693922779305,
+    "position_pct": 0.10468012398977115,
+    "as_of": "2026-07-31T10:02:15.171381+00:00"
   },
   {
     "ticker": "ESRT",
@@ -105,18 +105,18 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-07-30T22:30:13.161389+00:00"
+    "as_of": "2026-07-31T10:02:15.171381+00:00"
   },
   {
-    "ticker": "FICO",
-    "name": "Fair Isaac Corporation Common Stock",
-    "exchange": "NYSE",
-    "score": -4.5,
-    "direction": "SELL",
-    "price": 1139.5400390625,
-    "stop_price": null,
-    "target_price": null,
-    "position_pct": null,
-    "as_of": "2026-07-30T22:30:13.161389+00:00"
+    "ticker": "FEZ",
+    "name": "State Street SPDR EURO STOXX 50 ETF",
+    "exchange": "NYSE Arca",
+    "score": 4.5,
+    "direction": "BUY",
+    "price": 69.69999694824219,
+    "stop_price": 67.63975025294143,
+    "target_price": 73.82049033884371,
+    "position_pct": 0.25,
+    "as_of": "2026-07-31T10:02:15.171381+00:00"
   }
 ]
