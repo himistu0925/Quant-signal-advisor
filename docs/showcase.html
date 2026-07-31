@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>퀀트 신호 어드바이저 — 소개 & 2주차 회고</title>
+<style>
+  :root {
+    --bg: #eef1f6;
+    --bg-slide-alt: #e6eaf2;
+    --card: #ffffff;
+    --border: #dde3ec;
+    --text: #1a2233;
+    --text-muted: #5b6778;
+    --accent: #2c4a8c;
+    --accent-soft: #eaf0fb;
+    --green-bg: #e3f7ea;
+    --green-text: #12693a;
+    --green-border: #b7e6c9;
+    --red-bg: #fdeaea;
+    --red-text: #a3262c;
+    --red-border: #f4c3c5;
+    --amber-bg: #fef3e2;
+    --amber-text: #92600a;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Pretendard", "Malgun Gothic", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12151c;
+      --bg-slide-alt: #171b24;
+      --card: #1b202b;
+      --border: #2b3140;
+      --text: #e7eaf1;
+      --text-muted: #96a1b5;
+      --accent: #7fa1e6;
+      --accent-soft: #202b42;
+      --green-bg: #123423;
+      --green-text: #6fd99a;
+      --green-border: #1f5c3b;
+      --red-bg: #3a1c1e;
+      --red-text: #f0999c;
+      --red-border: #5c2528;
+      --amber-bg: #3a2c10;
+      --amber-text: #f0c268;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  section.slide {
+    padding: 5rem 8vw 4rem;
+    max-width: 1180px;
+    margin: 0 auto;
+    scroll-margin-top: 1rem;
+  }
+  section.slide.alt { background: var(--bg-slide-alt); max-width: none; }
+  section.slide.alt > .inner { max-width: 1180px; margin: 0 auto; }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.9rem;
+  }
+  h1 { font-size: clamp(1.9rem, 4vw, 3rem); margin: 0 0 1rem; letter-spacing: -0.01em; }
+  h2 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); margin: 0 0 0.9rem; letter-spacing: -0.01em; }
+  h3 { font-size: 1.05rem; margin: 0 0 0.5rem; }
+  p.lede { font-size: 1.08rem; color: var(--text-muted); max-width: 62ch; }
+  p { color: var(--text); }
+  .muted { color: var(--text-muted); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text-muted);
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+  }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.2rem;
+  }
+  .stat-card .label { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+  .stat-card .value { font-size: 1.5rem; font-weight: 700; }
+  .stat-card .sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem; }
+  .cta-row { display: flex; gap: 0.8rem; margin-top: 2.2rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.75rem 1.3rem; border-radius: 9px; font-weight: 600; font-size: 0.95rem;
+    border: 1px solid var(--accent);
+  }
+  .btn.primary { background: var(--accent); color: #fff; }
+  .btn.primary:hover { opacity: 0.9; text-decoration: none; }
+  .btn.ghost { background: transparent; color: var(--accent); }
+  .btn.ghost:hover { background: var(--accent-soft); text-decoration: none; }
+  .col-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 1.8rem; }
+  .col-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.8rem; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;
+  }
+  .card h3 { color: var(--accent); }
+  table { border-collapse: collapse; width: 100%; font-size: 0.88rem; margin-top: 1rem; }
+  th, td { border: 1px solid var(--border); padding: 0.55rem 0.7rem; text-align: left; vertical-align: top; }
+  th { background: var(--accent-soft); font-weight: 700; font-size: 0.8rem; }
+  td.num, th.num { text-align: right; font-family: var(--mono); }
+  .table-wrap { overflow-x: auto; }
+  .pill { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.74rem; font-weight: 700; }
+  .pill-buy { background: var(--green-bg); color: var(--green-text); }
+  .pill-sell { background: var(--red-bg); color: var(--red-text); }
+  .pill-flat { background: var(--accent-soft); color: var(--accent); }
+  .include-exclude { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.8rem; }
+  .panel { border-radius: 12px; padding: 1.4rem 1.5rem; border: 1px solid; }
+  .panel.good { background: var(--green-bg); border-color: var(--green-border); }
+  .panel.bad { background: var(--red-bg); border-color: var(--red-border); }
+  .panel h3 { margin-bottom: 0.7rem; }
+  .panel.good h3 { color: var(--green-text); }
+  .panel.bad h3 { color: var(--red-text); }
+  .panel ul { margin: 0; padding-left: 1.1rem; }
+  .panel li { margin-bottom: 0.45rem; }
+  .callout {
+    border-radius: 12px; padding: 1.2rem 1.4rem; margin-top: 1rem;
+    background: var(--amber-bg); color: var(--amber-text); border: 1px solid var(--amber-text);
+    font-size: 0.92rem;
+  }
+  .callout b { display: block; margin-bottom: 0.3rem; }
+  .buildlog { display: flex; flex-direction: column; gap: 0.9rem; margin-top: 1.6rem; }
+  .buildlog .row {
+    display: grid; grid-template-columns: 2.2rem 1fr auto; gap: 1rem; align-items: start;
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.2rem;
+  }
+  .buildlog .num {
+    width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--accent-soft); color: var(--accent);
+    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem;
+  }
+  .buildlog .commit { font-family: var(--mono); font-size: 0.78rem; color: var(--text-muted); white-space: nowrap; }
+  .buildlog .title { font-weight: 700; margin-bottom: 0.3rem; }
+  .buildlog .desc { color: var(--text-muted); font-size: 0.9rem; }
+  .phase-status { font-weight: 700; }
+  .phase-status.done { color: var(--green-text); }
+  .phase-status.watch { color: var(--accent); }
+  .persona-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.8rem; margin-top: 1.6rem; }
+  .persona-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 0.9rem;
+    font-size: 0.82rem;
+  }
+  .persona-card .name { font-weight: 700; margin-bottom: 0.2rem; }
+  .persona-card .meta { color: var(--text-muted); font-size: 0.76rem; margin-bottom: 0.4rem; }
+  .discord-mock {
+    background: #313338; color: #dbdee1; border-radius: 10px; padding: 1rem 1.2rem; font-family: var(--mono);
+    font-size: 0.82rem; max-width: 480px; margin-top: 1.4rem;
+  }
+  .discord-mock .chan { color: #949ba4; font-size: 0.75rem; margin-bottom: 0.6rem; }
+  .discord-mock .bot { color: #a3d9ff; font-weight: 700; }
+  .discord-mock .ts { color: #949ba4; font-weight: 400; font-size: 0.75rem; }
+  .discord-mock .buy { color: #66d19e; font-weight: 700; }
+  .footer-links { margin-top: 1rem; font-size: 0.9rem; }
+  .footer-links span { margin: 0 0.6rem; color: var(--text-muted); }
+  .disclaimer {
+    border: 1px solid var(--red-border); background: var(--red-bg); color: var(--red-text);
+    border-radius: 12px; padding: 1.1rem 1.3rem; margin-top: 1.6rem; font-size: 0.88rem;
+  }
+  .disclaimer b { display: block; margin-bottom: 0.3rem; }
+
+  /* dot nav */
+  #dotnav {
+    position: fixed; right: 1.4rem; top: 50%; transform: translateY(-50%);
+    display: flex; flex-direction: column; gap: 0.55rem; z-index: 50;
+  }
+  #dotnav a {
+    width: 9px; height: 9px; border-radius: 50%; background: var(--border);
+    border: 1px solid var(--text-muted); display: block; transition: all .2s;
+  }
+  #dotnav a.active { background: var(--accent); border-color: var(--accent); transform: scale(1.3); }
+  #dotnav a:hover { text-decoration: none; }
+
+  @media (max-width: 900px) {
+    .stat-grid, .col-3, .col-2, .include-exclude, .persona-grid { grid-template-columns: 1fr; }
+    section.slide { padding: 3.5rem 6vw 3rem; }
+    #dotnav { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="dotnav" aria-label="슬라이드 이동"></nav>
+
+<!-- 1. HERO -->
+<section class="slide" id="s-hero">
+  <div class="eyebrow">Personal Quant Research Note · v0.3 · Week 2 Update</div>
+  <h1>감정을 배제하고,<br>지표만 남긴다</h1>
+  <p class="lede">
+    미국 주식 워치리스트를 15분 주기로 점검해, 여러 보조지표가 같은 방향을 가리킬 때만
+    후보 신호를 디스코드로 통지하는 개인용 규칙 기반 시스템. 최종 판단과 주문 실행은
+    항상 사람이 맡는다. 1주차에 만들고 배포했고, 2주차에는 실사용자 가정을 검증하고
+    운영 중 드러난 문제들을 고쳐 더 단단하게 만들었다.
+  </p>
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="label">워치리스트</div>
+      <div class="value">5 / 5</div>
+      <div class="sub">TQQQ · SOXL · UPRO · AAPL · GOOGL</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">지표 레지스트리</div>
+      <div class="value">8 + 3</div>
+      <div class="sub">core 8종 + candidate 3종</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">점검 주기</div>
+      <div class="value">15분</div>
+      <div class="sub">정규장 중, GitHub Actions</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">가동 기간</div>
+      <div class="value">9일째</div>
+      <div class="sub">2026-07-23 배포 → 2026-07-31</div>
+    </div>
+  </div>
+  <div class="cta-row">
+    <a class="btn primary" href="https://himistu0925.github.io/Quant-signal-advisor/" target="_blank" rel="noopener">체험하기 — 실시간 대시보드 →</a>
+    <a class="btn ghost" href="https://github.com/himistu0925/Quant-signal-advisor" target="_blank" rel="noopener">GitHub 저장소</a>
+  </div>
+</section>
+
+<!-- 2. WHY -->
+<section class="slide alt" id="s-why">
+  <div class="inner">
+    <div class="eyebrow">Why</div>
+    <h2>왜 만들었고, 누구에게, 언제 쓰는가</h2>
+    <p class="lede">
+      변동성 장세에서 감정적으로 판단하지 않기 위해 시작한 개인 도구다. 실제로 이 도구를
+      만들기 전, 서로 다른 투자 성향의 페르소나 5명을 세워 가정을 검증해봤는데
+      (2주차 작업, 아래 참고) — 경력과 무관하게 전원이 매수/매도 타이밍에서 스트레스를
+      느끼고 있었다.
+    </p>
+    <div class="col-3">
+      <div class="card">
+        <h3>왜 만들었나</h3>
+        <p>급락·급등장에서 "확신 없이 흔들리는" 순간을 줄이려고. 사람이 확신을 갖는 게
+        아니라, 지표 근거가 기준을 만족할 때만 후보 신호를 제시하고 최종 실행은 항상
+        사용자가 한다.</p>
+      </div>
+      <div class="card">
+        <h3>누구에게 쓸모있나</h3>
+        <p><b>기술적 지표를 신뢰하는 개인 트레이더</b>, 특히 장중 실시간 대응이 어려운
+        직장인·개발자. 반대로 펀더멘털 중심 장기 가치투자자에게는 이 도구의 전제
+        자체가 성립하지 않는다는 것도 인터뷰로 확인했다.</p>
+      </div>
+      <div class="card">
+        <h3>어떤 경우에 사용하나</h3>
+        <p>미국 장중(한국 시간 밤~새벽)에 화면을 보고 있을 수 없을 때, 15분마다 자동으로
+        지표를 점검해 디스코드로 알려준다. 월 1회는 5년치 데이터로 임계값을
+        재캘리브레이션한다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 체험하기 -->
+<section class="slide" id="s-try">
+  <div class="eyebrow">Try it</div>
+  <h2>체험하기 — 실제로 써보기</h2>
+  <p class="lede">
+    <a href="https://himistu0925.github.io/Quant-signal-advisor/" target="_blank" rel="noopener">himistu0925.github.io/Quant-signal-advisor</a>
+    에서 로그인 없이 누구나 현재 워치리스트·신호 히스토리·자동 발굴 후보를 조회할 수
+    있다. 워치리스트를 실제로 추가/삭제하려면 본인의 GitHub Fine-grained PAT을 브라우저에
+    입력하면 되고(서버로 전송되지 않고 localStorage에만 저장), 이 저장소에 대한 권한이
+    없는 방문자는 조회만 가능하다.
+  </p>
+  <div class="card" style="margin-top:1.6rem;">
+    <h3>2026-07-31 04:00 UTC 기준 · 실제 화면 그대로</h3>
+    <div class="table-wrap">
+    <table>
+      <tr><th>종목</th><th>매수/매도 임계값</th><th>주요 지표</th><th class="num">검증구간 수익</th><th class="num">샤프</th><th class="num">거래수</th></tr>
+      <tr><td>TQQQ</td><td>+2.0 / -2.0</td><td>RSI(7.0)</td><td class="num">43.5%</td><td class="num">2.35</td><td class="num">1</td></tr>
+      <tr><td>SOXL</td><td>+3.0 / -3.0</td><td>BollingerBands(2.3), Ichimoku(2.0), MA(1.6)</td><td class="num">170.9%</td><td class="num">1.81</td><td class="num">1</td></tr>
+      <tr><td>UPRO</td><td>+2.0 / -2.0</td><td>RSI(4.5), Ichimoku(1.5), BollingerBands(1.0)</td><td class="num">29.3%</td><td class="num">1.70</td><td class="num">1</td></tr>
+      <tr><td>AAPL</td><td>+2.0 / -2.0</td><td>RSI(2.4), BollingerBands(2.1), Ichimoku(1.5)</td><td class="num">37.9%</td><td class="num">2.12</td><td class="num">5</td></tr>
+      <tr><td>GOOGL</td><td>+3.0 / -3.0</td><td>RSI(2.9), BollingerBands(2.1), MACD(2.0)</td><td class="num">0.0%</td><td class="num">0.00</td><td class="num">0</td></tr>
+    </table>
+    </div>
+    <p class="muted" style="margin-top:0.8rem; font-size:0.85rem;">
+      AAPL·GOOGL은 2주차에 새로 만든 브라우저 워치리스트 편집기로 사용자가 직접 추가한
+      종목 — 개발 후 처음으로 실제 배포 화면에서 PAT을 입력해 두 종목을 연달아
+      추가해본 실사용 테스트였다 (아래 시행착오 참고).
+    </p>
+  </div>
+</section>
+
+<!-- 4. 1주차 vs 2주차 -->
+<section class="slide alt" id="s-weeks">
+  <div class="inner">
+    <div class="eyebrow">Week 1 → Week 2</div>
+    <h2>1주차와 2주차, 무엇이 달라졌나</h2>
+    <p class="lede">1주차는 "만들고 배포하기"였고, 2주차는 "그 전제가 맞는지 확인하고, 실제로 굴리면서 드러난 틈을 메우기"였다.</p>
+    <div class="col-2">
+      <div class="card">
+        <h3>1주차 · 2026-07-23</h3>
+        <ul>
+          <li>지표 플러그인 프레임워크(RSI, MACD, MA, 볼린저밴드, 지지/저항, 거래량, 피보나치, 일목균형표) 구축</li>
+          <li>5년 백테스트 + IC 기반 종목별 가중치 캘리브레이션</li>
+          <li>Discord 알림 + GitHub Pages 대시보드 + GitHub Actions 15분 스케줄러</li>
+          <li>후보 지표(Stochastic/ADX/OBV) 프레임워크만 등록, 실거래 미반영</li>
+          <li>워치리스트 TQQQ · SOXL · UPRO(3종) 확정 후 관찰 시작</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>2주차 · 2026-07-24 ~ 07-31</h3>
+        <ul>
+          <li><b>가정 검증:</b> 페르소나 인터뷰 5명 — "매도가 매수보다 더 고통스럽다", "타겟은 기술적 트레이더로 한정" 등 제품 전제 재확인/수정</li>
+          <li><b>기능 확장:</b> ATR 기반 리스크 사이징, 미국 전종목(~12,480개) 유니버스 스크리너 + 급변동 알림</li>
+          <li><b>UI 확장:</b> 대시보드에서 브라우저로 직접 워치리스트 추가/삭제 (AAPL·GOOGL로 실사용 검증, 5/5 도달)</li>
+          <li><b>신뢰성 강화:</b> GitHub 자체 cron 스케줄러 불안정 문제, 동시 push 레이스 컨디션, 폰 푸시 알림 미도착 — 3건의 운영 이슈를 실측 후 근본 수정</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Assumption validation -->
+<section class="slide" id="s-assumptions">
+  <div class="eyebrow">2주차 · Assumption Validation</div>
+  <h2>가정 검증: 인터뷰로 되짚어본 문제 정의</h2>
+  <p class="lede">
+    plan.md의 전제("주관적 판단 대신 지표 수치만으로 신호를 생성")를 실제로 사람들이
+    원하는지 확인하기 위해, 서로 다른 투자 성향의 페르소나 5명을 서브에이전트로 세워
+    인터뷰를 진행했다.
+  </p>
+  <div class="persona-grid">
+    <div class="persona-card"><div class="name">강지훈 · 28/남</div><div class="meta">투자 1년차</div>초보 개미, 패닉셀 경험, 커뮤니티 의존</div>
+    <div class="persona-card"><div class="name">오세훈 · 35/남</div><div class="meta">투자 6년차</div>기술적 지표 기반 스윙 트레이더</div>
+    <div class="persona-card"><div class="name">한미영 · 50/여</div><div class="meta">투자 15년차</div>펀더멘털 중심, 기술적 지표에 회의적</div>
+    <div class="persona-card"><div class="name">배준서 · 30/남</div><div class="meta">백엔드 개발자</div>장중 확인 어려움, 자동화 선호</div>
+    <div class="persona-card"><div class="name">정하윤 · 26/여</div><div class="meta">투자 2년차</div>단타, 패닉셀·추격매수 반복</div>
+  </div>
+
+  <div class="col-2" style="margin-top:2rem;">
+    <div class="panel good">
+      <h3>확인된 것</h3>
+      <ul>
+        <li>경력과 무관하게 전원이 매수/매도 타이밍에서 스트레스를 느낀다 — 단, <b>"매도" 쪽이 더 고통스럽다</b>는 게 공통적으로 나타났다(3명 명시적 언급)</li>
+        <li>5명 중 4명이 감정/직감보다 지표·데이터 기반 신호를 명확히 선호한다</li>
+        <li>혼자 판단할 때 흔들리는 이유는 정보 부족이 아니라 <b>판단을 검증해줄 근거(anchor)의 부재</b> — 지금은 그 자리를 커뮤니티 의견이 대신하고 있고, 종종 틀려서 손실로 이어진다</li>
+      </ul>
+    </div>
+    <div class="panel bad">
+      <h3>전제를 수정하게 만든 것</h3>
+      <ul>
+        <li>장기 가치투자자(한미영)에게는 "지표 기반 신호 선호" 가정 자체가 성립하지 않는다 — 기술적 지표를 "도박처럼 느껴서" 신뢰하지 않음</li>
+        <li>→ 이 도구의 타겟은 <b>"기술적 지표를 신뢰하는 트레이더" 세그먼트로 명확히 한정</b>해야 하며, 펀더멘털 투자자는 애초에 스코프 아웃 유지가 맞다는 걸 재확인</li>
+        <li>plan.md는 매수/매도 신호를 대칭적으로 설계했지만, 실사용자 고통은 매도 쪽에 더 쏠려 있어 <b>매도 신호의 근거 설명을 더 두텁게</b> 만들 필요가 있음 (아직 미착수, 열린 과제)</li>
+      </ul>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:1rem; font-size:0.85rem;">
+    자세한 질문지·답변 전문은 <a href="assumption_validation.md" target="_blank">docs/assumption_validation.md</a> 참고.
+  </p>
+</section>
+
+<!-- 6. Feature expansion -->
+<section class="slide alt" id="s-features">
+  <div class="inner">
+    <div class="eyebrow">2주차 · 기능 확장</div>
+    <h2>진짜 브로커리지 앱처럼</h2>
+    <p class="lede">개인용 신호 알림 도구를 넘어, 실제 트레이딩 데스크가 쓸 법한 형태로 세 가지를 더했다.</p>
+    <div class="col-3">
+      <div class="card">
+        <h3>ATR 기반 리스크 사이징</h3>
+        <p>BUY 신호에 손절/목표가(ATR 배수)와 고정비율 포지션 사이징(거래당 리스크
+        1%, 종목당 최대 25%)을 자동으로 붙였다. 공개 저장소라 <span class="tag">%</span>
+        기반 값만 대시보드에 남기고, 실제 주식 수는 계산하지 않는다(선택적 비공개 설정,
+        아직 미사용).</p>
+      </div>
+      <div class="card">
+        <h3>전종목 유니버스 스크리너</h3>
+        <p>미국 상장 종목/ETF 전체(~12,480개)를 매일 밤 유동성 기준으로 스크리닝해
+        상위 10개 후보를 뽑고, 그 종목이 자기 ATR 대비 2배 이상 급변동하면 실시간으로
+        알려준다. 워치리스트에는 자동 추가되지 않는다.</p>
+      </div>
+      <div class="card">
+        <h3>대시보드 워치리스트 편집기</h3>
+        <p>"진짜 브로커리지 앱처럼" 티커를 검색해서 직접 추가/삭제하고 싶다는 요구에
+        맞춰, 별도 백엔드 없이 브라우저에서 GitHub PAT으로 workflow_dispatch API를
+        직접 호출하는 방식으로 구현했다.</p>
+      </div>
+    </div>
+    <div class="callout">
+      <b>설계가 한 번에 나오지 않은 지점</b>
+      유니버스 후보 알림은 처음엔 상위 20개를 밤 한 번에 몰아서 디스코드로 보내는
+      다이제스트 방식으로 만들었다. 실제로 받아보니 "20개를 한 번에 보는 건 실전에
+      쓸모가 없다"는 게 명확해져서, 상위 10개로 줄이고 "그 종목이 지금 막 크게
+      움직이는 순간"에만 실시간으로 알리는 방식(<code>detect_sharp_move</code>)으로
+      갈아엎었다 — 같은 날 안에 뒤집은 설계 변경(commit 37667ae).
+    </div>
+  </div>
+</section>
+
+<!-- 7. Discord example + build log -->
+<section class="slide" id="s-buildlog">
+  <div class="eyebrow">2주차 · Build Log</div>
+  <h2>시행착오와 배운 점</h2>
+  <p class="lede">
+    9일 동안 실제로 24/7 돌려보니, 로컬에서는 안 보이던 운영 이슈가 나왔다.
+    발견 → 근본 원인 → 조치 순으로 남긴다.
+  </p>
+
+  <div class="buildlog">
+    <div class="row">
+      <div class="num">1</div>
+      <div>
+        <div class="title">GitHub 자체 cron 스케줄러가 발동을 대부분 누락시켰다</div>
+        <div class="desc">
+          <code>schedule.yml</code>이 하루 약 20번 발동해야 하는데 실제로는 2번만
+          발동. 원인은 GitHub 문서에도 나와 있는 "매 시 정각/30분은 스케줄 부하가
+          몰려 지연·누락되기 쉽다"는 특성 — <code>:07</code>/<code>:37</code>로
+          옮겨도 여전히 대부분 누락됐다. 결국 저장소 밖에서
+          <b>cron-job.org</b>가 <code>workflow_dispatch</code> API를 직접 30분마다
+          호출하도록 전환하고, GitHub 자체 cron은 백업으로만 남겼다.
+        </div>
+      </div>
+      <div class="commit">c54328b<br>(외부 설정, 코드 없음)</div>
+    </div>
+
+    <div class="row">
+      <div class="num">2</div>
+      <div>
+        <div class="title">동시에 실행된 워크플로가 git push에서 서로 충돌했다</div>
+        <div class="desc">
+          대시보드에서 AAPL을 추가한 직후 GOOGL을 추가했더니, GOOGL의
+          <code>add_ticker.yml</code>이 AAPL 커밋이 아직 push 중일 때 시작돼
+          레이스가 나서 GOOGL 추가가 조용히 실패했다. 5개 워크플로 전부가 쓰는
+          <code>commit_and_push.sh</code>를 새로 만들어, push가 거부되면 최신
+          커밋으로 rebase 후 최대 5회까지 재시도하도록 고쳤다.
+        </div>
+      </div>
+      <div class="commit">ef81bf8</div>
+    </div>
+
+    <div class="row">
+      <div class="num">3</div>
+      <div>
+        <div class="title">Discord 알림은 도착했는데 폰에 푸시가 안 왔다</div>
+        <div class="desc">
+          Discord 채널 알림 설정("모든 메시지"), 서버 음소거 해제, 앱 내 푸시 토글까지
+          다 확인해도 재현됐다. 진짜 원인은 <b>iOS 설정 앱 → Discord → 알림 →
+          "잠금 화면" 토글</b>이 꺼져 있던 것 — Discord 앱 안의 설정과는 완전히
+          별개인 OS 레벨 스위치였다. 진단용으로 만든 수동 테스트 알림 워크플로로
+          재현·확인했다.
+        </div>
+      </div>
+      <div class="commit">abb289a<br>(진단 도구, 수정은 OS 설정)</div>
+    </div>
+
+    <div class="row">
+      <div class="num">4</div>
+      <div>
+        <div class="title">전종목 스캔이 18분 넘게 "진행 중"으로 멈춰 보였다</div>
+        <div class="desc">
+          ~12,480개 티커를 배치로 조회하는 <code>fetch_batch_daily</code>에 요청별
+          타임아웃이 없어서, 응답이 느리거나 막힌 청크 하나가 전체를 무한정
+          붙잡았다. 청크당 20초 타임아웃 + 실패 시 스킵 + 진행 상황 로그로
+          바꿨다.
+        </div>
+      </div>
+      <div class="commit">e928e2a</div>
+    </div>
+  </div>
+
+  <div class="discord-mock">
+    <div class="chan"># signal-alerts</div>
+    <div><span class="bot">Quant Signal Bot</span> <span class="ts">웹훅 · 오늘 15:32</span></div>
+    <div><span class="buy">BUY 신호 — AAPL</span></div>
+    <div>가격: $224.15 (15:32 ET)</div>
+    <div>근거: RSI 28.4(과매도) · MACD 골든크로스 · 일목구름대 상향 돌파 · 거래량 1.8배</div>
+    <div>VIX 필터: 중립 (52th pct)</div>
+    <div>신호 스코어: +5 / 캘리브레이션된 임계값 +4</div>
+  </div>
+</section>
+
+<!-- 8. Where this stands -->
+<section class="slide alt" id="s-status">
+  <div class="inner">
+    <div class="eyebrow">Where This Stands · 2026-07-31</div>
+    <h2>지금은 지켜보는 단계</h2>
+    <div class="table-wrap">
+    <table>
+      <tr><th>단계</th><th>내용</th><th>상태</th></tr>
+      <tr><td>Phase 1–5</td><td>지표 프레임워크 · 백테스트 · 캘리브레이션 · Discord 알림 · 대시보드</td><td class="phase-status done">완료 (1주차)</td></tr>
+      <tr><td>Phase 6</td><td>후보 지표 검증(Stochastic/ADX/OBV)</td><td class="phase-status done">완료 · 미편입 유지</td></tr>
+      <tr><td>Phase 7</td><td>페르소나 인터뷰 기반 가정 검증</td><td class="phase-status done">완료 (2주차)</td></tr>
+      <tr><td>Phase 8</td><td>리스크 사이징 · 유니버스 스크리너 · 워치리스트 편집기</td><td class="phase-status done">완료 · 실사용 검증</td></tr>
+      <tr><td>Phase 9</td><td>운영 신뢰성(cron, git race, 알림 전달)</td><td class="phase-status done">완료</td></tr>
+      <tr><td>Phase 10</td><td>매도 신호 설명 강화 (인터뷰에서 발견한 과제)</td><td class="phase-status watch">미착수</td></tr>
+    </table>
+    </div>
+    <div class="callout" style="margin-top:1.6rem;">
+      <b>지금부터 몇 주는 이 상태로 지켜보기로 했다</b>
+      워치리스트가 5/5로 다 찼고, 알림·리스크 사이징·유니버스 스크리너가 모두 실전에서
+      돌고 있다. 백테스트/캘리브레이션 수치는 여전히 종목당 거래 1~5건 수준의
+      소표본이라 — 좋아 보이는 숫자(SOXL 검증구간 +170.9%)도 실전 유의성보다는
+      참고용으로만 본다.
+    </div>
+  </div>
+</section>
+
+<!-- 9. Open questions & links -->
+<section class="slide" id="s-open">
+  <div class="eyebrow">Open Questions & Links</div>
+  <h2>아직 열려있는 것</h2>
+  <div class="col-2">
+    <div class="card">
+      <h3>제품</h3>
+      <ul>
+        <li>매도 신호에 "왜 지금 팔아야 하는지" 근거를 매수 신호보다 더 두텁게 노출 (인터뷰 결과 반영, 아직 미착수)</li>
+        <li>재캘리브레이션 주기 — 월별(현재) vs 분기별, 아직 미정</li>
+        <li>Stochastic/ADX/OBV 외 추가 후보 지표 도입 우선순위</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>운영</h3>
+      <ul>
+        <li>cron-job.org 외부 트리거의 장기 안정성 — 도입 초기라 몇 주 더 관찰 필요</li>
+        <li><code>REGENERATE_DASHBOARD=1</code> 재생성 경로의 실제 rebase 충돌 케이스는 아직 실전에서 안 나봄</li>
+        <li>계정 자산(ACCOUNT_EQUITY) 연동한 실제 주식 수 계산 — 사용자가 아직 설정 안 함, 보류</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <b>참고용 도구입니다</b>
+    등록된 투자자문업자가 제공하는 서비스가 아니며, 산출되는 신호는 투자 권유가 아닌
+    참고용입니다. 자동 주문 실행 기능은 없으며, 모든 매매 판단과 실행의 책임은 사용자
+    본인에게 있습니다.
+  </div>
+
+  <div class="footer-links">
+    <a href="https://github.com/himistu0925/Quant-signal-advisor" target="_blank" rel="noopener">github.com/himistu0925/Quant-signal-advisor</a>
+    <span>·</span>
+    <a href="https://himistu0925.github.io/Quant-signal-advisor/" target="_blank" rel="noopener">himistu0925.github.io/Quant-signal-advisor</a>
+    <span>·</span>
+    <span class="muted">Claude Sonnet 5와 함께 설계 · 구현 · 회고까지</span>
+  </div>
+  <p class="muted" style="font-size:0.82rem; margin-top:0.6rem;">최종 갱신: 2026-07-31 · commit 97c3129 기준 (1주차: 14ead7b / 2주차: ef81bf8)</p>
+</section>
+
+<script>
+  const slides = Array.from(document.querySelectorAll('section.slide'));
+  const nav = document.getElementById('dotnav');
+  slides.forEach((s, i) => {
+    const a = document.createElement('a');
+    a.href = '#' + s.id;
+    a.title = s.querySelector('h1, h2')?.textContent || ('slide ' + (i + 1));
+    nav.appendChild(a);
+  });
+  const dots = Array.from(nav.children);
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const idx = slides.indexOf(e.target);
+        dots.forEach(d => d.classList.remove('active'));
+        if (dots[idx]) dots[idx].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-45% 0px -45% 0px' });
+  slides.forEach(s => io.observe(s));
+
+  document.addEventListener('keydown', (e) => {
+    const cur = slides.findIndex(s => {
+      const r = s.getBoundingClientRect();
+      return r.top <= window.innerHeight * 0.5 && r.bottom >= window.innerHeight * 0.5;
+    });
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+      if (cur >= 0 && cur < slides.length - 1) { e.preventDefault(); slides[cur + 1].scrollIntoView({ behavior: 'smooth' }); }
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      if (cur > 0) { e.preventDefault(); slides[cur - 1].scrollIntoView({ behavior: 'smooth' }); }
+    }
+  });
+</script>
+</body>
+</html>
