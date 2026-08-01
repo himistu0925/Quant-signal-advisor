@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-01T07:38:29.207452",
+  "generated_at": "2026-08-01T08:00:54.853987",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,7 +144,7 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-01T03:38:28.823875-04:00",
+    "timestamp": "2026-08-01T04:00:54.532829-04:00",
     "market_open": false,
     "tickers": {}
   },
@@ -159,7 +159,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-31T22:17:30.561531+00:00"
+      "as_of": "2026-08-01T07:58:56.449291+00:00"
     },
     {
       "ticker": "VNLA",
@@ -171,7 +171,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-31T22:17:30.561531+00:00"
+      "as_of": "2026-08-01T07:58:56.449291+00:00"
     },
     {
       "ticker": "AMZN",
@@ -183,7 +183,7 @@
       "stop_price": 252.5571370689305,
       "target_price": 309.6256855789359,
       "position_pct": 0.14276514489832445,
-      "as_of": "2026-07-31T22:17:30.561531+00:00"
+      "as_of": "2026-08-01T07:58:56.449291+00:00"
     },
     {
       "ticker": "NBIX",
@@ -195,7 +195,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-31T22:17:30.561531+00:00"
+      "as_of": "2026-08-01T07:58:56.449291+00:00"
     },
     {
       "ticker": "PWP",
@@ -207,7 +207,7 @@
       "stop_price": 15.264707497038062,
       "target_price": 22.420583861514697,
       "position_pct": 0.07399512814174156,
-      "as_of": "2026-07-31T22:17:30.561531+00:00"
+      "as_of": "2026-08-01T07:58:56.449291+00:00"
     },
     {
       "ticker": "WMG",
@@ -219,7 +219,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-31T22:17:30.561531+00:00"
+      "as_of": "2026-08-01T07:58:56.449291+00:00"
     },
     {
       "ticker": "CONY",
@@ -231,7 +231,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-31T22:17:30.561531+00:00"
+      "as_of": "2026-08-01T07:58:56.449291+00:00"
     },
     {
       "ticker": "FET",
@@ -240,10 +240,10 @@
       "score": 4.5,
       "direction": "BUY",
       "price": 62.66999816894531,
-      "stop_price": 56.10193811051708,
-      "target_price": 75.80611828580177,
-      "position_pct": 0.09541629889410988,
-      "as_of": "2026-07-31T22:17:30.561531+00:00"
+      "stop_price": 56.10152394338538,
+      "target_price": 75.80694662006518,
+      "position_pct": 0.09541028253574826,
+      "as_of": "2026-08-01T07:58:56.449291+00:00"
     },
     {
       "ticker": "HUN",
@@ -255,7 +255,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-31T22:17:30.561531+00:00"
+      "as_of": "2026-08-01T07:58:56.449291+00:00"
     },
     {
       "ticker": "OLN",
@@ -267,7 +267,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-07-31T22:17:30.561531+00:00"
+      "as_of": "2026-08-01T07:58:56.449291+00:00"
     }
   ]
 }
