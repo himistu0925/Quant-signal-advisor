@@ -1,36 +1,36 @@
 {
   "ticker": "GOOGL",
   "weights": {
-    "BollingerBands": 2.0939226475217714,
+    "BollingerBands": 2.0753032942011918,
     "Fibonacci": 0.0,
     "Ichimoku": 0.0,
-    "MACD": 1.998531896680873,
+    "MACD": 2.057887795306745,
     "MA": 0.0,
-    "RSI": 2.9075454557973552,
+    "RSI": 2.8668089104920638,
     "SupportResistance": 0.0
   },
   "buy_threshold": 3.0,
   "sell_threshold": -3.0,
   "train_metrics": {
-    "cumulative_return": 0.4748762871949528,
-    "cagr": 0.11396870149739136,
-    "max_drawdown": -0.2542646629488685,
-    "sharpe_ratio": 0.6007977681666744,
-    "win_rate": 0.8,
-    "avg_win_loss_ratio": 0.7962488496022299,
-    "total_trades": 5,
-    "benchmark_return": 0.4379192811644641,
-    "excess_return": 0.03695700603048868
+    "cumulative_return": 1.0394497144221897,
+    "cagr": 0.21890342030222665,
+    "max_drawdown": -0.16753856763574138,
+    "sharpe_ratio": 1.090568333919036,
+    "win_rate": 0.8571428571428571,
+    "avg_win_loss_ratio": 1.1500722917542803,
+    "total_trades": 7,
+    "benchmark_return": 0.45034593580521287,
+    "excess_return": 0.5891037786169768
   },
   "test_metrics": {
-    "cumulative_return": 0.0,
-    "cagr": 0.0,
+    "cumulative_return": 0.06313824076796082,
+    "cagr": 0.06318282443304324,
     "max_drawdown": 0.0,
-    "sharpe_ratio": 0.0,
-    "win_rate": 0.0,
-    "avg_win_loss_ratio": 0.0,
-    "total_trades": 0,
-    "benchmark_return": 0.1647921089865434,
-    "excess_return": -0.1647921089865434
+    "sharpe_ratio": 1.0019900517195868,
+    "win_rate": 0.5,
+    "avg_win_loss_ratio": null,
+    "total_trades": 2,
+    "benchmark_return": 0.18145753034855927,
+    "excess_return": -0.11831928958059845
   }
 }
