@@ -18,5 +18,9 @@
   "SIMO": {
     "direction": "SURGE",
     "timestamp": "2026-07-30T09:30:50.412608-04:00"
+  },
+  "FET": {
+    "direction": "SURGE",
+    "timestamp": "2026-08-03T13:31:56.311560-04:00"
   }
 }
