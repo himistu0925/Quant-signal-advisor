@@ -1,1 +1,122 @@
-[]
+[
+  {
+    "ticker": "ARQQ",
+    "name": "Arqit Quantum Inc. - Ordinary Shares",
+    "exchange": "NASDAQ",
+    "score": 4.5,
+    "direction": "BUY",
+    "price": 21.979999542236328,
+    "stop_price": 17.290569119560544,
+    "target_price": 31.358860387587892,
+    "position_pct": 0.046871362961164426,
+    "as_of": "2026-08-04T22:25:41.084691+00:00"
+  },
+  {
+    "ticker": "ARVN",
+    "name": "Arvinas, Inc. - Common Stock",
+    "exchange": "NASDAQ",
+    "score": 4.5,
+    "direction": "BUY",
+    "price": 9.0,
+    "stop_price": 8.167055082663168,
+    "target_price": 10.665889834673663,
+    "position_pct": 0.10805036218692146,
+    "as_of": "2026-08-04T22:25:41.084691+00:00"
+  },
+  {
+    "ticker": "BETR",
+    "name": "Better Home & Finance Holding Company - Class A Common Stock",
+    "exchange": "NASDAQ",
+    "score": -4.5,
+    "direction": "SELL",
+    "price": 17.270000457763672,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-08-04T22:25:41.084691+00:00"
+  },
+  {
+    "ticker": "TALK",
+    "name": "Talkspace, Inc. - Common Stock",
+    "exchange": "NASDAQ",
+    "score": -4.5,
+    "direction": "SELL",
+    "price": 5.150000095367432,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-08-04T22:25:41.084691+00:00"
+  },
+  {
+    "ticker": "CTA",
+    "name": "Simplify Managed Futures Strategy ETF",
+    "exchange": "NYSE Arca",
+    "score": -4.5,
+    "direction": "SELL",
+    "price": 25.450000762939453,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-08-04T22:25:41.084691+00:00"
+  },
+  {
+    "ticker": "CTRI",
+    "name": "Centuri Holdings, Inc. Common Stock",
+    "exchange": "NYSE",
+    "score": -4.5,
+    "direction": "SELL",
+    "price": 21.8799991607666,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-08-04T22:25:41.084691+00:00"
+  },
+  {
+    "ticker": "DOG",
+    "name": "ProShares Short Dow30",
+    "exchange": "NYSE Arca",
+    "score": -4.5,
+    "direction": "SELL",
+    "price": 21.0,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-08-04T22:25:41.084691+00:00"
+  },
+  {
+    "ticker": "DXD",
+    "name": "ProShares UltraShort Dow30",
+    "exchange": "NYSE Arca",
+    "score": -4.5,
+    "direction": "SELL",
+    "price": 16.1299991607666,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-08-04T22:25:41.084691+00:00"
+  },
+  {
+    "ticker": "IYZ",
+    "name": "iShares U.S. Telecommunications ETF",
+    "exchange": "Cboe BZX",
+    "score": 4.5,
+    "direction": "BUY",
+    "price": 43.349998474121094,
+    "stop_price": 41.52345121000905,
+    "target_price": 47.00309300234518,
+    "position_pct": 0.23733302349115626,
+    "as_of": "2026-08-04T22:25:41.084691+00:00"
+  },
+  {
+    "ticker": "NRG",
+    "name": "NRG Energy, Inc. Common Stock",
+    "exchange": "NYSE",
+    "score": -4.5,
+    "direction": "SELL",
+    "price": 117.04000091552734,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-08-04T22:25:41.084691+00:00"
+  }
+]
