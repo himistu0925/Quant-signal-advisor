@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T22:00:56.755906",
+  "generated_at": "2026-08-05T22:30:51.350674",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,130 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-05T18:00:56.360350-04:00",
+    "timestamp": "2026-08-05T18:30:50.946174-04:00",
     "market_open": false,
     "tickers": {}
   },
   "universe_candidates": [
     {
-      "ticker": "ARQQ",
-      "name": "Arqit Quantum Inc. - Ordinary Shares",
-      "exchange": "NASDAQ",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 21.979999542236328,
-      "stop_price": 17.290569119560544,
-      "target_price": 31.358860387587892,
-      "position_pct": 0.046871362961164426,
-      "as_of": "2026-08-05T08:28:06.209034+00:00"
-    },
-    {
-      "ticker": "ARVN",
-      "name": "Arvinas, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 9.0,
-      "stop_price": 8.167055082663168,
-      "target_price": 10.665889834673663,
-      "position_pct": 0.10805036218692146,
-      "as_of": "2026-08-05T08:28:06.209034+00:00"
-    },
-    {
-      "ticker": "BETR",
-      "name": "Better Home & Finance Holding Company - Class A Common Stock",
+      "ticker": "PODD",
+      "name": "Insulet Corporation - Common Stock",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 17.270000457763672,
+      "price": 133.25999450683594,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-05T08:28:06.209034+00:00"
+      "as_of": "2026-08-05T22:24:38.241327+00:00"
     },
     {
-      "ticker": "TALK",
-      "name": "Talkspace, Inc. - Common Stock",
+      "ticker": "SEDG",
+      "name": "SolarEdge Technologies, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 5.150000095367432,
+      "price": 33.900001525878906,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-05T08:28:06.209034+00:00"
+      "as_of": "2026-08-05T22:24:38.241327+00:00"
     },
     {
-      "ticker": "CTA",
-      "name": "Simplify Managed Futures Strategy ETF",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 25.450000762939453,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-05T08:28:06.209034+00:00"
-    },
-    {
-      "ticker": "CTRI",
-      "name": "Centuri Holdings, Inc. Common Stock",
+      "ticker": "CC",
+      "name": "Chemours Company (The) Common Stock",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 21.8799991607666,
+      "price": 14.59000015258789,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-05T08:28:06.209034+00:00"
+      "as_of": "2026-08-05T22:24:38.241327+00:00"
     },
     {
-      "ticker": "DOG",
-      "name": "ProShares Short Dow30",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 21.0,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-05T08:28:06.209034+00:00"
-    },
-    {
-      "ticker": "DXD",
-      "name": "ProShares UltraShort Dow30",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 16.1299991607666,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-05T08:28:06.209034+00:00"
-    },
-    {
-      "ticker": "EWM",
-      "name": "iShares MSCI Malaysia Index Fund",
-      "exchange": "NYSE Arca",
+      "ticker": "GFF",
+      "name": "Griffon Corporation Common Stock",
+      "exchange": "NYSE",
       "score": 4.5,
       "direction": "BUY",
-      "price": 28.399999618530273,
-      "stop_price": 27.85199809785746,
-      "target_price": 29.496002659875902,
-      "position_pct": 0.25,
-      "as_of": "2026-08-05T08:28:06.209034+00:00"
+      "price": 102.80999755859375,
+      "stop_price": 95.09735136320245,
+      "target_price": 118.23528994937635,
+      "position_pct": 0.13330054945347813,
+      "as_of": "2026-08-05T22:24:38.241327+00:00"
     },
     {
-      "ticker": "IYZ",
-      "name": "iShares U.S. Telecommunications ETF",
-      "exchange": "Cboe BZX",
-      "score": 4.5,
+      "ticker": "NYT",
+      "name": "New York Times Company (The) Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 65.4800033569336,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-05T22:24:38.241327+00:00"
+    },
+    {
+      "ticker": "ADV",
+      "name": "Advantage Solutions Inc.  - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 33.02000045776367,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-05T22:24:38.241327+00:00"
+    },
+    {
+      "ticker": "ASTE",
+      "name": "Astec Industries, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 45.040000915527344,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-05T22:24:38.241327+00:00"
+    },
+    {
+      "ticker": "AUGO",
+      "name": "Aura Minerals Inc. - Common Shares",
+      "exchange": "NASDAQ",
+      "score": 3.0,
       "direction": "BUY",
-      "price": 43.349998474121094,
-      "stop_price": 41.52345121000905,
-      "target_price": 47.00309300234518,
-      "position_pct": 0.23733302349115626,
-      "as_of": "2026-08-05T08:28:06.209034+00:00"
+      "price": 65.76000213623047,
+      "stop_price": 57.69752065664103,
+      "target_price": 81.88496509540934,
+      "position_pct": 0.08156298070600854,
+      "as_of": "2026-08-05T22:24:38.241327+00:00"
+    },
+    {
+      "ticker": "BNTX",
+      "name": "BioNTech SE - American Depositary Shares",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 92.18000030517578,
+      "stop_price": 86.69563986943544,
+      "target_price": 103.14872117665645,
+      "position_pct": 0.16807793978028795,
+      "as_of": "2026-08-05T22:24:38.241327+00:00"
+    },
+    {
+      "ticker": "CRTO",
+      "name": "Criteo S.A. - Ordinary Shares",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 17.049999237060547,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-05T22:24:38.241327+00:00"
     }
   ]
 }
