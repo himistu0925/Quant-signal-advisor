@@ -22,5 +22,9 @@
   "FET": {
     "direction": "SURGE",
     "timestamp": "2026-08-03T15:00:54.915995-04:00"
+  },
+  "TALK": {
+    "direction": "SURGE",
+    "timestamp": "2026-08-05T10:00:56.214226-04:00"
   }
 }
