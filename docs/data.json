@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T08:00:58.647686",
+  "generated_at": "2026-08-05T08:30:50.897905",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,7 +144,7 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-05T04:00:58.238370-04:00",
+    "timestamp": "2026-08-05T04:30:50.571665-04:00",
     "market_open": false,
     "tickers": {}
   },
@@ -159,7 +159,7 @@
       "stop_price": 17.290569119560544,
       "target_price": 31.358860387587892,
       "position_pct": 0.046871362961164426,
-      "as_of": "2026-08-04T22:25:41.084691+00:00"
+      "as_of": "2026-08-05T08:28:06.209034+00:00"
     },
     {
       "ticker": "ARVN",
@@ -171,7 +171,7 @@
       "stop_price": 8.167055082663168,
       "target_price": 10.665889834673663,
       "position_pct": 0.10805036218692146,
-      "as_of": "2026-08-04T22:25:41.084691+00:00"
+      "as_of": "2026-08-05T08:28:06.209034+00:00"
     },
     {
       "ticker": "BETR",
@@ -183,7 +183,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-04T22:25:41.084691+00:00"
+      "as_of": "2026-08-05T08:28:06.209034+00:00"
     },
     {
       "ticker": "TALK",
@@ -195,7 +195,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-04T22:25:41.084691+00:00"
+      "as_of": "2026-08-05T08:28:06.209034+00:00"
     },
     {
       "ticker": "CTA",
@@ -207,7 +207,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-04T22:25:41.084691+00:00"
+      "as_of": "2026-08-05T08:28:06.209034+00:00"
     },
     {
       "ticker": "CTRI",
@@ -219,7 +219,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-04T22:25:41.084691+00:00"
+      "as_of": "2026-08-05T08:28:06.209034+00:00"
     },
     {
       "ticker": "DOG",
@@ -231,7 +231,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-04T22:25:41.084691+00:00"
+      "as_of": "2026-08-05T08:28:06.209034+00:00"
     },
     {
       "ticker": "DXD",
@@ -243,7 +243,19 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-04T22:25:41.084691+00:00"
+      "as_of": "2026-08-05T08:28:06.209034+00:00"
+    },
+    {
+      "ticker": "EWM",
+      "name": "iShares MSCI Malaysia Index Fund",
+      "exchange": "NYSE Arca",
+      "score": 4.5,
+      "direction": "BUY",
+      "price": 28.399999618530273,
+      "stop_price": 27.85199809785746,
+      "target_price": 29.496002659875902,
+      "position_pct": 0.25,
+      "as_of": "2026-08-05T08:28:06.209034+00:00"
     },
     {
       "ticker": "IYZ",
@@ -255,19 +267,7 @@
       "stop_price": 41.52345121000905,
       "target_price": 47.00309300234518,
       "position_pct": 0.23733302349115626,
-      "as_of": "2026-08-04T22:25:41.084691+00:00"
-    },
-    {
-      "ticker": "NRG",
-      "name": "NRG Energy, Inc. Common Stock",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 117.04000091552734,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-04T22:25:41.084691+00:00"
+      "as_of": "2026-08-05T08:28:06.209034+00:00"
     }
   ]
 }
