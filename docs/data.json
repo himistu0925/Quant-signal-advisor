@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T08:04:11.450355",
+  "generated_at": "2026-08-06T08:30:53.099019",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,7 +144,7 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-06T04:04:11.070881-04:00",
+    "timestamp": "2026-08-06T04:30:52.716814-04:00",
     "market_open": false,
     "tickers": {}
   },
@@ -159,7 +159,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-05T22:24:38.241327+00:00"
+      "as_of": "2026-08-06T08:21:25.373600+00:00"
     },
     {
       "ticker": "SEDG",
@@ -171,7 +171,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-05T22:24:38.241327+00:00"
+      "as_of": "2026-08-06T08:21:25.373600+00:00"
     },
     {
       "ticker": "CC",
@@ -183,7 +183,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-05T22:24:38.241327+00:00"
+      "as_of": "2026-08-06T08:21:25.373600+00:00"
     },
     {
       "ticker": "GFF",
@@ -195,7 +195,7 @@
       "stop_price": 95.09735136320245,
       "target_price": 118.23528994937635,
       "position_pct": 0.13330054945347813,
-      "as_of": "2026-08-05T22:24:38.241327+00:00"
+      "as_of": "2026-08-06T08:21:25.373600+00:00"
     },
     {
       "ticker": "NYT",
@@ -207,7 +207,19 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-05T22:24:38.241327+00:00"
+      "as_of": "2026-08-06T08:21:25.373600+00:00"
+    },
+    {
+      "ticker": "TRP",
+      "name": "TC Energy Corporation Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 63.86000061035156,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-06T08:21:25.373600+00:00"
     },
     {
       "ticker": "ADV",
@@ -219,7 +231,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-05T22:24:38.241327+00:00"
+      "as_of": "2026-08-06T08:21:25.373600+00:00"
     },
     {
       "ticker": "ASTE",
@@ -231,7 +243,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-05T22:24:38.241327+00:00"
+      "as_of": "2026-08-06T08:21:25.373600+00:00"
     },
     {
       "ticker": "AUGO",
@@ -240,10 +252,10 @@
       "score": 3.0,
       "direction": "BUY",
       "price": 65.76000213623047,
-      "stop_price": 57.69752065664103,
-      "target_price": 81.88496509540934,
-      "position_pct": 0.08156298070600854,
-      "as_of": "2026-08-05T22:24:38.241327+00:00"
+      "stop_price": 57.696091780036674,
+      "target_price": 81.88782284861806,
+      "position_pct": 0.08154852823447001,
+      "as_of": "2026-08-06T08:21:25.373600+00:00"
     },
     {
       "ticker": "BNTX",
@@ -255,19 +267,7 @@
       "stop_price": 86.69563986943544,
       "target_price": 103.14872117665645,
       "position_pct": 0.16807793978028795,
-      "as_of": "2026-08-05T22:24:38.241327+00:00"
-    },
-    {
-      "ticker": "CRTO",
-      "name": "Criteo S.A. - Ordinary Shares",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 17.049999237060547,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-05T22:24:38.241327+00:00"
+      "as_of": "2026-08-06T08:21:25.373600+00:00"
     }
   ]
 }
