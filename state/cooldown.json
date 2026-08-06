@@ -26,5 +26,9 @@
   "TALK": {
     "direction": "SURGE",
     "timestamp": "2026-08-05T15:01:06.217825-04:00"
+  },
+  "ASTE": {
+    "direction": "PLUNGE",
+    "timestamp": "2026-08-06T09:30:50.809917-04:00"
   }
 }
