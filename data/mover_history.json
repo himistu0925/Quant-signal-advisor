@@ -145,5 +145,47 @@
     "pct_change": -0.1379904130999552,
     "price": 45.040000915527344,
     "timestamp": "2026-08-06T09:30:50.809917-04:00"
+  },
+  {
+    "ticker": "PODD",
+    "direction": "PLUNGE",
+    "pct_change": -0.20117498707548975,
+    "price": 133.25999450683594,
+    "timestamp": "2026-08-06T10:00:58.958526-04:00"
+  },
+  {
+    "ticker": "SEDG",
+    "direction": "PLUNGE",
+    "pct_change": -0.30475794313331395,
+    "price": 33.900001525878906,
+    "timestamp": "2026-08-06T10:00:58.958526-04:00"
+  },
+  {
+    "ticker": "CC",
+    "direction": "PLUNGE",
+    "pct_change": -0.18627998303066096,
+    "price": 14.59000015258789,
+    "timestamp": "2026-08-06T10:00:58.958526-04:00"
+  },
+  {
+    "ticker": "GFF",
+    "direction": "SURGE",
+    "pct_change": 0.09863213877899368,
+    "price": 102.80999755859375,
+    "timestamp": "2026-08-06T10:00:58.958526-04:00"
+  },
+  {
+    "ticker": "NYT",
+    "direction": "PLUNGE",
+    "pct_change": -0.133976949763853,
+    "price": 65.4800033569336,
+    "timestamp": "2026-08-06T10:00:58.958526-04:00"
+  },
+  {
+    "ticker": "ADV",
+    "direction": "PLUNGE",
+    "pct_change": -0.2085330898461759,
+    "price": 33.02000045776367,
+    "timestamp": "2026-08-06T10:00:58.958526-04:00"
   }
 ]

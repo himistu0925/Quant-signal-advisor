@@ -30,5 +30,29 @@
   "ASTE": {
     "direction": "PLUNGE",
     "timestamp": "2026-08-06T09:30:50.809917-04:00"
+  },
+  "PODD": {
+    "direction": "PLUNGE",
+    "timestamp": "2026-08-06T10:00:58.958526-04:00"
+  },
+  "SEDG": {
+    "direction": "PLUNGE",
+    "timestamp": "2026-08-06T10:00:58.958526-04:00"
+  },
+  "CC": {
+    "direction": "PLUNGE",
+    "timestamp": "2026-08-06T10:00:58.958526-04:00"
+  },
+  "GFF": {
+    "direction": "SURGE",
+    "timestamp": "2026-08-06T10:00:58.958526-04:00"
+  },
+  "NYT": {
+    "direction": "PLUNGE",
+    "timestamp": "2026-08-06T10:00:58.958526-04:00"
+  },
+  "ADV": {
+    "direction": "PLUNGE",
+    "timestamp": "2026-08-06T10:00:58.958526-04:00"
   }
 }
