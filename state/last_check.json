@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-07T12:30:52.385534-04:00",
+  "timestamp": "2026-08-07T13:00:53.310804-04:00",
   "market_open": true,
   "tickers": {
     "TQQQ": {
@@ -8,7 +8,7 @@
       "threshold": null
     },
     "SOXL": {
-      "score": 0.0,
+      "score": 0.5,
       "direction": null,
       "threshold": null
     },
