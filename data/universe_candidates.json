@@ -9,7 +9,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-07T22:15:19.204627+00:00"
+    "as_of": "2026-08-08T04:08:36.826596+00:00"
   },
   {
     "ticker": "CART",
@@ -21,7 +21,7 @@
     "stop_price": 46.316026234297794,
     "target_price": 57.87794203824034,
     "position_pct": 0.1301773832806436,
-    "as_of": "2026-08-07T22:15:19.204627+00:00"
+    "as_of": "2026-08-08T04:08:36.826596+00:00"
   },
   {
     "ticker": "CCOI",
@@ -33,7 +33,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-07T22:15:19.204627+00:00"
+    "as_of": "2026-08-08T04:08:36.826596+00:00"
   },
   {
     "ticker": "LASR",
@@ -45,7 +45,19 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-07T22:15:19.204627+00:00"
+    "as_of": "2026-08-08T04:08:36.826596+00:00"
+  },
+  {
+    "ticker": "PCLA",
+    "name": "PicoCELA Inc. - American Depositary Shares",
+    "exchange": "NASDAQ",
+    "score": 4.5,
+    "direction": "BUY",
+    "price": 8.109999656677246,
+    "stop_price": 5.998725546166089,
+    "target_price": 12.332547877699561,
+    "position_pct": 0.03841282198413236,
+    "as_of": "2026-08-08T04:08:36.826596+00:00"
   },
   {
     "ticker": "POST",
@@ -57,7 +69,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-07T22:15:19.204627+00:00"
+    "as_of": "2026-08-08T04:08:36.826596+00:00"
   },
   {
     "ticker": "AHCO",
@@ -69,7 +81,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-07T22:15:19.204627+00:00"
+    "as_of": "2026-08-08T04:08:36.826596+00:00"
   },
   {
     "ticker": "AMPH",
@@ -78,10 +90,10 @@
     "score": 3.0,
     "direction": "BUY",
     "price": 20.780000686645508,
-    "stop_price": 19.025249583048158,
-    "target_price": 24.28950289384021,
-    "position_pct": 0.11842135698929146,
-    "as_of": "2026-08-07T22:15:19.204627+00:00"
+    "stop_price": 19.024535417224357,
+    "target_price": 24.29093122548781,
+    "position_pct": 0.1183731803107533,
+    "as_of": "2026-08-08T04:08:36.826596+00:00"
   },
   {
     "ticker": "ANDE",
@@ -93,7 +105,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-07T22:15:19.204627+00:00"
+    "as_of": "2026-08-08T04:08:36.826596+00:00"
   },
   {
     "ticker": "ARDX",
@@ -105,18 +117,6 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-07T22:15:19.204627+00:00"
-  },
-  {
-    "ticker": "AXTI",
-    "name": "AXT Inc - Common Stock",
-    "exchange": "NASDAQ",
-    "score": 3.0,
-    "direction": "BUY",
-    "price": 88.58000183105469,
-    "stop_price": 67.13273184009901,
-    "target_price": 131.47454181296604,
-    "position_pct": 0.041301294695506204,
-    "as_of": "2026-08-07T22:15:19.204627+00:00"
+    "as_of": "2026-08-08T04:08:36.826596+00:00"
   }
 ]
