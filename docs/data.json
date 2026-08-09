@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T22:01:06.392063",
+  "generated_at": "2026-08-09T22:30:48.265712",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,7 +144,7 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-09T18:01:05.974299-04:00",
+    "timestamp": "2026-08-09T18:30:47.853585-04:00",
     "market_open": false,
     "tickers": {}
   },
@@ -159,7 +159,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-08T22:15:14.651249+00:00"
+      "as_of": "2026-08-09T22:22:33.700940+00:00"
     },
     {
       "ticker": "CART",
@@ -171,7 +171,7 @@
       "stop_price": 46.316026234297794,
       "target_price": 57.87794203824034,
       "position_pct": 0.1301773832806436,
-      "as_of": "2026-08-08T22:15:14.651249+00:00"
+      "as_of": "2026-08-09T22:22:33.700940+00:00"
     },
     {
       "ticker": "CCOI",
@@ -183,7 +183,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-08T22:15:14.651249+00:00"
+      "as_of": "2026-08-09T22:22:33.700940+00:00"
     },
     {
       "ticker": "LASR",
@@ -195,7 +195,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-08T22:15:14.651249+00:00"
+      "as_of": "2026-08-09T22:22:33.700940+00:00"
     },
     {
       "ticker": "PCLA",
@@ -207,7 +207,7 @@
       "stop_price": 5.998725546166089,
       "target_price": 12.332547877699561,
       "position_pct": 0.03841282198413236,
-      "as_of": "2026-08-08T22:15:14.651249+00:00"
+      "as_of": "2026-08-09T22:22:33.700940+00:00"
     },
     {
       "ticker": "POST",
@@ -219,7 +219,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-08T22:15:14.651249+00:00"
+      "as_of": "2026-08-09T22:22:33.700940+00:00"
     },
     {
       "ticker": "AHCO",
@@ -231,7 +231,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-08T22:15:14.651249+00:00"
+      "as_of": "2026-08-09T22:22:33.700940+00:00"
     },
     {
       "ticker": "AMPH",
@@ -243,7 +243,7 @@
       "stop_price": 19.024535417224357,
       "target_price": 24.29093122548781,
       "position_pct": 0.1183731803107533,
-      "as_of": "2026-08-08T22:15:14.651249+00:00"
+      "as_of": "2026-08-09T22:22:33.700940+00:00"
     },
     {
       "ticker": "ANDE",
@@ -255,7 +255,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-08T22:15:14.651249+00:00"
+      "as_of": "2026-08-09T22:22:33.700940+00:00"
     },
     {
       "ticker": "ARDX",
@@ -267,7 +267,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-08T22:15:14.651249+00:00"
+      "as_of": "2026-08-09T22:22:33.700940+00:00"
     }
   ]
 }
