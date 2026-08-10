@@ -58,5 +58,9 @@
   "CELH": {
     "direction": "SURGE",
     "timestamp": "2026-08-07T15:40:17.797687-04:00"
+  },
+  "PCLA": {
+    "direction": "SURGE",
+    "timestamp": "2026-08-10T10:30:50.730466-04:00"
   }
 }
