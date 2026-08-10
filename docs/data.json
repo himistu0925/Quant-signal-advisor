@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T13:31:02.127107",
+  "generated_at": "2026-08-10T14:01:08.383562",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,7 +144,7 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-10T09:30:55.012719-04:00",
+    "timestamp": "2026-08-10T10:01:04.539609-04:00",
     "market_open": true,
     "tickers": {
       "TQQQ": {
@@ -158,7 +158,7 @@
         "threshold": null
       },
       "UPRO": {
-        "score": -0.5,
+        "score": 0.0,
         "direction": null,
         "threshold": null
       },
