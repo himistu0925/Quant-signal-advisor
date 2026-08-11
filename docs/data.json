@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T04:00:57.964173",
+  "generated_at": "2026-08-11T04:30:50.331457",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,7 +144,7 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-11T00:00:57.553019-04:00",
+    "timestamp": "2026-08-11T00:30:50.003504-04:00",
     "market_open": false,
     "tickers": {}
   },
@@ -159,7 +159,19 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-10T22:15:09.387898+00:00"
+      "as_of": "2026-08-11T04:28:16.666116+00:00"
+    },
+    {
+      "ticker": "CSV",
+      "name": "Carriage Services, Inc. Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 34.25,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-11T04:28:16.666116+00:00"
     },
     {
       "ticker": "JDST",
@@ -171,7 +183,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-10T22:15:09.387898+00:00"
+      "as_of": "2026-08-11T04:28:16.666116+00:00"
     },
     {
       "ticker": "SDRL",
@@ -180,10 +192,10 @@
       "score": 4.5,
       "direction": "BUY",
       "price": 46.7599983215332,
-      "stop_price": 42.84704104901062,
-      "target_price": 54.58591286657836,
-      "position_pct": 0.1195004061247729,
-      "as_of": "2026-08-10T22:15:09.387898+00:00"
+      "stop_price": 42.845612717363025,
+      "target_price": 54.58876952987357,
+      "position_pct": 0.11945680127097741,
+      "as_of": "2026-08-11T04:28:16.666116+00:00"
     },
     {
       "ticker": "ALOY",
@@ -195,7 +207,7 @@
       "stop_price": 10.330486590186949,
       "target_price": 18.29402578965784,
       "position_pct": 0.04891669142863008,
-      "as_of": "2026-08-10T22:15:09.387898+00:00"
+      "as_of": "2026-08-11T04:28:16.666116+00:00"
     },
     {
       "ticker": "BTDR",
@@ -207,7 +219,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-10T22:15:09.387898+00:00"
+      "as_of": "2026-08-11T04:28:16.666116+00:00"
     },
     {
       "ticker": "COMT",
@@ -216,10 +228,10 @@
       "score": 3.0,
       "direction": "BUY",
       "price": 33.59000015258789,
-      "stop_price": 32.43778801358619,
-      "target_price": 35.894424430591286,
+      "stop_price": 32.43635913698184,
+      "target_price": 35.897282183799994,
       "position_pct": 0.25,
-      "as_of": "2026-08-10T22:15:09.387898+00:00"
+      "as_of": "2026-08-11T04:28:16.666116+00:00"
     },
     {
       "ticker": "ETOR",
@@ -231,7 +243,19 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-10T22:15:09.387898+00:00"
+      "as_of": "2026-08-11T04:28:16.666116+00:00"
+    },
+    {
+      "ticker": "FDMT",
+      "name": "4D Molecular Therapeutics, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 11.140000343322754,
+      "stop_price": 9.763602977631493,
+      "target_price": 13.892795074705276,
+      "position_pct": 0.08093593188278128,
+      "as_of": "2026-08-11T04:28:16.666116+00:00"
     },
     {
       "ticker": "ITRN",
@@ -243,31 +267,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-10T22:15:09.387898+00:00"
-    },
-    {
-      "ticker": "LASR",
-      "name": "nLIGHT, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 51.005001068115234,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-10T22:15:09.387898+00:00"
-    },
-    {
-      "ticker": "NUTX",
-      "name": "Nutex Health Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 197.50999450683594,
-      "stop_price": 173.73799313098408,
-      "target_price": 245.05399725853965,
-      "position_pct": 0.0830851350645937,
-      "as_of": "2026-08-10T22:15:09.387898+00:00"
+      "as_of": "2026-08-11T04:28:16.666116+00:00"
     }
   ]
 }
