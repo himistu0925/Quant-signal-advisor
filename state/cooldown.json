@@ -62,5 +62,9 @@
   "PCLA": {
     "direction": "SURGE",
     "timestamp": "2026-08-10T10:30:50.730466-04:00"
+  },
+  "ETOR": {
+    "direction": "PLUNGE",
+    "timestamp": "2026-08-11T10:30:56.575623-04:00"
   }
 }
