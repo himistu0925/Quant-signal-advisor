@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T05:35:16.971769",
+  "generated_at": "2026-08-12T06:00:54.225732",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,23 +144,11 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-12T01:35:16.569822-04:00",
+    "timestamp": "2026-08-12T02:00:53.834327-04:00",
     "market_open": false,
     "tickers": {}
   },
   "universe_candidates": [
-    {
-      "ticker": "ONON",
-      "name": "On Holding AG Class A Ordinary Shares",
-      "exchange": "NYSE",
-      "score": -6.0,
-      "direction": "SELL",
-      "price": 30.90999984741211,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-11T22:15:35.602158+00:00"
-    },
     {
       "ticker": "APEI",
       "name": "American Public Education, Inc. - Common Stock",
@@ -171,31 +159,19 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-11T22:15:35.602158+00:00"
+      "as_of": "2026-08-12T05:34:50.429028+00:00"
     },
     {
-      "ticker": "LASR",
-      "name": "nLIGHT, Inc. - Common Stock",
-      "exchange": "NASDAQ",
+      "ticker": "KMT",
+      "name": "Kennametal Inc. Common Stock",
+      "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 49.209999084472656,
+      "price": 30.239999771118164,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-11T22:15:35.602158+00:00"
-    },
-    {
-      "ticker": "WVE",
-      "name": "Wave Life Sciences, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 5.045000076293945,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-11T22:15:35.602158+00:00"
+      "as_of": "2026-08-12T05:34:50.429028+00:00"
     },
     {
       "ticker": "TWO",
@@ -207,31 +183,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-11T22:15:35.602158+00:00"
-    },
-    {
-      "ticker": "AHCO",
-      "name": "AdaptHealth Corp.  - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 5.650000095367432,
-      "stop_price": 4.289945467731756,
-      "target_price": 8.370109350638783,
-      "position_pct": 0.04154244969696118,
-      "as_of": "2026-08-11T22:15:35.602158+00:00"
-    },
-    {
-      "ticker": "COLL",
-      "name": "Collegium Pharmaceutical, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 25.979999542236328,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-11T22:15:35.602158+00:00"
+      "as_of": "2026-08-12T05:34:50.429028+00:00"
     },
     {
       "ticker": "IMOS",
@@ -243,31 +195,79 @@
       "stop_price": 50.78914612458951,
       "target_price": 76.26170408871161,
       "position_pct": 0.0698163084321476,
-      "as_of": "2026-08-11T22:15:35.602158+00:00"
+      "as_of": "2026-08-12T05:34:50.429028+00:00"
     },
     {
-      "ticker": "LKFT",
-      "name": "Lakefront Biotherapeutics - American Depositary Shares",
+      "ticker": "QNST",
+      "name": "QuinStreet, Inc. - Common Stock",
       "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 28.729999542236328,
-      "stop_price": 27.268045016078922,
-      "target_price": 31.65390859455114,
-      "position_pct": 0.1965177372359871,
-      "as_of": "2026-08-11T22:15:35.602158+00:00"
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 20.899999618530273,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-12T05:34:50.429028+00:00"
     },
     {
-      "ticker": "NN",
-      "name": "NextNav Inc. - Common stock",
-      "exchange": "NASDAQ",
+      "ticker": "ACM",
+      "name": "AECOM Common Stock",
+      "exchange": "NYSE",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 67.05000305175781,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-12T05:34:50.429028+00:00"
+    },
+    {
+      "ticker": "AMN",
+      "name": "AMN Healthcare Services Inc",
+      "exchange": "NYSE",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 33.11000061035156,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-12T05:34:50.429028+00:00"
+    },
+    {
+      "ticker": "ATS",
+      "name": "ATS Corporation Common Shares",
+      "exchange": "NYSE",
       "score": 3.0,
       "direction": "BUY",
-      "price": 17.829999923706055,
-      "stop_price": 14.999854682625012,
-      "target_price": 23.49029040586814,
-      "position_pct": 0.06300030000190185,
-      "as_of": "2026-08-11T22:15:35.602158+00:00"
+      "price": 20.389999389648438,
+      "stop_price": 17.461325731235885,
+      "target_price": 26.247346706473543,
+      "position_pct": 0.0696219578138336,
+      "as_of": "2026-08-12T05:34:50.429028+00:00"
+    },
+    {
+      "ticker": "CSV",
+      "name": "Carriage Services, Inc. Common Stock",
+      "exchange": "NYSE",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 33.63999938964844,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-12T05:34:50.429028+00:00"
+    },
+    {
+      "ticker": "CTGO",
+      "name": "Contango Silver & Gold Inc. Common Stock",
+      "exchange": "NYSE American",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 19.93000030517578,
+      "stop_price": 18.0179883193865,
+      "target_price": 23.754024276754347,
+      "position_pct": 0.1042357498452011,
+      "as_of": "2026-08-12T05:34:50.429028+00:00"
     }
   ]
 }
