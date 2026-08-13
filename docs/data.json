@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T05:37:41.462357",
+  "generated_at": "2026-08-13T06:01:00.200640",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,7 +144,7 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-13T01:37:41.022883-04:00",
+    "timestamp": "2026-08-13T02:00:59.757447-04:00",
     "market_open": false,
     "tickers": {}
   },
@@ -156,10 +156,10 @@
       "score": 4.5,
       "direction": "BUY",
       "price": 71.12999725341797,
-      "stop_price": 63.98648274125575,
-      "target_price": 85.41702627774241,
-      "position_pct": 0.0995728322974851,
-      "as_of": "2026-08-12T22:20:42.411174+00:00"
+      "stop_price": 64.15060407578376,
+      "target_price": 85.0887836086864,
+      "position_pct": 0.10191430034541875,
+      "as_of": "2026-08-13T05:37:13.065598+00:00"
     },
     {
       "ticker": "WEN",
@@ -168,22 +168,22 @@
       "score": 4.5,
       "direction": "BUY",
       "price": 8.65999984741211,
-      "stop_price": 7.682479912020332,
-      "target_price": 10.615039718195664,
-      "position_pct": 0.08859154206344953,
-      "as_of": "2026-08-12T22:20:42.411174+00:00"
+      "stop_price": 7.681379916815952,
+      "target_price": 10.617239708604425,
+      "position_pct": 0.08849196278004058,
+      "as_of": "2026-08-13T05:37:13.065598+00:00"
     },
     {
-      "ticker": "ATRO",
-      "name": "Astronics Corporation - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
+      "ticker": "BUFQ",
+      "name": "FT Vest Laddered Nasdaq Buffer ETF",
+      "exchange": "Cboe BZX",
+      "score": 4.5,
       "direction": "BUY",
-      "price": 87.88999938964844,
-      "stop_price": 78.13183445345908,
-      "target_price": 107.40632926202716,
-      "position_pct": 0.09006816339381342,
-      "as_of": "2026-08-12T22:20:42.411174+00:00"
+      "price": 39.63999938964844,
+      "stop_price": 38.80141804420474,
+      "target_price": 41.31716208053584,
+      "position_pct": 0.25,
+      "as_of": "2026-08-13T05:37:13.065598+00:00"
     },
     {
       "ticker": "BATRK",
@@ -192,10 +192,10 @@
       "score": 3.0,
       "direction": "BUY",
       "price": 53.0,
-      "stop_price": 50.23901990232486,
-      "target_price": 58.52196019535027,
-      "position_pct": 0.19196081871299364,
-      "as_of": "2026-08-12T22:20:42.411174+00:00"
+      "stop_price": 50.246545516047256,
+      "target_price": 58.50690896790549,
+      "position_pct": 0.1924854770939066,
+      "as_of": "2026-08-13T05:37:13.065598+00:00"
     },
     {
       "ticker": "CBRS",
@@ -207,7 +207,19 @@
       "stop_price": 215.31302108826222,
       "target_price": 355.5539504992568,
       "position_pct": 0.056059240050511695,
-      "as_of": "2026-08-12T22:20:42.411174+00:00"
+      "as_of": "2026-08-13T05:37:13.065598+00:00"
+    },
+    {
+      "ticker": "COLL",
+      "name": "Collegium Pharmaceutical, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 25.700000762939453,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-13T05:37:13.065598+00:00"
     },
     {
       "ticker": "CRMD",
@@ -219,7 +231,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-12T22:20:42.411174+00:00"
+      "as_of": "2026-08-13T05:37:13.065598+00:00"
     },
     {
       "ticker": "CRWG",
@@ -231,7 +243,7 @@
       "stop_price": 22.13077752350441,
       "target_price": 46.48844495299118,
       "position_pct": 0.03725726211785795,
-      "as_of": "2026-08-12T22:20:42.411174+00:00"
+      "as_of": "2026-08-13T05:37:13.065598+00:00"
     },
     {
       "ticker": "FRMI",
@@ -243,7 +255,7 @@
       "stop_price": 6.206252324383707,
       "target_price": 10.387495065130292,
       "position_pct": 0.05452924196844557,
-      "as_of": "2026-08-12T22:20:42.411174+00:00"
+      "as_of": "2026-08-13T05:37:13.065598+00:00"
     },
     {
       "ticker": "HALO",
@@ -255,19 +267,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-12T22:20:42.411174+00:00"
-    },
-    {
-      "ticker": "IMVT",
-      "name": "Immunovant, Inc.  - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 42.599998474121094,
-      "stop_price": 39.4154691606572,
-      "target_price": 48.969057101048875,
-      "position_pct": 0.13377172662224313,
-      "as_of": "2026-08-12T22:20:42.411174+00:00"
+      "as_of": "2026-08-13T05:37:13.065598+00:00"
     }
   ]
 }
