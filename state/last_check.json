@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-08-13T09:30:50.547214-04:00",
+  "timestamp": "2026-08-13T10:00:55.553641-04:00",
   "market_open": true,
   "tickers": {
     "TQQQ": {
-      "score": 0.0,
+      "score": 0.11207493893425477,
       "direction": null,
       "threshold": null
     },
@@ -23,7 +23,7 @@
       "threshold": null
     },
     "GOOGL": {
-      "score": -1.557887795306745,
+      "score": 0.5,
       "direction": null,
       "threshold": null
     }
