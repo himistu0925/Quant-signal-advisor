@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T04:00:54.441397",
+  "generated_at": "2026-08-13T04:30:57.462399",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,7 +144,7 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-13T00:00:54.009550-04:00",
+    "timestamp": "2026-08-13T00:30:56.988453-04:00",
     "market_open": false,
     "tickers": {}
   },
