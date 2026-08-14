@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T22:00:48.239201",
+  "generated_at": "2026-08-14T22:30:46.735781",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,94 +144,34 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-14T18:00:47.807335-04:00",
+    "timestamp": "2026-08-14T18:30:46.356457-04:00",
     "market_open": false,
     "tickers": {}
   },
   "universe_candidates": [
     {
-      "ticker": "LENZ",
-      "name": "LENZ Therapeutics, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 4.599999904632568,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-14T05:31:49.458329+00:00"
-    },
-    {
-      "ticker": "TPR",
-      "name": "Tapestry, Inc. Common Stock",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 128.38999938964844,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-14T05:31:49.458329+00:00"
-    },
-    {
-      "ticker": "MC",
-      "name": "Moelis & Company Class A Common Stock",
-      "exchange": "NYSE",
-      "score": 4.0,
-      "direction": "BUY",
-      "price": 70.37999725341797,
-      "stop_price": 64.80802570926322,
-      "target_price": 81.52394034172748,
-      "position_pct": 0.12631076217043805,
-      "as_of": "2026-08-14T05:31:49.458329+00:00"
-    },
-    {
-      "ticker": "AAXJ",
-      "name": "iShares MSCI All Country Asia ex Japan ETF",
+      "ticker": "AAOI",
+      "name": "Applied Optoelectronics, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 115.91000366210938,
-      "stop_price": 111.00862907284161,
-      "target_price": 125.71275284064491,
-      "position_pct": 0.2364846872057285,
-      "as_of": "2026-08-14T05:31:49.458329+00:00"
+      "price": 150.27999877929688,
+      "stop_price": 117.53671715909579,
+      "target_price": 215.76656201969905,
+      "position_pct": 0.04589643778605902,
+      "as_of": "2026-08-14T22:16:38.376463+00:00"
     },
     {
-      "ticker": "AIA",
-      "name": "iShares Asia 50 ETF",
+      "ticker": "ALOY",
+      "name": "REalloys Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 139.10000610351562,
-      "stop_price": 132.0977990427487,
-      "target_price": 153.10442022504947,
-      "position_pct": 0.1986516606783699,
-      "as_of": "2026-08-14T05:31:49.458329+00:00"
-    },
-    {
-      "ticker": "APPX",
-      "name": "Tradr 2X Long APP Daily ETF",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 13.010000228881836,
-      "stop_price": 6.910869956725158,
-      "target_price": 25.208260773195192,
-      "position_pct": 0.021330910553385256,
-      "as_of": "2026-08-14T05:31:49.458329+00:00"
-    },
-    {
-      "ticker": "ASMB",
-      "name": "Assembly Biosciences, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 29.950000762939453,
-      "stop_price": 27.246671041984875,
-      "target_price": 35.35666020484861,
-      "position_pct": 0.1107893000649723,
-      "as_of": "2026-08-14T05:31:49.458329+00:00"
+      "price": 14.720000267028809,
+      "stop_price": 12.028517478588594,
+      "target_price": 20.10296584390924,
+      "position_pct": 0.054691043651664724,
+      "as_of": "2026-08-14T22:16:38.376463+00:00"
     },
     {
       "ticker": "BWMN",
@@ -239,35 +179,95 @@
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 42.20000076293945,
+      "price": 42.29999923706055,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-14T05:31:49.458329+00:00"
+      "as_of": "2026-08-14T22:16:38.376463+00:00"
     },
     {
-      "ticker": "CLBT",
-      "name": "Cellebrite DI Ltd. - Ordinary Shares",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 10.800000190734863,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-14T05:31:49.458329+00:00"
-    },
-    {
-      "ticker": "CRMD",
-      "name": "CorMedix Inc. - Common Stock",
+      "ticker": "CPRT",
+      "name": "Copart, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 8.140000343322754,
-      "stop_price": 7.294866423281467,
-      "target_price": 9.830268183405328,
-      "position_pct": 0.09631610032792305,
-      "as_of": "2026-08-14T05:31:49.458329+00:00"
+      "price": 31.610000610351562,
+      "stop_price": 29.542806154870117,
+      "target_price": 35.74438952131445,
+      "position_pct": 0.15291256478815224,
+      "as_of": "2026-08-14T22:16:38.376463+00:00"
+    },
+    {
+      "ticker": "ETOR",
+      "name": "eToro Group Ltd. - Class A Common Shares",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 28.579999923706055,
+      "stop_price": 25.412910605917894,
+      "target_price": 34.91417855928238,
+      "position_pct": 0.09024058703739317,
+      "as_of": "2026-08-14T22:16:38.376463+00:00"
+    },
+    {
+      "ticker": "IMXI",
+      "name": "International Money Express, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 14.59000015258789,
+      "stop_price": 13.27347850182216,
+      "target_price": 17.223043454119352,
+      "position_pct": 0.11082233356437303,
+      "as_of": "2026-08-14T22:16:38.376463+00:00"
+    },
+    {
+      "ticker": "LPTH",
+      "name": "LightPath Technologies, Inc. - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 15.170000076293945,
+      "stop_price": 12.720264665865246,
+      "target_price": 20.069470897151344,
+      "position_pct": 0.06192505530072419,
+      "as_of": "2026-08-14T22:16:38.376463+00:00"
+    },
+    {
+      "ticker": "LQDA",
+      "name": "Liquidia Corporation - Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 74.44000244140625,
+      "stop_price": 63.44683320722791,
+      "target_price": 96.42634090976293,
+      "position_pct": 0.06771477892832613,
+      "as_of": "2026-08-14T22:16:38.376463+00:00"
+    },
+    {
+      "ticker": "LTRX",
+      "name": "Lantronix, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 6.46999979019165,
+      "stop_price": 5.744613632901023,
+      "target_price": 7.920772104772905,
+      "position_pct": 0.08919386901946948,
+      "as_of": "2026-08-14T22:16:38.376463+00:00"
+    },
+    {
+      "ticker": "OCC",
+      "name": "Optical Cable Corporation - Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 17.799999237060547,
+      "stop_price": 14.571866384640995,
+      "target_price": 24.25626494189965,
+      "position_pct": 0.05514023136848001,
+      "as_of": "2026-08-14T22:16:38.376463+00:00"
     }
   ]
 }
