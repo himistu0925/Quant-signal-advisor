@@ -1,15 +1,15 @@
 [
   {
-    "ticker": "JBTM",
-    "name": "JBT Marel Corporation Common Stock",
-    "exchange": "NYSE",
+    "ticker": "LENZ",
+    "name": "LENZ Therapeutics, Inc. - Common Stock",
+    "exchange": "NASDAQ",
     "score": -4.5,
     "direction": "SELL",
-    "price": 117.52999877929688,
+    "price": 4.599999904632568,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-13T22:20:34.182726+00:00"
+    "as_of": "2026-08-14T05:31:49.458329+00:00"
   },
   {
     "ticker": "TPR",
@@ -21,7 +21,19 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-13T22:20:34.182726+00:00"
+    "as_of": "2026-08-14T05:31:49.458329+00:00"
+  },
+  {
+    "ticker": "MC",
+    "name": "Moelis & Company Class A Common Stock",
+    "exchange": "NYSE",
+    "score": 4.0,
+    "direction": "BUY",
+    "price": 70.37999725341797,
+    "stop_price": 64.80802570926322,
+    "target_price": 81.52394034172748,
+    "position_pct": 0.12631076217043805,
+    "as_of": "2026-08-14T05:31:49.458329+00:00"
   },
   {
     "ticker": "AAXJ",
@@ -30,10 +42,10 @@
     "score": 3.0,
     "direction": "BUY",
     "price": 115.91000366210938,
-    "stop_price": 111.00791517949618,
-    "target_price": 125.71418062733575,
-    "position_pct": 0.2364502478346136,
-    "as_of": "2026-08-13T22:20:34.182726+00:00"
+    "stop_price": 111.00862907284161,
+    "target_price": 125.71275284064491,
+    "position_pct": 0.2364846872057285,
+    "as_of": "2026-08-14T05:31:49.458329+00:00"
   },
   {
     "ticker": "AIA",
@@ -42,10 +54,22 @@
     "score": 3.0,
     "direction": "BUY",
     "price": 139.10000610351562,
-    "stop_price": 131.9506617964293,
-    "target_price": 153.39869471768827,
-    "position_pct": 0.1945633055686543,
-    "as_of": "2026-08-13T22:20:34.182726+00:00"
+    "stop_price": 132.0977990427487,
+    "target_price": 153.10442022504947,
+    "position_pct": 0.1986516606783699,
+    "as_of": "2026-08-14T05:31:49.458329+00:00"
+  },
+  {
+    "ticker": "APPX",
+    "name": "Tradr 2X Long APP Daily ETF",
+    "exchange": "NASDAQ",
+    "score": 3.0,
+    "direction": "BUY",
+    "price": 13.010000228881836,
+    "stop_price": 6.910869956725158,
+    "target_price": 25.208260773195192,
+    "position_pct": 0.021330910553385256,
+    "as_of": "2026-08-14T05:31:49.458329+00:00"
   },
   {
     "ticker": "ASMB",
@@ -54,10 +78,10 @@
     "score": 3.0,
     "direction": "BUY",
     "price": 29.950000762939453,
-    "stop_price": 27.18411454545654,
-    "target_price": 35.48177319790528,
-    "position_pct": 0.10828356052258498,
-    "as_of": "2026-08-13T22:20:34.182726+00:00"
+    "stop_price": 27.246671041984875,
+    "target_price": 35.35666020484861,
+    "position_pct": 0.1107893000649723,
+    "as_of": "2026-08-14T05:31:49.458329+00:00"
   },
   {
     "ticker": "BWMN",
@@ -69,7 +93,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-13T22:20:34.182726+00:00"
+    "as_of": "2026-08-14T05:31:49.458329+00:00"
   },
   {
     "ticker": "CLBT",
@@ -81,7 +105,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-13T22:20:34.182726+00:00"
+    "as_of": "2026-08-14T05:31:49.458329+00:00"
   },
   {
     "ticker": "CRMD",
@@ -93,30 +117,6 @@
     "stop_price": 7.294866423281467,
     "target_price": 9.830268183405328,
     "position_pct": 0.09631610032792305,
-    "as_of": "2026-08-13T22:20:34.182726+00:00"
-  },
-  {
-    "ticker": "DLLL",
-    "name": "GraniteShares 2x Long DELL Daily ETF",
-    "exchange": "NASDAQ",
-    "score": 3.0,
-    "direction": "BUY",
-    "price": 29.729999542236328,
-    "stop_price": 22.313824799682706,
-    "target_price": 44.56234902734357,
-    "position_pct": 0.04008805155526764,
-    "as_of": "2026-08-13T22:20:34.182726+00:00"
-  },
-  {
-    "ticker": "EQPT",
-    "name": "EquipmentShare.com Inc - Class A Common Stock",
-    "exchange": "NASDAQ",
-    "score": 3.0,
-    "direction": "BUY",
-    "price": 21.40999984741211,
-    "stop_price": 18.654397220655817,
-    "target_price": 26.921205100924695,
-    "position_pct": 0.0776962528614458,
-    "as_of": "2026-08-13T22:20:34.182726+00:00"
+    "as_of": "2026-08-14T05:31:49.458329+00:00"
   }
 ]
