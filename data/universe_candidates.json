@@ -1,5 +1,17 @@
 [
   {
+    "ticker": "GOVZ",
+    "name": "iShares 25  Year Treasury STRIPS Bond ETF",
+    "exchange": "Cboe BZX",
+    "score": -4.5,
+    "direction": "SELL",
+    "price": 33.279998779296875,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-08-15T00:12:37.789055+00:00"
+  },
+  {
     "ticker": "AAOI",
     "name": "Applied Optoelectronics, Inc. - Common Stock",
     "exchange": "NASDAQ",
@@ -9,7 +21,7 @@
     "stop_price": 117.53671715909579,
     "target_price": 215.76656201969905,
     "position_pct": 0.04589643778605902,
-    "as_of": "2026-08-14T22:16:38.376463+00:00"
+    "as_of": "2026-08-15T00:12:37.789055+00:00"
   },
   {
     "ticker": "ALOY",
@@ -21,19 +33,7 @@
     "stop_price": 12.028517478588594,
     "target_price": 20.10296584390924,
     "position_pct": 0.054691043651664724,
-    "as_of": "2026-08-14T22:16:38.376463+00:00"
-  },
-  {
-    "ticker": "BWMN",
-    "name": "Bowman Consulting Group Ltd. - Common Stock",
-    "exchange": "NASDAQ",
-    "score": -3.0,
-    "direction": "SELL",
-    "price": 42.29999923706055,
-    "stop_price": null,
-    "target_price": null,
-    "position_pct": null,
-    "as_of": "2026-08-14T22:16:38.376463+00:00"
+    "as_of": "2026-08-15T00:12:37.789055+00:00"
   },
   {
     "ticker": "CPRT",
@@ -45,7 +45,7 @@
     "stop_price": 29.542806154870117,
     "target_price": 35.74438952131445,
     "position_pct": 0.15291256478815224,
-    "as_of": "2026-08-14T22:16:38.376463+00:00"
+    "as_of": "2026-08-15T00:12:37.789055+00:00"
   },
   {
     "ticker": "ETOR",
@@ -57,7 +57,7 @@
     "stop_price": 25.412910605917894,
     "target_price": 34.91417855928238,
     "position_pct": 0.09024058703739317,
-    "as_of": "2026-08-14T22:16:38.376463+00:00"
+    "as_of": "2026-08-15T00:12:37.789055+00:00"
   },
   {
     "ticker": "IMXI",
@@ -66,10 +66,10 @@
     "score": 3.0,
     "direction": "BUY",
     "price": 14.59000015258789,
-    "stop_price": 13.27347850182216,
-    "target_price": 17.223043454119352,
-    "position_pct": 0.11082233356437303,
-    "as_of": "2026-08-14T22:16:38.376463+00:00"
+    "stop_price": 13.284246240916412,
+    "target_price": 17.20150797593085,
+    "position_pct": 0.11173621631285341,
+    "as_of": "2026-08-15T00:12:37.789055+00:00"
   },
   {
     "ticker": "LPTH",
@@ -81,7 +81,7 @@
     "stop_price": 12.720264665865246,
     "target_price": 20.069470897151344,
     "position_pct": 0.06192505530072419,
-    "as_of": "2026-08-14T22:16:38.376463+00:00"
+    "as_of": "2026-08-15T00:12:37.789055+00:00"
   },
   {
     "ticker": "LQDA",
@@ -93,7 +93,7 @@
     "stop_price": 63.44683320722791,
     "target_price": 96.42634090976293,
     "position_pct": 0.06771477892832613,
-    "as_of": "2026-08-14T22:16:38.376463+00:00"
+    "as_of": "2026-08-15T00:12:37.789055+00:00"
   },
   {
     "ticker": "LTRX",
@@ -105,7 +105,7 @@
     "stop_price": 5.744613632901023,
     "target_price": 7.920772104772905,
     "position_pct": 0.08919386901946948,
-    "as_of": "2026-08-14T22:16:38.376463+00:00"
+    "as_of": "2026-08-15T00:12:37.789055+00:00"
   },
   {
     "ticker": "OCC",
@@ -117,6 +117,6 @@
     "stop_price": 14.571866384640995,
     "target_price": 24.25626494189965,
     "position_pct": 0.05514023136848001,
-    "as_of": "2026-08-14T22:16:38.376463+00:00"
+    "as_of": "2026-08-15T00:12:37.789055+00:00"
   }
 ]
