@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T22:13:48.640451",
+  "generated_at": "2026-08-16T22:30:43.714819",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,11 +144,23 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-16T18:13:48.223282-04:00",
+    "timestamp": "2026-08-16T18:30:43.301329-04:00",
     "market_open": false,
     "tickers": {}
   },
   "universe_candidates": [
+    {
+      "ticker": "GOVZ",
+      "name": "iShares 25  Year Treasury STRIPS Bond ETF",
+      "exchange": "Cboe BZX",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 33.279998779296875,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-16T22:13:22.801766+00:00"
+    },
     {
       "ticker": "AAOI",
       "name": "Applied Optoelectronics, Inc. - Common Stock",
@@ -159,7 +171,7 @@
       "stop_price": 117.53671715909579,
       "target_price": 215.76656201969905,
       "position_pct": 0.04589643778605902,
-      "as_of": "2026-08-15T22:15:43.805474+00:00"
+      "as_of": "2026-08-16T22:13:22.801766+00:00"
     },
     {
       "ticker": "ALOY",
@@ -171,7 +183,7 @@
       "stop_price": 12.028517478588594,
       "target_price": 20.10296584390924,
       "position_pct": 0.054691043651664724,
-      "as_of": "2026-08-15T22:15:43.805474+00:00"
+      "as_of": "2026-08-16T22:13:22.801766+00:00"
     },
     {
       "ticker": "CPRT",
@@ -183,7 +195,7 @@
       "stop_price": 29.542091989046316,
       "target_price": 35.745817852962055,
       "position_pct": 0.15285975542961663,
-      "as_of": "2026-08-15T22:15:43.805474+00:00"
+      "as_of": "2026-08-16T22:13:22.801766+00:00"
     },
     {
       "ticker": "ETOR",
@@ -192,10 +204,10 @@
       "score": 3.0,
       "direction": "BUY",
       "price": 28.579999923706055,
-      "stop_price": 25.412910605917894,
-      "target_price": 34.91417855928238,
-      "position_pct": 0.09024058703739317,
-      "as_of": "2026-08-15T22:15:43.805474+00:00"
+      "stop_price": 25.382599047471103,
+      "target_price": 34.97480167617596,
+      "position_pct": 0.08938510068014992,
+      "as_of": "2026-08-16T22:13:22.801766+00:00"
     },
     {
       "ticker": "IMXI",
@@ -207,7 +219,7 @@
       "stop_price": 13.284246240916412,
       "target_price": 17.20150797593085,
       "position_pct": 0.11173621631285341,
-      "as_of": "2026-08-15T22:15:43.805474+00:00"
+      "as_of": "2026-08-16T22:13:22.801766+00:00"
     },
     {
       "ticker": "LPTH",
@@ -219,7 +231,7 @@
       "stop_price": 12.720264665865246,
       "target_price": 20.069470897151344,
       "position_pct": 0.06192505530072419,
-      "as_of": "2026-08-15T22:15:43.805474+00:00"
+      "as_of": "2026-08-16T22:13:22.801766+00:00"
     },
     {
       "ticker": "LQDA",
@@ -228,10 +240,10 @@
       "score": 3.0,
       "direction": "BUY",
       "price": 74.44000244140625,
-      "stop_price": 63.442547667328355,
-      "target_price": 96.43491198956204,
-      "position_pct": 0.06768839151479741,
-      "as_of": "2026-08-15T22:15:43.805474+00:00"
+      "stop_price": 63.3883567204191,
+      "target_price": 96.54329388338056,
+      "position_pct": 0.0673564863738295,
+      "as_of": "2026-08-16T22:13:22.801766+00:00"
     },
     {
       "ticker": "LTRX",
@@ -240,10 +252,10 @@
       "score": 3.0,
       "direction": "BUY",
       "price": 6.46999979019165,
-      "stop_price": 5.744613632901023,
-      "target_price": 7.920772104772905,
-      "position_pct": 0.08919386901946948,
-      "as_of": "2026-08-15T22:15:43.805474+00:00"
+      "stop_price": 5.732697071560611,
+      "target_price": 7.944605227453731,
+      "position_pct": 0.08775228446471196,
+      "as_of": "2026-08-16T22:13:22.801766+00:00"
     },
     {
       "ticker": "OCC",
@@ -255,19 +267,7 @@
       "stop_price": 14.57185194328706,
       "target_price": 24.25629382460752,
       "position_pct": 0.0551399846946065,
-      "as_of": "2026-08-15T22:15:43.805474+00:00"
-    },
-    {
-      "ticker": "PDYN",
-      "name": "Palladyne AI Corp. - Common stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 6.610000133514404,
-      "stop_price": 5.859006127043865,
-      "target_price": 8.111988146455483,
-      "position_pct": 0.08801668291042089,
-      "as_of": "2026-08-15T22:15:43.805474+00:00"
+      "as_of": "2026-08-16T22:13:22.801766+00:00"
     }
   ]
 }
