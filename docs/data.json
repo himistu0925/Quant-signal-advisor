@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T13:00:54.328250",
+  "generated_at": "2026-08-17T13:30:46.640049",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,9 +144,35 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-17T09:00:53.923980-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-08-17T09:30:42.690431-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
