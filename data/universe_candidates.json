@@ -9,7 +9,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-17T22:17:08.217841+00:00"
+    "as_of": "2026-08-18T00:20:34.342052+00:00"
   },
   {
     "ticker": "ARGX",
@@ -21,7 +21,7 @@
     "stop_price": 916.712336626243,
     "target_price": 1130.0954073139203,
     "position_pct": 0.13888262414706867,
-    "as_of": "2026-08-17T22:17:08.217841+00:00"
+    "as_of": "2026-08-18T00:20:34.342052+00:00"
   },
   {
     "ticker": "EYPT",
@@ -33,7 +33,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-17T22:17:08.217841+00:00"
+    "as_of": "2026-08-18T00:20:34.342052+00:00"
   },
   {
     "ticker": "VIST",
@@ -45,7 +45,7 @@
     "stop_price": 66.30288423791185,
     "target_price": 83.87424251050442,
     "position_pct": 0.12320049914638022,
-    "as_of": "2026-08-17T22:17:08.217841+00:00"
+    "as_of": "2026-08-18T00:20:34.342052+00:00"
   },
   {
     "ticker": "AAXJ",
@@ -57,7 +57,7 @@
     "stop_price": 112.52001037999175,
     "target_price": 126.46997374685245,
     "position_pct": 0.25,
-    "as_of": "2026-08-17T22:17:08.217841+00:00"
+    "as_of": "2026-08-18T00:20:34.342052+00:00"
   },
   {
     "ticker": "ALM",
@@ -69,7 +69,19 @@
     "stop_price": 13.809609717267337,
     "target_price": 21.460782396520013,
     "position_pct": 0.06414703194994227,
-    "as_of": "2026-08-17T22:17:08.217841+00:00"
+    "as_of": "2026-08-18T00:20:34.342052+00:00"
+  },
+  {
+    "ticker": "CXAI",
+    "name": "CXApp Inc. - Class A Common Stock",
+    "exchange": "NASDAQ",
+    "score": -3.0,
+    "direction": "SELL",
+    "price": 0.08900000154972076,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-08-18T00:20:34.342052+00:00"
   },
   {
     "ticker": "ENVX",
@@ -81,7 +93,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-17T22:17:08.217841+00:00"
+    "as_of": "2026-08-18T00:20:34.342052+00:00"
   },
   {
     "ticker": "GLPI",
@@ -93,7 +105,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-17T22:17:08.217841+00:00"
+    "as_of": "2026-08-18T00:20:34.342052+00:00"
   },
   {
     "ticker": "HTHT",
@@ -105,18 +117,6 @@
     "stop_price": 43.84555144516987,
     "target_price": 52.138898940714945,
     "position_pct": 0.16860501975368442,
-    "as_of": "2026-08-17T22:17:08.217841+00:00"
-  },
-  {
-    "ticker": "IEP",
-    "name": "Icahn Enterprises L.P. - Depositary Units representing Limited Partner Interests",
-    "exchange": "NASDAQ",
-    "score": -3.0,
-    "direction": "SELL",
-    "price": 7.110000133514404,
-    "stop_price": null,
-    "target_price": null,
-    "position_pct": null,
-    "as_of": "2026-08-17T22:17:08.217841+00:00"
+    "as_of": "2026-08-18T00:20:34.342052+00:00"
   }
 ]
