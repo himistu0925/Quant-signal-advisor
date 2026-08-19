@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T22:00:54.010238",
+  "generated_at": "2026-08-19T22:30:41.469148",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,130 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-19T18:00:53.608411-04:00",
+    "timestamp": "2026-08-19T18:30:41.065455-04:00",
     "market_open": false,
     "tickers": {}
   },
   "universe_candidates": [
     {
-      "ticker": "FG",
-      "name": "F&G Annuities & Life, Inc. Common Stock",
+      "ticker": "BITI",
+      "name": "ProShares Short Bitcoin ETF",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 22.31999969482422,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-19T22:18:09.739304+00:00"
+    },
+    {
+      "ticker": "CSTM",
+      "name": "Constellium SE Ordinary Shares (France)",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 25.549999237060547,
+      "price": 26.540000915527344,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-19T00:11:24.026725+00:00"
+      "as_of": "2026-08-19T22:18:09.739304+00:00"
     },
     {
-      "ticker": "KLAR",
-      "name": "Klarna Group plc Ordinary Shares",
-      "exchange": "NYSE",
+      "ticker": "SBIT",
+      "name": "ProShares UltraShort Bitcoin ETF",
+      "exchange": "NYSE Arca",
       "score": -4.5,
       "direction": "SELL",
-      "price": 15.0600004196167,
+      "price": 48.77000045776367,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-19T00:11:24.026725+00:00"
+      "as_of": "2026-08-19T22:18:09.739304+00:00"
     },
     {
-      "ticker": "AIP",
-      "name": "Arteris, Inc.  - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 25.809999465942383,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-19T00:11:24.026725+00:00"
-    },
-    {
-      "ticker": "CIFR",
-      "name": "Cipher Digital Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 16.094999313354492,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-19T00:11:24.026725+00:00"
-    },
-    {
-      "ticker": "CXAI",
-      "name": "CXApp Inc. - Class A Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 4.260000228881836,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-19T00:11:24.026725+00:00"
-    },
-    {
-      "ticker": "DFGX",
-      "name": "Dimensional International Core Fixed Income ETF",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 51.98500061035156,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-19T00:11:24.026725+00:00"
-    },
-    {
-      "ticker": "DUOT",
-      "name": "Duos Technologies Group, Inc. - Common Stock",
+      "ticker": "ASST",
+      "name": "Strive, Inc. - Class A Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 11.59000015258789,
-      "stop_price": 9.830738170548795,
-      "target_price": 15.10852411666608,
-      "position_pct": 0.06587989890598529,
-      "as_of": "2026-08-19T00:11:24.026725+00:00"
+      "price": 14.729999542236328,
+      "stop_price": 12.904280603118568,
+      "target_price": 18.381437420471848,
+      "position_pct": 0.08068054302681599,
+      "as_of": "2026-08-19T22:18:09.739304+00:00"
     },
     {
-      "ticker": "ENVX",
-      "name": "Enovix Corporation - Common Stock",
+      "ticker": "AVGG",
+      "name": "Leverage Shares 2X Long AVGO Daily ETF",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 3.134999990463257,
+      "price": 23.959999084472656,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-19T00:11:24.026725+00:00"
+      "as_of": "2026-08-19T22:18:09.739304+00:00"
     },
     {
-      "ticker": "MAZE",
-      "name": "Maze Therapeutics, Inc. - Common Stock",
+      "ticker": "AVGU",
+      "name": "GraniteShares 2x Long AVGO Daily ETF",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 30.58139991760254,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-19T22:18:09.739304+00:00"
+    },
+    {
+      "ticker": "AVGX",
+      "name": "Defiance Daily Target 2X Long AVGO ETF",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 41.15999984741211,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-19T22:18:09.739304+00:00"
+    },
+    {
+      "ticker": "CMPR",
+      "name": "Cimpress plc - Ordinary Shares",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 29.1299991607666,
-      "stop_price": 26.07251010885389,
-      "target_price": 35.24497726459202,
-      "position_pct": 0.09527425500524163,
-      "as_of": "2026-08-19T00:11:24.026725+00:00"
+      "price": 90.12999725341797,
+      "stop_price": 81.19751766142456,
+      "target_price": 107.99495643740478,
+      "position_pct": 0.10090143092429299,
+      "as_of": "2026-08-19T22:18:09.739304+00:00"
     },
     {
-      "ticker": "BURL",
-      "name": "Burlington Stores, Inc. Common Stock",
-      "exchange": "NYSE",
+      "ticker": "CNXC",
+      "name": "Concentrix Corporation - Common Stock",
+      "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 336.95001220703125,
-      "stop_price": 315.4033051669692,
-      "target_price": 380.04342628715546,
-      "position_pct": 0.1563812101684658,
-      "as_of": "2026-08-19T00:11:24.026725+00:00"
+      "price": 25.719999313354492,
+      "stop_price": 22.372332467487247,
+      "target_price": 32.41533300508898,
+      "position_pct": 0.0768296264161002,
+      "as_of": "2026-08-19T22:18:09.739304+00:00"
+    },
+    {
+      "ticker": "CONI",
+      "name": "GraniteShares 2x Short COIN Daily ETF",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 42.996299743652344,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-19T22:18:09.739304+00:00"
     }
   ]
 }
