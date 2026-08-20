@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T13:30:49.995491",
+  "generated_at": "2026-08-20T14:00:52.545114",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,7 +144,7 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-20T09:30:46.785255-04:00",
+    "timestamp": "2026-08-20T10:00:49.149119-04:00",
     "market_open": true,
     "tickers": {
       "TQQQ": {
@@ -163,7 +163,7 @@
         "threshold": null
       },
       "AAPL": {
-        "score": 1.673545956243728,
+        "score": 0.5,
         "direction": null,
         "threshold": null
       },
