@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T22:00:48.012514",
+  "generated_at": "2026-08-20T22:30:43.178544",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,130 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-20T18:00:47.609050-04:00",
+    "timestamp": "2026-08-20T18:30:42.856556-04:00",
     "market_open": false,
     "tickers": {}
   },
   "universe_candidates": [
     {
-      "ticker": "NVCT",
-      "name": "Nuvectis Pharma, Inc. - Common Stock",
+      "ticker": "WMT",
+      "name": "Walmart Inc. - Common Stock",
       "exchange": "NASDAQ",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 23.329999923706055,
-      "stop_price": 20.118476352304228,
-      "target_price": 29.75304706650971,
-      "position_pct": 0.07264464795294197,
-      "as_of": "2026-08-20T00:18:28.156654+00:00"
-    },
-    {
-      "ticker": "BITI",
-      "name": "ProShares Short Bitcoin ETF",
-      "exchange": "NYSE Arca",
       "score": -4.5,
       "direction": "SELL",
-      "price": 22.31999969482422,
+      "price": 103.83999633789062,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-20T00:18:28.156654+00:00"
+      "as_of": "2026-08-20T22:14:28.678727+00:00"
     },
     {
-      "ticker": "CSTM",
-      "name": "Constellium SE Ordinary Shares (France)",
+      "ticker": "AAP",
+      "name": "Advance Auto Parts Inc.",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 26.540000915527344,
+      "price": 42.38999938964844,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-20T00:18:28.156654+00:00"
+      "as_of": "2026-08-20T22:14:28.678727+00:00"
     },
     {
-      "ticker": "SBIT",
-      "name": "ProShares UltraShort Bitcoin ETF",
+      "ticker": "AGQ",
+      "name": "ProShares Ultra Silver",
+      "exchange": "NYSE Arca",
+      "score": 4.5,
+      "direction": "BUY",
+      "price": 87.6500015258789,
+      "stop_price": 77.55361475789978,
+      "target_price": 107.84277506183717,
+      "position_pct": 0.08681323679463472,
+      "as_of": "2026-08-20T22:14:28.678727+00:00"
+    },
+    {
+      "ticker": "BMNZ",
+      "name": "Defiance Daily Target 2X Short BMNR ETF",
       "exchange": "NYSE Arca",
       "score": -4.5,
       "direction": "SELL",
-      "price": 48.77000045776367,
+      "price": 8.460000038146973,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-20T00:18:28.156654+00:00"
+      "as_of": "2026-08-20T22:14:28.678727+00:00"
     },
     {
-      "ticker": "ASST",
-      "name": "Strive, Inc. - Class A Common Stock",
+      "ticker": "AUPH",
+      "name": "Aurinia Pharmaceuticals Inc - Common Shares",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 14.729999542236328,
-      "stop_price": 12.904280603118568,
-      "target_price": 18.381437420471848,
-      "position_pct": 0.08068054302681599,
-      "as_of": "2026-08-20T00:18:28.156654+00:00"
+      "price": 17.270000457763672,
+      "stop_price": 15.94071542143812,
+      "target_price": 19.928570530414774,
+      "position_pct": 0.12991946787802505,
+      "as_of": "2026-08-20T22:14:28.678727+00:00"
     },
     {
-      "ticker": "AVGG",
-      "name": "Leverage Shares 2X Long AVGO Daily ETF",
+      "ticker": "CONI",
+      "name": "GraniteShares 2x Short COIN Daily ETF",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 23.959999084472656,
+      "price": 36.505001068115234,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-20T00:18:28.156654+00:00"
+      "as_of": "2026-08-20T22:14:28.678727+00:00"
     },
     {
-      "ticker": "AVGU",
-      "name": "GraniteShares 2x Long AVGO Daily ETF",
+      "ticker": "ELVA",
+      "name": "Electrovaya Inc. - Common Shares",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 30.58139991760254,
+      "price": 6.679999828338623,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-20T00:18:28.156654+00:00"
+      "as_of": "2026-08-20T22:14:28.678727+00:00"
     },
     {
-      "ticker": "AVGX",
-      "name": "Defiance Daily Target 2X Long AVGO ETF",
+      "ticker": "GMAB",
+      "name": "Genmab A/S - American Depositary Shares",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 41.15999984741211,
+      "price": 33.40999984741211,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-20T00:18:28.156654+00:00"
+      "as_of": "2026-08-20T22:14:28.678727+00:00"
     },
     {
-      "ticker": "CLOA",
-      "name": "iShares AAA CLO Active ETF",
+      "ticker": "ILMN",
+      "name": "Illumina, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 51.880001068115234,
-      "stop_price": 51.7863256344717,
-      "target_price": 52.06735193540231,
-      "position_pct": 0.25,
-      "as_of": "2026-08-20T00:18:28.156654+00:00"
+      "price": 213.24000549316406,
+      "stop_price": 196.1874235504616,
+      "target_price": 247.34516937856898,
+      "position_pct": 0.12504851535659606,
+      "as_of": "2026-08-20T22:14:28.678727+00:00"
     },
     {
-      "ticker": "CMPR",
-      "name": "Cimpress plc - Ordinary Shares",
+      "ticker": "LYTS",
+      "name": "LSI Industries Inc. - Common Stock",
       "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 90.12999725341797,
-      "stop_price": 81.3816048054699,
-      "target_price": 107.6267821493141,
-      "position_pct": 0.10302463885757426,
-      "as_of": "2026-08-20T00:18:28.156654+00:00"
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 20.6200008392334,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-20T22:14:28.678727+00:00"
     }
   ]
 }
