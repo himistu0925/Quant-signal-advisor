@@ -90,5 +90,9 @@
   "HTHT": {
     "direction": "SURGE",
     "timestamp": "2026-08-18T10:30:46.536835-04:00"
+  },
+  "BITI": {
+    "direction": "PLUNGE",
+    "timestamp": "2026-08-20T12:59:21.646498-04:00"
   }
 }
