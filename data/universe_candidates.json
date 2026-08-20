@@ -1,5 +1,17 @@
 [
   {
+    "ticker": "NVCT",
+    "name": "Nuvectis Pharma, Inc. - Common Stock",
+    "exchange": "NASDAQ",
+    "score": 4.5,
+    "direction": "BUY",
+    "price": 23.329999923706055,
+    "stop_price": 20.118476352304228,
+    "target_price": 29.75304706650971,
+    "position_pct": 0.07264464795294197,
+    "as_of": "2026-08-20T00:18:28.156654+00:00"
+  },
+  {
     "ticker": "BITI",
     "name": "ProShares Short Bitcoin ETF",
     "exchange": "NYSE Arca",
@@ -9,7 +21,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-19T22:18:09.739304+00:00"
+    "as_of": "2026-08-20T00:18:28.156654+00:00"
   },
   {
     "ticker": "CSTM",
@@ -21,7 +33,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-19T22:18:09.739304+00:00"
+    "as_of": "2026-08-20T00:18:28.156654+00:00"
   },
   {
     "ticker": "SBIT",
@@ -33,7 +45,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-19T22:18:09.739304+00:00"
+    "as_of": "2026-08-20T00:18:28.156654+00:00"
   },
   {
     "ticker": "ASST",
@@ -45,7 +57,7 @@
     "stop_price": 12.904280603118568,
     "target_price": 18.381437420471848,
     "position_pct": 0.08068054302681599,
-    "as_of": "2026-08-19T22:18:09.739304+00:00"
+    "as_of": "2026-08-20T00:18:28.156654+00:00"
   },
   {
     "ticker": "AVGG",
@@ -57,7 +69,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-19T22:18:09.739304+00:00"
+    "as_of": "2026-08-20T00:18:28.156654+00:00"
   },
   {
     "ticker": "AVGU",
@@ -69,7 +81,7 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-19T22:18:09.739304+00:00"
+    "as_of": "2026-08-20T00:18:28.156654+00:00"
   },
   {
     "ticker": "AVGX",
@@ -81,7 +93,19 @@
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-08-19T22:18:09.739304+00:00"
+    "as_of": "2026-08-20T00:18:28.156654+00:00"
+  },
+  {
+    "ticker": "CLOA",
+    "name": "iShares AAA CLO Active ETF",
+    "exchange": "NASDAQ",
+    "score": 3.0,
+    "direction": "BUY",
+    "price": 51.880001068115234,
+    "stop_price": 51.7863256344717,
+    "target_price": 52.06735193540231,
+    "position_pct": 0.25,
+    "as_of": "2026-08-20T00:18:28.156654+00:00"
   },
   {
     "ticker": "CMPR",
@@ -90,33 +114,9 @@
     "score": 3.0,
     "direction": "BUY",
     "price": 90.12999725341797,
-    "stop_price": 81.19751766142456,
-    "target_price": 107.99495643740478,
-    "position_pct": 0.10090143092429299,
-    "as_of": "2026-08-19T22:18:09.739304+00:00"
-  },
-  {
-    "ticker": "CNXC",
-    "name": "Concentrix Corporation - Common Stock",
-    "exchange": "NASDAQ",
-    "score": 3.0,
-    "direction": "BUY",
-    "price": 25.719999313354492,
-    "stop_price": 22.372332467487247,
-    "target_price": 32.41533300508898,
-    "position_pct": 0.0768296264161002,
-    "as_of": "2026-08-19T22:18:09.739304+00:00"
-  },
-  {
-    "ticker": "CONI",
-    "name": "GraniteShares 2x Short COIN Daily ETF",
-    "exchange": "NASDAQ",
-    "score": -3.0,
-    "direction": "SELL",
-    "price": 42.996299743652344,
-    "stop_price": null,
-    "target_price": null,
-    "position_pct": null,
-    "as_of": "2026-08-19T22:18:09.739304+00:00"
+    "stop_price": 81.3816048054699,
+    "target_price": 107.6267821493141,
+    "position_pct": 0.10302463885757426,
+    "as_of": "2026-08-20T00:18:28.156654+00:00"
   }
 ]
