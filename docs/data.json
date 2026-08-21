@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T22:00:44.175231",
+  "generated_at": "2026-08-21T22:30:38.896894",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,82 +144,70 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-21T18:00:43.916245-04:00",
+    "timestamp": "2026-08-21T18:30:38.521910-04:00",
     "market_open": false,
     "tickers": {}
   },
   "universe_candidates": [
     {
-      "ticker": "WMT",
-      "name": "Walmart Inc. - Common Stock",
+      "ticker": "URNJ",
+      "name": "Sprott Junior Uranium Miners ETF",
       "exchange": "NASDAQ",
+      "score": 4.5,
+      "direction": "BUY",
+      "price": 26.100000381469727,
+      "stop_price": 24.09651694877523,
+      "target_price": 30.106967246858723,
+      "position_pct": 0.130273103114048,
+      "as_of": "2026-08-21T22:17:58.262358+00:00"
+    },
+    {
+      "ticker": "FUTY",
+      "name": "Fidelity MSCI Utilities Index ETF",
+      "exchange": "NYSE Arca",
       "score": -4.5,
       "direction": "SELL",
-      "price": 103.83999633789062,
+      "price": 55.25,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-21T00:15:12.673504+00:00"
+      "as_of": "2026-08-21T22:17:58.262358+00:00"
     },
     {
-      "ticker": "AAP",
-      "name": "Advance Auto Parts Inc.",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 42.38999938964844,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-21T00:15:12.673504+00:00"
-    },
-    {
-      "ticker": "AGQ",
-      "name": "ProShares Ultra Silver",
+      "ticker": "URNM",
+      "name": "Sprott Uranium Miners ETF",
       "exchange": "NYSE Arca",
       "score": 4.5,
       "direction": "BUY",
-      "price": 87.6500015258789,
-      "stop_price": 77.55361475789978,
-      "target_price": 107.84277506183717,
-      "position_pct": 0.08681323679463472,
-      "as_of": "2026-08-21T00:15:12.673504+00:00"
+      "price": 58.189998626708984,
+      "stop_price": 54.129953652188654,
+      "target_price": 66.31008857574965,
+      "position_pct": 0.1433235321083697,
+      "as_of": "2026-08-21T22:17:58.262358+00:00"
     },
     {
-      "ticker": "BMNZ",
-      "name": "Defiance Daily Target 2X Short BMNR ETF",
+      "ticker": "UTSL",
+      "name": "Direxion Daily Utilities Bull 3X ETF",
       "exchange": "NYSE Arca",
       "score": -4.5,
       "direction": "SELL",
-      "price": 8.460000038146973,
+      "price": 37.40999984741211,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-21T00:15:12.673504+00:00"
+      "as_of": "2026-08-21T22:17:58.262358+00:00"
     },
     {
-      "ticker": "NEA",
-      "name": "Nuveen AMT-Free Quality Municipal Income Fund Common Shares of Beneficial Interest Par Value $.01",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 11.140000343322754,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-21T00:15:12.673504+00:00"
-    },
-    {
-      "ticker": "AUPH",
-      "name": "Aurinia Pharmaceuticals Inc - Common Shares",
+      "ticker": "ARQQ",
+      "name": "Arqit Quantum Inc. - Ordinary Shares",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 17.270000457763672,
-      "stop_price": 15.929912337147504,
-      "target_price": 19.950176698996007,
-      "position_pct": 0.12887212558695765,
-      "as_of": "2026-08-21T00:15:12.673504+00:00"
+      "price": 21.139999389648438,
+      "stop_price": 17.28772699026865,
+      "target_price": 28.844544188408015,
+      "position_pct": 0.05487669925172464,
+      "as_of": "2026-08-21T22:17:58.262358+00:00"
     },
     {
       "ticker": "CONI",
@@ -227,47 +215,59 @@
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 36.505001068115234,
+      "price": 30.440000534057617,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-21T00:15:12.673504+00:00"
+      "as_of": "2026-08-21T22:17:58.262358+00:00"
     },
     {
-      "ticker": "ELVA",
-      "name": "Electrovaya Inc. - Common Shares",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 6.679999828338623,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-21T00:15:12.673504+00:00"
-    },
-    {
-      "ticker": "GMAB",
-      "name": "Genmab A/S - American Depositary Shares",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 33.40999984741211,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-21T00:15:12.673504+00:00"
-    },
-    {
-      "ticker": "ILMN",
-      "name": "Illumina, Inc. - Common Stock",
+      "ticker": "EZPW",
+      "name": "EZCORP, Inc. - Class A Non-Voting Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 213.24000549316406,
-      "stop_price": 195.88639056982197,
-      "target_price": 247.94723533984825,
-      "position_pct": 0.12287930003928926,
-      "as_of": "2026-08-21T00:15:12.673504+00:00"
+      "price": 32.220001220703125,
+      "stop_price": 29.054734474208217,
+      "target_price": 38.55053471369294,
+      "position_pct": 0.10179237265352843,
+      "as_of": "2026-08-21T22:17:58.262358+00:00"
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood Markets, Inc. - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 108.12999725341797,
+      "stop_price": 95.88618239635895,
+      "target_price": 132.617626967536,
+      "position_pct": 0.08831397608979433,
+      "as_of": "2026-08-21T22:17:58.262358+00:00"
+    },
+    {
+      "ticker": "HOOG",
+      "name": "Leverage Shares 2X Long HOOD Daily ETF",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 31.950000762939453,
+      "stop_price": 25.420636514832353,
+      "target_price": 45.008729259153654,
+      "position_pct": 0.04893278970031721,
+      "as_of": "2026-08-21T22:17:58.262358+00:00"
+    },
+    {
+      "ticker": "MSTR",
+      "name": "Strategy Inc - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 119.25,
+      "stop_price": 105.69394506360777,
+      "target_price": 146.36210987278446,
+      "position_pct": 0.0879680707695161,
+      "as_of": "2026-08-21T22:17:58.262358+00:00"
     }
   ]
 }
