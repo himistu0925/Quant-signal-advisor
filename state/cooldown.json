@@ -94,5 +94,9 @@
   "BITI": {
     "direction": "PLUNGE",
     "timestamp": "2026-08-20T15:30:39.728396-04:00"
+  },
+  "NEA": {
+    "direction": "PLUNGE",
+    "timestamp": "2026-08-21T09:30:45.467240-04:00"
   }
 }
