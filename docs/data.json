@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T00:15:41.738305",
+  "generated_at": "2026-08-21T00:30:44.349702",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,7 +144,7 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-20T20:15:41.354053-04:00",
+    "timestamp": "2026-08-20T20:30:43.912041-04:00",
     "market_open": false,
     "tickers": {}
   },
@@ -159,7 +159,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-20T22:14:28.678727+00:00"
+      "as_of": "2026-08-21T00:15:12.673504+00:00"
     },
     {
       "ticker": "AAP",
@@ -171,7 +171,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-20T22:14:28.678727+00:00"
+      "as_of": "2026-08-21T00:15:12.673504+00:00"
     },
     {
       "ticker": "AGQ",
@@ -183,7 +183,7 @@
       "stop_price": 77.55361475789978,
       "target_price": 107.84277506183717,
       "position_pct": 0.08681323679463472,
-      "as_of": "2026-08-20T22:14:28.678727+00:00"
+      "as_of": "2026-08-21T00:15:12.673504+00:00"
     },
     {
       "ticker": "BMNZ",
@@ -195,7 +195,19 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-20T22:14:28.678727+00:00"
+      "as_of": "2026-08-21T00:15:12.673504+00:00"
+    },
+    {
+      "ticker": "NEA",
+      "name": "Nuveen AMT-Free Quality Municipal Income Fund Common Shares of Beneficial Interest Par Value $.01",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 11.140000343322754,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-21T00:15:12.673504+00:00"
     },
     {
       "ticker": "AUPH",
@@ -204,10 +216,10 @@
       "score": 3.0,
       "direction": "BUY",
       "price": 17.270000457763672,
-      "stop_price": 15.94071542143812,
-      "target_price": 19.928570530414774,
-      "position_pct": 0.12991946787802505,
-      "as_of": "2026-08-20T22:14:28.678727+00:00"
+      "stop_price": 15.929912337147504,
+      "target_price": 19.950176698996007,
+      "position_pct": 0.12887212558695765,
+      "as_of": "2026-08-21T00:15:12.673504+00:00"
     },
     {
       "ticker": "CONI",
@@ -219,7 +231,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-20T22:14:28.678727+00:00"
+      "as_of": "2026-08-21T00:15:12.673504+00:00"
     },
     {
       "ticker": "ELVA",
@@ -231,7 +243,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-20T22:14:28.678727+00:00"
+      "as_of": "2026-08-21T00:15:12.673504+00:00"
     },
     {
       "ticker": "GMAB",
@@ -243,7 +255,7 @@
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-20T22:14:28.678727+00:00"
+      "as_of": "2026-08-21T00:15:12.673504+00:00"
     },
     {
       "ticker": "ILMN",
@@ -252,22 +264,10 @@
       "score": 3.0,
       "direction": "BUY",
       "price": 213.24000549316406,
-      "stop_price": 196.1874235504616,
-      "target_price": 247.34516937856898,
-      "position_pct": 0.12504851535659606,
-      "as_of": "2026-08-20T22:14:28.678727+00:00"
-    },
-    {
-      "ticker": "LYTS",
-      "name": "LSI Industries Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 20.6200008392334,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-20T22:14:28.678727+00:00"
+      "stop_price": 195.88639056982197,
+      "target_price": 247.94723533984825,
+      "position_pct": 0.12287930003928926,
+      "as_of": "2026-08-21T00:15:12.673504+00:00"
     }
   ]
 }
