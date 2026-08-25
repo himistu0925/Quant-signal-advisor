@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T17:39:43.292731",
+  "generated_at": "2026-08-25T18:52:18.755710",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,7 +144,7 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-25T13:39:36.840845-04:00",
+    "timestamp": "2026-08-25T14:52:13.904049-04:00",
     "market_open": true,
     "tickers": {
       "TQQQ": {
@@ -153,7 +153,7 @@
         "threshold": null
       },
       "SOXL": {
-        "score": -0.11375730104524547,
+        "score": 0.0,
         "direction": null,
         "threshold": null
       },
