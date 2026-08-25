@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T22:37:38.927250",
+  "generated_at": "2026-08-25T13:57:51.293835",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,82 +144,48 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-24T18:37:38.534076-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-08-25T09:57:47.489018-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 2.557887795306745,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "URNJ",
-      "name": "Sprott Junior Uranium Miners ETF",
-      "exchange": "NASDAQ",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 26.100000381469727,
-      "stop_price": 24.09653139012916,
-      "target_price": 30.106938364150857,
-      "position_pct": 0.13027404214529745,
-      "as_of": "2026-08-23T22:14:56.798477+00:00"
-    },
-    {
-      "ticker": "FUTY",
-      "name": "Fidelity MSCI Utilities Index ETF",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 55.25,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-23T22:14:56.798477+00:00"
-    },
-    {
-      "ticker": "URNM",
-      "name": "Sprott Uranium Miners ETF",
-      "exchange": "NYSE Arca",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 58.189998626708984,
-      "stop_price": 54.129953652188654,
-      "target_price": 66.31008857574965,
-      "position_pct": 0.1433235321083697,
-      "as_of": "2026-08-23T22:14:56.798477+00:00"
-    },
-    {
-      "ticker": "UTSL",
-      "name": "Direxion Daily Utilities Bull 3X ETF",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 37.40999984741211,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-23T22:14:56.798477+00:00"
-    },
-    {
-      "ticker": "ARQQ",
-      "name": "Arqit Quantum Inc. - Ordinary Shares",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 21.139999389648438,
-      "stop_price": 17.28772699026865,
-      "target_price": 28.844544188408015,
-      "position_pct": 0.05487669925172464,
-      "as_of": "2026-08-23T22:14:56.798477+00:00"
-    },
-    {
-      "ticker": "CONI",
-      "name": "GraniteShares 2x Short COIN Daily ETF",
+      "ticker": "ARRY",
+      "name": "Array Technologies, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 30.440000534057617,
+      "price": 4.570000171661377,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-23T22:14:56.798477+00:00"
+      "as_of": "2026-08-25T00:14:45.953532+00:00"
     },
     {
       "ticker": "EZPW",
@@ -227,35 +193,47 @@
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 32.220001220703125,
-      "stop_price": 29.051877265956264,
-      "target_price": 38.556249130196846,
-      "position_pct": 0.10170057005638074,
-      "as_of": "2026-08-23T22:14:56.798477+00:00"
+      "price": 35.04999923706055,
+      "stop_price": 31.66317015501772,
+      "target_price": 41.8236574011462,
+      "position_pct": 0.10348912917660288,
+      "as_of": "2026-08-25T00:14:45.953532+00:00"
     },
     {
-      "ticker": "HOOD",
-      "name": "Robinhood Markets, Inc. - Class A Common Stock",
+      "ticker": "GENB",
+      "name": "Generate Biomedicines, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 108.12999725341797,
-      "stop_price": 95.88618239635895,
-      "target_price": 132.617626967536,
-      "position_pct": 0.08831397608979433,
-      "as_of": "2026-08-23T22:14:56.798477+00:00"
+      "price": 17.719999313354492,
+      "stop_price": 15.651731593698106,
+      "target_price": 21.856534752667265,
+      "position_pct": 0.0856755590436736,
+      "as_of": "2026-08-25T00:14:45.953532+00:00"
     },
     {
-      "ticker": "HOOG",
-      "name": "Leverage Shares 2X Long HOOD Daily ETF",
+      "ticker": "JBHT",
+      "name": "J.B. Hunt Transport Services, Inc. - Common Stock",
       "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 31.950000762939453,
-      "stop_price": 25.420636514832353,
-      "target_price": 45.008729259153654,
-      "position_pct": 0.04893278970031721,
-      "as_of": "2026-08-23T22:14:56.798477+00:00"
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 259.8800048828125,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-25T00:14:45.953532+00:00"
+    },
+    {
+      "ticker": "MRCY",
+      "name": "Mercury Systems Inc - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 89.58999633789062,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-25T00:14:45.953532+00:00"
     },
     {
       "ticker": "MSTR",
@@ -263,11 +241,59 @@
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 119.25,
-      "stop_price": 105.69251618700342,
-      "target_price": 146.36496762599316,
-      "position_pct": 0.08795879946814585,
-      "as_of": "2026-08-23T22:14:56.798477+00:00"
+      "price": 122.62999725341797,
+      "stop_price": 108.80519089028635,
+      "target_price": 150.2796099796812,
+      "position_pct": 0.08870286789726844,
+      "as_of": "2026-08-25T00:14:45.953532+00:00"
+    },
+    {
+      "ticker": "NTGR",
+      "name": "NETGEAR, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 20.719999313354492,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-25T00:14:45.953532+00:00"
+    },
+    {
+      "ticker": "ON",
+      "name": "ON Semiconductor Corporation - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 71.93000030517578,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-25T00:14:45.953532+00:00"
+    },
+    {
+      "ticker": "RGNX",
+      "name": "REGENXBIO Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 8.055000305175781,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-25T00:14:45.953532+00:00"
+    },
+    {
+      "ticker": "AS",
+      "name": "Amer Sports, Inc. Ordinary Shares",
+      "exchange": "NYSE",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 31.239999771118164,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-25T00:14:45.953532+00:00"
     }
   ]
 }
