@@ -98,5 +98,9 @@
   "NEA": {
     "direction": "PLUNGE",
     "timestamp": "2026-08-21T09:30:45.467240-04:00"
+  },
+  "GENB": {
+    "direction": "SURGE",
+    "timestamp": "2026-08-25T10:56:39.736994-04:00"
   }
 }
