@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T22:37:52.044058",
+  "generated_at": "2026-08-26T14:00:16.452268",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,156 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-25T18:37:51.637782-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-08-26T10:00:06.994924-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 1.673545956243728,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "ARRY",
-      "name": "Array Technologies, Inc. - Common Stock",
+      "ticker": "AVBP",
+      "name": "ArriVent BioPharma, Inc. - Common Stock",
       "exchange": "NASDAQ",
-      "score": -3.0,
+      "score": 4.5,
+      "direction": "BUY",
+      "price": 31.350000381469727,
+      "stop_price": 28.103325285277784,
+      "target_price": 37.84335057385361,
+      "position_pct": 0.09656032541796518,
+      "as_of": "2026-08-25T23:59:06.022977+00:00"
+    },
+    {
+      "ticker": "EH",
+      "name": "EHang Holdings Limited - ADS",
+      "exchange": "NASDAQ",
+      "score": -4.5,
       "direction": "SELL",
-      "price": 4.570000171661377,
+      "price": 4.829999923706055,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-25T00:14:45.953532+00:00"
+      "as_of": "2026-08-25T23:59:06.022977+00:00"
     },
     {
-      "ticker": "EZPW",
-      "name": "EZCORP, Inc. - Class A Non-Voting Common Stock",
+      "ticker": "SHOE",
+      "name": "Shoe Station Group, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 14.3100004196167,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-25T23:59:06.022977+00:00"
+    },
+    {
+      "ticker": "AKTS",
+      "name": "Aktis Oncology, Inc. - Common stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 35.04999923706055,
-      "stop_price": 31.66317015501772,
-      "target_price": 41.8236574011462,
-      "position_pct": 0.10348912917660288,
-      "as_of": "2026-08-25T00:14:45.953532+00:00"
+      "price": 26.690000534057617,
+      "stop_price": 23.531219293280888,
+      "target_price": 33.007563015611076,
+      "position_pct": 0.08449461516839533,
+      "as_of": "2026-08-25T23:59:06.022977+00:00"
     },
     {
-      "ticker": "GENB",
-      "name": "Generate Biomedicines, Inc. - Common Stock",
+      "ticker": "ASO",
+      "name": "Academy Sports and Outdoors, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 43.474998474121094,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-25T23:59:06.022977+00:00"
+    },
+    {
+      "ticker": "CRML",
+      "name": "Critical Metals Corp. - Ordinary Shares",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 17.719999313354492,
-      "stop_price": 15.651731593698106,
-      "target_price": 21.856534752667265,
-      "position_pct": 0.0856755590436736,
-      "as_of": "2026-08-25T00:14:45.953532+00:00"
+      "price": 8.100000381469727,
+      "stop_price": 6.783589057946532,
+      "target_price": 10.732823028516115,
+      "position_pct": 0.06153092302329327,
+      "as_of": "2026-08-25T23:59:06.022977+00:00"
     },
     {
-      "ticker": "JBHT",
-      "name": "J.B. Hunt Transport Services, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 259.8800048828125,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-25T00:14:45.953532+00:00"
-    },
-    {
-      "ticker": "MRCY",
-      "name": "Mercury Systems Inc - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 89.58999633789062,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-25T00:14:45.953532+00:00"
-    },
-    {
-      "ticker": "MSTR",
-      "name": "Strategy Inc - Class A Common Stock",
+      "ticker": "IBTI",
+      "name": "iShares iBonds Dec 2028 Term Treasury ETF",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 122.62999725341797,
-      "stop_price": 108.80519089028635,
-      "target_price": 150.2796099796812,
-      "position_pct": 0.08870286789726844,
-      "as_of": "2026-08-25T00:14:45.953532+00:00"
+      "price": 22.125,
+      "stop_price": 22.07969055846558,
+      "target_price": 22.215618883068842,
+      "position_pct": 0.25,
+      "as_of": "2026-08-25T23:59:06.022977+00:00"
     },
     {
-      "ticker": "NTGR",
-      "name": "NETGEAR, Inc. - Common Stock",
+      "ticker": "NVAX",
+      "name": "Novavax, Inc. - Common Stock",
       "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 20.719999313354492,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-25T00:14:45.953532+00:00"
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 9.4399995803833,
+      "stop_price": 8.514567746409742,
+      "target_price": 11.290863248330417,
+      "position_pct": 0.10200642806775359,
+      "as_of": "2026-08-25T23:59:06.022977+00:00"
     },
     {
-      "ticker": "ON",
-      "name": "ON Semiconductor Corporation - Common Stock",
+      "ticker": "VGSH",
+      "name": "Vanguard Short-Term Treasury ETF",
       "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 71.93000030517578,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-25T00:14:45.953532+00:00"
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 58.20000076293945,
+      "stop_price": 58.08893964563246,
+      "target_price": 58.422122997553444,
+      "position_pct": 0.25,
+      "as_of": "2026-08-25T23:59:06.022977+00:00"
     },
     {
-      "ticker": "RGNX",
-      "name": "REGENXBIO Inc. - Common Stock",
+      "ticker": "VPLS",
+      "name": "Vanguard Core Plus Bond ETF",
       "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 8.055000305175781,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-25T00:14:45.953532+00:00"
-    },
-    {
-      "ticker": "AS",
-      "name": "Amer Sports, Inc. Ordinary Shares",
-      "exchange": "NYSE",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 31.239999771118164,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-25T00:14:45.953532+00:00"
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 76.82499694824219,
+      "stop_price": 76.39274583530411,
+      "target_price": 77.68949917411835,
+      "position_pct": 0.25,
+      "as_of": "2026-08-25T23:59:06.022977+00:00"
     }
   ]
 }
