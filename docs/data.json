@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T01:01:32.135750",
+  "generated_at": "2026-08-27T22:55:29.214125",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,130 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-26T21:01:31.733759-04:00",
+    "timestamp": "2026-08-27T18:55:28.793676-04:00",
     "market_open": false,
     "tickers": {}
   },
   "universe_candidates": [
     {
-      "ticker": "AVBP",
-      "name": "ArriVent BioPharma, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 31.350000381469727,
-      "stop_price": 28.103325285277784,
-      "target_price": 37.84335057385361,
-      "position_pct": 0.09656032541796518,
-      "as_of": "2026-08-25T23:59:06.022977+00:00"
-    },
-    {
-      "ticker": "EH",
-      "name": "EHang Holdings Limited - ADS",
-      "exchange": "NASDAQ",
+      "ticker": "LEG",
+      "name": "Leggett & Platt, Incorporated Common Stock",
+      "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 4.829999923706055,
+      "price": 9.199999809265137,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-25T23:59:06.022977+00:00"
+      "as_of": "2026-08-27T04:49:38.145825+00:00"
     },
     {
-      "ticker": "SHOE",
-      "name": "Shoe Station Group, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 14.3100004196167,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-08-25T23:59:06.022977+00:00"
-    },
-    {
-      "ticker": "AKTS",
-      "name": "Aktis Oncology, Inc. - Common stock",
+      "ticker": "DRS",
+      "name": "Leonardo DRS, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 26.690000534057617,
-      "stop_price": 23.531219293280888,
-      "target_price": 33.007563015611076,
-      "position_pct": 0.08449461516839533,
-      "as_of": "2026-08-25T23:59:06.022977+00:00"
+      "price": 38.599998474121094,
+      "stop_price": 35.45159903510267,
+      "target_price": 44.89679735215795,
+      "position_pct": 0.12260197354804313,
+      "as_of": "2026-08-27T04:49:38.145825+00:00"
     },
     {
-      "ticker": "ASO",
-      "name": "Academy Sports and Outdoors, Inc. - Common Stock",
+      "ticker": "NEXR",
+      "name": "Nexera Technologies Ltd - Ordinary Shares",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 43.474998474121094,
+      "price": 2.009999990463257,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-08-25T23:59:06.022977+00:00"
+      "as_of": "2026-08-27T04:49:38.145825+00:00"
     },
     {
-      "ticker": "CRML",
-      "name": "Critical Metals Corp. - Ordinary Shares",
+      "ticker": "SMMT",
+      "name": "Summit Therapeutics Inc.  - Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 8.100000381469727,
-      "stop_price": 6.783589057946532,
-      "target_price": 10.732823028516115,
-      "position_pct": 0.06153092302329327,
-      "as_of": "2026-08-25T23:59:06.022977+00:00"
+      "price": 14.229999542236328,
+      "stop_price": 12.372682019223427,
+      "target_price": 17.94463458826213,
+      "position_pct": 0.07661586867038614,
+      "as_of": "2026-08-27T04:49:38.145825+00:00"
     },
     {
-      "ticker": "IBTI",
-      "name": "iShares iBonds Dec 2028 Term Treasury ETF",
+      "ticker": "SMTC",
+      "name": "Semtech Corporation - Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 22.125,
-      "stop_price": 22.07969055846558,
-      "target_price": 22.215618883068842,
-      "position_pct": 0.25,
-      "as_of": "2026-08-25T23:59:06.022977+00:00"
+      "price": 140.8000030517578,
+      "stop_price": 117.48705736171343,
+      "target_price": 187.4258944318466,
+      "position_pct": 0.06039562950291835,
+      "as_of": "2026-08-27T04:49:38.145825+00:00"
     },
     {
-      "ticker": "NVAX",
-      "name": "Novavax, Inc. - Common Stock",
+      "ticker": "STRT",
+      "name": "STRATTEC SECURITY CORPORATION - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 72.76000213623047,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-08-27T04:49:38.145825+00:00"
+    },
+    {
+      "ticker": "URBN",
+      "name": "Urban Outfitters, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 9.4399995803833,
-      "stop_price": 8.514567746409742,
-      "target_price": 11.290863248330417,
-      "position_pct": 0.10200642806775359,
-      "as_of": "2026-08-25T23:59:06.022977+00:00"
+      "price": 82.94999694824219,
+      "stop_price": 76.92700009402031,
+      "target_price": 94.99599065668595,
+      "position_pct": 0.13772213228054,
+      "as_of": "2026-08-27T04:49:38.145825+00:00"
     },
     {
-      "ticker": "VGSH",
-      "name": "Vanguard Short-Term Treasury ETF",
-      "exchange": "NASDAQ",
+      "ticker": "AEO",
+      "name": "American Eagle Outfitters, Inc. Common Stock",
+      "exchange": "NYSE",
       "score": 3.0,
       "direction": "BUY",
-      "price": 58.20000076293945,
-      "stop_price": 58.08893964563246,
-      "target_price": 58.422122997553444,
-      "position_pct": 0.25,
-      "as_of": "2026-08-25T23:59:06.022977+00:00"
+      "price": 17.59000015258789,
+      "stop_price": 16.222676788022262,
+      "target_price": 20.324646881719147,
+      "position_pct": 0.12864550265456692,
+      "as_of": "2026-08-27T04:49:38.145825+00:00"
     },
     {
-      "ticker": "VPLS",
-      "name": "Vanguard Core Plus Bond ETF",
-      "exchange": "NASDAQ",
+      "ticker": "BHVN",
+      "name": "Biohaven Ltd. Common Shares ",
+      "exchange": "NYSE",
       "score": 3.0,
       "direction": "BUY",
-      "price": 76.82499694824219,
-      "stop_price": 76.39274583530411,
-      "target_price": 77.68949917411835,
-      "position_pct": 0.25,
-      "as_of": "2026-08-25T23:59:06.022977+00:00"
+      "price": 16.950000762939453,
+      "stop_price": 14.688413412912412,
+      "target_price": 21.473175462993535,
+      "position_pct": 0.07494736280133857,
+      "as_of": "2026-08-27T04:49:38.145825+00:00"
+    },
+    {
+      "ticker": "BMNZ",
+      "name": "Defiance Daily Target 2X Short BMNR ETF",
+      "exchange": "NYSE Arca",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 6.179999828338623,
+      "stop_price": 2.672903501988891,
+      "target_price": 13.194192481038087,
+      "position_pct": 0.017621414564255533,
+      "as_of": "2026-08-27T04:49:38.145825+00:00"
     }
   ]
 }
