@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T23:19:26.769565",
+  "generated_at": "2026-09-01T17:18:05.012408",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -8,24 +8,24 @@
         "weights": {
           "BollingerBands": 0.0,
           "Fibonacci": 0.0,
-          "Ichimoku": 0.0,
+          "Ichimoku": 0.017166572125526074,
           "MACD": 0.0,
           "MA": 0.0,
-          "RSI": 6.887925061065745,
-          "SupportResistance": 0.11207493893425477
+          "RSI": 6.982833427874474,
+          "SupportResistance": 0.0
         },
         "buy_threshold": 2.0,
         "sell_threshold": -2.0,
         "test_metrics": {
           "cumulative_return": 0.43501813294058644,
-          "cagr": 0.43537317427927125,
+          "cagr": 0.4382343116365337,
           "max_drawdown": -0.02294995430654756,
-          "sharpe_ratio": 2.346849788188096,
+          "sharpe_ratio": 2.3516231984866005,
           "win_rate": 1.0,
           "avg_win_loss_ratio": null,
           "total_trades": 1,
-          "benchmark_return": 0.18145753034855927,
-          "excess_return": 0.2535606025920272
+          "benchmark_return": 0.19805037298807382,
+          "excess_return": 0.23696775995251262
         }
       }
     },
@@ -34,26 +34,26 @@
       "calibration": {
         "status": "calibrated",
         "weights": {
-          "BollingerBands": 2.2496886633154296,
+          "BollingerBands": 2.675026635477665,
           "Fibonacci": 0.0,
-          "Ichimoku": 1.991097117473851,
-          "MACD": 0.11375730104524547,
-          "MA": 1.9513364799905788,
-          "RSI": 0.6941204381748944,
+          "Ichimoku": 1.9333343480965297,
+          "MACD": 0.27611439804425386,
+          "MA": 0.9840439133712844,
+          "RSI": 1.1314807050102664,
           "SupportResistance": 0.0
         },
-        "buy_threshold": 3.0,
-        "sell_threshold": -3.0,
+        "buy_threshold": 4.0,
+        "sell_threshold": -4.0,
         "test_metrics": {
-          "cumulative_return": 2.615505921076273,
-          "cagr": 2.618690036852149,
+          "cumulative_return": 2.5546801935937773,
+          "cagr": 2.5827341820367,
           "max_drawdown": -0.6941516732921514,
-          "sharpe_ratio": 1.6857269266474906,
+          "sharpe_ratio": 1.6587396408923785,
           "win_rate": 1.0,
           "avg_win_loss_ratio": null,
           "total_trades": 1,
-          "benchmark_return": 0.18145753034855927,
-          "excess_return": 2.434048390727714
+          "benchmark_return": 0.19805037298807382,
+          "excess_return": 2.3566298206057033
         }
       }
     },
@@ -62,26 +62,26 @@
       "calibration": {
         "status": "calibrated",
         "weights": {
-          "BollingerBands": 1.0210001492113958,
+          "BollingerBands": 1.2846749950079204,
           "Fibonacci": 0.0,
-          "Ichimoku": 1.523547390370203,
+          "Ichimoku": 0.43066921365883126,
           "MACD": 0.0,
           "MA": 0.0,
-          "RSI": 4.455452460418401,
+          "RSI": 5.284655791333249,
           "SupportResistance": 0.0
         },
         "buy_threshold": 2.0,
         "sell_threshold": -2.0,
         "test_metrics": {
           "cumulative_return": 0.29272816407665503,
-          "cagr": 0.29295552257061264,
+          "cagr": 0.2947871215221458,
           "max_drawdown": -0.11171901540347062,
-          "sharpe_ratio": 1.7049835970624632,
+          "sharpe_ratio": 1.708416067215259,
           "win_rate": 1.0,
           "avg_win_loss_ratio": null,
           "total_trades": 1,
-          "benchmark_return": 0.18145753034855927,
-          "excess_return": 0.11127063372809576
+          "benchmark_return": 0.19805037298807382,
+          "excess_return": 0.09467779108858121
         }
       }
     },
@@ -90,26 +90,26 @@
       "calibration": {
         "status": "calibrated",
         "weights": {
-          "BollingerBands": 2.052350224489735,
+          "BollingerBands": 1.8603461417148126,
           "Fibonacci": 0.0,
-          "Ichimoku": 1.456457704024847,
-          "MACD": 1.173545956243728,
+          "Ichimoku": 1.5123073550812889,
+          "MACD": 1.1820422408392872,
           "MA": 0.0,
-          "RSI": 2.31764611524169,
+          "RSI": 2.445304262364611,
           "SupportResistance": 0.0
         },
-        "buy_threshold": 2.0,
-        "sell_threshold": -2.0,
+        "buy_threshold": 3.0,
+        "sell_threshold": -3.0,
         "test_metrics": {
-          "cumulative_return": 0.37949678567946066,
-          "cagr": 0.37980079864576743,
-          "max_drawdown": -0.08050393371227738,
-          "sharpe_ratio": 2.123190073682041,
-          "win_rate": 0.8,
-          "avg_win_loss_ratio": 40.78245496558113,
-          "total_trades": 5,
-          "benchmark_return": 0.18145753034855927,
-          "excess_return": 0.1980392553309014
+          "cumulative_return": 0.13052307318399747,
+          "cagr": 0.13138306777204534,
+          "max_drawdown": -0.11239471400575929,
+          "sharpe_ratio": 0.9155520781975843,
+          "win_rate": 1.0,
+          "avg_win_loss_ratio": null,
+          "total_trades": 1,
+          "benchmark_return": 0.19805037298807382,
+          "excess_return": -0.06752729980407635
         }
       }
     },
@@ -118,35 +118,182 @@
       "calibration": {
         "status": "calibrated",
         "weights": {
-          "BollingerBands": 2.0753032942011918,
+          "BollingerBands": 2.3440072134712033,
           "Fibonacci": 0.0,
           "Ichimoku": 0.0,
-          "MACD": 2.057887795306745,
-          "MA": 0.0,
-          "RSI": 2.8668089104920638,
+          "MACD": 1.769058135108071,
+          "MA": 0.31116795978299006,
+          "RSI": 2.5757666916377358,
           "SupportResistance": 0.0
         },
-        "buy_threshold": 3.0,
-        "sell_threshold": -3.0,
+        "buy_threshold": 5.0,
+        "sell_threshold": -5.0,
         "test_metrics": {
-          "cumulative_return": 0.06313824076796082,
-          "cagr": 0.06318282443304324,
+          "cumulative_return": 0.0,
+          "cagr": 0.0,
           "max_drawdown": 0.0,
-          "sharpe_ratio": 1.0019900517195868,
-          "win_rate": 0.5,
-          "avg_win_loss_ratio": null,
-          "total_trades": 2,
-          "benchmark_return": 0.18145753034855927,
-          "excess_return": -0.11831928958059845
+          "sharpe_ratio": 0.0,
+          "win_rate": 0.0,
+          "avg_win_loss_ratio": 0.0,
+          "total_trades": 0,
+          "benchmark_return": 0.19805037298807382,
+          "excess_return": -0.19805037298807382
         }
       }
     }
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-08-31T19:19:26.309548-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-09-01T13:17:59.203196-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": -0.27611439804425386,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
-  "universe_candidates": []
+  "universe_candidates": [
+    {
+      "ticker": "CSIQ",
+      "name": "Canadian Solar Inc. - Common Shares",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 12.329999923706055,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-01T02:09:51.558578+00:00"
+    },
+    {
+      "ticker": "APTV",
+      "name": "Aptiv PLC Ordinary Shares",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 44.7599983215332,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-01T02:09:51.558578+00:00"
+    },
+    {
+      "ticker": "HLF",
+      "name": "Herbalife Ltd. Common Shares",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 10.989999771118164,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-01T02:09:51.558578+00:00"
+    },
+    {
+      "ticker": "SRE",
+      "name": "DBA Sempra Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 81.69999694824219,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-01T02:09:51.558578+00:00"
+    },
+    {
+      "ticker": "VNLA",
+      "name": "Janus Henderson Short Duration Income ETF",
+      "exchange": "NYSE Arca",
+      "score": -4.0,
+      "direction": "SELL",
+      "price": 48.779998779296875,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-01T02:09:51.558578+00:00"
+    },
+    {
+      "ticker": "AIP",
+      "name": "Arteris, Inc.  - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 21.8799991607666,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-01T02:09:51.558578+00:00"
+    },
+    {
+      "ticker": "ASND",
+      "name": "Ascendis Pharma A/S - Ordinary Share",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 263.0400085449219,
+      "stop_price": 246.7393260173703,
+      "target_price": 295.641373600025,
+      "position_pct": 0.1613674814538158,
+      "as_of": "2026-09-01T02:09:51.558578+00:00"
+    },
+    {
+      "ticker": "CME",
+      "name": "CME Group Inc. - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 285.5,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-01T02:09:51.558578+00:00"
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike Holdings, Inc. - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 231.0,
+      "stop_price": 206.3610103451765,
+      "target_price": 280.277979309647,
+      "position_pct": 0.09375384430780741,
+      "as_of": "2026-09-01T02:09:51.558578+00:00"
+    },
+    {
+      "ticker": "DPRO",
+      "name": "Draganfly Inc. - Common Shares",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 5.420000076293945,
+      "stop_price": 4.794147410747073,
+      "target_price": 6.671705407387689,
+      "position_pct": 0.08660185335406267,
+      "as_of": "2026-09-01T02:09:51.558578+00:00"
+    }
+  ]
 }
