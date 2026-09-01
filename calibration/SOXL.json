@@ -1,36 +1,36 @@
 {
   "ticker": "SOXL",
   "weights": {
-    "BollingerBands": 2.2496886633154296,
+    "BollingerBands": 2.675026635477665,
     "Fibonacci": 0.0,
-    "Ichimoku": 1.991097117473851,
-    "MACD": 0.11375730104524547,
-    "MA": 1.9513364799905788,
-    "RSI": 0.6941204381748944,
+    "Ichimoku": 1.9333343480965297,
+    "MACD": 0.27611439804425386,
+    "MA": 0.9840439133712844,
+    "RSI": 1.1314807050102664,
     "SupportResistance": 0.0
   },
-  "buy_threshold": 3.0,
-  "sell_threshold": -3.0,
+  "buy_threshold": 4.0,
+  "sell_threshold": -4.0,
   "train_metrics": {
-    "cumulative_return": 0.3366665070755839,
-    "cagr": 0.0839362613374246,
-    "max_drawdown": -0.8635266396042947,
-    "sharpe_ratio": 0.5577654690703541,
+    "cumulative_return": 0.36032652905991025,
+    "cagr": 0.08951581080035864,
+    "max_drawdown": -0.8635266387203109,
+    "sharpe_ratio": 0.5647766685234724,
     "win_rate": 1.0,
     "avg_win_loss_ratio": null,
     "total_trades": 2,
-    "benchmark_return": 0.45034593580521287,
-    "excess_return": -0.113679428729629
+    "benchmark_return": 0.42796893712219397,
+    "excess_return": -0.06764240806228372
   },
   "test_metrics": {
-    "cumulative_return": 2.615505921076273,
-    "cagr": 2.618690036852149,
+    "cumulative_return": 2.5546801935937773,
+    "cagr": 2.5827341820367,
     "max_drawdown": -0.6941516732921514,
-    "sharpe_ratio": 1.6857269266474906,
+    "sharpe_ratio": 1.6587396408923785,
     "win_rate": 1.0,
     "avg_win_loss_ratio": null,
     "total_trades": 1,
-    "benchmark_return": 0.18145753034855927,
-    "excess_return": 2.434048390727714
+    "benchmark_return": 0.19805037298807382,
+    "excess_return": 2.3566298206057033
   }
 }

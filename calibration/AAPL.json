@@ -1,36 +1,36 @@
 {
   "ticker": "AAPL",
   "weights": {
-    "BollingerBands": 2.052350224489735,
+    "BollingerBands": 1.8603461417148126,
     "Fibonacci": 0.0,
-    "Ichimoku": 1.456457704024847,
-    "MACD": 1.173545956243728,
+    "Ichimoku": 1.5123073550812889,
+    "MACD": 1.1820422408392872,
     "MA": 0.0,
-    "RSI": 2.31764611524169,
+    "RSI": 2.445304262364611,
     "SupportResistance": 0.0
   },
-  "buy_threshold": 2.0,
-  "sell_threshold": -2.0,
+  "buy_threshold": 3.0,
+  "sell_threshold": -3.0,
   "train_metrics": {
-    "cumulative_return": 0.45700228792150877,
-    "cagr": 0.11020241468305536,
-    "max_drawdown": -0.24299094854299086,
-    "sharpe_ratio": 0.5680376335489414,
-    "win_rate": 0.7272727272727273,
-    "avg_win_loss_ratio": 1.981782022215634,
-    "total_trades": 11,
-    "benchmark_return": 0.45034593580521287,
-    "excess_return": 0.006656352116295894
+    "cumulative_return": 0.40258291827756754,
+    "cagr": 0.09884110750517294,
+    "max_drawdown": -0.3022258534509268,
+    "sharpe_ratio": 0.6112599999795464,
+    "win_rate": 1.0,
+    "avg_win_loss_ratio": null,
+    "total_trades": 3,
+    "benchmark_return": 0.42796893712219397,
+    "excess_return": -0.025386018844626435
   },
   "test_metrics": {
-    "cumulative_return": 0.37949678567946066,
-    "cagr": 0.37980079864576743,
-    "max_drawdown": -0.08050393371227738,
-    "sharpe_ratio": 2.123190073682041,
-    "win_rate": 0.8,
-    "avg_win_loss_ratio": 40.78245496558113,
-    "total_trades": 5,
-    "benchmark_return": 0.18145753034855927,
-    "excess_return": 0.1980392553309014
+    "cumulative_return": 0.13052307318399747,
+    "cagr": 0.13138306777204534,
+    "max_drawdown": -0.11239471400575929,
+    "sharpe_ratio": 0.9155520781975843,
+    "win_rate": 1.0,
+    "avg_win_loss_ratio": null,
+    "total_trades": 1,
+    "benchmark_return": 0.19805037298807382,
+    "excess_return": -0.06752729980407635
   }
 }
