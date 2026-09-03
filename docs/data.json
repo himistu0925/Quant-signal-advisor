@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T00:35:02.474124",
+  "generated_at": "2026-09-03T17:01:01.583876",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,60 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-09-02T20:35:02.098579-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-09-03T13:00:54.615629-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "BNDW",
-      "name": "Vanguard Total World Bond ETF",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 66.94999694824219,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-02T01:21:41.203077+00:00"
-    },
-    {
-      "ticker": "IUSB",
-      "name": "iShares Core Universal USD Bond ETF",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 45.150001525878906,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-02T01:21:41.203077+00:00"
-    },
-    {
-      "ticker": "SLQD",
-      "name": "iShares 0-5 Year Investment Grade Corporate Bond ETF",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 49.869998931884766,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-02T01:21:41.203077+00:00"
-    },
-    {
-      "ticker": "SUSC",
-      "name": "iShares ESG Aware USD Corporate Bond ETF",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 22.5049991607666,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-02T01:21:41.203077+00:00"
-    },
-    {
-      "ticker": "UITB",
-      "name": "VictoryShares Core Intermediate Bond ETF",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 45.91999816894531,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-02T01:21:41.203077+00:00"
-    },
-    {
-      "ticker": "VBIL",
-      "name": "Vanguard 0-3 Month Treasury Bill ETF",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 75.5,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-02T01:21:41.203077+00:00"
-    },
-    {
-      "ticker": "BKAG",
-      "name": "BNY Mellon Core Bond ETF",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 41.0099983215332,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-02T01:21:41.203077+00:00"
-    },
-    {
-      "ticker": "BOND",
-      "name": "PIMCO Active Bond Exchange-Traded Fund Exchange-Traded Fund",
+      "ticker": "NAC",
+      "name": "Nuveen California Quality Municipal Income Fund",
       "exchange": "NYSE",
-      "score": -4.5,
+      "score": -3.0,
       "direction": "SELL",
-      "price": 89.76000213623047,
+      "price": 11.40999984741211,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-09-02T01:21:41.203077+00:00"
+      "as_of": "2026-09-03T01:20:12.229806+00:00"
     },
     {
-      "ticker": "CGCP",
-      "name": "Capital Group Core Plus Income ETF",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 21.850000381469727,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-02T01:21:41.203077+00:00"
-    },
-    {
-      "ticker": "CRUX",
-      "name": "Columbia Core Bond ETF",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 29.28499984741211,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-02T01:21:41.203077+00:00"
+      "ticker": "SMMD",
+      "name": "iShares Russell 2500 ETF",
+      "exchange": "Cboe BZX",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 89.91000366210938,
+      "stop_price": 87.8116772719497,
+      "target_price": 94.1066564424287,
+      "position_pct": 0.25,
+      "as_of": "2026-09-03T01:20:12.229806+00:00"
     }
   ]
 }
