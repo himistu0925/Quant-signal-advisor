@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "ticker": "VSDM",
+    "name": "Vanguard Short Duration Tax-Exempt Bond ETF",
+    "exchange": "Cboe BZX",
+    "score": 3.0,
+    "direction": "BUY",
+    "price": 75.83499908447266,
+    "stop_price": 75.62255857996524,
+    "target_price": 76.25988009348748,
+    "position_pct": 0.25,
+    "as_of": "2026-09-05T01:10:40.516753+00:00"
+  }
+]
