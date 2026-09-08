@@ -102,5 +102,9 @@
   "GENB": {
     "direction": "SURGE",
     "timestamp": "2026-08-25T10:56:39.736994-04:00"
+  },
+  "FCUV": {
+    "direction": "PLUNGE",
+    "timestamp": "2026-09-08T13:13:12.160554-04:00"
   }
 }
