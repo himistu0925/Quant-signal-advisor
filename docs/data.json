@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T22:56:28.598243",
+  "generated_at": "2026-09-09T17:07:47.327193",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,48 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-09-08T18:56:28.133373-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-09-09T13:07:43.181655-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "LULU",
-      "name": "lululemon athletica inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 100.61000061035156,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-08T01:29:33.102898+00:00"
-    },
-    {
-      "ticker": "PSQL",
-      "name": "Pasqal Holding SA - Ordinary Shares",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 7.960000038146973,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-08T01:29:33.102898+00:00"
-    },
-    {
-      "ticker": "BEZ",
-      "name": "Tradr 2X Short BE Daily ETF",
-      "exchange": "Cboe BZX",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 7.210000038146973,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-08T01:29:33.102898+00:00"
-    },
-    {
-      "ticker": "FICO",
-      "name": "Fair Isaac Corporation Common Stock",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 932.260009765625,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-08T01:29:33.102898+00:00"
-    },
-    {
-      "ticker": "AKAN",
-      "name": "Akanda Corp. - Common Shares",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 3.3499999046325684,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-08T01:29:33.102898+00:00"
-    },
-    {
-      "ticker": "AMBA",
-      "name": "Ambarella, Inc. - Ordinary Shares",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 62.88999938964844,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-08T01:29:33.102898+00:00"
-    },
-    {
-      "ticker": "CDNS",
-      "name": "Cadence Design Systems, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 292.70001220703125,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-08T01:29:33.102898+00:00"
-    },
-    {
-      "ticker": "FCUV",
-      "name": "Focus Universal Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 17.0,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-08T01:29:33.102898+00:00"
-    },
-    {
-      "ticker": "IRMD",
-      "name": "iRadimed Corporation - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 83.44999694824219,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-08T01:29:33.102898+00:00"
-    },
-    {
-      "ticker": "PDEX",
-      "name": "Pro-Dex, Inc. - Common Stock",
-      "exchange": "NASDAQ",
+      "ticker": "MMIT",
+      "name": "NYLIM MacKay Muni Intermediate ETF",
+      "exchange": "NYSE Arca",
       "score": 3.0,
       "direction": "BUY",
-      "price": 73.41000366210938,
-      "stop_price": 65.5546793586915,
-      "target_price": 89.12065226894512,
-      "position_pct": 0.09345254355720037,
-      "as_of": "2026-09-08T01:29:33.102898+00:00"
+      "price": 23.649999618530273,
+      "stop_price": 23.479203978924478,
+      "target_price": 23.99159089774187,
+      "position_pct": 0.25,
+      "as_of": "2026-09-09T01:38:12.032473+00:00"
     }
   ]
 }
