@@ -1,14 +1,26 @@
 [
   {
-    "ticker": "MMIT",
-    "name": "NYLIM MacKay Muni Intermediate ETF",
-    "exchange": "NYSE Arca",
-    "score": 3.0,
-    "direction": "BUY",
-    "price": 23.649999618530273,
-    "stop_price": 23.479203978924478,
-    "target_price": 23.99159089774187,
-    "position_pct": 0.25,
-    "as_of": "2026-09-09T01:38:12.032473+00:00"
+    "ticker": "CALI",
+    "name": "iShares Short-Term California Muni Active ETF",
+    "exchange": "NASDAQ",
+    "score": -3.0,
+    "direction": "SELL",
+    "price": 50.220001220703125,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-09-10T01:29:12.856525+00:00"
+  },
+  {
+    "ticker": "NEA",
+    "name": "Nuveen AMT-Free Quality Municipal Income Fund Common Shares of Beneficial Interest Par Value $.01",
+    "exchange": "NYSE",
+    "score": -3.0,
+    "direction": "SELL",
+    "price": 10.960000038146973,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-09-10T01:29:12.856525+00:00"
   }
 ]
