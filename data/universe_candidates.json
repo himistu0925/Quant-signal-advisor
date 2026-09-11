@@ -1,26 +1,86 @@
 [
   {
-    "ticker": "CALI",
-    "name": "iShares Short-Term California Muni Active ETF",
+    "ticker": "BSCT",
+    "name": "Invesco BulletShares 2029 Corporate Bond ETF",
     "exchange": "NASDAQ",
     "score": -3.0,
     "direction": "SELL",
-    "price": 50.220001220703125,
+    "price": 18.3799991607666,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-09-10T01:29:12.856525+00:00"
+    "as_of": "2026-09-11T01:23:34.360154+00:00"
   },
   {
-    "ticker": "NEA",
-    "name": "Nuveen AMT-Free Quality Municipal Income Fund Common Shares of Beneficial Interest Par Value $.01",
+    "ticker": "CGSD",
+    "name": "Capital Group Short Duration Income ETF",
+    "exchange": "NYSE Arca",
+    "score": -3.0,
+    "direction": "SELL",
+    "price": 25.530000686645508,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-09-11T01:23:34.360154+00:00"
+  },
+  {
+    "ticker": "DNP",
+    "name": "DNP Select Income Fund, Inc. Common Stock",
     "exchange": "NYSE",
     "score": -3.0,
     "direction": "SELL",
-    "price": 10.960000038146973,
+    "price": 10.609999656677246,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-09-10T01:29:12.856525+00:00"
+    "as_of": "2026-09-11T01:23:34.360154+00:00"
+  },
+  {
+    "ticker": "HYT",
+    "name": "Blackrock Corporate High Yield Fund, Inc. Common Stock",
+    "exchange": "NYSE",
+    "score": -3.0,
+    "direction": "SELL",
+    "price": 8.15999984741211,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-09-11T01:23:34.360154+00:00"
+  },
+  {
+    "ticker": "JHCR",
+    "name": "John Hancock Core Bond ETF",
+    "exchange": "NYSE Arca",
+    "score": -3.0,
+    "direction": "SELL",
+    "price": 24.540000915527344,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-09-11T01:23:34.360154+00:00"
+  },
+  {
+    "ticker": "LDUR",
+    "name": "PIMCO Enhanced Low Duration Active Exchange-Traded Fund",
+    "exchange": "NYSE Arca",
+    "score": -3.0,
+    "direction": "SELL",
+    "price": 94.69999694824219,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-09-11T01:23:34.360154+00:00"
+  },
+  {
+    "ticker": "TDTT",
+    "name": "Northern Trust iBoxx 3-Year Target Duration TIPS ETF",
+    "exchange": "NYSE Arca",
+    "score": -3.0,
+    "direction": "SELL",
+    "price": 23.489999771118164,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-09-11T01:23:34.360154+00:00"
   }
 ]
