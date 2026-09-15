@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T00:29:53.553416",
+  "generated_at": "2026-09-15T17:38:36.720627",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,118 +144,156 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-09-14T20:29:53.089537-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-09-15T13:38:32.968444-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "BCAT",
-      "name": "BlackRock Capital Allocation Term Trust Common Shares of Beneficial Interest",
+      "ticker": "INIO",
+      "name": "INNIO N.V. - Ordinary Shares",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 17.450000762939453,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-15T01:44:26.262593+00:00"
+    },
+    {
+      "ticker": "ETR",
+      "name": "Entergy Corporation Common Stock",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 14.800000190734863,
+      "price": 103.63999938964844,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-09-12T01:31:46.435876+00:00"
+      "as_of": "2026-09-15T01:44:26.262593+00:00"
     },
     {
-      "ticker": "FMB",
-      "name": "First Trust Managed Municipal ETF",
+      "ticker": "GEVX",
+      "name": "Tradr 2X Long GEV Daily ETF",
+      "exchange": "Cboe BZX",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 14.729999542236328,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-15T01:44:26.262593+00:00"
+    },
+    {
+      "ticker": "NLY",
+      "name": "Annaly Capital Management Inc. Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 21.84000015258789,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-15T01:44:26.262593+00:00"
+    },
+    {
+      "ticker": "PDO",
+      "name": "PIMCO Dynamic Income Opportunities Fund Common Shares of Beneficial Interest",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 12.020000457763672,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-15T01:44:26.262593+00:00"
+    },
+    {
+      "ticker": "POWR",
+      "name": "iShares U.S. Power Infrastructure ETF",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 24.84000015258789,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-15T01:44:26.262593+00:00"
+    },
+    {
+      "ticker": "SPMO",
+      "name": "Invesco S&P 500 Momentum ETF",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 144.19000244140625,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-15T01:44:26.262593+00:00"
+    },
+    {
+      "ticker": "UTG",
+      "name": "Reaves Utility Income Fund Common Shares of Beneficial Interest",
+      "exchange": "NYSE American",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 36.630001068115234,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-15T01:44:26.262593+00:00"
+    },
+    {
+      "ticker": "ACLS",
+      "name": "Axcelis Technologies, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 105.30999755859375,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-15T01:44:26.262593+00:00"
+    },
+    {
+      "ticker": "ACRS",
+      "name": "Aclaris Therapeutics, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 49.189998626708984,
-      "stop_price": 48.80109256065178,
-      "target_price": 49.96781075882339,
-      "position_pct": 0.25,
-      "as_of": "2026-09-12T01:31:46.435876+00:00"
-    },
-    {
-      "ticker": "CERY",
-      "name": "State Street SPDR Bloomberg Enhanced Roll Yield Commodity Strategy No K-1 ETF",
-      "exchange": "NYSE Arca",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 39.84000015258789,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-12T01:31:46.435876+00:00"
-    },
-    {
-      "ticker": "CGHM",
-      "name": "Capital Group Municipal High-Income ETF",
-      "exchange": "NYSE Arca",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 24.809999465942383,
-      "stop_price": 24.59266799549608,
-      "target_price": 25.244662406834994,
-      "position_pct": 0.25,
-      "as_of": "2026-09-12T01:31:46.435876+00:00"
-    },
-    {
-      "ticker": "DFNM",
-      "name": "Dimensional National Municipal Bond ETF",
-      "exchange": "NYSE Arca",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 46.93000030517578,
-      "stop_price": 46.69637134368181,
-      "target_price": 47.39725822816373,
-      "position_pct": 0.25,
-      "as_of": "2026-09-12T01:31:46.435876+00:00"
-    },
-    {
-      "ticker": "ECAT",
-      "name": "BlackRock ESG Capital Allocation Term Trust Common Shares of Beneficial Interest",
-      "exchange": "NYSE",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 14.739999771118164,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-12T01:31:46.435876+00:00"
-    },
-    {
-      "ticker": "NVG",
-      "name": "Nuveen AMT-Free Municipal Credit Income Fund ",
-      "exchange": "NYSE",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 11.619999885559082,
-      "stop_price": 11.36907761663038,
-      "target_price": 12.121844423416487,
-      "position_pct": 0.25,
-      "as_of": "2026-09-12T01:31:46.435876+00:00"
-    },
-    {
-      "ticker": "PDI",
-      "name": "PIMCO Dynamic Income Fund Common Stock",
-      "exchange": "NYSE",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 14.760000228881836,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-12T01:31:46.435876+00:00"
-    },
-    {
-      "ticker": "TAFM",
-      "name": "AB Tax-Aware Intermediate Municipal ETF",
-      "exchange": "NYSE Arca",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 24.600000381469727,
-      "stop_price": 24.390467361433206,
-      "target_price": 25.019066421542764,
-      "position_pct": 0.25,
-      "as_of": "2026-09-12T01:31:46.435876+00:00"
+      "price": 5.639999866485596,
+      "stop_price": 4.95496492969689,
+      "target_price": 7.010069740063008,
+      "position_pct": 0.08233156534942115,
+      "as_of": "2026-09-15T01:44:26.262593+00:00"
     }
   ]
 }
