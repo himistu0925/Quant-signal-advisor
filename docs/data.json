@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T23:55:15.894301",
+  "generated_at": "2026-09-24T17:50:10.352874",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,9 +144,156 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-09-23T19:55:15.501195-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-09-24T13:50:05.023723-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
-  "universe_candidates": []
+  "universe_candidates": [
+    {
+      "ticker": "AXSM",
+      "name": "Axsome Therapeutics, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 193.4499969482422,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-24T01:44:23.028605+00:00"
+    },
+    {
+      "ticker": "DGCB",
+      "name": "Dimensional Global Credit ETF",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 52.25630187988281,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-24T01:44:23.028605+00:00"
+    },
+    {
+      "ticker": "RELY",
+      "name": "Remitly Global, Inc. - Common stock",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 20.190000534057617,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-24T01:44:23.028605+00:00"
+    },
+    {
+      "ticker": "SVRA",
+      "name": "Savara, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 5.0,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-24T01:44:23.028605+00:00"
+    },
+    {
+      "ticker": "BFH",
+      "name": "Bread Financial Holdings, Inc. Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 99.19000244140625,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-24T01:44:23.028605+00:00"
+    },
+    {
+      "ticker": "CUBE",
+      "name": "CubeSmart Common Shares",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 38.13999938964844,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-24T01:44:23.028605+00:00"
+    },
+    {
+      "ticker": "EXR",
+      "name": "Extra Space Storage Inc Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 133.83999633789062,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-24T01:44:23.028605+00:00"
+    },
+    {
+      "ticker": "NYT",
+      "name": "New York Times Company (The) Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 61.88999938964844,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-24T01:44:23.028605+00:00"
+    },
+    {
+      "ticker": "OMAH",
+      "name": "VistaShares Target 15 Berkshire Select Income ETF",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 17.950000762939453,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-24T01:44:23.028605+00:00"
+    },
+    {
+      "ticker": "OSK",
+      "name": "Oshkosh Corporation (Holding Company)Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 135.49000549316406,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-24T01:44:23.028605+00:00"
+    }
+  ]
 }
