@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T23:58:45.626778",
+  "generated_at": "2026-09-25T17:54:31.667349",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,156 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-09-24T19:58:45.341222-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-09-25T13:54:25.483859-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "AXSM",
-      "name": "Axsome Therapeutics, Inc. - Common Stock",
+      "ticker": "FLRT",
+      "name": "Pacer Aristotle Pacific Floating Rate High Income ETF",
+      "exchange": "NYSE Arca",
+      "score": -6.0,
+      "direction": "SELL",
+      "price": 46.54999923706055,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-25T01:47:17.805914+00:00"
+    },
+    {
+      "ticker": "PTRN",
+      "name": "Pattern Group Inc. - Series A Common Stock",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 193.4499969482422,
+      "price": 17.940000534057617,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-09-24T01:44:23.028605+00:00"
+      "as_of": "2026-09-25T01:47:17.805914+00:00"
     },
     {
-      "ticker": "DGCB",
-      "name": "Dimensional Global Credit ETF",
+      "ticker": "TLT",
+      "name": "iShares 20+ Year Treasury Bond ETF",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 52.25630187988281,
+      "price": 79.41999816894531,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-09-24T01:44:23.028605+00:00"
+      "as_of": "2026-09-25T01:47:17.805914+00:00"
     },
     {
-      "ticker": "RELY",
-      "name": "Remitly Global, Inc. - Common stock",
+      "ticker": "VCLT",
+      "name": "Vanguard Long-Term Corporate Bond ETF",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 20.190000534057617,
+      "price": 69.68000030517578,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-09-24T01:44:23.028605+00:00"
+      "as_of": "2026-09-25T01:47:17.805914+00:00"
     },
     {
-      "ticker": "SVRA",
-      "name": "Savara, Inc. - Common Stock",
-      "exchange": "NASDAQ",
+      "ticker": "BUYW",
+      "name": "Main BuyWrite ETF",
+      "exchange": "Cboe BZX",
       "score": -4.5,
       "direction": "SELL",
-      "price": 5.0,
+      "price": 14.449999809265137,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-09-24T01:44:23.028605+00:00"
+      "as_of": "2026-09-25T01:47:17.805914+00:00"
     },
     {
-      "ticker": "BFH",
-      "name": "Bread Financial Holdings, Inc. Common Stock",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 99.19000244140625,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-24T01:44:23.028605+00:00"
-    },
-    {
-      "ticker": "CUBE",
-      "name": "CubeSmart Common Shares",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 38.13999938964844,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-24T01:44:23.028605+00:00"
-    },
-    {
-      "ticker": "EXR",
-      "name": "Extra Space Storage Inc Common Stock",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 133.83999633789062,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-24T01:44:23.028605+00:00"
-    },
-    {
-      "ticker": "NYT",
-      "name": "New York Times Company (The) Common Stock",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 61.88999938964844,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-09-24T01:44:23.028605+00:00"
-    },
-    {
-      "ticker": "OMAH",
-      "name": "VistaShares Target 15 Berkshire Select Income ETF",
+      "ticker": "SPLB",
+      "name": "State Street SPDR Portfolio Long Term Corporate Bond ETF",
       "exchange": "NYSE Arca",
       "score": -4.5,
       "direction": "SELL",
-      "price": 17.950000762939453,
+      "price": 20.739999771118164,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-09-24T01:44:23.028605+00:00"
+      "as_of": "2026-09-25T01:47:17.805914+00:00"
     },
     {
-      "ticker": "OSK",
-      "name": "Oshkosh Corporation (Holding Company)Common Stock",
+      "ticker": "TLTW",
+      "name": "iShares 20+ Year Treasury Bond BuyWrite Strategy ETF",
+      "exchange": "Cboe BZX",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 20.655000686645508,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-25T01:47:17.805914+00:00"
+    },
+    {
+      "ticker": "VIK",
+      "name": "Viking Holdings Ltd Ordinary Shares",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 135.49000549316406,
+      "price": 79.5199966430664,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-09-24T01:44:23.028605+00:00"
+      "as_of": "2026-09-25T01:47:17.805914+00:00"
+    },
+    {
+      "ticker": "ZROZ",
+      "name": "PIMCO 25  Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 56.5099983215332,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-25T01:47:17.805914+00:00"
+    },
+    {
+      "ticker": "ABNB",
+      "name": "Airbnb, Inc. - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 151.38999938964844,
+      "stop_price": 140.27591825476506,
+      "target_price": 173.61816165941522,
+      "position_pct": 0.13621458899961222,
+      "as_of": "2026-09-25T01:47:17.805914+00:00"
     }
   ]
 }
