@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T00:20:26.536699",
+  "generated_at": "2026-09-29T18:34:39.650349",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,156 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-09-28T20:20:26.125932-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-09-29T14:34:35.734547-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": -0.6820422408392872,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": -1.269058135108071,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "MXL",
-      "name": "MaxLinear, Inc - Common Stock",
+      "ticker": "TBIL",
+      "name": "F/m US Treasury 3 Month Bill Fund",
       "exchange": "NASDAQ",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 93.83999633789062,
-      "stop_price": 80.7684852799452,
-      "target_price": 119.9830184537815,
-      "position_pct": 0.07178970810788594,
-      "as_of": "2026-09-26T01:47:26.971471+00:00"
+      "score": -6.0,
+      "direction": "SELL",
+      "price": 49.83000183105469,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-29T02:47:59.308278+00:00"
     },
     {
-      "ticker": "GWW",
-      "name": "W.W. Grainger, Inc. Common Stock",
+      "ticker": "NCI",
+      "name": "Neo-Concept International Group Holdings Limited - Class A Ordinary Shares",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 2.380000114440918,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-29T02:47:59.308278+00:00"
+    },
+    {
+      "ticker": "BUXX",
+      "name": "Strive Enhanced Income Short Maturity ETF",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 1243.0699462890625,
+      "price": 20.1299991607666,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-09-26T01:47:26.971471+00:00"
+      "as_of": "2026-09-29T02:47:59.308278+00:00"
     },
     {
-      "ticker": "BSCR",
-      "name": "Invesco BulletShares 2027 Corporate Bond ETF",
-      "exchange": "NASDAQ",
-      "score": 3.0,
+      "ticker": "CAAP",
+      "name": "Corporacion America Airports SA Common Shares",
+      "exchange": "NYSE",
+      "score": 4.5,
       "direction": "BUY",
-      "price": 19.545000076293945,
-      "stop_price": 19.512185247157024,
-      "target_price": 19.610629734567787,
-      "position_pct": 0.25,
-      "as_of": "2026-09-26T01:47:26.971471+00:00"
+      "price": 26.049999237060547,
+      "stop_price": 24.376671145114656,
+      "target_price": 29.39665542095233,
+      "position_pct": 0.1556777739072517,
+      "as_of": "2026-09-29T02:47:59.308278+00:00"
     },
     {
-      "ticker": "BSCV",
-      "name": "Invesco BulletShares 2031 Corporate Bond ETF",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 15.833999633789062,
-      "stop_price": 15.717365994716875,
-      "target_price": 16.067266911933437,
-      "position_pct": 0.25,
-      "as_of": "2026-09-26T01:47:26.971471+00:00"
+      "ticker": "IAUI",
+      "name": "NEOS Gold High Income ETF",
+      "exchange": "Cboe BZX",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 47.91999816894531,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-29T02:47:59.308278+00:00"
     },
     {
-      "ticker": "BSCW",
-      "name": "Invesco BulletShares 2032 Corporate Bond ETF",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 19.69219970703125,
-      "stop_price": 19.52086325394262,
-      "target_price": 20.034872613208513,
-      "position_pct": 0.25,
-      "as_of": "2026-09-26T01:47:26.971471+00:00"
-    },
-    {
-      "ticker": "BYND",
-      "name": "Beyond Meat, Inc. - Common stock",
+      "ticker": "ALLW",
+      "name": "State Street Bridgewater All Weather ETF",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 8.350000381469727,
+      "price": 28.65999984741211,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-09-26T01:47:26.971471+00:00"
+      "as_of": "2026-09-29T02:47:59.308278+00:00"
     },
     {
-      "ticker": "FLY",
-      "name": "Firefly Aerospace Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 24.360000610351562,
-      "stop_price": 21.08387825487369,
-      "target_price": 30.912245321307314,
-      "position_pct": 0.07435619908890205,
-      "as_of": "2026-09-26T01:47:26.971471+00:00"
-    },
-    {
-      "ticker": "IMNM",
-      "name": "Immunome, Inc. - Common Stock",
+      "ticker": "ATLC",
+      "name": "Atlanticus Holdings Corporation - Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 21.40999984741211,
+      "price": 87.0999984741211,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-09-26T01:47:26.971471+00:00"
+      "as_of": "2026-09-29T02:47:59.308278+00:00"
     },
     {
-      "ticker": "MGTX",
-      "name": "MeiraGTx Holdings plc - Ordinary Shares",
+      "ticker": "BETR",
+      "name": "Better Home & Finance Holding Company - Class A Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 10.90999984741211,
+      "price": 10.079999923706055,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-09-26T01:47:26.971471+00:00"
+      "as_of": "2026-09-29T02:47:59.308278+00:00"
     },
     {
-      "ticker": "MSEX",
-      "name": "Middlesex Water Company - Common Stock",
+      "ticker": "CENX",
+      "name": "Century Aluminum Company - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 37.400001525878906,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-09-29T02:47:59.308278+00:00"
+    },
+    {
+      "ticker": "CLRO",
+      "name": "ClearOne, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 53.470001220703125,
-      "stop_price": 51.102557242672724,
-      "target_price": 58.204889176763935,
-      "position_pct": 0.22585540235333262,
-      "as_of": "2026-09-26T01:47:26.971471+00:00"
+      "price": 5.099999904632568,
+      "stop_price": 3.670958375053534,
+      "target_price": 7.958082963790637,
+      "position_pct": 0.035688255373060584,
+      "as_of": "2026-09-29T02:47:59.308278+00:00"
     }
   ]
 }
