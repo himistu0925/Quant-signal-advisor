@@ -40,19 +40,19 @@
 </head>
 <body>
 <h1>퀀트 신호 어드바이저 대시보드</h1>
-<p class="meta">생성 시각: 2026-10-01T01:30:15.249308</p>
+<p class="meta">생성 시각: 2026-10-01T18:48:43.740743</p>
 
 <h2>마지막 체크</h2>
-<p>마지막 워크플로 실행: 2026-09-30T21:30:14.845192-04:00 (장 마감 시간이라 스킵됨)</p>
+<p>마지막 체크: 2026-10-01T14:48:40.214227-04:00</p><table><tr><th>종목</th><th>현재 스코어</th><th>방향</th></tr><tr><td>TQQQ</td><td>0.00</td><td><span class="badge badge-neutral">중립</span></td></tr><tr><td>SOXL</td><td>1.59</td><td><span class="badge badge-neutral">중립</span></td></tr><tr><td>UPRO</td><td>0.50</td><td><span class="badge badge-neutral">중립</span></td></tr><tr><td>AAPL</td><td>0.50</td><td><span class="badge badge-neutral">중립</span></td></tr><tr><td>GOOGL</td><td>-1.46</td><td><span class="badge badge-neutral">중립</span></td></tr></table>
 
 <h2>워치리스트 현황</h2>
 <table>
 <tr><th>종목</th><th>매수/매도 임계값</th><th>주요 지표</th><th>검증구간 누적수익</th><th>샤프비율</th><th>거래수</th><th>벤치마크 초과수익</th><th>관리</th></tr>
-<tr><td>TQQQ</td><td>+2.0 / -2.0</td><td>RSI(7.0), Ichimoku(0.0)</td><td>43.5%</td><td>2.35</td><td>1</td><td>23.7%</td><td><button class="btn-remove" data-ticker="TQQQ">삭제</button></td></tr>
-<tr><td>SOXL</td><td>+4.0 / -4.0</td><td>BollingerBands(2.7), Ichimoku(1.9), RSI(1.1)</td><td>255.5%</td><td>1.66</td><td>1</td><td>235.7%</td><td><button class="btn-remove" data-ticker="SOXL">삭제</button></td></tr>
-<tr><td>UPRO</td><td>+2.0 / -2.0</td><td>RSI(5.3), BollingerBands(1.3), Ichimoku(0.4)</td><td>29.3%</td><td>1.71</td><td>1</td><td>9.5%</td><td><button class="btn-remove" data-ticker="UPRO">삭제</button></td></tr>
-<tr><td>AAPL</td><td>+3.0 / -3.0</td><td>RSI(2.4), BollingerBands(1.9), Ichimoku(1.5)</td><td>13.1%</td><td>0.92</td><td>1</td><td>-6.8%</td><td><button class="btn-remove" data-ticker="AAPL">삭제</button></td></tr>
-<tr><td>GOOGL</td><td>+5.0 / -5.0</td><td>RSI(2.6), BollingerBands(2.3), MACD(1.8)</td><td>0.0%</td><td>0.00</td><td>0</td><td>-19.8%</td><td><button class="btn-remove" data-ticker="GOOGL">삭제</button></td></tr>
+<tr><td>TQQQ</td><td>+2.0 / -2.0</td><td>RSI(6.4), BollingerBands(0.6)</td><td>43.5%</td><td>2.35</td><td>1</td><td>29.1%</td><td><button class="btn-remove" data-ticker="TQQQ">삭제</button></td></tr>
+<tr><td>SOXL</td><td>+3.0 / -3.0</td><td>BollingerBands(2.6), Ichimoku(2.1), RSI(1.2)</td><td>249.4%</td><td>1.95</td><td>2</td><td>235.0%</td><td><button class="btn-remove" data-ticker="SOXL">삭제</button></td></tr>
+<tr><td>UPRO</td><td>+3.0 / -3.0</td><td>RSI(5.1), BollingerBands(1.0), Ichimoku(0.5)</td><td>29.3%</td><td>1.70</td><td>1</td><td>14.9%</td><td><button class="btn-remove" data-ticker="UPRO">삭제</button></td></tr>
+<tr><td>AAPL</td><td>+4.0 / -4.0</td><td>RSI(2.5), BollingerBands(1.7), Ichimoku(1.5)</td><td>13.1%</td><td>0.91</td><td>1</td><td>-1.3%</td><td><button class="btn-remove" data-ticker="AAPL">삭제</button></td></tr>
+<tr><td>GOOGL</td><td>+5.0 / -5.0</td><td>RSI(2.5), BollingerBands(2.1), MACD(2.0)</td><td>0.0%</td><td>0.00</td><td>0</td><td>-14.4%</td><td><button class="btn-remove" data-ticker="GOOGL">삭제</button></td></tr>
 </table>
 
 <h2>워치리스트 관리</h2>
@@ -222,19 +222,19 @@ searchInput.addEventListener("input", async () => {
 </table>
 
 <h2>자동 발굴 후보 (전체 미국 상장 종목/ETF 스캔)</h2>
-<p class="meta">기준 시각: 2026-09-30T02:25:28.504542+00:00 · 워치리스트 미포함 종목 중 유동성 필터 통과 + 현재 매수/매도 신호가 있는 상위 종목 (참고용, 알림 발송 대상 아님)</p>
+<p class="meta">기준 시각: 2026-10-01T02:26:56.371226+00:00 · 워치리스트 미포함 종목 중 유동성 필터 통과 + 현재 매수/매도 신호가 있는 상위 종목 (참고용, 알림 발송 대상 아님)</p>
 <table>
 <tr><th>종목</th><th>이름</th><th>거래소</th><th>방향</th><th>스코어</th><th>리스크 (ATR 기준)</th></tr>
-<tr><td>CLPT</td><td>ClearPoint Neuro Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
-<tr><td>VNET</td><td>VNET Group, Inc. - American Depositary Shares</td><td>NASDAQ</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
-<tr><td>AIR</td><td>AAR Corp. Common Stock</td><td>NYSE</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
-<tr><td>RDY</td><td>Dr. Reddy's Laboratories Ltd Common Stock</td><td>NYSE</td><td>BUY</td><td>+4.50</td><td>손절 $12.32 / 익절 $13.92 (24.1%)</td></tr>
-<tr><td>AXSM</td><td>Axsome Therapeutics, Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
-<tr><td>BSJQ</td><td>Invesco BulletShares 2026 High Yield Corporate Bond ETF</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
-<tr><td>ESTA</td><td>Establishment Labs Holdings Inc. - Common Shares</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
-<tr><td>FRVO</td><td>Fervo Energy Company - Class A common stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
-<tr><td>IGIB</td><td>iShares 5-10 Year Investment Grade Corporate Bond ETF</td><td>NASDAQ</td><td>BUY</td><td>+3.00</td><td>손절 $49.95 / 익절 $51.37 (25.0%)</td></tr>
-<tr><td>LI</td><td>Li Auto Inc. - American Depositary Shares</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
+<tr><td>KALU</td><td>Kaiser Aluminum Corporation - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
+<tr><td>DOCS</td><td>Doximity, Inc. Class A Common Stock</td><td>NYSE</td><td>BUY</td><td>+4.50</td><td>손절 $25.92 / 익절 $33.18 (11.7%)</td></tr>
+<tr><td>ITW</td><td>Illinois Tool Works Inc. Common Stock</td><td>NYSE</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
+<tr><td>ACT</td><td>Enact Holdings, Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
+<tr><td>ALLW</td><td>State Street Bridgewater All Weather ETF</td><td>NASDAQ</td><td>BUY</td><td>+3.00</td><td>손절 $27.98 / 익절 $29.74 (25.0%)</td></tr>
+<tr><td>AMAL</td><td>Amalgamated Financial Corp. - Common Stock</td><td>NASDAQ</td><td>BUY</td><td>+3.00</td><td>손절 $45.45 / 익절 $51.81 (22.4%)</td></tr>
+<tr><td>APP</td><td>Applovin Corporation - Class A Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
+<tr><td>APPX</td><td>Tradr 2X Long APP Daily ETF</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
+<tr><td>BJRI</td><td>BJ's Restaurants, Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
+<tr><td>CCXI</td><td>Churchill Capital Corp XI - Class A Ordinary Shares</td><td>NASDAQ</td><td>SELL</td><td>-3.00</td><td>-</td></tr>
 </table>
 </body>
 </html>
