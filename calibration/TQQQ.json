@@ -1,36 +1,36 @@
 {
   "ticker": "TQQQ",
   "weights": {
-    "BollingerBands": 0.0,
+    "BollingerBands": 0.5523711512140566,
     "Fibonacci": 0.0,
-    "Ichimoku": 0.017166572125526074,
+    "Ichimoku": 0.0,
     "MACD": 0.0,
     "MA": 0.0,
-    "RSI": 6.982833427874474,
+    "RSI": 6.447628848785943,
     "SupportResistance": 0.0
   },
   "buy_threshold": 2.0,
   "sell_threshold": -2.0,
   "train_metrics": {
-    "cumulative_return": 0.46824580962820983,
-    "cagr": 0.11293762385744532,
-    "max_drawdown": -0.7481570204889418,
-    "sharpe_ratio": 0.4791844512876131,
-    "win_rate": 0.75,
-    "avg_win_loss_ratio": 0.8997791364756048,
+    "cumulative_return": 2.719511065390023,
+    "cagr": 0.4415130087418202,
+    "max_drawdown": -0.4203718761571624,
+    "sharpe_ratio": 1.0426820285327,
+    "win_rate": 1.0,
+    "avg_win_loss_ratio": null,
     "total_trades": 4,
-    "benchmark_return": 0.42796893712219397,
-    "excess_return": 0.04027687250601586
+    "benchmark_return": 0.5288383630210536,
+    "excess_return": 2.1906727023689694
   },
   "test_metrics": {
-    "cumulative_return": 0.43501813294058644,
-    "cagr": 0.4382343116365337,
-    "max_drawdown": -0.02294995430654756,
-    "sharpe_ratio": 2.3516231984866005,
+    "cumulative_return": 0.435018180352575,
+    "cagr": 0.4353732217354722,
+    "max_drawdown": -0.022949978543943872,
+    "sharpe_ratio": 2.3468503402632512,
     "win_rate": 1.0,
     "avg_win_loss_ratio": null,
     "total_trades": 1,
-    "benchmark_return": 0.19805037298807382,
-    "excess_return": 0.23696775995251262
+    "benchmark_return": 0.1439913049864483,
+    "excess_return": 0.2910268753661267
   }
 }
