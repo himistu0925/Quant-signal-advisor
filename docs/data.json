@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T22:58:20.370696",
+  "generated_at": "2026-10-07T19:18:11.887208",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,156 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-10-06T18:58:19.958466-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-10-07T15:18:06.677569-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "CHRW",
-      "name": "C.H. Robinson Worldwide, Inc. - Common Stock",
+      "ticker": "GILT",
+      "name": "Gilat Satellite Networks Ltd. - Ordinary Shares",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 140.61000061035156,
+      "price": 9.220000267028809,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-06T03:22:36.030116+00:00"
+      "as_of": "2026-10-07T02:43:10.743112+00:00"
     },
     {
-      "ticker": "LEN",
-      "name": "Lennar Corporation Class A Common Stock",
+      "ticker": "PENG",
+      "name": "Penguin Solutions, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": 4.5,
+      "direction": "BUY",
+      "price": 64.20999908447266,
+      "stop_price": 56.8833566447872,
+      "target_price": 78.86328396384357,
+      "position_pct": 0.08763905105655637,
+      "as_of": "2026-10-07T02:43:10.743112+00:00"
+    },
+    {
+      "ticker": "CBL",
+      "name": "CBL & Associates Properties, Inc. Common Stock",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 74.44000244140625,
+      "price": 50.0,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-06T03:22:36.030116+00:00"
+      "as_of": "2026-10-07T02:43:10.743112+00:00"
     },
     {
-      "ticker": "SSPC",
-      "name": "Leverage Shares 2X Short SPCX Daily ETF",
-      "exchange": "Cboe BZX",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 6.650000095367432,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-10-06T03:22:36.030116+00:00"
-    },
-    {
-      "ticker": "TS",
-      "name": "Tenaris S.A. American Depositary Shares",
-      "exchange": "NYSE",
-      "score": 4.5,
+      "ticker": "APOG",
+      "name": "Apogee Enterprises, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
       "direction": "BUY",
-      "price": 58.459999084472656,
-      "stop_price": 55.8102309652081,
-      "target_price": 63.75953532300178,
-      "position_pct": 0.22062307512665735,
-      "as_of": "2026-10-06T03:22:36.030116+00:00"
+      "price": 40.0,
+      "stop_price": 36.94801970103694,
+      "target_price": 46.10396059792611,
+      "position_pct": 0.13106244497577668,
+      "as_of": "2026-10-07T02:43:10.743112+00:00"
     },
     {
-      "ticker": "VIV",
-      "name": "Telefonica Brasil S.A. American Depositary Shares (Each representing One Common Share)",
-      "exchange": "NYSE",
-      "score": 4.5,
+      "ticker": "ARGX",
+      "name": "argenx SE - American Depositary Shares",
+      "exchange": "NASDAQ",
+      "score": 3.0,
       "direction": "BUY",
-      "price": 12.619999885559082,
-      "stop_price": 11.920079707846881,
-      "target_price": 14.019840240983482,
-      "position_pct": 0.1803062733069012,
-      "as_of": "2026-10-06T03:22:36.030116+00:00"
+      "price": 930.52001953125,
+      "stop_price": 880.9552617827227,
+      "target_price": 1029.6495350283046,
+      "position_pct": 0.1877382361581095,
+      "as_of": "2026-10-07T02:43:10.743112+00:00"
     },
     {
-      "ticker": "ALGN",
-      "name": "Align Technology, Inc. - Common Stock",
+      "ticker": "ASTS",
+      "name": "AST SpaceMobile, Inc. - Class A Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 63.119998931884766,
+      "stop_price": 54.88083139318892,
+      "target_price": 79.59833400927646,
+      "position_pct": 0.07660968008653438,
+      "as_of": "2026-10-07T02:43:10.743112+00:00"
+    },
+    {
+      "ticker": "CPB",
+      "name": "The Campbell's Company - Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 140.64999389648438,
+      "price": 19.0,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-06T03:22:36.030116+00:00"
+      "as_of": "2026-10-07T02:43:10.743112+00:00"
     },
     {
-      "ticker": "BOT",
-      "name": "RoboStrategy, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 31.809999465942383,
-      "stop_price": 27.705059079880385,
-      "target_price": 40.01988023806638,
-      "position_pct": 0.07749198885798858,
-      "as_of": "2026-10-06T03:22:36.030116+00:00"
-    },
-    {
-      "ticker": "CAPR",
-      "name": "Capricor Therapeutics, Inc. - Common Stock",
+      "ticker": "DNLI",
+      "name": "Denali Therapeutics Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 7.78000020980835,
+      "price": 19.280000686645508,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-06T03:22:36.030116+00:00"
+      "as_of": "2026-10-07T02:43:10.743112+00:00"
     },
     {
-      "ticker": "ECHO",
-      "name": "EchoStar Corporation - Common stock",
+      "ticker": "FCEL",
+      "name": "FuelCell Energy, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 98.20999908447266,
-      "stop_price": 91.73922108808162,
-      "target_price": 111.15155507725473,
-      "position_pct": 0.1517746384426224,
-      "as_of": "2026-10-06T03:22:36.030116+00:00"
+      "price": 20.649999618530273,
+      "stop_price": 17.513573042525028,
+      "target_price": 26.922852770540764,
+      "position_pct": 0.0658392572506239,
+      "as_of": "2026-10-07T02:43:10.743112+00:00"
     },
     {
-      "ticker": "EMXC",
-      "name": "iShares MSCI Emerging Markets ex China ETF",
+      "ticker": "FDUS",
+      "name": "Fidus Investment Corporation - Closed End Fund",
       "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 102.75,
-      "stop_price": 99.23557327353534,
-      "target_price": 109.77885345292933,
-      "position_pct": 0.25,
-      "as_of": "2026-10-06T03:22:36.030116+00:00"
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 18.8799991607666,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-07T02:43:10.743112+00:00"
     }
   ]
 }
