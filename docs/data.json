@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T23:45:35.612107",
+  "generated_at": "2026-10-08T19:14:45.743176",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,156 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-10-07T19:45:35.213491-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-10-08T15:14:41.353465-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "GILT",
-      "name": "Gilat Satellite Networks Ltd. - Ordinary Shares",
+      "ticker": "CZR",
+      "name": "Caesars Entertainment, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 9.220000267028809,
+      "price": 29.489999771118164,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-07T02:43:10.743112+00:00"
+      "as_of": "2026-10-08T02:57:37.102174+00:00"
     },
     {
-      "ticker": "PENG",
-      "name": "Penguin Solutions, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 64.20999908447266,
-      "stop_price": 56.8833566447872,
-      "target_price": 78.86328396384357,
-      "position_pct": 0.08763905105655637,
-      "as_of": "2026-10-07T02:43:10.743112+00:00"
-    },
-    {
-      "ticker": "CBL",
-      "name": "CBL & Associates Properties, Inc. Common Stock",
+      "ticker": "MTH",
+      "name": "Meritage Homes Corporation Common Stock",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 50.0,
+      "price": 60.06999969482422,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-07T02:43:10.743112+00:00"
+      "as_of": "2026-10-08T02:57:37.102174+00:00"
     },
     {
-      "ticker": "APOG",
-      "name": "Apogee Enterprises, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 40.0,
-      "stop_price": 36.94801970103694,
-      "target_price": 46.10396059792611,
-      "position_pct": 0.13106244497577668,
-      "as_of": "2026-10-07T02:43:10.743112+00:00"
+      "ticker": "NAIL",
+      "name": "Direxion Daily Homebuilders & Supplies Bull 3X ETF",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 25.829999923706055,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-08T02:57:37.102174+00:00"
     },
     {
-      "ticker": "ARGX",
-      "name": "argenx SE - American Depositary Shares",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 930.52001953125,
-      "stop_price": 880.9552617827227,
-      "target_price": 1029.6495350283046,
-      "position_pct": 0.1877382361581095,
-      "as_of": "2026-10-07T02:43:10.743112+00:00"
-    },
-    {
-      "ticker": "ASTS",
-      "name": "AST SpaceMobile, Inc. - Class A Common Stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 63.119998931884766,
-      "stop_price": 54.88083139318892,
-      "target_price": 79.59833400927646,
-      "position_pct": 0.07660968008653438,
-      "as_of": "2026-10-07T02:43:10.743112+00:00"
-    },
-    {
-      "ticker": "CPB",
-      "name": "The Campbell's Company - Common Stock",
+      "ticker": "ADUR",
+      "name": "Aduro Clean Technologies Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 19.0,
+      "price": 11.145000457763672,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-07T02:43:10.743112+00:00"
+      "as_of": "2026-10-08T02:57:37.102174+00:00"
     },
     {
-      "ticker": "DNLI",
-      "name": "Denali Therapeutics Inc. - Common Stock",
+      "ticker": "ASTE",
+      "name": "Astec Industries, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 19.280000686645508,
+      "price": 39.209999084472656,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-07T02:43:10.743112+00:00"
+      "as_of": "2026-10-08T02:57:37.102174+00:00"
     },
     {
-      "ticker": "FCEL",
-      "name": "FuelCell Energy, Inc. - Common Stock",
+      "ticker": "BRZE",
+      "name": "Braze, Inc. - Class A Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 20.649999618530273,
-      "stop_price": 17.513573042525028,
-      "target_price": 26.922852770540764,
-      "position_pct": 0.0658392572506239,
-      "as_of": "2026-10-07T02:43:10.743112+00:00"
+      "price": 28.459999084472656,
+      "stop_price": 25.338487785236666,
+      "target_price": 34.70302168294464,
+      "position_pct": 0.0911737820440964,
+      "as_of": "2026-10-08T02:57:37.102174+00:00"
     },
     {
-      "ticker": "FDUS",
-      "name": "Fidus Investment Corporation - Closed End Fund",
+      "ticker": "CHDN",
+      "name": "Churchill Downs, Incorporated - Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 18.8799991607666,
+      "price": 73.94999694824219,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-07T02:43:10.743112+00:00"
+      "as_of": "2026-10-08T02:57:37.102174+00:00"
+    },
+    {
+      "ticker": "CIGI",
+      "name": "Colliers International Group Inc.  - Subordinate Voting Shares",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 85.87999725341797,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-08T02:57:37.102174+00:00"
+    },
+    {
+      "ticker": "EUFN",
+      "name": "iShares MSCI Europe Financials ETF",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 38.470001220703125,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-08T02:57:37.102174+00:00"
+    },
+    {
+      "ticker": "FYC",
+      "name": "First Trust Small Cap Growth AlphaDEX Fund",
+      "exchange": "NASDAQ",
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 114.26000213623047,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-08T02:57:37.102174+00:00"
     }
   ]
 }
