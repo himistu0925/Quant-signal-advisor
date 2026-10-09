@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T23:54:38.425382",
+  "generated_at": "2026-10-09T18:45:23.766870",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,156 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-10-08T19:54:37.983927-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-10-09T14:45:17.857323-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "CZR",
-      "name": "Caesars Entertainment, Inc. - Common Stock",
+      "ticker": "CECO",
+      "name": "CECO Environmental Corp. - Common Stock",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 29.489999771118164,
+      "price": 65.55000305175781,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-08T02:57:37.102174+00:00"
+      "as_of": "2026-10-09T03:12:30.206556+00:00"
     },
     {
-      "ticker": "MTH",
-      "name": "Meritage Homes Corporation Common Stock",
-      "exchange": "NYSE",
+      "ticker": "EQPT",
+      "name": "EquipmentShare.com Inc - Class A Common Stock",
+      "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 60.06999969482422,
+      "price": 15.65999984741211,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-08T02:57:37.102174+00:00"
+      "as_of": "2026-10-09T03:12:30.206556+00:00"
     },
     {
-      "ticker": "NAIL",
-      "name": "Direxion Daily Homebuilders & Supplies Bull 3X ETF",
+      "ticker": "ESTA",
+      "name": "Establishment Labs Holdings Inc. - Common Shares",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 60.61000061035156,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-09T03:12:30.206556+00:00"
+    },
+    {
+      "ticker": "KC",
+      "name": "Kingsoft Cloud Holdings Limited - American Depositary Shares",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 8.739999771118164,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-09T03:12:30.206556+00:00"
+    },
+    {
+      "ticker": "RVMD",
+      "name": "Revolution Medicines, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 188.1199951171875,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-09T03:12:30.206556+00:00"
+    },
+    {
+      "ticker": "MO",
+      "name": "Altria Group, Inc.",
+      "exchange": "NYSE",
+      "score": 4.5,
+      "direction": "BUY",
+      "price": 71.41999816894531,
+      "stop_price": 68.56466686669742,
+      "target_price": 77.1306607734411,
+      "position_pct": 0.25,
+      "as_of": "2026-10-09T03:12:30.206556+00:00"
+    },
+    {
+      "ticker": "PBW",
+      "name": "Invesco WilderHill Clean Energy ETF",
       "exchange": "NYSE Arca",
       "score": -4.5,
       "direction": "SELL",
-      "price": 25.829999923706055,
+      "price": 28.290000915527344,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-08T02:57:37.102174+00:00"
+      "as_of": "2026-10-09T03:12:30.206556+00:00"
     },
     {
-      "ticker": "ADUR",
-      "name": "Aduro Clean Technologies Inc. - Common Stock",
+      "ticker": "RIOX",
+      "name": "Defiance Daily Target 2X Long RIOT ETF",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 15.789999961853027,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-09T03:12:30.206556+00:00"
+    },
+    {
+      "ticker": "ARGX",
+      "name": "argenx SE - American Depositary Shares",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 11.145000457763672,
+      "price": 818.6300048828125,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-08T02:57:37.102174+00:00"
+      "as_of": "2026-10-09T03:12:30.206556+00:00"
     },
     {
-      "ticker": "ASTE",
-      "name": "Astec Industries, Inc. - Common Stock",
+      "ticker": "BRUN",
+      "name": "Boost Run Inc. - Class A Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 39.209999084472656,
+      "price": 12.100000381469727,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-08T02:57:37.102174+00:00"
-    },
-    {
-      "ticker": "BRZE",
-      "name": "Braze, Inc. - Class A Common Stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 28.459999084472656,
-      "stop_price": 25.338487785236666,
-      "target_price": 34.70302168294464,
-      "position_pct": 0.0911737820440964,
-      "as_of": "2026-10-08T02:57:37.102174+00:00"
-    },
-    {
-      "ticker": "CHDN",
-      "name": "Churchill Downs, Incorporated - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 73.94999694824219,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-10-08T02:57:37.102174+00:00"
-    },
-    {
-      "ticker": "CIGI",
-      "name": "Colliers International Group Inc.  - Subordinate Voting Shares",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 85.87999725341797,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-10-08T02:57:37.102174+00:00"
-    },
-    {
-      "ticker": "EUFN",
-      "name": "iShares MSCI Europe Financials ETF",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 38.470001220703125,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-10-08T02:57:37.102174+00:00"
-    },
-    {
-      "ticker": "FYC",
-      "name": "First Trust Small Cap Growth AlphaDEX Fund",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 114.26000213623047,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-10-08T02:57:37.102174+00:00"
+      "as_of": "2026-10-09T03:12:30.206556+00:00"
     }
   ]
 }
