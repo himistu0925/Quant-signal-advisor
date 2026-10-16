@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T23:47:58.755869",
+  "generated_at": "2026-10-16T17:20:11.503107",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,156 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-10-15T19:47:58.280369-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-10-16T13:20:07.566040-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": -1.4579840196686513,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "AIRR",
-      "name": "First Trust RBA American Industrial Renaissance ETF",
+      "ticker": "GTX",
+      "name": "Garrett Motion Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 99.52999877929688,
+      "price": 24.44499969482422,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-15T01:48:29.787441+00:00"
+      "as_of": "2026-10-16T01:40:02.355794+00:00"
     },
     {
-      "ticker": "CCJ",
-      "name": "Cameco Corporation Common Stock",
+      "ticker": "CMRE",
+      "name": "Costamare Inc. Common Stock $0.0001 par value",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 81.47000122070312,
+      "price": 14.279999732971191,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-15T01:48:29.787441+00:00"
+      "as_of": "2026-10-16T01:40:02.355794+00:00"
     },
     {
-      "ticker": "CSHI",
-      "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
+      "ticker": "IEZ",
+      "name": "iShares U.S. Oil Equipment & Services ETF",
       "exchange": "NYSE Arca",
       "score": -4.5,
       "direction": "SELL",
-      "price": 49.599998474121094,
+      "price": 26.190000534057617,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-15T01:48:29.787441+00:00"
+      "as_of": "2026-10-16T01:40:02.355794+00:00"
     },
     {
-      "ticker": "LEU",
-      "name": "Centrus Energy Corp. Class A Common Stock",
+      "ticker": "SCHW",
+      "name": "Charles Schwab Corporation (The) Common Stock",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 119.94999694824219,
+      "price": 94.16000366210938,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-15T01:48:29.787441+00:00"
+      "as_of": "2026-10-16T01:40:02.355794+00:00"
     },
     {
-      "ticker": "ULTY",
-      "name": "YieldMax Ultra Option Income Strategy ETF",
-      "exchange": "NYSE Arca",
+      "ticker": "VMI",
+      "name": "Valmont Industries, Inc. Common Stock",
+      "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 24.149999618530273,
+      "price": 451.3299865722656,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-15T01:48:29.787441+00:00"
+      "as_of": "2026-10-16T01:40:02.355794+00:00"
     },
     {
-      "ticker": "AEHL",
-      "name": "Antelope Enterprise Holdings Limited - Class A Ordinary Shares",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 11.489999771118164,
-      "stop_price": 5.061927112104975,
-      "target_price": 24.346145089144542,
-      "position_pct": 0.017874719812022256,
-      "as_of": "2026-10-15T01:48:29.787441+00:00"
-    },
-    {
-      "ticker": "AMSC",
-      "name": "American Superconductor Corporation - Common Stock",
+      "ticker": "ADTN",
+      "name": "ADTRAN Holdings, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 25.649999618530273,
+      "price": 6.53000020980835,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-15T01:48:29.787441+00:00"
+      "as_of": "2026-10-16T01:40:02.355794+00:00"
     },
     {
-      "ticker": "ANGO",
-      "name": "AngioDynamics, Inc. - Common Stock",
+      "ticker": "ADUR",
+      "name": "Aduro Clean Technologies Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 11.050000190734863,
-      "stop_price": 9.537288552770782,
-      "target_price": 14.075423466663025,
-      "position_pct": 0.07304763124323398,
-      "as_of": "2026-10-15T01:48:29.787441+00:00"
+      "price": 10.0,
+      "stop_price": 8.851996248383049,
+      "target_price": 12.296007503233902,
+      "position_pct": 0.08710772927279295,
+      "as_of": "2026-10-16T01:40:02.355794+00:00"
     },
     {
-      "ticker": "ARWR",
-      "name": "Arrowhead Pharmaceuticals, Inc. - Common Stock",
+      "ticker": "BETR",
+      "name": "Better Home & Finance Holding Company - Class A Common Stock",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 58.369998931884766,
-      "stop_price": 52.47316767141542,
-      "target_price": 70.16366145282346,
-      "position_pct": 0.09898536409406927,
-      "as_of": "2026-10-15T01:48:29.787441+00:00"
+      "price": 10.760000228881836,
+      "stop_price": 8.08596789758445,
+      "target_price": 16.10806489147661,
+      "position_pct": 0.040238856138516854,
+      "as_of": "2026-10-16T01:40:02.355794+00:00"
     },
     {
-      "ticker": "BILI",
-      "name": "Bilibili Inc. - American Depositary Shares",
+      "ticker": "CGNX",
+      "name": "Cognex Corporation - Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 14.270000457763672,
+      "price": 55.66999816894531,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-15T01:48:29.787441+00:00"
+      "as_of": "2026-10-16T01:40:02.355794+00:00"
+    },
+    {
+      "ticker": "CIFR",
+      "name": "Cipher Digital Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 10.039999961853027,
+      "stop_price": 7.3923976726689204,
+      "target_price": 15.335204540221241,
+      "position_pct": 0.03792110319162393,
+      "as_of": "2026-10-16T01:40:02.355794+00:00"
     }
   ]
 }
