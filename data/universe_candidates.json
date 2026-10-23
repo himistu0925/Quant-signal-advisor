@@ -1,122 +1,122 @@
 [
   {
-    "ticker": "BJRI",
-    "name": "BJ's Restaurants, Inc. - Common Stock",
+    "ticker": "WDFC",
+    "name": "WD-40 Company - Common Stock",
+    "exchange": "NASDAQ",
+    "score": 6.0,
+    "direction": "BUY",
+    "price": 210.17999267578125,
+    "stop_price": 198.05511517291086,
+    "target_price": 234.42974768152203,
+    "position_pct": 0.17334607514675854,
+    "as_of": "2026-10-23T01:43:06.504557+00:00"
+  },
+  {
+    "ticker": "BABX",
+    "name": "GraniteShares 2x Long BABA Daily ETF",
     "exchange": "NASDAQ",
     "score": -4.5,
     "direction": "SELL",
-    "price": 56.779998779296875,
+    "price": 14.359999656677246,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-10-22T01:46:13.397830+00:00"
+    "as_of": "2026-10-23T01:43:06.504557+00:00"
   },
   {
-    "ticker": "IART",
-    "name": "Integra LifeSciences Holdings Corporation - Common Stock",
+    "ticker": "FCFS",
+    "name": "FirstCash Holdings, Inc. - Common Stock",
     "exchange": "NASDAQ",
     "score": -4.5,
     "direction": "SELL",
-    "price": 11.84000015258789,
+    "price": 184.77999877929688,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-10-22T01:46:13.397830+00:00"
+    "as_of": "2026-10-23T01:43:06.504557+00:00"
   },
   {
-    "ticker": "NFLX",
-    "name": "Netflix, Inc. - Common Stock",
+    "ticker": "TSEM",
+    "name": "Tower Semiconductor Ltd. - Ordinary Shares",
     "exchange": "NASDAQ",
     "score": -4.5,
     "direction": "SELL",
-    "price": 65.04000091552734,
+    "price": 167.7100067138672,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-10-22T01:46:13.397830+00:00"
+    "as_of": "2026-10-23T01:43:06.504557+00:00"
   },
   {
-    "ticker": "NFXL",
-    "name": "Direxion Daily NFLX Bull 2X ETF",
+    "ticker": "WWD",
+    "name": "Woodward, Inc. - Common Stock",
     "exchange": "NASDAQ",
     "score": -4.5,
     "direction": "SELL",
-    "price": 11.9399995803833,
+    "price": 304.8500061035156,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-10-22T01:46:13.397830+00:00"
+    "as_of": "2026-10-23T01:43:06.504557+00:00"
   },
   {
-    "ticker": "BABA",
-    "name": "Alibaba Group Holding Limited American Depositary Shares each representing eight Ordinary share",
+    "ticker": "ARMK",
+    "name": "Aramark Common Stock",
     "exchange": "NYSE",
     "score": -4.5,
     "direction": "SELL",
-    "price": 104.41000366210938,
+    "price": 52.52000045776367,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-10-22T01:46:13.397830+00:00"
+    "as_of": "2026-10-23T01:43:06.504557+00:00"
   },
   {
-    "ticker": "SMBK",
-    "name": "SmartFinancial, Inc. Common Stock",
+    "ticker": "BKV",
+    "name": "BKV Corporation Common Stock",
     "exchange": "NYSE",
     "score": -4.5,
     "direction": "SELL",
-    "price": 48.2400016784668,
+    "price": 20.709999084472656,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-10-22T01:46:13.397830+00:00"
+    "as_of": "2026-10-23T01:43:06.504557+00:00"
   },
   {
-    "ticker": "WAB",
-    "name": "Westinghouse Air Brake Technologies Corporation Common Stock",
+    "ticker": "CR",
+    "name": "Crane Company Common Stock",
     "exchange": "NYSE",
-    "score": 4.5,
-    "direction": "BUY",
-    "price": 288.9599914550781,
-    "stop_price": 274.9572128827926,
-    "target_price": 316.9655485996492,
-    "position_pct": 0.20635903793193652,
-    "as_of": "2026-10-22T01:46:13.397830+00:00"
-  },
-  {
-    "ticker": "ALMR",
-    "name": "Alamar Biosciences, Inc. - Class A common stock",
-    "exchange": "NASDAQ",
-    "score": 3.0,
-    "direction": "BUY",
-    "price": 31.450000762939453,
-    "stop_price": 25.975114465870842,
-    "target_price": 42.399773357076675,
-    "position_pct": 0.05744411674773695,
-    "as_of": "2026-10-22T01:46:13.397830+00:00"
-  },
-  {
-    "ticker": "BETR",
-    "name": "Better Home & Finance Holding Company - Class A Common Stock",
-    "exchange": "NASDAQ",
-    "score": 3.0,
-    "direction": "BUY",
-    "price": 15.579999923706055,
-    "stop_price": 12.481605634020621,
-    "target_price": 21.776788503076922,
-    "position_pct": 0.050284109984232585,
-    "as_of": "2026-10-22T01:46:13.397830+00:00"
-  },
-  {
-    "ticker": "BFC",
-    "name": "Bank First Corporation - Common Stock",
-    "exchange": "NASDAQ",
-    "score": -3.0,
+    "score": -4.5,
     "direction": "SELL",
-    "price": 142.0399932861328,
+    "price": 189.0500030517578,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-10-22T01:46:13.397830+00:00"
+    "as_of": "2026-10-23T01:43:06.504557+00:00"
+  },
+  {
+    "ticker": "CSQR",
+    "name": "Csquare, Inc. Common Stock",
+    "exchange": "NYSE",
+    "score": -4.5,
+    "direction": "SELL",
+    "price": 14.899999618530273,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-10-23T01:43:06.504557+00:00"
+  },
+  {
+    "ticker": "CWEB",
+    "name": "Direxion Daily CSI China Internet Index Bull 2X ETF",
+    "exchange": "NYSE Arca",
+    "score": -4.5,
+    "direction": "SELL",
+    "price": 16.329999923706055,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-10-23T01:43:06.504557+00:00"
   }
 ]
