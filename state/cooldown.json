@@ -106,5 +106,9 @@
   "FCUV": {
     "direction": "PLUNGE",
     "timestamp": "2026-09-08T13:13:12.160554-04:00"
+  },
+  "FVRR": {
+    "direction": "PLUNGE",
+    "timestamp": "2026-10-30T14:32:37.161256-04:00"
   }
 }

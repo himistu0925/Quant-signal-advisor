@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T23:13:43.755367",
+  "generated_at": "2026-10-30T18:32:41.508133",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,130 +144,156 @@
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-10-29T19:13:43.371407-04:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-10-30T14:32:37.161256-04:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.1164308474689068,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 2.0449213642312456,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "FWRD",
-      "name": "Forward Air Corporation - Common Stock",
-      "exchange": "NASDAQ",
+      "ticker": "FVRR",
+      "name": "Fiverr International Ltd. Ordinary Shares, no par value",
+      "exchange": "NYSE",
       "score": 6.0,
       "direction": "BUY",
-      "price": 17.540000915527344,
-      "stop_price": 15.84244108599324,
-      "target_price": 20.93512057459555,
-      "position_pct": 0.10332478779461464,
-      "as_of": "2026-10-29T02:43:03.601553+00:00"
+      "price": 9.050000190734863,
+      "stop_price": 8.420462579994428,
+      "target_price": 10.309075412215734,
+      "position_pct": 0.14375630679302298,
+      "as_of": "2026-10-30T02:55:51.203984+00:00"
     },
     {
-      "ticker": "ATAT",
-      "name": "Atour Lifestyle Holdings Limited - American Depositary Shares",
+      "ticker": "AMSF",
+      "name": "AMERISAFE, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 30.290000915527344,
+      "price": 23.09000015258789,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-29T02:43:03.601553+00:00"
+      "as_of": "2026-10-30T02:55:51.203984+00:00"
     },
     {
-      "ticker": "CHRW",
-      "name": "C.H. Robinson Worldwide, Inc. - Common Stock",
+      "ticker": "AUR",
+      "name": "Aurora Innovation, Inc.  - Class A Common Stock",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 127.5999984741211,
+      "price": 4.40500020980835,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-29T02:43:03.601553+00:00"
+      "as_of": "2026-10-30T02:55:51.203984+00:00"
     },
     {
-      "ticker": "INBX",
-      "name": "Inhibrx Biosciences, Inc. - Common Stock",
+      "ticker": "NVCR",
+      "name": "NovoCure Limited - Ordinary Shares",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 73.29000091552734,
+      "price": 13.109999656677246,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-29T02:43:03.601553+00:00"
+      "as_of": "2026-10-30T02:55:51.203984+00:00"
     },
     {
-      "ticker": "PSMT",
-      "name": "PriceSmart, Inc. - Common Stock",
+      "ticker": "PRCH",
+      "name": "Porch Group, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": 4.5,
+      "direction": "BUY",
+      "price": 20.889999389648438,
+      "stop_price": 18.56772948256487,
+      "target_price": 25.53453920381557,
+      "position_pct": 0.08995508801939071,
+      "as_of": "2026-10-30T02:55:51.203984+00:00"
+    },
+    {
+      "ticker": "UVSP",
+      "name": "Univest Financial Corporation - Common Stock",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 161.4600067138672,
+      "price": 39.33000183105469,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-29T02:43:03.601553+00:00"
+      "as_of": "2026-10-30T02:55:51.203984+00:00"
     },
     {
-      "ticker": "SEDG",
-      "name": "SolarEdge Technologies, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 29.489999771118164,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-10-29T02:43:03.601553+00:00"
-    },
-    {
-      "ticker": "ARE",
-      "name": "Alexandria Real Estate Equities, Inc. Common Stock",
+      "ticker": "AGI",
+      "name": "Alamos Gold Inc. Class A Common Shares",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 39.90999984741211,
+      "price": 28.829999923706055,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-29T02:43:03.601553+00:00"
+      "as_of": "2026-10-30T02:55:51.203984+00:00"
     },
     {
-      "ticker": "MIR",
-      "name": "Mirion Technologies, Inc. Class A Common Stock",
+      "ticker": "CTRI",
+      "name": "Centuri Holdings, Inc. Common Stock",
       "exchange": "NYSE",
       "score": 4.5,
       "direction": "BUY",
-      "price": 16.75,
-      "stop_price": 15.259143410000162,
-      "target_price": 19.731713179999677,
-      "position_pct": 0.11235151732469327,
-      "as_of": "2026-10-29T02:43:03.601553+00:00"
+      "price": 21.540000915527344,
+      "stop_price": 19.885054136552718,
+      "target_price": 24.849894473476596,
+      "position_pct": 0.1301552484296391,
+      "as_of": "2026-10-30T02:55:51.203984+00:00"
     },
     {
-      "ticker": "ZWS",
-      "name": "Zurn Elkay Water Solutions Corporation Common Stock",
+      "ticker": "FDN",
+      "name": "First Trust DJ Internet Index Fund",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 275.70001220703125,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-30T02:55:51.203984+00:00"
+    },
+    {
+      "ticker": "HLN",
+      "name": "Haleon plc American Depositary Shares (Each representing two Ordinary Shares)",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 43.5,
+      "price": 8.569999694824219,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-10-29T02:43:03.601553+00:00"
-    },
-    {
-      "ticker": "BCAX",
-      "name": "Bicara Therapeutics Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 9.760000228881836,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-10-29T02:43:03.601553+00:00"
+      "as_of": "2026-10-30T02:55:51.203984+00:00"
     }
   ]
 }
