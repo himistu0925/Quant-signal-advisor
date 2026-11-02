@@ -1,31 +1,31 @@
 {
-  "generated_at": "2026-10-31T01:47:23.367275",
+  "generated_at": "2026-11-02T22:16:19.593275",
   "tickers": [
     {
       "ticker": "TQQQ",
       "calibration": {
         "status": "calibrated",
         "weights": {
-          "BollingerBands": 0.5523711512140566,
+          "BollingerBands": 0.06344535857190345,
           "Fibonacci": 0.0,
-          "Ichimoku": 0.0,
+          "Ichimoku": 0.04716775853438155,
           "MACD": 0.0,
           "MA": 0.0,
-          "RSI": 6.447628848785943,
+          "RSI": 6.8893868828937155,
           "SupportResistance": 0.0
         },
         "buy_threshold": 2.0,
         "sell_threshold": -2.0,
         "test_metrics": {
-          "cumulative_return": 0.435018180352575,
-          "cagr": 0.4353732217354722,
+          "cumulative_return": 0.4350180815677862,
+          "cagr": 0.43537312285856533,
           "max_drawdown": -0.022949978543943872,
-          "sharpe_ratio": 2.3468503402632512,
+          "sharpe_ratio": 2.3468491515983154,
           "win_rate": 1.0,
           "avg_win_loss_ratio": null,
           "total_trades": 1,
-          "benchmark_return": 0.1439913049864483,
-          "excess_return": 0.2910268753661267
+          "benchmark_return": 0.1110659975642978,
+          "excess_return": 0.3239520840034884
         }
       }
     },
@@ -34,26 +34,26 @@
       "calibration": {
         "status": "calibrated",
         "weights": {
-          "BollingerBands": 2.6008064814782594,
+          "BollingerBands": 2.34636743213125,
           "Fibonacci": 0.0,
-          "Ichimoku": 2.139304235419611,
-          "MACD": 0.0,
-          "MA": 1.0888795859999771,
-          "RSI": 1.1710096971021529,
+          "Ichimoku": 2.2066141593787476,
+          "MACD": 0.7498388623974389,
+          "MA": 0.6776430630621543,
+          "RSI": 1.0195364830304094,
           "SupportResistance": 0.0
         },
-        "buy_threshold": 3.0,
-        "sell_threshold": -3.0,
+        "buy_threshold": 2.0,
+        "sell_threshold": -2.0,
         "test_metrics": {
-          "cumulative_return": 2.4939972058916267,
-          "cagr": 2.496992429167069,
-          "max_drawdown": -0.43473419102906297,
-          "sharpe_ratio": 1.9454259884915546,
-          "win_rate": 1.0,
-          "avg_win_loss_ratio": null,
-          "total_trades": 2,
-          "benchmark_return": 0.1439913049864483,
-          "excess_return": 2.3500059009051784
+          "cumulative_return": 1.3357277278690884,
+          "cagr": 1.337085281633152,
+          "max_drawdown": -0.3326073946991803,
+          "sharpe_ratio": 1.4774189958961501,
+          "win_rate": 0.75,
+          "avg_win_loss_ratio": 2.042950055187397,
+          "total_trades": 4,
+          "benchmark_return": 0.1110659975642978,
+          "excess_return": 1.2246617303047906
         }
       }
     },
@@ -62,16 +62,16 @@
       "calibration": {
         "status": "calibrated",
         "weights": {
-          "BollingerBands": 1.047025263009382,
-          "Fibonacci": 0.3835691525310932,
-          "Ichimoku": 0.47230025472414083,
+          "BollingerBands": 0.9878305197907407,
+          "Fibonacci": 0.24918280810783344,
+          "Ichimoku": 0.5196024572123878,
           "MACD": 0.0,
           "MA": 0.0,
-          "RSI": 5.097105329735385,
+          "RSI": 5.243384214889037,
           "SupportResistance": 0.0
         },
-        "buy_threshold": 3.0,
-        "sell_threshold": -3.0,
+        "buy_threshold": 2.0,
+        "sell_threshold": -2.0,
         "test_metrics": {
           "cumulative_return": 0.292728147096577,
           "cagr": 0.2929555055759159,
@@ -80,8 +80,8 @@
           "win_rate": 1.0,
           "avg_win_loss_ratio": null,
           "total_trades": 1,
-          "benchmark_return": 0.1439913049864483,
-          "excess_return": 0.14873684211012872
+          "benchmark_return": 0.1110659975642978,
+          "excess_return": 0.18166214953227922
         }
       }
     },
@@ -90,26 +90,26 @@
       "calibration": {
         "status": "calibrated",
         "weights": {
-          "BollingerBands": 1.6917763635947023,
+          "BollingerBands": 1.508662247035269,
           "Fibonacci": 0.0,
-          "Ichimoku": 1.5267859691807946,
-          "MACD": 1.2319865043973035,
+          "Ichimoku": 1.704199420281705,
+          "MACD": 1.0090911875799624,
           "MA": 0.0,
-          "RSI": 2.5494511628271987,
+          "RSI": 2.7780471451030637,
           "SupportResistance": 0.0
         },
-        "buy_threshold": 4.0,
-        "sell_threshold": -4.0,
+        "buy_threshold": 2.0,
+        "sell_threshold": -2.0,
         "test_metrics": {
-          "cumulative_return": 0.13052307318399747,
-          "cagr": 0.13061807241356305,
-          "max_drawdown": -0.11239471400575929,
-          "sharpe_ratio": 0.9137276802059094,
+          "cumulative_return": 0.31417041766238074,
+          "cagr": 0.3144163576073622,
+          "max_drawdown": -0.11239461634540282,
+          "sharpe_ratio": 1.7467020773979132,
           "win_rate": 1.0,
           "avg_win_loss_ratio": null,
-          "total_trades": 1,
-          "benchmark_return": 0.1439913049864483,
-          "excess_return": -0.013468231802450825
+          "total_trades": 2,
+          "benchmark_return": 0.1110659975642978,
+          "excess_return": 0.20310442009808294
         }
       }
     },
@@ -118,12 +118,12 @@
       "calibration": {
         "status": "calibrated",
         "weights": {
-          "BollingerBands": 2.1300872676117297,
+          "BollingerBands": 2.1694354519760477,
           "Fibonacci": 0.0,
-          "Ichimoku": 0.0,
-          "MACD": 1.9579840196686513,
-          "MA": 0.3670073484883739,
-          "RSI": 2.5449213642312456,
+          "Ichimoku": 0.2718648056537906,
+          "MACD": 2.0147991635416047,
+          "MA": 0.19525762052269696,
+          "RSI": 2.3486429583058603,
           "SupportResistance": 0.0
         },
         "buy_threshold": 5.0,
@@ -136,138 +136,138 @@
           "win_rate": 0.0,
           "avg_win_loss_ratio": 0.0,
           "total_trades": 0,
-          "benchmark_return": 0.1439913049864483,
-          "excess_return": -0.1439913049864483
+          "benchmark_return": 0.1110659975642978,
+          "excess_return": -0.1110659975642978
         }
       }
     }
   ],
   "recent_signals": [],
   "last_check": {
-    "timestamp": "2026-10-30T21:47:22.906498-04:00",
+    "timestamp": "2026-11-02T17:16:19.261874-05:00",
     "market_open": false,
     "tickers": {}
   },
   "universe_candidates": [
     {
-      "ticker": "FVRR",
-      "name": "Fiverr International Ltd. Ordinary Shares, no par value",
+      "ticker": "CACC",
+      "name": "Credit Acceptance Corporation - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -6.0,
+      "direction": "SELL",
+      "price": 464.8900146484375,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-31T02:37:24.063125+00:00"
+    },
+    {
+      "ticker": "APPS",
+      "name": "Digital Turbine, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 8.869999885559082,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-31T02:37:24.063125+00:00"
+    },
+    {
+      "ticker": "CARE",
+      "name": "Carter Bankshares, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 29.0,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-31T02:37:24.063125+00:00"
+    },
+    {
+      "ticker": "GPIQ",
+      "name": "Goldman Sachs Nasdaq-100 Premium Income ETF",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 54.290000915527344,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-31T02:37:24.063125+00:00"
+    },
+    {
+      "ticker": "IDCC",
+      "name": "InterDigital, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 311.57000732421875,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-31T02:37:24.063125+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 204.63999938964844,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-31T02:37:24.063125+00:00"
+    },
+    {
+      "ticker": "OPRA",
+      "name": "Opera Limited - American Depositary Shares",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 15.40999984741211,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-31T02:37:24.063125+00:00"
+    },
+    {
+      "ticker": "QCOM",
+      "name": "QUALCOMM Incorporated - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 164.7899932861328,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-31T02:37:24.063125+00:00"
+    },
+    {
+      "ticker": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 51.65999984741211,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-10-31T02:37:24.063125+00:00"
+    },
+    {
+      "ticker": "HRB",
+      "name": "H&R Block, Inc. Common Stock",
       "exchange": "NYSE",
-      "score": 6.0,
-      "direction": "BUY",
-      "price": 9.050000190734863,
-      "stop_price": 8.420462579994428,
-      "target_price": 10.309075412215734,
-      "position_pct": 0.14375630679302298,
-      "as_of": "2026-10-30T02:55:51.203984+00:00"
-    },
-    {
-      "ticker": "AMSF",
-      "name": "AMERISAFE, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 23.09000015258789,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-10-30T02:55:51.203984+00:00"
-    },
-    {
-      "ticker": "AUR",
-      "name": "Aurora Innovation, Inc.  - Class A Common Stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 4.40500020980835,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-10-30T02:55:51.203984+00:00"
-    },
-    {
-      "ticker": "NVCR",
-      "name": "NovoCure Limited - Ordinary Shares",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 13.109999656677246,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-10-30T02:55:51.203984+00:00"
-    },
-    {
-      "ticker": "PRCH",
-      "name": "Porch Group, Inc. - Common Stock",
-      "exchange": "NASDAQ",
       "score": 4.5,
       "direction": "BUY",
-      "price": 20.889999389648438,
-      "stop_price": 18.56772948256487,
-      "target_price": 25.53453920381557,
-      "position_pct": 0.08995508801939071,
-      "as_of": "2026-10-30T02:55:51.203984+00:00"
-    },
-    {
-      "ticker": "UVSP",
-      "name": "Univest Financial Corporation - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 39.33000183105469,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-10-30T02:55:51.203984+00:00"
-    },
-    {
-      "ticker": "AGI",
-      "name": "Alamos Gold Inc. Class A Common Shares",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 28.829999923706055,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-10-30T02:55:51.203984+00:00"
-    },
-    {
-      "ticker": "CTRI",
-      "name": "Centuri Holdings, Inc. Common Stock",
-      "exchange": "NYSE",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 21.540000915527344,
-      "stop_price": 19.885054136552718,
-      "target_price": 24.849894473476596,
-      "position_pct": 0.1301552484296391,
-      "as_of": "2026-10-30T02:55:51.203984+00:00"
-    },
-    {
-      "ticker": "FDN",
-      "name": "First Trust DJ Internet Index Fund",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 275.70001220703125,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-10-30T02:55:51.203984+00:00"
-    },
-    {
-      "ticker": "HLN",
-      "name": "Haleon plc American Depositary Shares (Each representing two Ordinary Shares)",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 8.569999694824219,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-10-30T02:55:51.203984+00:00"
+      "price": 51.310001373291016,
+      "stop_price": 48.050408410576274,
+      "target_price": 57.8291872987205,
+      "position_pct": 0.15741229644377952,
+      "as_of": "2026-10-31T02:37:24.063125+00:00"
     }
   ]
 }
