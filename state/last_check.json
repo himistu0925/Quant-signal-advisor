@@ -1,5 +1,31 @@
 {
-  "timestamp": "2026-11-02T22:40:30.784299-05:00",
-  "market_open": false,
-  "tickers": {}
+  "timestamp": "2026-11-03T15:03:09.958011-05:00",
+  "market_open": true,
+  "tickers": {
+    "TQQQ": {
+      "score": 0.0,
+      "direction": null,
+      "threshold": null
+    },
+    "SOXL": {
+      "score": 0.5,
+      "direction": null,
+      "threshold": null
+    },
+    "UPRO": {
+      "score": 1.4878305197907407,
+      "direction": null,
+      "threshold": null
+    },
+    "AAPL": {
+      "score": 0.5,
+      "direction": null,
+      "threshold": null
+    },
+    "GOOGL": {
+      "score": 5.018078410281908,
+      "direction": null,
+      "threshold": null
+    }
+  }
 }
