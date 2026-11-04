@@ -1,122 +1,122 @@
 [
   {
-    "ticker": "NXT",
-    "name": "Nextpower Inc. - Common Stock",
-    "exchange": "NASDAQ",
-    "score": 6.0,
-    "direction": "BUY",
-    "price": 91.12999725341797,
-    "stop_price": 81.04572951464993,
-    "target_price": 111.29853273095404,
-    "position_pct": 0.09036848248591924,
-    "as_of": "2026-11-03T04:07:35.290964+00:00"
-  },
-  {
-    "ticker": "AOSL",
-    "name": "Alpha and Omega Semiconductor Limited - Common Shares",
-    "exchange": "NASDAQ",
-    "score": -4.5,
+    "ticker": "MSA",
+    "name": "MSA Safety Incorporated Common Stock",
+    "exchange": "NYSE",
+    "score": -6.0,
     "direction": "SELL",
-    "price": 21.25,
+    "price": 174.05999755859375,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-11-03T04:07:35.290964+00:00"
+    "as_of": "2026-11-04T03:08:55.960229+00:00"
   },
   {
-    "ticker": "HELP",
-    "name": "Helus Pharma Inc.  - Common Stock",
+    "ticker": "OTTR",
+    "name": "Otter Tail Corporation - Common Stock",
     "exchange": "NASDAQ",
     "score": -4.5,
     "direction": "SELL",
-    "price": 8.800000190734863,
+    "price": 83.41000366210938,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-11-03T04:07:35.290964+00:00"
+    "as_of": "2026-11-04T03:08:55.960229+00:00"
   },
   {
-    "ticker": "KRYS",
-    "name": "Krystal Biotech, Inc. - Common Stock",
+    "ticker": "SUPN",
+    "name": "Supernus, Inc. - Common Stock",
     "exchange": "NASDAQ",
     "score": -4.5,
     "direction": "SELL",
-    "price": 295.8999938964844,
+    "price": 28.149999618530273,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-11-03T04:07:35.290964+00:00"
+    "as_of": "2026-11-04T03:08:55.960229+00:00"
   },
   {
-    "ticker": "MLAB",
-    "name": "Mesa Laboratories, Inc. - Common Stock",
-    "exchange": "NASDAQ",
+    "ticker": "APTV",
+    "name": "Aptiv PLC Ordinary Shares",
+    "exchange": "NYSE",
     "score": -4.5,
     "direction": "SELL",
-    "price": 121.97000122070312,
+    "price": 41.34000015258789,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-11-03T04:07:35.290964+00:00"
+    "as_of": "2026-11-04T03:08:55.960229+00:00"
   },
   {
-    "ticker": "MQQQ",
-    "name": "Tradr 2X Long Innovation 100 Monthly ETF",
-    "exchange": "NASDAQ",
+    "ticker": "NXRT",
+    "name": "NexPoint Residential Trust, Inc. Common Stock",
+    "exchange": "NYSE",
     "score": -4.5,
     "direction": "SELL",
-    "price": 201.63900756835938,
+    "price": 16.479999542236328,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-11-03T04:07:35.290964+00:00"
+    "as_of": "2026-11-04T03:08:55.960229+00:00"
   },
   {
-    "ticker": "NSSC",
-    "name": "NAPCO Security Technologies, Inc. - Common Stock",
-    "exchange": "NASDAQ",
+    "ticker": "SYY",
+    "name": "Sysco Corporation Common Stock",
+    "exchange": "NYSE",
     "score": -4.5,
     "direction": "SELL",
-    "price": 32.11000061035156,
+    "price": 74.11000061035156,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-11-03T04:07:35.290964+00:00"
+    "as_of": "2026-11-04T03:08:55.960229+00:00"
   },
   {
-    "ticker": "ORCX",
-    "name": "Defiance Daily Target 2X Long ORCL ETF",
-    "exchange": "NASDAQ",
+    "ticker": "UMH",
+    "name": "UMH Properties, Inc. Common Stock",
+    "exchange": "NYSE",
     "score": -4.5,
     "direction": "SELL",
-    "price": 13.109999656677246,
+    "price": 14.75,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-11-03T04:07:35.290964+00:00"
+    "as_of": "2026-11-04T03:08:55.960229+00:00"
   },
   {
-    "ticker": "QTOP",
-    "name": "iShares Nasdaq Top 30 Stocks ETF",
-    "exchange": "NASDAQ",
+    "ticker": "WRBY",
+    "name": "Warby Parker Inc. Class A Common Stock",
+    "exchange": "NYSE",
     "score": -4.5,
     "direction": "SELL",
-    "price": 35.220001220703125,
+    "price": 21.940000534057617,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-11-03T04:07:35.290964+00:00"
+    "as_of": "2026-11-04T03:08:55.960229+00:00"
   },
   {
-    "ticker": "SILC",
-    "name": "Silicom Ltd - Ordinary Shares",
+    "ticker": "ADEA",
+    "name": "Adeia Inc.  - Common Stock",
     "exchange": "NASDAQ",
-    "score": -4.5,
+    "score": -3.0,
     "direction": "SELL",
-    "price": 31.020000457763672,
+    "price": 17.850000381469727,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-11-03T04:07:35.290964+00:00"
+    "as_of": "2026-11-04T03:08:55.960229+00:00"
+  },
+  {
+    "ticker": "ADTN",
+    "name": "ADTRAN Holdings, Inc. - Common Stock",
+    "exchange": "NASDAQ",
+    "score": -3.0,
+    "direction": "SELL",
+    "price": 5.059999942779541,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-11-04T03:08:55.960229+00:00"
   }
 ]
