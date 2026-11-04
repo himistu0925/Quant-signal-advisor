@@ -1,0 +1,18 @@
+[
+  {
+    "ticker": "AAPL",
+    "direction": "BUY",
+    "price": 352.5899963378906,
+    "timestamp": "2026-11-04T15:23:20.852014-05:00",
+    "score": 2.008662247035269,
+    "threshold": 2.0,
+    "reasons": [
+      "BB(mid=343.06, upper=352.37, lower=333.76)",
+      "S/R(resistance=351.73, support=325.33, close=352.59)",
+      "News: 59 positive / 13 negative keyword hits across 246 headlines"
+    ],
+    "stop_price": 335.54092925410276,
+    "target_price": 386.68813050546635,
+    "position_pct": 0.20680896767259033
+  }
+]
