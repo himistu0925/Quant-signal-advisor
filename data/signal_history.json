@@ -14,5 +14,21 @@
     "stop_price": 335.54092925410276,
     "target_price": 386.68813050546635,
     "position_pct": 0.20680896767259033
+  },
+  {
+    "ticker": "TQQQ",
+    "direction": "BUY",
+    "price": 51.165000915527344,
+    "timestamp": "2026-11-05T15:36:12.457692-05:00",
+    "score": 10.334080324340572,
+    "threshold": 3.0,
+    "reasons": [
+      "Fib(38.2%=69.19, 61.8%=75.35, close=51.17)",
+      "RSI(14)=27.2",
+      "S/R(resistance=83.40, support=59.22, close=51.17)"
+    ],
+    "stop_price": 42.38486827967356,
+    "target_price": 68.72526618723491,
+    "position_pct": 0.05827360819880376
   }
 ]

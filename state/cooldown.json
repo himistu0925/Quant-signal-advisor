@@ -114,5 +114,9 @@
   "AAPL": {
     "direction": "BUY",
     "timestamp": "2026-11-04T15:23:20.852014-05:00"
+  },
+  "TQQQ": {
+    "direction": "BUY",
+    "timestamp": "2026-11-05T15:36:12.457692-05:00"
   }
 }
