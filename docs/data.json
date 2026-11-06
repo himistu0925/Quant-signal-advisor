@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T01:06:06.267270",
+  "generated_at": "2026-11-06T19:55:27.827519",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -144,6 +144,21 @@
   ],
   "recent_signals": [
     {
+      "ticker": "SOXL",
+      "direction": "BUY",
+      "price": 45.51689910888672,
+      "timestamp": "2026-11-06T14:55:23.331155-05:00",
+      "score": 5.0488558727424895,
+      "threshold": 3.0,
+      "reasons": [
+        "BB(mid=90.27, upper=137.23, lower=43.31)",
+        "RSI(14)=28.9"
+      ],
+      "stop_price": 18.371557207786207,
+      "target_price": 99.80758291108774,
+      "position_pct": 0.01676784889087781
+    },
+    {
       "ticker": "TQQQ",
       "direction": "BUY",
       "price": 51.165000915527344,
@@ -177,130 +192,156 @@
     }
   ],
   "last_check": {
-    "timestamp": "2026-11-05T20:06:05.874987-05:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-11-06T14:55:23.331155-05:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.06344535857190345,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 5.0488558727424895,
+        "direction": "BUY",
+        "threshold": 3.0
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "ICUI",
-      "name": "ICU Medical, Inc. - Common Stock",
+      "ticker": "DGRW",
+      "name": "WisdomTree U.S. Quality Dividend Growth Fund",
       "exchange": "NASDAQ",
-      "score": 6.0,
-      "direction": "BUY",
-      "price": 172.6199951171875,
-      "stop_price": 161.05996987865507,
-      "target_price": 195.74004559425236,
-      "position_pct": 0.14932492927593466,
-      "as_of": "2026-11-05T03:46:09.378544+00:00"
-    },
-    {
-      "ticker": "ABNB",
-      "name": "Airbnb, Inc. - Class A Common Stock",
-      "exchange": "NASDAQ",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 176.3699951171875,
-      "stop_price": 165.9462930448446,
-      "target_price": 197.21739926187334,
-      "position_pct": 0.1692009171915493,
-      "as_of": "2026-11-05T03:46:09.378544+00:00"
-    },
-    {
-      "ticker": "BRKR",
-      "name": "Bruker Corporation - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 63.790000915527344,
-      "stop_price": 56.363752547861594,
-      "target_price": 78.64249765085884,
-      "position_pct": 0.08589801708393184,
-      "as_of": "2026-11-05T03:46:09.378544+00:00"
-    },
-    {
-      "ticker": "CGNX",
-      "name": "Cognex Corporation - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
+      "score": -6.0,
       "direction": "SELL",
-      "price": 53.060001373291016,
+      "price": 96.44000244140625,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-11-05T03:46:09.378544+00:00"
+      "as_of": "2026-11-06T03:35:43.112618+00:00"
     },
     {
-      "ticker": "CLSK",
-      "name": "CleanSpark, Inc. - Common Stock",
+      "ticker": "GH",
+      "name": "Guardant Health, Inc. - Common Stock",
       "exchange": "NASDAQ",
-      "score": -4.5,
+      "score": -6.0,
       "direction": "SELL",
-      "price": 6.800000190734863,
+      "price": 153.42999267578125,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-11-05T03:46:09.378544+00:00"
+      "as_of": "2026-11-06T03:35:43.112618+00:00"
     },
     {
-      "ticker": "DUOL",
-      "name": "Duolingo, Inc. - Class A Common Stock",
+      "ticker": "KELYA",
+      "name": "Kelly Services, Inc. - Class A Common Stock",
       "exchange": "NASDAQ",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 161.27000427246094,
-      "stop_price": 141.30664913758102,
-      "target_price": 201.1967145422208,
-      "position_pct": 0.08078301627299628,
-      "as_of": "2026-11-05T03:46:09.378544+00:00"
-    },
-    {
-      "ticker": "HLNE",
-      "name": "Hamilton Lane Incorporated - Class A Common Stock",
-      "exchange": "NASDAQ",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 94.98999786376953,
-      "stop_price": 87.1307896533087,
-      "target_price": 110.7084142846912,
-      "position_pct": 0.12086459007070856,
-      "as_of": "2026-11-05T03:46:09.378544+00:00"
-    },
-    {
-      "ticker": "HSIC",
-      "name": "Henry Schein, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 4.5,
-      "direction": "BUY",
-      "price": 88.23999786376953,
-      "stop_price": 83.30352599067577,
-      "target_price": 98.11294160995706,
-      "position_pct": 0.17875114075848683,
-      "as_of": "2026-11-05T03:46:09.378544+00:00"
-    },
-    {
-      "ticker": "LGN",
-      "name": "Legence Corp. - Class A Common stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
+      "score": -6.0,
       "direction": "SELL",
-      "price": 32.130001068115234,
+      "price": 14.050000190734863,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-11-05T03:46:09.378544+00:00"
+      "as_of": "2026-11-06T03:35:43.112618+00:00"
     },
     {
-      "ticker": "LIME",
-      "name": "Neutron Holdings, Inc. - Common Stock",
+      "ticker": "LYTS",
+      "name": "LSI Industries Inc. - Common Stock",
       "exchange": "NASDAQ",
-      "score": -4.5,
+      "score": -6.0,
       "direction": "SELL",
-      "price": 18.389999389648438,
+      "price": 17.790000915527344,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-11-05T03:46:09.378544+00:00"
+      "as_of": "2026-11-06T03:35:43.112618+00:00"
+    },
+    {
+      "ticker": "MCHP",
+      "name": "Microchip Technology Incorporated - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -6.0,
+      "direction": "SELL",
+      "price": 64.8499984741211,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-06T03:35:43.112618+00:00"
+    },
+    {
+      "ticker": "SHOO",
+      "name": "Steven Madden, Ltd. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -6.0,
+      "direction": "SELL",
+      "price": 39.0,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-06T03:35:43.112618+00:00"
+    },
+    {
+      "ticker": "TRIP",
+      "name": "TripAdvisor, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -6.0,
+      "direction": "SELL",
+      "price": 7.380000114440918,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-06T03:35:43.112618+00:00"
+    },
+    {
+      "ticker": "PBH",
+      "name": "Prestige Consumer Healthcare Inc. Common Stock",
+      "exchange": "NYSE",
+      "score": -6.0,
+      "direction": "SELL",
+      "price": 44.31999969482422,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-06T03:35:43.112618+00:00"
+    },
+    {
+      "ticker": "POWR",
+      "name": "iShares U.S. Power Infrastructure ETF",
+      "exchange": "NYSE Arca",
+      "score": -6.0,
+      "direction": "SELL",
+      "price": 23.969999313354492,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-06T03:35:43.112618+00:00"
+    },
+    {
+      "ticker": "AIRR",
+      "name": "First Trust RBA American Industrial Renaissance ETF",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 90.62000274658203,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-06T03:35:43.112618+00:00"
     }
   ]
 }

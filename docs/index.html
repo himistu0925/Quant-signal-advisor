@@ -40,10 +40,10 @@
 </head>
 <body>
 <h1>퀀트 신호 어드바이저 대시보드</h1>
-<p class="meta">생성 시각: 2026-11-06T01:06:06.267270</p>
+<p class="meta">생성 시각: 2026-11-06T19:55:27.827519</p>
 
 <h2>마지막 체크</h2>
-<p>마지막 워크플로 실행: 2026-11-05T20:06:05.874987-05:00 (장 마감 시간이라 스킵됨)</p>
+<p>마지막 체크: 2026-11-06T14:55:23.331155-05:00</p><table><tr><th>종목</th><th>현재 스코어</th><th>방향</th></tr><tr><td>TQQQ</td><td>0.06</td><td><span class="badge badge-neutral">중립</span></td></tr><tr><td>SOXL</td><td>5.05</td><td><span class="badge badge-buy">BUY</span></td></tr><tr><td>UPRO</td><td>0.50</td><td><span class="badge badge-neutral">중립</span></td></tr><tr><td>AAPL</td><td>0.50</td><td><span class="badge badge-neutral">중립</span></td></tr><tr><td>GOOGL</td><td>0.50</td><td><span class="badge badge-neutral">중립</span></td></tr></table>
 
 <h2>워치리스트 현황</h2>
 <table>
@@ -218,24 +218,25 @@ searchInput.addEventListener("input", async () => {
 <h2>최근 신호 히스토리</h2>
 <table>
 <tr><th>시각</th><th>종목</th><th>방향</th><th>가격</th><th>근거</th><th>리스크 (ATR 기준)</th></tr>
+<tr><td>2026-11-06T14:55:23.331155-05:00</td><td>SOXL</td><td>BUY</td><td>$45.52</td><td>BB(mid=90.27, upper=137.23, lower=43.31) · RSI(14)=28.9</td><td>손절 $18.37 / 익절 $99.81 (1.7%)</td></tr>
 <tr><td>2026-11-05T15:36:12.457692-05:00</td><td>TQQQ</td><td>BUY</td><td>$51.17</td><td>Fib(38.2%=69.19, 61.8%=75.35, close=51.17) · RSI(14)=27.2 · S/R(resistance=83.40, support=59.22, close=51.17)</td><td>손절 $42.38 / 익절 $68.73 (5.8%)</td></tr>
 <tr><td>2026-11-04T15:23:20.852014-05:00</td><td>AAPL</td><td>BUY</td><td>$352.59</td><td>BB(mid=343.06, upper=352.37, lower=333.76) · S/R(resistance=351.73, support=325.33, close=352.59) · News: 59 positive / 13 negative keyword hits across 246 headlines</td><td>손절 $335.54 / 익절 $386.69 (20.7%)</td></tr>
 </table>
 
 <h2>자동 발굴 후보 (전체 미국 상장 종목/ETF 스캔)</h2>
-<p class="meta">기준 시각: 2026-11-05T03:46:09.378544+00:00 · 워치리스트 미포함 종목 중 유동성 필터 통과 + 현재 매수/매도 신호가 있는 상위 종목 (참고용, 알림 발송 대상 아님)</p>
+<p class="meta">기준 시각: 2026-11-06T03:35:43.112618+00:00 · 워치리스트 미포함 종목 중 유동성 필터 통과 + 현재 매수/매도 신호가 있는 상위 종목 (참고용, 알림 발송 대상 아님)</p>
 <table>
 <tr><th>종목</th><th>이름</th><th>거래소</th><th>방향</th><th>스코어</th><th>리스크 (ATR 기준)</th></tr>
-<tr><td>ICUI</td><td>ICU Medical, Inc. - Common Stock</td><td>NASDAQ</td><td>BUY</td><td>+6.00</td><td>손절 $161.06 / 익절 $195.74 (14.9%)</td></tr>
-<tr><td>ABNB</td><td>Airbnb, Inc. - Class A Common Stock</td><td>NASDAQ</td><td>BUY</td><td>+4.50</td><td>손절 $165.95 / 익절 $197.22 (16.9%)</td></tr>
-<tr><td>BRKR</td><td>Bruker Corporation - Common Stock</td><td>NASDAQ</td><td>BUY</td><td>+4.50</td><td>손절 $56.36 / 익절 $78.64 (8.6%)</td></tr>
-<tr><td>CGNX</td><td>Cognex Corporation - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
-<tr><td>CLSK</td><td>CleanSpark, Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
-<tr><td>DUOL</td><td>Duolingo, Inc. - Class A Common Stock</td><td>NASDAQ</td><td>BUY</td><td>+4.50</td><td>손절 $141.31 / 익절 $201.20 (8.1%)</td></tr>
-<tr><td>HLNE</td><td>Hamilton Lane Incorporated - Class A Common Stock</td><td>NASDAQ</td><td>BUY</td><td>+4.50</td><td>손절 $87.13 / 익절 $110.71 (12.1%)</td></tr>
-<tr><td>HSIC</td><td>Henry Schein, Inc. - Common Stock</td><td>NASDAQ</td><td>BUY</td><td>+4.50</td><td>손절 $83.30 / 익절 $98.11 (17.9%)</td></tr>
-<tr><td>LGN</td><td>Legence Corp. - Class A Common stock</td><td>NASDAQ</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
-<tr><td>LIME</td><td>Neutron Holdings, Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
+<tr><td>DGRW</td><td>WisdomTree U.S. Quality Dividend Growth Fund</td><td>NASDAQ</td><td>SELL</td><td>-6.00</td><td>-</td></tr>
+<tr><td>GH</td><td>Guardant Health, Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-6.00</td><td>-</td></tr>
+<tr><td>KELYA</td><td>Kelly Services, Inc. - Class A Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-6.00</td><td>-</td></tr>
+<tr><td>LYTS</td><td>LSI Industries Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-6.00</td><td>-</td></tr>
+<tr><td>MCHP</td><td>Microchip Technology Incorporated - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-6.00</td><td>-</td></tr>
+<tr><td>SHOO</td><td>Steven Madden, Ltd. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-6.00</td><td>-</td></tr>
+<tr><td>TRIP</td><td>TripAdvisor, Inc. - Common Stock</td><td>NASDAQ</td><td>SELL</td><td>-6.00</td><td>-</td></tr>
+<tr><td>PBH</td><td>Prestige Consumer Healthcare Inc. Common Stock</td><td>NYSE</td><td>SELL</td><td>-6.00</td><td>-</td></tr>
+<tr><td>POWR</td><td>iShares U.S. Power Infrastructure ETF</td><td>NYSE Arca</td><td>SELL</td><td>-6.00</td><td>-</td></tr>
+<tr><td>AIRR</td><td>First Trust RBA American Industrial Renaissance ETF</td><td>NASDAQ</td><td>SELL</td><td>-4.50</td><td>-</td></tr>
 </table>
 </body>
 </html>

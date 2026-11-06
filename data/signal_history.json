@@ -30,5 +30,20 @@
     "stop_price": 42.38486827967356,
     "target_price": 68.72526618723491,
     "position_pct": 0.05827360819880376
+  },
+  {
+    "ticker": "SOXL",
+    "direction": "BUY",
+    "price": 45.51689910888672,
+    "timestamp": "2026-11-06T14:55:23.331155-05:00",
+    "score": 5.0488558727424895,
+    "threshold": 3.0,
+    "reasons": [
+      "BB(mid=90.27, upper=137.23, lower=43.31)",
+      "RSI(14)=28.9"
+    ],
+    "stop_price": 18.371557207786207,
+    "target_price": 99.80758291108774,
+    "position_pct": 0.01676784889087781
   }
 ]
