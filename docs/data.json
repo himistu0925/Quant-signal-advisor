@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T22:57:23.615664",
+  "generated_at": "2026-11-10T20:25:26.389161",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -192,130 +192,156 @@
     }
   ],
   "last_check": {
-    "timestamp": "2026-11-09T17:57:23.281755-05:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-11-10T15:25:21.196897-05:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "KRMN",
-      "name": "Karman Holdings Inc. Common Stock",
-      "exchange": "NYSE",
-      "score": 6.0,
-      "direction": "BUY",
-      "price": 45.61000061035156,
-      "stop_price": 38.43172435761315,
-      "target_price": 59.9665531158284,
-      "position_pct": 0.06353893191690965,
-      "as_of": "2026-11-07T02:59:44.481036+00:00"
-    },
-    {
-      "ticker": "BL",
-      "name": "BlackLine, Inc. - Common Stock",
+      "ticker": "ATLC",
+      "name": "Atlanticus Holdings Corporation - Common Stock",
       "exchange": "NASDAQ",
-      "score": -4.5,
+      "score": -6.0,
       "direction": "SELL",
-      "price": 25.889999389648438,
+      "price": 81.12000274658203,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-11-07T02:59:44.481036+00:00"
+      "as_of": "2026-11-10T04:53:25.415061+00:00"
     },
     {
-      "ticker": "ETON",
-      "name": "Eton Pharmaceuticals, Inc. - Common Stock",
+      "ticker": "IBRX",
+      "name": "ImmunityBio, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 7.110000133514404,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-10T04:53:25.415061+00:00"
+    },
+    {
+      "ticker": "JANX",
+      "name": "Janux Therapeutics, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 12.760000228881836,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-10T04:53:25.415061+00:00"
+    },
+    {
+      "ticker": "LASR",
+      "name": "nLIGHT, Inc. - Common Stock",
       "exchange": "NASDAQ",
       "score": 4.5,
       "direction": "BUY",
-      "price": 56.459999084472656,
-      "stop_price": 49.59917041277463,
-      "target_price": 70.1816564278687,
-      "position_pct": 0.08229326483166513,
-      "as_of": "2026-11-07T02:59:44.481036+00:00"
+      "price": 43.209999084472656,
+      "stop_price": 37.09938516282663,
+      "target_price": 55.431226927764705,
+      "position_pct": 0.07071302431889383,
+      "as_of": "2026-11-10T04:53:25.415061+00:00"
     },
     {
-      "ticker": "FLGT",
-      "name": "Fulgent Genetics, Inc. - Common Stock",
+      "ticker": "ABEO",
+      "name": "Abeona Therapeutics Inc. - Common Stock",
       "exchange": "NASDAQ",
-      "score": 4.5,
+      "score": -3.0,
+      "direction": "SELL",
+      "price": 2.5399999618530273,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-10T04:53:25.415061+00:00"
+    },
+    {
+      "ticker": "ADTN",
+      "name": "ADTRAN Holdings, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": 3.0,
       "direction": "BUY",
-      "price": 23.739999771118164,
-      "stop_price": 21.398568628564135,
-      "target_price": 28.42286205622622,
-      "position_pct": 0.10139097981426277,
-      "as_of": "2026-11-07T02:59:44.481036+00:00"
+      "price": 4.289999961853027,
+      "stop_price": 3.463959061460698,
+      "target_price": 5.942081762637686,
+      "position_pct": 0.051934473944516356,
+      "as_of": "2026-11-10T04:53:25.415061+00:00"
     },
     {
-      "ticker": "ICFI",
-      "name": "ICF International, Inc. - Common Stock",
+      "ticker": "AOSL",
+      "name": "Alpha and Omega Semiconductor Limited - Common Shares",
       "exchange": "NASDAQ",
-      "score": -4.5,
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 29.170000076293945,
+      "stop_price": 24.554576044723913,
+      "target_price": 38.40084813943401,
+      "position_pct": 0.06320112708337908,
+      "as_of": "2026-11-10T04:53:25.415061+00:00"
+    },
+    {
+      "ticker": "ARWR",
+      "name": "Arrowhead Pharmaceuticals, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -3.0,
       "direction": "SELL",
-      "price": 79.68000030517578,
+      "price": 49.2400016784668,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-11-07T02:59:44.481036+00:00"
+      "as_of": "2026-11-10T04:53:25.415061+00:00"
     },
     {
-      "ticker": "INVA",
-      "name": "Innoviva, Inc. - Common Stock",
+      "ticker": "AVLN",
+      "name": "Avalyn Pharma Inc. - common stock",
       "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 19.100000381469727,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-11-07T02:59:44.481036+00:00"
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 29.5,
+      "stop_price": 25.601133688543868,
+      "target_price": 37.297732622912264,
+      "position_pct": 0.0756630200766809,
+      "as_of": "2026-11-10T04:53:25.415061+00:00"
     },
     {
-      "ticker": "IRTC",
-      "name": "iRhythm Holdings, Inc.  - Common Stock",
+      "ticker": "CEG",
+      "name": "Constellation Energy Corporation - Common Stock When-Issued",
       "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 90.22000122070312,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-11-07T02:59:44.481036+00:00"
-    },
-    {
-      "ticker": "NRDS",
-      "name": "NerdWallet, Inc. - Class A Common Stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 7.889999866485596,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-11-07T02:59:44.481036+00:00"
-    },
-    {
-      "ticker": "OMDA",
-      "name": "Omada Health, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 15.09000015258789,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-11-07T02:59:44.481036+00:00"
-    },
-    {
-      "ticker": "PRAA",
-      "name": "PRA Group, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 12.920000076293945,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-11-07T02:59:44.481036+00:00"
+      "score": 3.0,
+      "direction": "BUY",
+      "price": 276.0899963378906,
+      "stop_price": 247.69120796996322,
+      "target_price": 332.88757307374544,
+      "position_pct": 0.097218935104181,
+      "as_of": "2026-11-10T04:53:25.415061+00:00"
     }
   ]
 }
