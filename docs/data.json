@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T01:46:23.502336",
+  "generated_at": "2026-11-13T20:26:38.831876",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -192,130 +192,156 @@
     }
   ],
   "last_check": {
-    "timestamp": "2026-11-12T20:46:23.107450-05:00",
-    "market_open": false,
-    "tickers": {}
+    "timestamp": "2026-11-13T15:26:34.534233-05:00",
+    "market_open": true,
+    "tickers": {
+      "TQQQ": {
+        "score": 0.0,
+        "direction": null,
+        "threshold": null
+      },
+      "SOXL": {
+        "score": 1.2498388623974388,
+        "direction": null,
+        "threshold": null
+      },
+      "UPRO": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "AAPL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      },
+      "GOOGL": {
+        "score": 0.5,
+        "direction": null,
+        "threshold": null
+      }
+    }
   },
   "universe_candidates": [
     {
-      "ticker": "MUX",
-      "name": "McEwen Inc. Common Stock",
+      "ticker": "BABX",
+      "name": "GraniteShares 2x Long BABA Daily ETF",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 12.130000114440918,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-13T03:36:22.541885+00:00"
+    },
+    {
+      "ticker": "CTRN",
+      "name": "Citi Trends, Inc. - Common Stock",
+      "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 43.04999923706055,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-13T03:36:22.541885+00:00"
+    },
+    {
+      "ticker": "BABA",
+      "name": "Alibaba Group Holding Limited American Depositary Shares each representing eight Ordinary share",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 12.710000038146973,
+      "price": 94.36000061035156,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-11-12T03:59:25.721347+00:00"
+      "as_of": "2026-11-13T03:36:22.541885+00:00"
     },
     {
-      "ticker": "AAPD",
-      "name": "Direxion Daily AAPL Bear 1X ETF",
+      "ticker": "ECAT",
+      "name": "BlackRock ESG Capital Allocation Term Trust Common Shares of Beneficial Interest",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 12.880000114440918,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-13T03:36:22.541885+00:00"
+    },
+    {
+      "ticker": "STDN",
+      "name": "Standard Nuclear, Inc. Class A Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 11.029999732971191,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-13T03:36:22.541885+00:00"
+    },
+    {
+      "ticker": "AGNC",
+      "name": "AGNC Investment Corp. - Common Stock",
       "exchange": "NASDAQ",
       "score": -3.0,
       "direction": "SELL",
-      "price": 9.640000343322754,
+      "price": 8.199999809265137,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-11-12T03:59:25.721347+00:00"
+      "as_of": "2026-11-13T03:36:22.541885+00:00"
     },
     {
-      "ticker": "AVL",
-      "name": "Direxion Daily AVGO Bull 2X ETF",
+      "ticker": "AMDL",
+      "name": "GraniteShares 2x Long AMD Daily ETF",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 32.689998626708984,
-      "stop_price": 26.612416820172214,
-      "target_price": 44.845162239782525,
-      "position_pct": 0.05378783810289335,
-      "as_of": "2026-11-12T03:59:25.721347+00:00"
+      "price": 62.66999816894531,
+      "stop_price": 46.487852278522084,
+      "target_price": 95.03428994979177,
+      "position_pct": 0.03872786625044216,
+      "as_of": "2026-11-13T03:36:22.541885+00:00"
     },
     {
-      "ticker": "AXON",
-      "name": "Axon Enterprise, Inc. - Common Stock",
+      "ticker": "AMUU",
+      "name": "Direxion Daily AMD Bull 2X ETF",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 315.4200134277344,
-      "stop_price": 267.6126745050905,
-      "target_price": 411.0346912730221,
-      "position_pct": 0.0659773207494585,
-      "as_of": "2026-11-12T03:59:25.721347+00:00"
+      "price": 222.17999267578125,
+      "stop_price": 165.8699976604959,
+      "target_price": 334.79998270635195,
+      "position_pct": 0.039456581840483285,
+      "as_of": "2026-11-13T03:36:22.541885+00:00"
     },
     {
-      "ticker": "ERAS",
-      "name": "Erasca, Inc. - Common Stock",
+      "ticker": "BLTE",
+      "name": "Belite Bio, Inc - American Depositary Shares",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 16.799999237060547,
-      "stop_price": 14.491566924151584,
-      "target_price": 21.416863862878472,
-      "position_pct": 0.07277665948060694,
-      "as_of": "2026-11-12T03:59:25.721347+00:00"
+      "price": 169.9600067138672,
+      "stop_price": 154.2056932991758,
+      "target_price": 201.46863354324995,
+      "position_pct": 0.10788157010725351,
+      "as_of": "2026-11-13T03:36:22.541885+00:00"
     },
     {
-      "ticker": "GO",
-      "name": "Grocery Outlet Holding Corp. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -3.0,
-      "direction": "SELL",
-      "price": 13.119999885559082,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-11-12T03:59:25.721347+00:00"
-    },
-    {
-      "ticker": "IMXI",
-      "name": "International Money Express, Inc. - Common Stock",
+      "ticker": "CHA",
+      "name": "Chagee Holdings Limited - American Depositary Shares, each representing 1 Class A ordinary share",
       "exchange": "NASDAQ",
       "score": 3.0,
       "direction": "BUY",
-      "price": 6.889999866485596,
-      "stop_price": 5.401797270311346,
-      "target_price": 9.866405058834095,
-      "position_pct": 0.046297458989776316,
-      "as_of": "2026-11-12T03:59:25.721347+00:00"
-    },
-    {
-      "ticker": "KRT",
-      "name": "Karat Packaging Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 36.75,
-      "stop_price": 30.55400712032138,
-      "target_price": 49.14198575935724,
-      "position_pct": 0.05931252781217882,
-      "as_of": "2026-11-12T03:59:25.721347+00:00"
-    },
-    {
-      "ticker": "MRCY",
-      "name": "Mercury Systems Inc - Common Stock",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 88.33000183105469,
-      "stop_price": 78.44729111402732,
-      "target_price": 108.09542326510942,
-      "position_pct": 0.08937831366334233,
-      "as_of": "2026-11-12T03:59:25.721347+00:00"
-    },
-    {
-      "ticker": "NCT",
-      "name": "Intercont (Cayman) Limited - Class A Ordinary shares",
-      "exchange": "NASDAQ",
-      "score": 3.0,
-      "direction": "BUY",
-      "price": 0.7200000286102295,
-      "stop_price": -1.2142373303168639,
-      "target_price": 4.588474746464416,
-      "position_pct": 0.003722397488018782,
-      "as_of": "2026-11-12T03:59:25.721347+00:00"
+      "price": 13.510000228881836,
+      "stop_price": 12.463472483606218,
+      "target_price": 15.603055719433073,
+      "position_pct": 0.12909356956727205,
+      "as_of": "2026-11-13T03:36:22.541885+00:00"
     }
   ]
 }
