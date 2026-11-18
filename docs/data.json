@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T03:38:18.364370",
+  "generated_at": "2026-11-18T21:20:29.957029",
   "tickers": [
     {
       "ticker": "TQQQ",
@@ -192,130 +192,130 @@
     }
   ],
   "last_check": {
-    "timestamp": "2026-11-17T22:38:18.036085-05:00",
+    "timestamp": "2026-11-18T16:20:29.514396-05:00",
     "market_open": false,
     "tickers": {}
   },
   "universe_candidates": [
     {
-      "ticker": "BTDR",
-      "name": "Bitdeer Technologies Group - Ordinary Shares",
+      "ticker": "CSIQ",
+      "name": "Canadian Solar Inc. - Common Shares",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 4.494999885559082,
+      "price": 7.809999942779541,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-11-17T05:19:31.566875+00:00"
+      "as_of": "2026-11-18T04:32:14.366285+00:00"
     },
     {
-      "ticker": "DRTS",
-      "name": "Alpha Tau Medical Ltd. - Ordinary Shares",
+      "ticker": "IONX",
+      "name": "Defiance Daily Target 2X Long IONQ ETF",
       "exchange": "NASDAQ",
       "score": -4.5,
       "direction": "SELL",
-      "price": 11.970000267028809,
+      "price": 7.21999979019165,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-11-17T05:19:31.566875+00:00"
+      "as_of": "2026-11-18T04:32:14.366285+00:00"
     },
     {
-      "ticker": "KC",
-      "name": "Kingsoft Cloud Holdings Limited - American Depositary Shares",
+      "ticker": "OPRA",
+      "name": "Opera Limited - American Depositary Shares",
       "exchange": "NASDAQ",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 14.170000076293945,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-18T04:32:14.366285+00:00"
+    },
+    {
+      "ticker": "BBIN",
+      "name": "JPMorgan BetaBuilders International Equity ETF",
+      "exchange": "Cboe BZX",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 76.00299835205078,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-18T04:32:14.366285+00:00"
+    },
+    {
+      "ticker": "BRC",
+      "name": "Brady Corporation Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 76.9000015258789,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-18T04:32:14.366285+00:00"
+    },
+    {
+      "ticker": "CGIC",
+      "name": "Capital Group International Core Equity ETF",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 34.150001525878906,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-18T04:32:14.366285+00:00"
+    },
+    {
+      "ticker": "DFAX",
+      "name": "Dimensional World ex U.S. Core Equity 2 ETF",
+      "exchange": "NYSE Arca",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 34.709999084472656,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-18T04:32:14.366285+00:00"
+    },
+    {
+      "ticker": "EMBJ",
+      "name": "Embraer S.A. Common Stock",
+      "exchange": "NYSE",
+      "score": -4.5,
+      "direction": "SELL",
+      "price": 18.899999618530273,
+      "stop_price": null,
+      "target_price": null,
+      "position_pct": null,
+      "as_of": "2026-11-18T04:32:14.366285+00:00"
+    },
+    {
+      "ticker": "FUBO",
+      "name": "FuboTV Inc. Class A Common Stock",
+      "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
       "price": 6.869999885559082,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-11-17T05:19:31.566875+00:00"
+      "as_of": "2026-11-18T04:32:14.366285+00:00"
     },
     {
-      "ticker": "MAMA",
-      "name": "Mama's Creations, Inc. - Common Stock",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 11.979999542236328,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-11-17T05:19:31.566875+00:00"
-    },
-    {
-      "ticker": "PAYP",
-      "name": "PayPay Corporation - American Depository Shares",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 12.84000015258789,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-11-17T05:19:31.566875+00:00"
-    },
-    {
-      "ticker": "SLVR",
-      "name": "Sprott Silver Miners & Physical Silver ETF",
-      "exchange": "NASDAQ",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 41.59000015258789,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-11-17T05:19:31.566875+00:00"
-    },
-    {
-      "ticker": "AG",
-      "name": "First Majestic Silver Corp. Ordinary Shares (Canada)",
+      "ticker": "JMIA",
+      "name": "Jumia Technologies AG American Depositary Shares, each representing two Ordinary Shares",
       "exchange": "NYSE",
       "score": -4.5,
       "direction": "SELL",
-      "price": 12.670000076293945,
+      "price": 4.630000114440918,
       "stop_price": null,
       "target_price": null,
       "position_pct": null,
-      "as_of": "2026-11-17T05:19:31.566875+00:00"
-    },
-    {
-      "ticker": "AOR",
-      "name": "iShares Core 60/40 Balanced Allocation ETF",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 67.1500015258789,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-11-17T05:19:31.566875+00:00"
-    },
-    {
-      "ticker": "BLSH",
-      "name": "Bullish Ordinary Shares",
-      "exchange": "NYSE",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 19.75,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-11-17T05:19:31.566875+00:00"
-    },
-    {
-      "ticker": "COPX",
-      "name": "Global X Copper Miners ETF",
-      "exchange": "NYSE Arca",
-      "score": -4.5,
-      "direction": "SELL",
-      "price": 65.51000213623047,
-      "stop_price": null,
-      "target_price": null,
-      "position_pct": null,
-      "as_of": "2026-11-17T05:19:31.566875+00:00"
+      "as_of": "2026-11-18T04:32:14.366285+00:00"
     }
   ]
 }
