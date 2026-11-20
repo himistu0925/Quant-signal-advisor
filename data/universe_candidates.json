@@ -1,99 +1,51 @@
 [
   {
-    "ticker": "EPRX",
-    "name": "Eupraxia Pharmaceuticals Inc. - Common Stock",
+    "ticker": "SBLK",
+    "name": "Star Bulk Carriers Corp. - Common Shares",
     "exchange": "NASDAQ",
     "score": -4.5,
     "direction": "SELL",
-    "price": 6.210000038146973,
+    "price": 25.700000762939453,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-11-19T04:22:17.338555+00:00"
+    "as_of": "2026-11-20T04:13:51.827556+00:00"
   },
   {
-    "ticker": "SSRM",
-    "name": "SSR Mining Inc. - Common Stock",
-    "exchange": "NASDAQ",
-    "score": -4.5,
-    "direction": "SELL",
-    "price": 24.190000534057617,
-    "stop_price": null,
-    "target_price": null,
-    "position_pct": null,
-    "as_of": "2026-11-19T04:22:17.338555+00:00"
-  },
-  {
-    "ticker": "WRD",
-    "name": "WeRide Inc. - American Depositary Shares",
-    "exchange": "NASDAQ",
-    "score": -4.5,
-    "direction": "SELL",
-    "price": 3.6700000762939453,
-    "stop_price": null,
-    "target_price": null,
-    "position_pct": null,
-    "as_of": "2026-11-19T04:22:17.338555+00:00"
-  },
-  {
-    "ticker": "DIVO",
-    "name": "Amplify CWP Enhanced Dividend Income ETF",
+    "ticker": "UDOW",
+    "name": "ProShares UltraPro Dow30",
     "exchange": "NYSE Arca",
     "score": -4.5,
     "direction": "SELL",
-    "price": 45.470001220703125,
+    "price": 55.0,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-11-19T04:22:17.338555+00:00"
+    "as_of": "2026-11-20T04:13:51.827556+00:00"
   },
   {
-    "ticker": "EXK",
-    "name": "Endeavour Silver Corporation Ordinary Shares (Canada)",
-    "exchange": "NYSE",
-    "score": -4.5,
-    "direction": "SELL",
-    "price": 6.559999942779541,
-    "stop_price": null,
-    "target_price": null,
-    "position_pct": null,
-    "as_of": "2026-11-19T04:22:17.338555+00:00"
-  },
-  {
-    "ticker": "SVM",
-    "name": "Silvercorp Metals Inc. Common Shares",
-    "exchange": "NYSE American",
-    "score": -4.5,
-    "direction": "SELL",
-    "price": 7.610000133514404,
-    "stop_price": null,
-    "target_price": null,
-    "position_pct": null,
-    "as_of": "2026-11-19T04:22:17.338555+00:00"
-  },
-  {
-    "ticker": "MRK",
-    "name": "Merck & Company, Inc. Common Stock (new)",
-    "exchange": "NYSE",
-    "score": -4.0,
-    "direction": "SELL",
-    "price": 137.77999877929688,
-    "stop_price": null,
-    "target_price": null,
-    "position_pct": null,
-    "as_of": "2026-11-19T04:22:17.338555+00:00"
-  },
-  {
-    "ticker": "AVR",
-    "name": "Anteris Technologies Global Corp. - Common Stock",
+    "ticker": "ADBE",
+    "name": "Adobe Inc. - Common Stock",
     "exchange": "NASDAQ",
     "score": -3.0,
     "direction": "SELL",
-    "price": 5.210000038146973,
+    "price": 221.67999267578125,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-11-19T04:22:17.338555+00:00"
+    "as_of": "2026-11-20T04:13:51.827556+00:00"
+  },
+  {
+    "ticker": "ANDE",
+    "name": "The Andersons, Inc. - Common Stock",
+    "exchange": "NASDAQ",
+    "score": 3.0,
+    "direction": "BUY",
+    "price": 47.459999084472656,
+    "stop_price": 42.46325357432767,
+    "target_price": 57.45349010476262,
+    "position_pct": 0.0949818216439356,
+    "as_of": "2026-11-20T04:13:51.827556+00:00"
   },
   {
     "ticker": "AYA",
@@ -101,22 +53,70 @@
     "exchange": "NASDAQ",
     "score": -3.0,
     "direction": "SELL",
-    "price": 20.280000686645508,
+    "price": 18.899999618530273,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-11-19T04:22:17.338555+00:00"
+    "as_of": "2026-11-20T04:13:51.827556+00:00"
   },
   {
-    "ticker": "BNTX",
-    "name": "BioNTech SE - American Depositary Shares",
+    "ticker": "BPOP",
+    "name": "Popular, Inc. - Common Stock",
     "exchange": "NASDAQ",
     "score": -3.0,
     "direction": "SELL",
-    "price": 83.26000213623047,
+    "price": 148.6699981689453,
     "stop_price": null,
     "target_price": null,
     "position_pct": null,
-    "as_of": "2026-11-19T04:22:17.338555+00:00"
+    "as_of": "2026-11-20T04:13:51.827556+00:00"
+  },
+  {
+    "ticker": "CTBI",
+    "name": "Community Trust Bancorp, Inc. - Common Stock",
+    "exchange": "NASDAQ",
+    "score": -3.0,
+    "direction": "SELL",
+    "price": 67.0199966430664,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-11-20T04:13:51.827556+00:00"
+  },
+  {
+    "ticker": "GLNG",
+    "name": "Golar LNG Limited - Common Shares",
+    "exchange": "NASDAQ",
+    "score": 3.0,
+    "direction": "BUY",
+    "price": 40.400001525878906,
+    "stop_price": 37.43434376510574,
+    "target_price": 46.331317047425244,
+    "position_pct": 0.13622610828616427,
+    "as_of": "2026-11-20T04:13:51.827556+00:00"
+  },
+  {
+    "ticker": "IMOS",
+    "name": "ChipMOS TECHNOLOGIES INC. - American Depositary Shares",
+    "exchange": "NASDAQ",
+    "score": -3.0,
+    "direction": "SELL",
+    "price": 41.22999954223633,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-11-20T04:13:51.827556+00:00"
+  },
+  {
+    "ticker": "LMAT",
+    "name": "LeMaitre Vascular, Inc. - Common Stock",
+    "exchange": "NASDAQ",
+    "score": -3.0,
+    "direction": "SELL",
+    "price": 74.86000061035156,
+    "stop_price": null,
+    "target_price": null,
+    "position_pct": null,
+    "as_of": "2026-11-20T04:13:51.827556+00:00"
   }
 ]
